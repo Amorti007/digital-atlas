@@ -1,53 +1,128 @@
-body {  
-  text-align: center;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+:root {
+    /* --- LIGHT MODE --- */
+    --ana-renk: #5F6F52;        /* Koyu Yeşil */
+    --ikincil-renk: #A9B388;    /* Açık Yeşil */
+    --zemin-rengi: #FEFAE0;     /* Krem Arkaplan */
+    --vurgu-rengi: #B99470;     /* Kahve */
+    
+    /* Harita Renkleri */
+    --map-bg: #A5D7E8;          /* Deniz Rengi */
+    --map-fill: #ececec;        /* Ülke Rengi (Senin SVG'deki gri tonun) */
+    --map-hover: #565656;       /* Hover Rengi (Koyu Gri) */
+    --map-stroke: #000000;      /* Sınır Çizgileri */
 }
 
-main {
-  flex: 1;
+[data-theme="dark"] {
+    /* --- DARK MODE --- */
+    --ana-renk: #FEFAE0;
+    --ikincil-renk: #5F6F52;
+    --zemin-rengi: #1A1C18;
+    --vurgu-rengi: #B99470;
+    
+    --map-bg: #1f262a;          /* Koyu Deniz */
+    --map-fill: #2c3e50;        /* Koyu Ülke */
+    --map-hover: #f1c40f;       /* Koyu modda Sarı Hover */
+    --map-stroke: #4a4a4a;
 }
 
-svg {
-  width: 90%;
-  max-width: 1200px;
-  margin-top: 30px;
+body {
+    background-color: var(--zemin-rengi);
+    color: var(--ana-renk);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-g path{
-  fill: #acb6c6;
-  stroke: #fff;
-  stroke-width: 0.5;
-  cursor: pointer;
-  transition: fill 0.2s;
+/* Navbar */
+.navbar {
+    background-color: var(--ana-renk) !important;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    z-index: 1000;
 }
-
-g:hover path{
-  fill: #565656;
+.navbar-brand, .nav-link, .btn-link {
+    color: var(--zemin-rengi) !important;
+    font-weight: 500;
+    transition: color 0.2s ease;
 }
-
-path {
-  fill: #acb6c6;
-  stroke: #fff;
-  stroke-width: 0.5;
-  cursor: pointer;
-  transition: fill 0.2s;
-}
-
-path:hover {
-  fill: #565656;
-}
-
-#map-container {
-  min-height: 500px;
-}
-
-.navbar .nav-link {
-  transition: color 0.2s ease;
-}
-
 .navbar .nav-link:hover {
-  color: #ffc107 !important;
+    color: #ffc107 !important;
 }
 
+/* Ana İçerik */
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    width: 100%;
+}
+
+.info-header {
+    margin-bottom: 20px;
+    max-width: 800px;
+}
+
+/* --- HARİTA KONTEYNERİ --- */
+#map-container {
+    width: 100%;
+    min-height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: var(--map-bg);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+/* --- SVG AYARLARI --- */
+svg {
+    width: 90%;
+    max-width: 1200px;
+    height: auto;
+    transition: transform 0.2s ease-out;
+}
+
+/* 1. Varsayılan Ülke Görünümü (Hem tekil hem grup içindekiler) */
+svg path {
+    fill: var(--map-fill);
+    stroke: var(--map-stroke);
+    stroke-width: 0.2px;     /* Senin SVG'deki ince çizgi ayarı */
+    cursor: pointer;
+    transition: fill 0.2s ease; 
+    pointer-events: all;
+}
+
+/* --- HOVER STRATEJİSİ (ÖNEMLİ KISIM) --- */
+
+/* Durum A: Tek başına duran ülkeye (örn: Afghanistan) hover yapınca */
+svg > path:hover {
+    fill: var(--map-hover) !important;
+    stroke: #ffc107 !important; /* Sınırı sarı yap */
+    stroke-width: 1px;
+}
+
+/* Durum B: Gruplanmış ülkeye (örn: USA, France) hover yapınca */
+/* "g:hover path" demek: Gruba mouse gelince içindeki TÜM path'leri boya */
+svg g:hover path {
+    fill: var(--map-hover) !important;
+    stroke: #ffc107 !important;
+    stroke-width: 1px;
+}
+
+/* Popover */
+.popover {
+    border: 2px solid var(--ana-renk);
+}
+.popover-header {
+    background-color: var(--ana-renk);
+    color: var(--zemin-rengi);
+}
