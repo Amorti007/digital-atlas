@@ -1,5 +1,3 @@
-/* Dijital Atlas Ana Stil Dosyası*/
-
 :root {
     /* --- LIGHT MODE --- */
     --ana-renk: #5F6F52;        /* Koyu Yeşil */
@@ -9,41 +7,42 @@
     
     /* Harita Renkleri */
     --map-bg: #A5D7E8;          /* Deniz Rengi */
-    --map-fill: #ececec;        /* Ülke Rengi (Senin SVG'deki gri tonun) */
-    --map-hover: #565656;       /* Hover Rengi (Koyu Gri) */
+    --map-fill: #ececec;        /* Ülke Rengi */
+    --map-hover: #565656;       /* Hover Rengi */
     --map-stroke: #000000;      /* Sınır Çizgileri */
 }
 
+/* --- DARK MODE --- */
 [data-theme="dark"] {
-    /* --- DARK MODE --- */
-    --ana-renk: #E6D6B8;        /* Kahve Köpüğü */
-    --ikincil-renk: #5F6F52;    /* Koyu Yeşil */
-    --zemin-rengi: #1A1C18;     /* Zemin */
-    --vurgu-rengi: #B99470;     /* Kahve */
+    --ana-renk: #E6D6B8;        /* Sıcak Krem */
+    --ikincil-renk: #5F6F52;    
+    --zemin-rengi: #1A1C18;     
+    --vurgu-rengi: #B99470;     
     
-    /* Harita Renkleri */
-    --map-bg: #34495E;          /* Deniz Rengi */
-    --map-fill: #2c3e50;        /* Ülke Rengi */
-    --map-hover: #f1c40f;       /* Hover */
-    --map-stroke: #95A5A6;      /* Sınır Çizgileri */
+    /* Harita Ayarları */
+    --map-bg: #34495E;          /* Deniz: Petrol Mavisi */
+    --map-fill: #5D6D7E;        /* Ülke: Metalik Gri */
+    --map-hover: #D35400;       /* Hover: Kiremit Rengi */
+    --map-stroke: #fffff0;      /* Sınır: Fildişi (Senin isteğin) */
 }
 
 body {
     background-color: var(--zemin-rengi);
     color: var(--ana-renk);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    /* Navbar üstte, içerik ortada */
     text-align: center;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     margin: 0;
-    /* Renk değişimlerinin yumuşak olması için transition */
     transition: background-color 0.3s, color 0.3s;
+    overflow-x: hidden; /* Sadece yatay taşmayı engelle */
+    overflow-y: auto;   /* Dikeyde kaydırmaya izin ver (Footer görünsün) */
 }
 
+/* Navbar */
 .navbar {
-    background-color: var(--ana-renk) !important; /* "!important": Bootstrap'in varsayılanını override etmek için */
+    background-color: var(--ana-renk) !important;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     z-index: 1000;
 }
@@ -53,11 +52,12 @@ body {
     transition: color 0.2s ease;
 }
 .navbar .nav-link:hover {
-    color: #ffc107 !important; /* Hover durumunda altın sarısı */
+    color: #ffc107 !important;
 }
 
+/* Ana İçerik */
 main {
-    flex: 1; /* Boş kalan tüm alanı kapla */
+    flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -67,33 +67,42 @@ main {
 }
 
 .info-header {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     max-width: 800px;
 }
 
+/* --- HARİTA KONTEYNERİ --- */
 #map-container {
-    /* --- HARİTA KONTEYNERİ --- */
     width: 100%;
     min-height: 500px;
-    /* Haritayı ortalamak için */
+    flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
-
-    position: relative; /* Zoom butonlarını sabitlemek için */
+    position: relative;
     background-color: var(--map-bg);
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-    overflow: hidden; /* Taşan kısımları gizle */
-    margin-top: 20px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    cursor: grab;
 }
 
+#map-container:active {
+    cursor: grabbing;
+}
+
+/* Sürükleme sırasında animasyonu kapat */
+.no-transition {
+    transition: none !important;
+}
+
+/* --- SVG AYARLARI --- */
 svg {
-    /* --- SVG AYARLARI --- */
     width: 90%;
     max-width: 1200px;
     height: auto;
-    transition: transform 0.2s ease-out; /* Zoom işlemi bu transform özelliği üzerinden yapılır (JS ile güncellenir) */
+    transition: transform 0.2s ease-out;
 }
 
 svg path {
@@ -105,25 +114,50 @@ svg path {
     pointer-events: all;
 }
 
-/* --- ÜLKE HOVER --- */
-svg > path:hover {
-    /* Tek başına duran ülkeye hover yapınca */
-    fill: var(--map-hover) !important;
-    stroke: #ffc107 !important; /* Sınırı sarı yap */
-    stroke-width: 1px;
-}
-
+/* Gruplu ve Tekil Hover Mantığı */
+svg > path:hover,
 svg g:hover path {
-    /* Gruplanmış ülkeye hover yapınca */
     fill: var(--map-hover) !important;
     stroke: #ffc107 !important;
     stroke-width: 1px;
 }
 
+/* --- YENİ: HOVER TOOLTIP (Fare Takipçisi) --- */
+.floating-tooltip {
+    position: fixed; /* Ekrana göre sabitlenir */
+    top: 0;
+    left: 0;
+    background-color: var(--ana-renk);
+    color: var(--zemin-rengi);
+    padding: 4px 8px; /* İSTEDİĞİN KÜÇÜK PADDING */
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    pointer-events: none; /* Mouse tıklamalarını engellemez */
+    z-index: 9999;
+    display: none; /* Başlangıçta gizli */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    white-space: nowrap;
+    transform: translate(10px, 10px);
+    border: 1px solid var(--zemin-rengi);
+}
+
+/* --- DETAY POPOVER (Tıklama) --- */
 .popover {
     border: 2px solid var(--ana-renk);
+    max-width: 300px;
 }
 .popover-header {
     background-color: var(--ana-renk);
     color: var(--zemin-rengi);
 }
+
+/* Footer */
+.footer {
+    background-color: var(--ana-renk);
+    color: var(--zemin-rengi);
+    padding: 10px 0;
+    font-size: 0.8rem;
+    width: 100%;
+}
+.footer a { color: #ffc107; text-decoration: none; }
