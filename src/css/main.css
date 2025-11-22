@@ -1,3 +1,5 @@
+/* Dijital Atlas Ana Stil Dosyası*/
+
 :root {
     /* --- LIGHT MODE --- */
     --ana-renk: #5F6F52;        /* Koyu Yeşil */
@@ -14,32 +16,33 @@
 
 [data-theme="dark"] {
     /* --- DARK MODE --- */
-    --ana-renk: #FEFAE0;
-    --ikincil-renk: #5F6F52;
-    --zemin-rengi: #1A1C18;
-    --vurgu-rengi: #B99470;
+    --ana-renk: #FEFAE0;        /* Koyu modda okunabilirlik için açık renk metin */
+    --ikincil-renk: #5F6F52;    /* Koyu Yeşil */
+    --zemin-rengi: #1A1C18;     /* Koyu Arkaplan */
+    --vurgu-rengi: #B99470;     /* Kahve */
     
     --map-bg: #1f262a;          /* Koyu Deniz */
     --map-fill: #2c3e50;        /* Koyu Ülke */
     --map-hover: #f1c40f;       /* Koyu modda Sarı Hover */
-    --map-stroke: #4a4a4a;
+    --map-stroke: #4a4a4a;      /* Koyu modda sınır çizgileri */
 }
 
 body {
     background-color: var(--zemin-rengi);
     color: var(--ana-renk);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Navbar üstte, içerik ortada */
     text-align: center;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     margin: 0;
+    /* Renk değişimlerinin yumuşak olması için transition */
     transition: background-color 0.3s, color 0.3s;
 }
 
-/* Navbar */
 .navbar {
-    background-color: var(--ana-renk) !important;
+    background-color: var(--ana-renk) !important; /* "!important": Bootstrap'in varsayılanını override etmek için */
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     z-index: 1000;
 }
@@ -49,12 +52,11 @@ body {
     transition: color 0.2s ease;
 }
 .navbar .nav-link:hover {
-    color: #ffc107 !important;
+    color: #ffc107 !important; /* Hover durumunda altın sarısı */
 }
 
-/* Ana İçerik */
 main {
-    flex: 1;
+    flex: 1; /* Boş kalan tüm alanı kapla */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -68,57 +70,55 @@ main {
     max-width: 800px;
 }
 
-/* --- HARİTA KONTEYNERİ --- */
 #map-container {
+    /* --- HARİTA KONTEYNERİ --- */
     width: 100%;
     min-height: 500px;
+    /* Haritayı ortalamak için */
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
+
+    position: relative; /* Zoom butonlarını sabitlemek için */
     background-color: var(--map-bg);
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-    overflow: hidden;
+    overflow: hidden; /* Taşan kısımları gizle */
     margin-top: 20px;
 }
 
-/* --- SVG AYARLARI --- */
 svg {
+    /* --- SVG AYARLARI --- */
     width: 90%;
     max-width: 1200px;
     height: auto;
-    transition: transform 0.2s ease-out;
+    transition: transform 0.2s ease-out; /* Zoom işlemi bu transform özelliği üzerinden yapılır (JS ile güncellenir) */
 }
 
-/* 1. Varsayılan Ülke Görünümü (Hem tekil hem grup içindekiler) */
 svg path {
     fill: var(--map-fill);
     stroke: var(--map-stroke);
-    stroke-width: 0.2px;     /* Senin SVG'deki ince çizgi ayarı */
+    stroke-width: 0.2px;
     cursor: pointer;
     transition: fill 0.2s ease; 
     pointer-events: all;
 }
 
-/* --- HOVER STRATEJİSİ (ÖNEMLİ KISIM) --- */
-
-/* Durum A: Tek başına duran ülkeye (örn: Afghanistan) hover yapınca */
+/* --- ÜLKE HOVER --- */
 svg > path:hover {
+    /* Tek başına duran ülkeye hover yapınca */
     fill: var(--map-hover) !important;
     stroke: #ffc107 !important; /* Sınırı sarı yap */
     stroke-width: 1px;
 }
 
-/* Durum B: Gruplanmış ülkeye (örn: USA, France) hover yapınca */
-/* "g:hover path" demek: Gruba mouse gelince içindeki TÜM path'leri boya */
 svg g:hover path {
+    /* Gruplanmış ülkeye hover yapınca */
     fill: var(--map-hover) !important;
     stroke: #ffc107 !important;
     stroke-width: 1px;
 }
 
-/* Popover */
 .popover {
     border: 2px solid var(--ana-renk);
 }
