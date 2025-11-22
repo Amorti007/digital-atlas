@@ -16,15 +16,16 @@
 
 [data-theme="dark"] {
     /* --- DARK MODE --- */
-    --ana-renk: #FEFAE0;        /* Koyu modda okunabilirlik için açık renk metin */
+    --ana-renk: #E6D6B8;        /* Kahve Köpüğü */
     --ikincil-renk: #5F6F52;    /* Koyu Yeşil */
-    --zemin-rengi: #1A1C18;     /* Koyu Arkaplan */
+    --zemin-rengi: #1A1C18;     /* Zemin */
     --vurgu-rengi: #B99470;     /* Kahve */
     
-    --map-bg: #1f262a;          /* Koyu Deniz */
-    --map-fill: #2c3e50;        /* Koyu Ülke */
-    --map-hover: #f1c40f;       /* Koyu modda Sarı Hover */
-    --map-stroke: #4a4a4a;      /* Koyu modda sınır çizgileri */
+    /* Harita Renkleri */
+    --map-bg: #34495E;          /* Deniz Rengi */
+    --map-fill: #2c3e50;        /* Ülke Rengi */
+    --map-hover: #f1c40f;       /* Hover */
+    --map-stroke: #95A5A6;      /* Sınır Çizgileri */
 }
 
 body {
