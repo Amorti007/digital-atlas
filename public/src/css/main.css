@@ -86,6 +86,8 @@ main {
     overflow: hidden;
     margin-bottom: 20px;
     cursor: grab;
+    user-select: none;
+    -webkit-user-select: none;
 }
 
 #map-container:active {
@@ -145,11 +147,91 @@ svg g:hover path {
 /* --- DETAY POPOVER (Tıklama) --- */
 .popover {
     border: 2px solid var(--ana-renk);
-    max-width: 300px;
+    max-width: 350px;       /* Genişlik */
+    width: 350px;           /* Mobilde daralmaması için */
+    cursor: auto !important; 
+    user-select: text !important; 
+    -webkit-user-select: text !important;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3); /* Daha derin gölge */
 }
+
 .popover-header {
     background-color: var(--ana-renk);
     color: var(--zemin-rengi);
+    font-weight: bold;
+    text-align: center;
+}
+
+.popover-body {
+    max-height: 400px;      /* SABİT YÜKSEKLİK */
+    overflow-y: auto;       /* DİKEY SCROLL */
+    padding-right: 10px;    /* Yazı scrollbar'a yapışmasın */
+    font-size: 0.85rem;     /* Daha fazla veri sığsın */
+}
+.popover a {
+    cursor: pointer;
+}
+
+/* İç Pencere */
+.info-box {
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 15px;
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.05); /* Hafif iç gölge */
+}
+
+[data-theme="dark"] .info-box {
+    background-color: rgba(255,255,255,0.05);
+    border-color: rgba(255,255,255,0.1);
+}
+
+/* Nüfus Piramidi */
+.pyramid-container {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.65rem;
+    margin-top: 5px;
+}
+
+.pyramid-row {
+    display: flex;
+    align-items: center;
+    height: 14px; /* Satır yüksekliği */
+    margin-bottom: 1px;
+}
+
+.pyramid-label {
+    width: 35px;
+    text-align: center;
+    color: #666;
+    font-weight: bold;
+    font-size: 0.6rem;
+    flex-shrink: 0;
+}
+
+.pyramid-bar-m, .pyramid-bar-f {
+    flex: 1; /* Kalan alanı paylaş */
+    display: flex;
+    align-items: center;
+}
+
+.pyramid-bar-m { justify-content: flex-end; } /* Erkekler sağa dayalı (ortaya doğru) */
+.pyramid-bar-f { justify-content: flex-start; } /* Kadınlar sola dayalı */
+
+.bar-fill {
+    height: 100%;
+    transition: width 0.3s;
+}
+
+.bar-m { 
+    background-color: #3498db;
+    border-radius: 2px 0 0 2px; 
+}
+.bar-f {
+    background-color: #e74c3c;
+    border-radius: 0 2px 2px 0;
 }
 
 /* Footer */
