@@ -285,16 +285,23 @@ function updateTooltipPosition() {
 }
 
 function showDetailPopover(element, code) {
-    if (activeDetailPopover) { activeDetailPopover.dispose(); activeDetailPopover = null; }
+    // Önceki açık kutuyu kapat
+    if (activeDetailPopover) { 
+        activeDetailPopover.dispose(); 
+        activeDetailPopover = null; 
+    }
     
     const content = generateDetailContent(code, element);
+
     const popover = new bootstrap.Popover(element, {
         trigger: 'manual',
         container: '#map-container',
-        html: true,
+        html: true,       // HTML içeriğe izin ver
+        sanitize: false,  // <--- KRİTİK DÜZELTME: "Kodu temizleme, olduğu gibi bas" diyoruz.
         content: content,
         placement: 'auto'
     });
+
     popover.show();
     activeDetailPopover = popover;
 }

@@ -215,6 +215,7 @@ svg g:hover path {
     flex: 1; /* Kalan alanı paylaş */
     display: flex;
     align-items: center;
+    height: 85%;
 }
 
 .pyramid-bar-m { justify-content: flex-end; } /* Erkekler sağa dayalı (ortaya doğru) */
@@ -227,7 +228,7 @@ svg g:hover path {
 
 .bar-m { 
     background-color: #3498db;
-    border-radius: 2px 0 0 2px; 
+    border-radius: 2px 0 0 2px;
 }
 .bar-f {
     background-color: #e74c3c;
