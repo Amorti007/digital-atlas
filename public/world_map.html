@@ -1,22 +1,18 @@
 <div class="info-header text-center fade-in mb-4">
-    <h1 class="display-6 fw-bold" style="color: var(--ana-renk)">Dünya Nüfus ve İstatistik Atlası</h1>
-    <p class="lead fs-6">
-        Ülkelerin üzerine gelerek temel bilgilere, tıklayarak detaylı verilere ulaşabilirsiniz.
-    </p>
+   <h1 class="display-6 fw-bold" style="color: var(--ana-renk)">Dünya Nüfus ve İstatistik Atlası</h1>
+   <p class="lead fs-6">
+      Ülkelerin üzerine gelerek temel bilgilere, tıklayarak detaylı verilere ulaşabilirsiniz.
+   </p>
 </div>
-
 <div id="map-container">
-    
-    <div class="btn-group-vertical position-absolute top-0 end-0 mt-2 me-2 z-3">
-        <button class="btn btn-sm btn-light border shadow-sm" onclick="zoomMap(1.2)"><i class="fas fa-plus"></i></button>
-        <button class="btn btn-sm btn-light border shadow-sm" onclick="zoomMap(0.8)"><i class="fas fa-minus"></i></button>
-        <button class="btn btn-sm btn-warning text-white border shadow-sm" onclick="resetMap()"><i class="fas fa-compress"></i></button>
-    </div>
-
-    <div id="svg-placeholder" class="d-flex justify-content-center align-items-center w-100 h-100">
-        <div class="spinner-border text-secondary" role="status">
-            <span class="visually-hidden">Harita Yükleniyor...</span>
-        </div>
-    </div>
-
+   <div class="btn-group-vertical position-absolute top-0 end-0 mt-2 me-2 z-3">
+      <button class="btn btn-sm btn-light border shadow-sm" onclick="zoomMap(1.2)"><i class="fas fa-plus"></i></button>
+      <button class="btn btn-sm btn-light border shadow-sm" onclick="zoomMap(0.8)"><i class="fas fa-minus"></i></button>
+      <button class="btn btn-sm btn-warning text-white border shadow-sm" onclick="resetMap()"><i class="fas fa-compress"></i></button>
+   </div>
+   <div id="svg-placeholder" class="d-flex justify-content-center align-items-center w-100 h-100">
+      <div class="spinner-border text-secondary" role="status">
+         <span class="visually-hidden">Harita Yükleniyor...</span>
+      </div>
+   </div>
 </div>
