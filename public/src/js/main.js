@@ -113,7 +113,7 @@ function generateDetailContent(code, pathElement) {
     if (!data) return `<strong>${defaultName}</strong><br><span class="text-muted small">Veri girilmemiş.</span>`;
 
     // Bayrak Yolu
-    let flagUrl = data.general_info?.flag_url || `https://flagcdn.com/w80/${code.toLowerCase()}.png`;
+    let flagUrl =`https://flagcdn.com/w80/${code.toLowerCase()}.png`;
     if (flagUrl.startsWith('assets/')) flagUrl = 'src/' + flagUrl;
 
     // Formatlar
@@ -216,7 +216,7 @@ function generateDetailContent(code, pathElement) {
     `;
 }
 
-// --- 6. GERÇEK PİRAMİT GRAFİĞİ OLUŞTURUCU ---
+// --- 6. GERÇEK PİRAMİT GRAFİĞİ OLUŞTURUCU (Hızlandırma Güncellemesi) ---
 function generatePyramidChart(pyramidData) {
     if (!pyramidData || !Array.isArray(pyramidData) || pyramidData.length === 0) {
         return '<div class="text-center text-muted small py-2">Veri Yok</div>';
@@ -225,7 +225,7 @@ function generatePyramidChart(pyramidData) {
     // En yüksek değeri bul
     let maxVal = 0;
     pyramidData.forEach(g => {
-        const m = g.M || 0; // Senin JSON'da sayılar Number, direkt alıyoruz
+        const m = g.M || 0;
         const f = g.F || 0;
         if (m > maxVal) maxVal = m;
         if (f > maxVal) maxVal = f;
@@ -233,7 +233,7 @@ function generatePyramidChart(pyramidData) {
 
     if (maxVal === 0) return '<div class="text-center text-muted small">Veri Hatası</div>';
 
-    // Ters çevir (0-4 en alta gelsin)
+    // Ters çevir
     const sortedData = [...pyramidData].reverse();
 
     let html = '<div class="pyramid-container">';
@@ -241,14 +241,21 @@ function generatePyramidChart(pyramidData) {
         const wM = (group.M / maxVal) * 100;
         const wF = (group.F / maxVal) * 100;
 
+        // GÜNCELLEME: "2.5s" yerine "1.5s" yapıldı.
         html += `
             <div class="pyramid-row">
                 <div class="pyramid-bar-m">
-                    <div class="bar-fill bar-m" style="width: ${wM}%;" title="Erkek: ${new Intl.NumberFormat().format(group.M)}"></div>
+                    <div class="bar-fill bar-m" 
+                         style="width: 0%; transition: width 1.5s ease-out;" 
+                         data-width="${wM}%" 
+                         title="Erkek: ${new Intl.NumberFormat().format(group.M)}"></div>
                 </div>
                 <div class="pyramid-label">${group.Age}</div>
                 <div class="pyramid-bar-f">
-                    <div class="bar-fill bar-f" style="width: ${wF}%;" title="Kadın: ${new Intl.NumberFormat().format(group.F)}"></div>
+                    <div class="bar-fill bar-f" 
+                         style="width: 0%; transition: width 1.5s ease-out;" 
+                         data-width="${wF}%" 
+                         title="Kadın: ${new Intl.NumberFormat().format(group.F)}"></div>
                 </div>
             </div>
         `;
@@ -296,11 +303,30 @@ function showDetailPopover(element, code) {
     const popover = new bootstrap.Popover(element, {
         trigger: 'manual',
         container: '#map-container',
-        html: true,       // HTML içeriğe izin ver
-        sanitize: false,  // <--- KRİTİK DÜZELTME: "Kodu temizleme, olduğu gibi bas" diyoruz.
+        html: true,
+        sanitize: false,
         content: content,
         placement: 'auto'
     });
+
+    // GÜNCELLEME: Animasyon Tetikleyicisi
+    // Bootstrap popover tamamen görünür olduğunda bu kod çalışır.
+    element.addEventListener('shown.bs.popover', function () {
+        // Popover'ın benzersiz ID'sini al
+        const popoverId = element.getAttribute('aria-describedby');
+        const popoverEl = document.getElementById(popoverId);
+
+        if (popoverEl) {
+            // İçindeki tüm barları bul
+            const bars = popoverEl.querySelectorAll('.bar-fill');
+            
+            // Her bir barın genişliğini data-width değerine çek
+            bars.forEach(bar => {
+                const targetWidth = bar.getAttribute('data-width');
+                bar.style.width = targetWidth; // Bu satır CSS transition'ı tetikler
+            });
+        }
+    }, { once: true }); // Önemli: Her tıklamada sadece bir kez çalışsın
 
     popover.show();
     activeDetailPopover = popover;
