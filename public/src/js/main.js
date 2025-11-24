@@ -258,7 +258,7 @@ function generatePyramidChart(pyramidData) {
             <div class="pyramid-row">
                 <div class="pyramid-bar-m">
                     <div class="bar-fill bar-m" 
-                         style="width: 0%; transition: width 1.5s ease-out;" 
+                         style="width: 0%; transition: width 2.0s ease-out;" 
                          data-width="${wM}%" 
                          title="Erkek: ${new Intl.NumberFormat().format(
                            group.M
@@ -267,7 +267,7 @@ function generatePyramidChart(pyramidData) {
                 <div class="pyramid-label">${group.Age}</div>
                 <div class="pyramid-bar-f">
                     <div class="bar-fill bar-f" 
-                         style="width: 0%; transition: width 1.5s ease-out;" 
+                         style="width: 0%; transition: width 2.0s ease-out;" 
                          data-width="${wF}%" 
                          title="Kadın: ${new Intl.NumberFormat().format(
                            group.F
