@@ -2125,5 +2125,2032 @@
       "total_personnel": 30000,
       "defense_budget_usd": 65000000
     }
+  },
+
+  {
+  "CV": {
+    "id": "CV",
+    "names": { "tr": "Cabo Verde", "en": "Cabo Verde" },
+    "codes": { "alpha2": "CV", "alpha3": "CPV" },
+    "general_info": {
+      "description_tr": "Afrika'nın batı kıyısında yer alan, volkanik adalardan oluşan bir takımada ülkesidir.",
+      "description_en": "An island country in the central Atlantic Ocean, consisting of ten volcanic islands.",
+      "flag_url": "assets/flags/cv.svg", "intelligence_agency": "SIR"
+    },
+    "geography": {
+      "capital_tr": "Praia", "capital_en": "Praia",
+      "continent_tr": "Afrika", "continent_en": "Africa",
+      "area_sq_km": 4033, "timezone": "UTC-01:00"
+    },
+    "politics": {
+      "government_tr": "Parlamenter Cumhuriyet", "government_en": "Parliamentary Republic",
+      "independence_date": "1975-07-05"
+    },
+    "economy": {
+      "gdp_usd": 2500000000, "gdp_growth_rate": 5.5, "gdp_per_capita_usd": 4200,
+      "inflation_rate": 1.5, "minimum_wage_usd": 140, "unemployment_rate": 12.1, "currency": "Cabo Verde Esküdosu"
+    },
+    "demographics": {
+      "total_population": 598000, "life_expectancy": 73.0, "birth_rate": 2.1, "most_spoken_language": "Portekizce",
+      "population_pyramid": []
+    },
+    "military": {
+      "global_firepower_rank": 0, "active_personnel": 1200, "reserve_personnel": 0,
+      "total_personnel": 1200, "defense_budget_usd": 11000000
+    }
+  },
+  "KH": {
+    "id": "KH",
+    "names": { "tr": "Kamboçya", "en": "Cambodia" },
+    "codes": { "alpha2": "KH", "alpha3": "KHM" },
+    "general_info": {
+      "description_tr": "Güneydoğu Asya'da, tarihi Angkor Wat tapınağına ev sahipliği yapan bir ülkedir.",
+      "description_en": "A Southeast Asian nation whose landscape spans low-lying plains, the Mekong Delta, and mountains.",
+      "flag_url": "assets/flags/kh.svg", "intelligence_agency": "GDI"
+    },
+    "geography": {
+      "capital_tr": "Phnom Penh", "capital_en": "Phnom Penh",
+      "continent_tr": "Asya", "continent_en": "Asia",
+      "area_sq_km": 181035, "timezone": "UTC+07:00"
+    },
+    "politics": {
+      "government_tr": "Parlamenter Monarşi", "government_en": "Parliamentary Constitutional Monarchy",
+      "independence_date": "1953-11-09"
+    },
+    "economy": {
+      "gdp_usd": 32000000000, "gdp_growth_rate": 5.8, "gdp_per_capita_usd": 1900,
+      "inflation_rate": 2.0, "minimum_wage_usd": 204, "unemployment_rate": 0.6, "currency": "Kamboçya Rieli"
+    },
+    "demographics": {
+      "total_population": 16900000, "life_expectancy": 69.6, "birth_rate": 2.3, "most_spoken_language": "Kmerce",
+      "population_pyramid": []
+    },
+    "military": {
+      "global_firepower_rank": 95, "active_personnel": 125000, "reserve_personnel": 0,
+      "total_personnel": 195000, "defense_budget_usd": 635000000
+    }
+  },
+  "CM": {
+    "id": "CM",
+    "names": { "tr": "Kamerun", "en": "Cameroon" },
+    "codes": { "alpha2": "CM", "alpha3": "CMR" },
+    "general_info": {
+      "description_tr": "Orta Afrika'da, coğrafi ve kültürel çeşitliliği nedeniyle 'Minyatür Afrika' olarak bilinen ülkedir.",
+      "description_en": "A Central African country often called 'Africa in miniature' for its geological and cultural diversity.",
+      "flag_url": "assets/flags/cm.svg", "intelligence_agency": "DGRE"
+    },
+    "geography": {
+      "capital_tr": "Yaounde", "capital_en": "Yaounde",
+      "continent_tr": "Afrika", "continent_en": "Africa",
+      "area_sq_km": 475442, "timezone": "UTC+01:00"
+    },
+    "politics": {
+      "government_tr": "Başkanlık Sistemi", "government_en": "Presidential Republic",
+      "independence_date": "1960-01-01"
+    },
+    "economy": {
+      "gdp_usd": 49000000000, "gdp_growth_rate": 3.9, "gdp_per_capita_usd": 1700,
+      "inflation_rate": 3.7, "minimum_wage_usd": 60, "unemployment_rate": 3.8, "currency": "Orta Afrika CFA Frangı"
+    },
+    "demographics": {
+      "total_population": 28600000, "life_expectancy": 60.3, "birth_rate": 4.3, "most_spoken_language": "Fransızca / İngilizce",
+      "population_pyramid": []
+    },
+    "military": {
+      "global_firepower_rank": 104, "active_personnel": 50000, "reserve_personnel": 0,
+      "total_personnel": 50000, "defense_budget_usd": 450000000
+    }
+  },
+  "CA": {
+    "id": "CA",
+    "names": { "tr": "Kanada", "en": "Canada" },
+    "codes": { "alpha2": "CA", "alpha3": "CAN" },
+    "general_info": {
+      "description_tr": "Kuzey Amerika'nın kuzeyinde yer alan, yüzölçümü bakımından dünyanın en büyük ikinci ülkesidir.",
+      "description_en": "A country in North America, the world's second-largest by total area.",
+      "flag_url": "assets/flags/ca.svg", "intelligence_agency": "CSIS"
+    },
+    "geography": {
+      "capital_tr": "Ottawa", "capital_en": "Ottawa",
+      "continent_tr": "Kuzey Amerika", "continent_en": "North America",
+      "area_sq_km": 9984670, "timezone": "UTC-05:00"
+    },
+    "politics": {
+      "government_tr": "Federal Parlamenter Demokrasi", "government_en": "Federal Parliamentary Democracy",
+      "independence_date": "1867-07-01"
+    },
+    "economy": {
+      "gdp_usd": 2140000000000, "gdp_growth_rate": 1.4, "gdp_per_capita_usd": 53500,
+      "inflation_rate": 2.0, "minimum_wage_usd": 2400, "unemployment_rate": 6.1, "currency": "Kanada Doları"
+    },
+    "demographics": {
+      "total_population": 40100000, "life_expectancy": 82.0, "birth_rate": 1.3, "most_spoken_language": "İngilizce / Fransızca",
+      "population_pyramid": []
+    },
+    "military": {
+      "global_firepower_rank": 28, "active_personnel": 68000, "reserve_personnel": 27000,
+      "total_personnel": 100000, "defense_budget_usd": 26500000000
+    }
+  },
+  "CF": {
+    "id": "CF",
+    "names": { "tr": "Orta Afrika Cumhuriyeti", "en": "Central African Republic" },
+    "codes": { "alpha2": "CF", "alpha3": "CAF" },
+    "general_info": {
+      "description_tr": "Afrika'nın merkezinde, denize kıyısı olmayan ve zengin doğal kaynaklara sahip bir ülkedir.",
+      "description_en": "A landlocked country in Central Africa, rich in diamonds, gold, oil and uranium.",
+      "flag_url": "assets/flags/cf.svg", "intelligence_agency": "BSR"
+    },
+    "geography": {
+      "capital_tr": "Bangui", "capital_en": "Bangui",
+      "continent_tr": "Afrika", "continent_en": "Africa",
+      "area_sq_km": 622984, "timezone": "UTC+01:00"
+    },
+    "politics": {
+      "government_tr": "Başkanlık Sistemi", "government_en": "Presidential Republic",
+      "independence_date": "1960-08-13"
+    },
+    "economy": {
+      "gdp_usd": 2700000000, "gdp_growth_rate": 1.8, "gdp_per_capita_usd": 500,
+      "inflation_rate": 4.6, "minimum_wage_usd": 35, "unemployment_rate": 6.6, "currency": "Orta Afrika CFA Frangı"
+    },
+    "demographics": {
+      "total_population": 5500000, "life_expectancy": 54.0, "birth_rate": 6.0, "most_spoken_language": "Sango / Fransızca",
+      "population_pyramid": []
+    },
+    "military": {
+      "global_firepower_rank": 134, "active_personnel": 10000, "reserve_personnel": 0,
+      "total_personnel": 11000, "defense_budget_usd": 45000000
+    }
+  },
+  "TD": {
+    "id": "TD",
+    "names": { "tr": "Çad", "en": "Chad" },
+    "codes": { "alpha2": "TD", "alpha3": "TCD" },
+    "general_info": {
+      "description_tr": "Orta Afrika'da, Sahra Çölü'nün bir kısmını kaplayan ve denize kıyısı olmayan bir ülkedir.",
+      "description_en": "A landlocked country in north-central Africa, often called the 'Dead Heart of Africa'.",
+      "flag_url": "assets/flags/td.svg", "intelligence_agency": "ANS"
+    },
+    "geography": {
+      "capital_tr": "N'Djamena", "capital_en": "N'Djamena",
+      "continent_tr": "Afrika", "continent_en": "Africa",
+      "area_sq_km": 1284000, "timezone": "UTC+01:00"
+    },
+    "politics": {
+      "government_tr": "Başkanlık Sistemi (Geçiş Dönemi)", "government_en": "Presidential Republic (Transitional)",
+      "independence_date": "1960-08-11"
+    },
+    "economy": {
+      "gdp_usd": 13000000000, "gdp_growth_rate": 3.1, "gdp_per_capita_usd": 720,
+      "inflation_rate": 4.0, "minimum_wage_usd": 100, "unemployment_rate": 1.4, "currency": "Orta Afrika CFA Frangı"
+    },
+    "demographics": {
+      "total_population": 18000000, "life_expectancy": 54.0, "birth_rate": 5.2, "most_spoken_language": "Fransızca / Arapça",
+      "population_pyramid": []
+    },
+    "military": {
+      "global_firepower_rank": 93, "active_personnel": 35000, "reserve_personnel": 0,
+      "total_personnel": 45000, "defense_budget_usd": 320000000
+    }
+  },
+  "CL": {
+    "id": "CL",
+    "names": { "tr": "Şili", "en": "Chile" },
+    "codes": { "alpha2": "CL", "alpha3": "CHL" },
+    "general_info": {
+      "description_tr": "Güney Amerika'nın batı kıyısında yer alan, uzun ve dar bir kıyı şeridine sahip ülkedir.",
+      "description_en": "A long, narrow country stretching along South America's western edge.",
+      "flag_url": "assets/flags/cl.svg", "intelligence_agency": "ANI"
+    },
+    "geography": {
+      "capital_tr": "Santiago", "capital_en": "Santiago",
+      "continent_tr": "Güney Amerika", "continent_en": "South America",
+      "area_sq_km": 756102, "timezone": "UTC-03:00"
+    },
+    "politics": {
+      "government_tr": "Başkanlık Sistemi", "government_en": "Presidential Republic",
+      "independence_date": "1810-09-18"
+    },
+    "economy": {
+      "gdp_usd": 330000000000, "gdp_growth_rate": 2.5, "gdp_per_capita_usd": 17000,
+      "inflation_rate": 4.3, "minimum_wage_usd": 500, "unemployment_rate": 8.5, "currency": "Şili Pesosu"
+    },
+    "demographics": {
+      "total_population": 19600000, "life_expectancy": 80.0, "birth_rate": 1.1, "most_spoken_language": "İspanyolca",
+      "population_pyramid": []
+    },
+    "military": {
+      "global_firepower_rank": 53, "active_personnel": 77000, "reserve_personnel": 40000,
+      "total_personnel": 162000, "defense_budget_usd": 5500000000
+    }
+  },
+  "CN": {
+    "id": "CN",
+    "names": { "tr": "Çin", "en": "China" },
+    "codes": { "alpha2": "CN", "alpha3": "CHN" },
+    "general_info": {
+      "description_tr": "Doğu Asya'da yer alan, dünyanın en kalabalık ikinci ülkesi ve büyük bir ekonomik güçtür.",
+      "description_en": "The world's second most populous country, located in East Asia.",
+      "flag_url": "assets/flags/cn.svg", "intelligence_agency": "MSS"
+    },
+    "geography": {
+      "capital_tr": "Pekin", "capital_en": "Beijing",
+      "continent_tr": "Asya", "continent_en": "Asia",
+      "area_sq_km": 9596961, "timezone": "UTC+08:00"
+    },
+    "politics": {
+      "government_tr": "Tek Partili Sosyalist Cumhuriyet", "government_en": "One-party Socialist Republic",
+      "independence_date": "1949-10-01"
+    },
+    "economy": {
+      "gdp_usd": 18500000000000, "gdp_growth_rate": 4.5, "gdp_per_capita_usd": 13000,
+      "inflation_rate": 0.5, "minimum_wage_usd": 350, "unemployment_rate": 5.2, "currency": "Çin Yuanı"
+    },
+    "demographics": {
+      "total_population": 1411000000, "life_expectancy": 78.0, "birth_rate": 1.0, "most_spoken_language": "Mandarin",
+      "population_pyramid": []
+    },
+    "military": {
+      "global_firepower_rank": 3, "active_personnel": 2000000, "reserve_personnel": 510000,
+      "total_personnel": 3135000, "defense_budget_usd": 236000000000
+    }
+  },
+  "CO": {
+    "id": "CO",
+    "names": { "tr": "Kolombiya", "en": "Colombia" },
+    "codes": { "alpha2": "CO", "alpha3": "COL" },
+    "general_info": {
+      "description_tr": "Güney Amerika'nın kuzey ucunda yer alan, biyolojik çeşitliliği yüksek ve kahve üretimiyle ünlü bir ülkedir.",
+      "description_en": "A country at the northern tip of South America, known for its coffee and biodiversity.",
+      "flag_url": "assets/flags/co.svg", "intelligence_agency": "DNI"
+    },
+    "geography": {
+      "capital_tr": "Bogota", "capital_en": "Bogota",
+      "continent_tr": "Güney Amerika", "continent_en": "South America",
+      "area_sq_km": 1141748, "timezone": "UTC-05:00"
+    },
+    "politics": {
+      "government_tr": "Başkanlık Sistemi", "government_en": "Presidential Republic",
+      "independence_date": "1810-07-20"
+    },
+    "economy": {
+      "gdp_usd": 365000000000, "gdp_growth_rate": 2.5, "gdp_per_capita_usd": 6900,
+      "inflation_rate": 5.5, "minimum_wage_usd": 300, "unemployment_rate": 10.0, "currency": "Kolombiya Pesosu"
+    },
+    "demographics": {
+      "total_population": 52000000, "life_expectancy": 77.0, "birth_rate": 1.6, "most_spoken_language": "İspanyolca",
+      "population_pyramid": []
+    },
+    "military": {
+      "global_firepower_rank": 44, "active_personnel": 255000, "reserve_personnel": 30000,
+      "total_personnel": 450000, "defense_budget_usd": 11000000000
+    }
+  },
+  "KM": {
+    "id": "KM",
+    "names": { "tr": "Komorlar", "en": "Comoros" },
+    "codes": { "alpha2": "KM", "alpha3": "COM" },
+    "general_info": {
+      "description_tr": "Doğu Afrika kıyısında, Hint Okyanusu'nda yer alan volkanik bir ada ülkesidir.",
+      "description_en": "A volcanic archipelago off Africa’s east coast, in the warm Indian Ocean.",
+      "flag_url": "assets/flags/km.svg", "intelligence_agency": "DNST"
+    },
+    "geography": {
+      "capital_tr": "Moroni", "capital_en": "Moroni",
+      "continent_tr": "Afrika", "continent_en": "Africa",
+      "area_sq_km": 1862, "timezone": "UTC+03:00"
+    },
+    "politics": {
+      "government_tr": "Federal Cumhuriyet", "government_en": "Federal Republic",
+      "independence_date": "1975-07-06"
+    },
+    "economy": {
+      "gdp_usd": 1350000000, "gdp_growth_rate": 3.4, "gdp_per_capita_usd": 1600,
+      "inflation_rate": 5.0, "minimum_wage_usd": 120, "unemployment_rate": 8.5, "currency": "Komor Frangı"
+    },
+    "demographics": {
+      "total_population": 850000, "life_expectancy": 64.0, "birth_rate": 3.8, "most_spoken_language": "Komorca / Fransızca",
+      "population_pyramid": []
+    },
+    "military": {
+      "global_firepower_rank": 0, "active_personnel": 500, "reserve_personnel": 0,
+      "total_personnel": 500, "defense_budget_usd": 15000000
+    }
+  },
+  "CD": {
+    "id": "CD",
+    "names": { "tr": "Demokratik Kongo Cumhuriyeti", "en": "Democratic Republic of the Congo" },
+    "codes": { "alpha2": "CD", "alpha3": "COD" },
+    "general_info": {
+      "description_tr": "Orta Afrika'da yer alan, yüzölçümü bakımından Afrika'nın en büyük ikinci ülkesidir.",
+      "description_en": "The second-largest country in Africa, located in Central Africa, rich in natural resources.",
+      "flag_url": "assets/flags/cd.svg", "intelligence_agency": "ANR"
+    },
+    "geography": {
+      "capital_tr": "Kinşasa", "capital_en": "Kinshasa",
+      "continent_tr": "Afrika", "continent_en": "Africa",
+      "area_sq_km": 2344858, "timezone": "UTC+01:00"
+    },
+    "politics": {
+      "government_tr": "Yarı Başkanlık Sistemi", "government_en": "Semi-Presidential Republic",
+      "independence_date": "1960-06-30"
+    },
+    "economy": {
+      "gdp_usd": 73000000000, "gdp_growth_rate": 5.1, "gdp_per_capita_usd": 700,
+      "inflation_rate": 17.7, "minimum_wage_usd": 50, "unemployment_rate": 5.0, "currency": "Kongo Frangı"
+    },
+    "demographics": {
+      "total_population": 102000000, "life_expectancy": 60.0, "birth_rate": 5.5, "most_spoken_language": "Fransızca",
+      "population_pyramid": []
+    },
+    "military": {
+      "global_firepower_rank": 73, "active_personnel": 135000, "reserve_personnel": 0,
+      "total_personnel": 145000, "defense_budget_usd": 750000000
+    }
+  },
+  "CG": {
+    "id": "CG",
+    "names": { "tr": "Kongo Cumhuriyeti", "en": "Republic of the Congo" },
+    "codes": { "alpha2": "CG", "alpha3": "COG" },
+    "general_info": {
+      "description_tr": "Orta Afrika'da, Kongo Nehri kıyısında yer alan, petrol rezervleri olan bir ülkedir.",
+      "description_en": "A country in Central Africa, bordered by the Congo River and known for its rainforests.",
+      "flag_url": "assets/flags/cg.svg", "intelligence_agency": "DGST"
+    },
+    "geography": {
+      "capital_tr": "Brazzavil", "capital_en": "Brazzaville",
+      "continent_tr": "Afrika", "continent_en": "Africa",
+      "area_sq_km": 342000, "timezone": "UTC+01:00"
+    },
+    "politics": {
+      "government_tr": "Başkanlık Sistemi", "government_en": "Presidential Republic",
+      "independence_date": "1960-08-15"
+    },
+    "economy": {
+      "gdp_usd": 15000000000, "gdp_growth_rate": 2.8, "gdp_per_capita_usd": 2500,
+      "inflation_rate": 3.6, "minimum_wage_usd": 150, "unemployment_rate": 10.0, "currency": "Orta Afrika CFA Frangı"
+    },
+    "demographics": {
+      "total_population": 6000000, "life_expectancy": 64.0, "birth_rate": 3.8, "most_spoken_language": "Fransızca",
+      "population_pyramid": []
+    },
+    "military": {
+      "global_firepower_rank": 119, "active_personnel": 12000, "reserve_personnel": 0,
+      "total_personnel": 14000, "defense_budget_usd": 350000000
+    }
+  },
+  "CR": {
+    "id": "CR",
+    "names": { "tr": "Kosta Rika", "en": "Costa Rica" },
+    "codes": { "alpha2": "CR", "alpha3": "CRI" },
+    "general_info": {
+      "description_tr": "Orta Amerika'da, ordusu olmayan ve çevre koruma politikalarıyla tanınan bir ülkedir.",
+      "description_en": "A rugged, rainforested Central American country with coastlines on the Caribbean and Pacific.",
+      "flag_url": "assets/flags/cr.svg", "intelligence_agency": "DIS"
+    },
+    "geography": {
+      "capital_tr": "San Jose", "capital_en": "San Jose",
+      "continent_tr": "Kuzey Amerika", "continent_en": "North America",
+      "area_sq_km": 51100, "timezone": "UTC-06:00"
+    },
+    "politics": {
+      "government_tr": "Başkanlık Sistemi", "government_en": "Presidential Republic",
+      "independence_date": "1821-09-15"
+    },
+    "economy": {
+      "gdp_usd": 75000000000, "gdp_growth_rate": 3.6, "gdp_per_capita_usd": 14000,
+      "inflation_rate": 0.4, "minimum_wage_usd": 600, "unemployment_rate": 7.8, "currency": "Kosta Rika Kolonu"
+    },
+    "demographics": {
+      "total_population": 5200000, "life_expectancy": 80.0, "birth_rate": 1.3, "most_spoken_language": "İspanyolca",
+      "population_pyramid": []
+    },
+    "military": {
+      "global_firepower_rank": 0, "active_personnel": 0, "reserve_personnel": 0,
+      "total_personnel": 0, "defense_budget_usd": 0
+    }
+  },
+  "CI": {
+    "id": "CI",
+    "names": { "tr": "Fildişi Sahili", "en": "Cote d'Ivoire" },
+    "codes": { "alpha2": "CI", "alpha3": "CIV" },
+    "general_info": {
+      "description_tr": "Batı Afrika'da, dünyanın en büyük kakao üreticisi olan ve plajlarıyla tanınan bir ülkedir.",
+      "description_en": "A West African country with beach resorts, rainforests and a French-colonial legacy.",
+      "flag_url": "assets/flags/ci.svg", "intelligence_agency": "CNS"
+    },
+    "geography": {
+      "capital_tr": "Yamoussoukro", "capital_en": "Yamoussoukro",
+      "continent_tr": "Afrika", "continent_en": "Africa",
+      "area_sq_km": 322463, "timezone": "UTC+00:00"
+    },
+    "politics": {
+      "government_tr": "Başkanlık Sistemi", "government_en": "Presidential Republic",
+      "independence_date": "1960-08-07"
+    },
+    "economy": {
+      "gdp_usd": 86000000000, "gdp_growth_rate": 6.2, "gdp_per_capita_usd": 2700,
+      "inflation_rate": 3.5, "minimum_wage_usd": 120, "unemployment_rate": 2.5, "currency": "Batı Afrika CFA Frangı"
+    },
+    "demographics": {
+      "total_population": 29200000, "life_expectancy": 59.0, "birth_rate": 3.4, "most_spoken_language": "Fransızca",
+      "population_pyramid": []
+    },
+    "military": {
+      "global_firepower_rank": 102, "active_personnel": 25000, "reserve_personnel": 0,
+      "total_personnel": 29000, "defense_budget_usd": 950000000
+    }
+  },
+  "HR": {
+    "id": "HR",
+    "names": { "tr": "Hırvatistan", "en": "Croatia" },
+    "codes": { "alpha2": "HR", "alpha3": "HRV" },
+    "general_info": {
+      "description_tr": "Adriyatik Denizi kıyısında, binlerce adası ve ortaçağ kentleriyle ünlü bir Avrupa ülkesidir.",
+      "description_en": "A country at the crossroads of Central and Southeast Europe on the Adriatic Sea.",
+      "flag_url": "assets/flags/hr.svg", "intelligence_agency": "SOA"
+    },
+    "geography": {
+      "capital_tr": "Zagreb", "capital_en": "Zagreb",
+      "continent_tr": "Avrupa", "continent_en": "Europe",
+      "area_sq_km": 56594, "timezone": "UTC+01:00"
+    },
+    "politics": {
+      "government_tr": "Parlamenter Cumhuriyet", "government_en": "Parliamentary Republic",
+      "independence_date": "1991-06-25"
+    },
+    "economy": {
+      "gdp_usd": 80000000000, "gdp_growth_rate": 3.2, "gdp_per_capita_usd": 20000,
+      "inflation_rate": 4.3, "minimum_wage_usd": 840, "unemployment_rate": 4.7, "currency": "Euro"
+    },
+    "demographics": {
+      "total_population": 3850000, "life_expectancy": 78.0, "birth_rate": 1.5, "most_spoken_language": "Hırvatça",
+      "population_pyramid": []
+    },
+    "military": {
+      "global_firepower_rank": 66, "active_personnel": 15000, "reserve_personnel": 20000,
+      "total_personnel": 37000, "defense_budget_usd": 1200000000
+    }
+  },
+  "CU": {
+    "id": "CU",
+    "names": { "tr": "Küba", "en": "Cuba" },
+    "codes": { "alpha2": "CU", "alpha3": "CUB" },
+    "general_info": {
+      "description_tr": "Karayipler'de yer alan, zengin kültürü ve tarihi ile bilinen sosyalist bir ada ülkesidir.",
+      "description_en": "An island nation in the Caribbean Sea, known for its communist rule and white-sand beaches.",
+      "flag_url": "assets/flags/cu.svg", "intelligence_agency": "DI"
+    },
+    "geography": {
+      "capital_tr": "Havana", "capital_en": "Havana",
+      "continent_tr": "Kuzey Amerika", "continent_en": "North America",
+      "area_sq_km": 109884, "timezone": "UTC-05:00"
+    },
+    "politics": {
+      "government_tr": "Sosyalist Cumhuriyet", "government_en": "Socialist Republic",
+      "independence_date": "1902-05-20"
+    },
+    "economy": {
+      "gdp_usd": 107000000000, "gdp_growth_rate": 1.5, "gdp_per_capita_usd": 9500,
+      "inflation_rate": 30.0, "minimum_wage_usd": 87, "unemployment_rate": 2.8, "currency": "Küba Pesosu"
+    },
+    "demographics": {
+      "total_population": 11000000, "life_expectancy": 79.0, "birth_rate": 1.4, "most_spoken_language": "İspanyolca",
+      "population_pyramid": []
+    },
+    "military": {
+      "global_firepower_rank": 69, "active_personnel": 45000, "reserve_personnel": 1145000,
+      "total_personnel": 1190000, "defense_budget_usd": 280000000
+    }
+  },
+  "CY": {
+    "id": "CY",
+    "names": { "tr": "Kıbrıs Cumhuriyeti", "en": "Cyprus" },
+    "codes": { "alpha2": "CY", "alpha3": "CYP" },
+    "general_info": {
+      "description_tr": "Doğu Akdeniz'de yer alan, tarihi ve turistik öneme sahip bir ada ülkesidir.",
+      "description_en": "An island country in the Eastern Mediterranean and the third largest and third most populous island in the Mediterranean.",
+      "flag_url": "assets/flags/cy.svg", "intelligence_agency": "KYP"
+    },
+    "geography": {
+      "capital_tr": "Lefkoşa", "capital_en": "Nicosia",
+      "continent_tr": "Avrupa", "continent_en": "Europe",
+      "area_sq_km": 9251, "timezone": "UTC+02:00"
+    },
+    "politics": {
+      "government_tr": "Başkanlık Sistemi", "government_en": "Presidential Republic",
+      "independence_date": "1960-08-16"
+    },
+    "economy": {
+      "gdp_usd": 30000000000, "gdp_growth_rate": 3.3, "gdp_per_capita_usd": 32000,
+      "inflation_rate": 1.7, "minimum_wage_usd": 940, "unemployment_rate": 6.0, "currency": "Euro"
+    },
+    "demographics": {
+      "total_population": 1250000, "life_expectancy": 81.0, "birth_rate": 1.3, "most_spoken_language": "Yunanca / Türkçe",
+      "population_pyramid": []
+    },
+    "military": {
+      "global_firepower_rank": 0, "active_personnel": 12000, "reserve_personnel": 50000,
+      "total_personnel": 62000, "defense_budget_usd": 500000000
+    }
+  },
+  "CZ": {
+    "id": "CZ",
+    "names": { "tr": "Çekya", "en": "Czechia" },
+    "codes": { "alpha2": "CZ", "alpha3": "CZE" },
+    "general_info": {
+      "description_tr": "Orta Avrupa'da, tarihi kaleleri ve bira kültürüyle tanınan denize kıyısı olmayan bir ülkedir.",
+      "description_en": "A landlocked country in Central Europe known for its ornate castles, native beers and long history.",
+      "flag_url": "assets/flags/cz.svg", "intelligence_agency": "BIS"
+    },
+    "geography": {
+      "capital_tr": "Prag", "capital_en": "Prague",
+      "continent_tr": "Avrupa", "continent_en": "Europe",
+      "area_sq_km": 78867, "timezone": "UTC+01:00"
+    },
+    "politics": {
+      "government_tr": "Parlamenter Cumhuriyet", "government_en": "Parliamentary Republic",
+      "independence_date": "1993-01-01"
+    },
+    "economy": {
+      "gdp_usd": 330000000000, "gdp_growth_rate": 2.3, "gdp_per_capita_usd": 29000,
+      "inflation_rate": 2.3, "minimum_wage_usd": 800, "unemployment_rate": 2.6, "currency": "Çek Korunası"
+    },
+    "demographics": {
+      "total_population": 10800000, "life_expectancy": 79.0, "birth_rate": 1.5, "most_spoken_language": "Çekçe",
+      "population_pyramid": []
+    },
+    "military": {
+      "global_firepower_rank": 47, "active_personnel": 27000, "reserve_personnel": 4000,
+      "total_personnel": 31000, "defense_budget_usd": 4500000000
+    }
+  },
+  "DK": {
+    "id": "DK",
+    "names": { "tr": "Danimarka", "en": "Denmark" },
+    "codes": { "alpha2": "DK", "alpha3": "DNK" },
+    "general_info": {
+      "description_tr": "İskandinavya'nın güneyinde, düz arazileri ve güçlü sosyal refah sistemiyle bilinen bir ülkedir.",
+      "description_en": "A Scandinavian country comprising the Jutland Peninsula and numerous islands.",
+      "flag_url": "assets/flags/dk.svg", "intelligence_agency": "PET"
+    },
+    "geography": {
+      "capital_tr": "Kopenhag", "capital_en": "Copenhagen",
+      "continent_tr": "Avrupa", "continent_en": "Europe",
+      "area_sq_km": 42933, "timezone": "UTC+01:00"
+    },
+    "politics": {
+      "government_tr": "Parlamenter Monarşi", "government_en": "Parliamentary Constitutional Monarchy",
+      "independence_date": "958"
+    },
+    "economy": {
+      "gdp_usd": 410000000000, "gdp_growth_rate": 3.0, "gdp_per_capita_usd": 68000,
+      "inflation_rate": 1.9, "minimum_wage_usd": 0, "unemployment_rate": 4.8, "currency": "Danimarka Kronu"
+    },
+    "demographics": {
+      "total_population": 5900000, "life_expectancy": 81.0, "birth_rate": 1.5, "most_spoken_language": "Danca",
+      "population_pyramid": []
+    },
+    "military": {
+      "global_firepower_rank": 54, "active_personnel": 15000, "reserve_personnel": 45000,
+      "total_personnel": 60000, "defense_budget_usd": 5000000000
+    }
+  },
+  "DJ": {
+    "id": "DJ",
+    "names": { "tr": "Cibuti", "en": "Djibouti" },
+    "codes": { "alpha2": "DJ", "alpha3": "DJI" },
+    "general_info": {
+      "description_tr": "Doğu Afrika'da, Kızıldeniz'in girişinde stratejik bir konuma sahip küçük bir ülkedir.",
+      "description_en": "A country located in the Horn of Africa, known for its strategic location near the Red Sea.",
+      "flag_url": "assets/flags/dj.svg", "intelligence_agency": "SRD"
+    },
+    "geography": {
+      "capital_tr": "Cibuti", "capital_en": "Djibouti",
+      "continent_tr": "Afrika", "continent_en": "Africa",
+      "area_sq_km": 23200, "timezone": "UTC+03:00"
+    },
+    "politics": {
+      "government_tr": "Başkanlık Sistemi", "government_en": "Presidential Republic",
+      "independence_date": "1977-06-27"
+    },
+    "economy": {
+      "gdp_usd": 4000000000, "gdp_growth_rate": 6.0, "gdp_per_capita_usd": 3800,
+      "inflation_rate": 1.6, "minimum_wage_usd": 250, "unemployment_rate": 11.0, "currency": "Cibuti Frangı"
+    },
+    "demographics": {
+      "total_population": 1100000, "life_expectancy": 67.0, "birth_rate": 2.6, "most_spoken_language": "Fransızca / Arapça",
+      "population_pyramid": []
+    },
+    "military": {
+      "global_firepower_rank": 0, "active_personnel": 10000, "reserve_personnel": 0,
+      "total_personnel": 10000, "defense_budget_usd": 60000000
+    }
+  },
+  "DM": {
+    "id": "DM",
+    "names": { "tr": "Dominika", "en": "Dominica" },
+    "codes": { "alpha2": "DM", "alpha3": "DMA" },
+    "general_info": {
+      "description_tr": "Karayipler'de, doğal kaplıcaları ve yağmur ormanlarıyla 'Doğa Adası' olarak bilinen ülkedir.",
+      "description_en": "A mountainous Caribbean island nation with natural hot springs and tropical rainforests.",
+      "flag_url": "assets/flags/dm.svg", "intelligence_agency": "N/A"
+    },
+    "geography": {
+      "capital_tr": "Roseau", "capital_en": "Roseau",
+      "continent_tr": "Kuzey Amerika", "continent_en": "North America",
+      "area_sq_km": 751, "timezone": "UTC-04:00"
+    },
+    "politics": {
+      "government_tr": "Parlamenter Cumhuriyet", "government_en": "Parliamentary Republic",
+      "independence_date": "1978-11-03"
+    },
+    "economy": {
+      "gdp_usd": 650000000, "gdp_growth_rate": 4.2, "gdp_per_capita_usd": 8500,
+      "inflation_rate": 2.1, "minimum_wage_usd": 500, "unemployment_rate": 23.0, "currency": "Doğu Karayip Doları"
+    },
+    "demographics": {
+      "total_population": 73000, "life_expectancy": 77.0, "birth_rate": 1.5, "most_spoken_language": "İngilizce",
+      "population_pyramid": []
+    },
+    "military": {
+      "global_firepower_rank": 0, "active_personnel": 0, "reserve_personnel": 0,
+      "total_personnel": 0, "defense_budget_usd": 0
+    }
+  },
+  "DO": {
+    "id": "DO",
+    "names": { "tr": "Dominik Cumhuriyeti", "en": "Dominican Republic" },
+    "codes": { "alpha2": "DO", "alpha3": "DOM" },
+    "general_info": {
+      "description_tr": "Hispaniola adasında yer alan, plajları ve tatil köyleriyle ünlü bir Karayip ülkesidir.",
+      "description_en": "A Caribbean nation that shares the island of Hispaniola with Haiti to the west.",
+      "flag_url": "assets/flags/do.svg", "intelligence_agency": "DNI"
+    },
+    "geography": {
+      "capital_tr": "Santo Domingo", "capital_en": "Santo Domingo",
+      "continent_tr": "Kuzey Amerika", "continent_en": "North America",
+      "area_sq_km": 48671, "timezone": "UTC-04:00"
+    },
+    "politics": {
+      "government_tr": "Başkanlık Sistemi", "government_en": "Presidential Republic",
+      "independence_date": "1844-02-27"
+    },
+    "economy": {
+      "gdp_usd": 120000000000, "gdp_growth_rate": 3.0, "gdp_per_capita_usd": 11000,
+      "inflation_rate": 3.6, "minimum_wage_usd": 350, "unemployment_rate": 5.8, "currency": "Dominik Pesosu"
+    },
+    "demographics": {
+      "total_population": 11300000, "life_expectancy": 74.0, "birth_rate": 2.2, "most_spoken_language": "İspanyolca",
+      "population_pyramid": []
+    },
+    "military": {
+      "global_firepower_rank": 124, "active_personnel": 50000, "reserve_personnel": 0,
+      "total_personnel": 80000, "defense_budget_usd": 660000000
+    }
   }
+},
+
+{
+  "EC": {
+    "id": "EC",
+    "names": {
+      "tr": "Ekvador",
+      "en": "Ecuador"
+    },
+    "codes": {
+      "alpha2": "EC",
+      "alpha3": "ECU"
+    },
+    "general_info": {
+      "description_tr": "Güney Amerika'nın kuzeybatısında, Amazon ormanları ve Galapagos Adaları'na ev sahipliği yapan bir ülkedir.",
+      "description_en": "A country straddling the equator on South America’s west coast, encompassing the Galápagos Islands.",
+      "flag_url": "assets/flags/ec.svg",
+      "intelligence_agency": "CIES"
+    },
+    "geography": {
+      "capital_tr": "Kito",
+      "capital_en": "Quito",
+      "continent_tr": "Güney Amerika",
+      "continent_en": "South America",
+      "area_sq_km": 283561,
+      "timezone": "UTC-05:00"
+    },
+    "politics": {
+      "government_tr": "Başkanlık Sistemi",
+      "government_en": "Presidential Republic",
+      "independence_date": "1822-05-24"
+    },
+    "economy": {
+      "gdp_usd": 130000000000,
+      "gdp_growth_rate": 2.0,
+      "gdp_per_capita_usd": 6700,
+      "inflation_rate": 1.1,
+      "minimum_wage_usd": 460,
+      "unemployment_rate": 4.0,
+      "currency": "Amerikan Doları"
+    },
+    "demographics": {
+      "total_population": 18300000,
+      "life_expectancy": 77.0,
+      "birth_rate": 1.8,
+      "most_spoken_language": "İspanyolca",
+      "population_pyramid": []
+    },
+    "military": {
+      "global_firepower_rank": 65,
+      "active_personnel": 41250,
+      "reserve_personnel": 118000,
+      "total_personnel": 160750,
+      "defense_budget_usd": 2376000000
+    }
+  },
+  "EG": {
+    "id": "EG",
+    "names": {
+      "tr": "Mısır",
+      "en": "Egypt"
+    },
+    "codes": {
+      "alpha2": "EG",
+      "alpha3": "EGY"
+    },
+    "general_info": {
+      "description_tr": "Kuzey Afrika'da yer alan, antik medeniyetleri ve piramitleriyle ünlü tarihi bir ülkedir.",
+      "description_en": "A country linking northeast Africa with the Middle East, dates to the time of the pharaohs.",
+      "flag_url": "assets/flags/eg.svg",
+      "intelligence_agency": "GIS"
+    },
+    "geography": {
+      "capital_tr": "Kahire",
+      "capital_en": "Cairo",
+      "continent_tr": "Afrika",
+      "continent_en": "Africa",
+      "area_sq_km": 1001450,
+      "timezone": "UTC+02:00"
+    },
+    "politics": {
+      "government_tr": "Yarı Başkanlık Sistemi",
+      "government_en": "Semi-Presidential Republic",
+      "independence_date": "1922-02-28"
+    },
+    "economy": {
+      "gdp_usd": 380000000000,
+      "gdp_growth_rate": 3.8,
+      "gdp_per_capita_usd": 3700,
+      "inflation_rate": 20.4,
+      "minimum_wage_usd": 100,
+      "unemployment_rate": 7.0,
+      "currency": "Mısır Lirası"
+    },
+    "demographics": {
+      "total_population": 111200000,
+      "life_expectancy": 72.0,
+      "birth_rate": 2.7,
+      "most_spoken_language": "Arapça",
+      "population_pyramid": []
+    },
+    "military": {
+      "global_firepower_rank": 19,
+      "active_personnel": 440000,
+      "reserve_personnel": 480000,
+      "total_personnel": 1220000,
+      "defense_budget_usd": 5879500000
+    }
+  },
+  "SV": {
+    "id": "SV",
+    "names": {
+      "tr": "El Salvador",
+      "en": "El Salvador"
+    },
+    "codes": {
+      "alpha2": "SV",
+      "alpha3": "SLV"
+    },
+    "general_info": {
+      "description_tr": "Orta Amerika'nın en küçük ve en yoğun nüfuslu ülkesidir, volkanları ve plajlarıyla bilinir.",
+      "description_en": "A small Central American nation known for its Pacific Ocean beaches and surf spots.",
+      "flag_url": "assets/flags/sv.svg",
+      "intelligence_agency": "OIE"
+    },
+    "geography": {
+      "capital_tr": "San Salvador",
+      "capital_en": "San Salvador",
+      "continent_tr": "Kuzey Amerika",
+      "continent_en": "North America",
+      "area_sq_km": 21041,
+      "timezone": "UTC-06:00"
+    },
+    "politics": {
+      "government_tr": "Başkanlık Sistemi",
+      "government_en": "Presidential Republic",
+      "independence_date": "1821-09-15"
+    },
+    "economy": {
+      "gdp_usd": 35300000000,
+      "gdp_growth_rate": 3.5,
+      "gdp_per_capita_usd": 5400,
+      "inflation_rate": 0.3,
+      "minimum_wage_usd": 365,
+      "unemployment_rate": 6.0,
+      "currency": "Amerikan Doları"
+    },
+    "demographics": {
+      "total_population": 6300000,
+      "life_expectancy": 73.0,
+      "birth_rate": 1.8,
+      "most_spoken_language": "İspanyolca",
+      "population_pyramid": []
+    },
+    "military": {
+      "global_firepower_rank": 128,
+      "active_personnel": 25000,
+      "reserve_personnel": 25000,
+      "total_personnel": 50000,
+      "defense_budget_usd": 290000000
+    }
+  },
+  "GQ": {
+    "id": "GQ",
+    "names": {
+      "tr": "Ekvator Ginesi",
+      "en": "Equatorial Guinea"
+    },
+    "codes": {
+      "alpha2": "GQ",
+      "alpha3": "GNQ"
+    },
+    "general_info": {
+      "description_tr": "Orta Afrika'da yer alan, zengin petrol rezervlerine sahip küçük bir ülkedir.",
+      "description_en": "A Central African country comprising the Rio Muni mainland and 5 volcanic offshore islands.",
+      "flag_url": "assets/flags/gq.svg",
+      "intelligence_agency": "N/A"
+    },
+    "geography": {
+      "capital_tr": "Malabo",
+      "capital_en": "Malabo",
+      "continent_tr": "Afrika",
+      "continent_en": "Africa",
+      "area_sq_km": 28051,
+      "timezone": "UTC+01:00"
+    },
+    "politics": {
+      "government_tr": "Başkanlık Sistemi",
+      "government_en": "Presidential Republic",
+      "independence_date": "1968-10-12"
+    },
+    "economy": {
+      "gdp_usd": 12000000000,
+      "gdp_growth_rate": -5.1,
+      "gdp_per_capita_usd": 7500,
+      "inflation_rate": 2.9,
+      "minimum_wage_usd": 220,
+      "unemployment_rate": 9.0,
+      "currency": "Orta Afrika CFA Frangı"
+    },
+    "demographics": {
+      "total_population": 1700000,
+      "life_expectancy": 60.0,
+      "birth_rate": 4.1,
+      "most_spoken_language": "İspanyolca / Fransızca",
+      "population_pyramid": []
+    },
+    "military": {
+      "global_firepower_rank": 141,
+      "active_personnel": 1450,
+      "reserve_personnel": 0,
+      "total_personnel": 1450,
+      "defense_budget_usd": 100000000
+    }
+  },
+  "ER": {
+    "id": "ER",
+    "names": {
+      "tr": "Eritre",
+      "en": "Eritrea"
+    },
+    "codes": {
+      "alpha2": "ER",
+      "alpha3": "ERI"
+    },
+    "general_info": {
+      "description_tr": "Kızıldeniz kıyısında, Afrika Boynuzu'nda yer alan ve kapalı bir ekonomiye sahip ülkedir.",
+      "description_en": "A northeast African country on the Red Sea coast.",
+      "flag_url": "assets/flags/er.svg",
+      "intelligence_agency": "NS"
+    },
+    "geography": {
+      "capital_tr": "Asmara",
+      "capital_en": "Asmara",
+      "continent_tr": "Afrika",
+      "continent_en": "Africa",
+      "area_sq_km": 117600,
+      "timezone": "UTC+03:00"
+    },
+    "politics": {
+      "government_tr": "Tek Partili Başkanlık Cumhuriyeti",
+      "government_en": "Unitary One-party Presidential Republic",
+      "independence_date": "1993-05-24"
+    },
+    "economy": {
+      "gdp_usd": 2600000000,
+      "gdp_growth_rate": 2.6,
+      "gdp_per_capita_usd": 700,
+      "inflation_rate": 5.0,
+      "minimum_wage_usd": 0,
+      "unemployment_rate": 6.5,
+      "currency": "Eritre Nakfası"
+    },
+    "demographics": {
+      "total_population": 3700000,
+      "life_expectancy": 67.0,
+      "birth_rate": 3.7,
+      "most_spoken_language": "Tigrinya / Arapça",
+      "population_pyramid": []
+    },
+    "military": {
+      "global_firepower_rank": 126,
+      "active_personnel": 200000,
+      "reserve_personnel": 120000,
+      "total_personnel": 320000,
+      "defense_budget_usd": 100000000
+    }
+  },
+  "EE": {
+    "id": "EE",
+    "names": {
+      "tr": "Estonya",
+      "en": "Estonia"
+    },
+    "codes": {
+      "alpha2": "EE",
+      "alpha3": "EST"
+    },
+    "general_info": {
+      "description_tr": "Kuzey Avrupa'da, dijitalleşme ve e-devlet uygulamalarında öncü bir Baltık ülkesidir.",
+      "description_en": "A country in Northern Europe, bordering the Baltic Sea and Gulf of Finland.",
+      "flag_url": "assets/flags/ee.svg",
+      "intelligence_agency": "KAPO"
+    },
+    "geography": {
+      "capital_tr": "Tallinn",
+      "capital_en": "Tallinn",
+      "continent_tr": "Avrupa",
+      "continent_en": "Europe",
+      "area_sq_km": 45227,
+      "timezone": "UTC+02:00"
+    },
+    "politics": {
+      "government_tr": "Parlamenter Cumhuriyet",
+      "government_en": "Parliamentary Republic",
+      "independence_date": "1991-08-20"
+    },
+    "economy": {
+      "gdp_usd": 42000000000,
+      "gdp_growth_rate": -2.7,
+      "gdp_per_capita_usd": 30900,
+      "inflation_rate": 5.1,
+      "minimum_wage_usd": 820,
+      "unemployment_rate": 6.9,
+      "currency": "Euro"
+    },
+    "demographics": {
+      "total_population": 1360000,
+      "life_expectancy": 78.0,
+      "birth_rate": 1.3,
+      "most_spoken_language": "Estonca",
+      "population_pyramid": []
+    },
+    "military": {
+      "global_firepower_rank": 87,
+      "active_personnel": 7700,
+      "reserve_personnel": 230000,
+      "total_personnel": 277700,
+      "defense_budget_usd": 1400000000
+    }
+  },
+  "SZ": {
+    "id": "SZ",
+    "names": {
+      "tr": "Esvatini",
+      "en": "Eswatini"
+    },
+    "codes": {
+      "alpha2": "SZ",
+      "alpha3": "SWZ"
+    },
+    "general_info": {
+      "description_tr": "Güney Afrika'da, eski adıyla Svaziland olarak bilinen küçük bir monarşidir.",
+      "description_en": "A small, landlocked monarchy in Southern Africa, known for its wilderness reserves.",
+      "flag_url": "assets/flags/sz.svg",
+      "intelligence_agency": "N/A"
+    },
+    "geography": {
+      "capital_tr": "Mbabane",
+      "capital_en": "Mbabane",
+      "continent_tr": "Afrika",
+      "continent_en": "Africa",
+      "area_sq_km": 17364,
+      "timezone": "UTC+02:00"
+    },
+    "politics": {
+      "government_tr": "Mutlak Monarşi",
+      "government_en": "Absolute Monarchy",
+      "independence_date": "1968-09-06"
+    },
+    "economy": {
+      "gdp_usd": 5000000000,
+      "gdp_growth_rate": 3.4,
+      "gdp_per_capita_usd": 4200,
+      "inflation_rate": 3.5,
+      "minimum_wage_usd": 100,
+      "unemployment_rate": 22.0,
+      "currency": "Lilangeni"
+    },
+    "demographics": {
+      "total_population": 1200000,
+      "life_expectancy": 58.0,
+      "birth_rate": 2.8,
+      "most_spoken_language": "Swati / İngilizce",
+      "population_pyramid": []
+    },
+    "military": {
+      "global_firepower_rank": 0,
+      "active_personnel": 3000,
+      "reserve_personnel": 0,
+      "total_personnel": 3000,
+      "defense_budget_usd": 45000000
+    }
+  },
+  "ET": {
+    "id": "ET",
+    "names": {
+      "tr": "Etiyopya",
+      "en": "Ethiopia"
+    },
+    "codes": {
+      "alpha2": "ET",
+      "alpha3": "ETH"
+    },
+    "general_info": {
+      "description_tr": "Afrika Boynuzu'nda yer alan, zengin tarihi ve kültürel mirasa sahip, kahvenin anavatanı olan ülkedir.",
+      "description_en": "A rugged, landlocked country split by the Great Rift Valley in the Horn of Africa.",
+      "flag_url": "assets/flags/et.svg",
+      "intelligence_agency": "NISS"
+    },
+    "geography": {
+      "capital_tr": "Addis Ababa",
+      "capital_en": "Addis Ababa",
+      "continent_tr": "Afrika",
+      "continent_en": "Africa",
+      "area_sq_km": 1104300,
+      "timezone": "UTC+03:00"
+    },
+    "politics": {
+      "government_tr": "Federal Parlamenter Cumhuriyet",
+      "government_en": "Federal Parliamentary Republic",
+      "independence_date": "MÖ 1000 (Efsanevi)"
+    },
+    "economy": {
+      "gdp_usd": 205000000000,
+      "gdp_growth_rate": 7.2,
+      "gdp_per_capita_usd": 1700,
+      "inflation_rate": 13.0,
+      "minimum_wage_usd": 20,
+      "unemployment_rate": 19.0,
+      "currency": "Etiyopya Birri"
+    },
+    "demographics": {
+      "total_population": 126500000,
+      "life_expectancy": 66.0,
+      "birth_rate": 3.8,
+      "most_spoken_language": "Amharca",
+      "population_pyramid": []
+    },
+    "military": {
+      "global_firepower_rank": 42,
+      "active_personnel": 162000,
+      "reserve_personnel": 0,
+      "total_personnel": 162000,
+      "defense_budget_usd": 888000000
+    }
+  },
+  "FJ": {
+    "id": "FJ",
+    "names": {
+      "tr": "Fiji",
+      "en": "Fiji"
+    },
+    "codes": {
+      "alpha2": "FJ",
+      "alpha3": "FJI"
+    },
+    "general_info": {
+      "description_tr": "Güney Pasifik'te 300'den fazla adadan oluşan, mercan resifleri ve berrak deniziyle ünlü bir ülkedir.",
+      "description_en": "An archipelago of more than 300 islands in the South Pacific.",
+      "flag_url": "assets/flags/fj.svg",
+      "intelligence_agency": "N/A"
+    },
+    "geography": {
+      "capital_tr": "Suva",
+      "capital_en": "Suva",
+      "continent_tr": "Okyanusya",
+      "continent_en": "Oceania",
+      "area_sq_km": 18274,
+      "timezone": "UTC+12:00"
+    },
+    "politics": {
+      "government_tr": "Parlamenter Cumhuriyet",
+      "government_en": "Parliamentary Republic",
+      "independence_date": "1970-10-10"
+    },
+    "economy": {
+      "gdp_usd": 5800000000,
+      "gdp_growth_rate": 9.4,
+      "gdp_per_capita_usd": 6200,
+      "inflation_rate": 0.1,
+      "minimum_wage_usd": 150,
+      "unemployment_rate": 4.8,
+      "currency": "Fiji Doları"
+    },
+    "demographics": {
+      "total_population": 936000,
+      "life_expectancy": 68.0,
+      "birth_rate": 2.3,
+      "most_spoken_language": "İngilizce / Fijice",
+      "population_pyramid": []
+    },
+    "military": {
+      "global_firepower_rank": 0,
+      "active_personnel": 3500,
+      "reserve_personnel": 6000,
+      "total_personnel": 9500,
+      "defense_budget_usd": 45000000
+    }
+  },
+  "FI": {
+    "id": "FI",
+    "names": {
+      "tr": "Finlandiya",
+      "en": "Finland"
+    },
+    "codes": {
+      "alpha2": "FI",
+      "alpha3": "FIN"
+    },
+    "general_info": {
+      "description_tr": "Kuzey Avrupa'da, 'Bin Göller Ülkesi' olarak bilinen, yüksek yaşam standartlarına sahip bir ülkedir.",
+      "description_en": "A Northern European nation bordering Sweden, Norway and Russia.",
+      "flag_url": "assets/flags/fi.svg",
+      "intelligence_agency": "Supo"
+    },
+    "geography": {
+      "capital_tr": "Helsinki",
+      "capital_en": "Helsinki",
+      "continent_tr": "Avrupa",
+      "continent_en": "Europe",
+      "area_sq_km": 338424,
+      "timezone": "UTC+02:00"
+    },
+    "politics": {
+      "government_tr": "Parlamenter Cumhuriyet",
+      "government_en": "Parliamentary Republic",
+      "independence_date": "1917-12-06"
+    },
+    "economy": {
+      "gdp_usd": 300000000000,
+      "gdp_growth_rate": -0.9,
+      "gdp_per_capita_usd": 54000,
+      "inflation_rate": 1.8,
+      "minimum_wage_usd": 0,
+      "unemployment_rate": 7.5,
+      "currency": "Euro"
+    },
+    "demographics": {
+      "total_population": 5600000,
+      "life_expectancy": 82.0,
+      "birth_rate": 1.3,
+      "most_spoken_language": "Fince / İsveççe",
+      "population_pyramid": []
+    },
+    "military": {
+      "global_firepower_rank": 51,
+      "active_personnel": 24000,
+      "reserve_personnel": 900000,
+      "total_personnel": 938000,
+      "defense_budget_usd": 6400000000
+    }
+  },
+  "FR": {
+    "id": "FR",
+    "names": {
+      "tr": "Fransa",
+      "en": "France"
+    },
+    "codes": {
+      "alpha2": "FR",
+      "alpha3": "FRA"
+    },
+    "general_info": {
+      "description_tr": "Batı Avrupa'da yer alan, kültürü, mutfağı ve tarihiyle ünlü dünyanın en çok turist çeken ülkesidir.",
+      "description_en": "A country in Western Europe, encompassing medieval cities, alpine villages and Mediterranean beaches.",
+      "flag_url": "assets/flags/fr.svg",
+      "intelligence_agency": "DGSE"
+    },
+    "geography": {
+      "capital_tr": "Paris",
+      "capital_en": "Paris",
+      "continent_tr": "Avrupa",
+      "continent_en": "Europe",
+      "area_sq_km": 551695,
+      "timezone": "UTC+01:00"
+    },
+    "politics": {
+      "government_tr": "Yarı Başkanlık Sistemi",
+      "government_en": "Semi-Presidential Republic",
+      "independence_date": "843 (Verdun Antlaşması)"
+    },
+    "economy": {
+      "gdp_usd": 3050000000000,
+      "gdp_growth_rate": 1.6,
+      "gdp_per_capita_usd": 46000,
+      "inflation_rate": 1.1,
+      "minimum_wage_usd": 1766,
+      "unemployment_rate": 7.4,
+      "currency": "Euro"
+    },
+    "demographics": {
+      "total_population": 68000000,
+      "life_expectancy": 83.0,
+      "birth_rate": 1.7,
+      "most_spoken_language": "Fransızca",
+      "population_pyramid": []
+    },
+    "military": {
+      "global_firepower_rank": 7,
+      "active_personnel": 200000,
+      "reserve_personnel": 35000,
+      "total_personnel": 385000,
+      "defense_budget_usd": 49700000000
+    }
+  }
+},
+
+{
+  "GA": {
+    "id": "GA",
+    "names": {
+      "tr": "Gabon",
+      "en": "Gabon"
+    },
+    "codes": {
+      "alpha2": "GA",
+      "alpha3": "GAB"
+    },
+    "general_info": {
+      "description_tr": "Orta Afrika'nın batı kıyısında yer alan, geniş yağmur ormanları ve biyolojik çeşitliliği ile bilinen bir ülkedir.",
+      "description_en": "A country along the Atlantic coast of Central Africa, known for its protected parkland.",
+      "flag_url": "assets/flags/ga.svg",
+      "intelligence_agency": "DGRI"
+    },
+    "geography": {
+      "capital_tr": "Libreville",
+      "capital_en": "Libreville",
+      "continent_tr": "Afrika",
+      "continent_en": "Africa",
+      "area_sq_km": 267668,
+      "timezone": "UTC+01:00"
+    },
+    "politics": {
+      "government_tr": "Başkanlık Sistemi (Geçiş Dönemi)",
+      "government_en": "Presidential Republic (Transitional)",
+      "independence_date": "1960-08-17"
+    },
+    "economy": {
+      "gdp_usd": 23000000000,
+      "gdp_growth_rate": 2.4,
+      "gdp_per_capita_usd": 8900,
+      "inflation_rate": 2.5,
+      "minimum_wage_usd": 250,
+      "unemployment_rate": 21.5,
+      "currency": "Orta Afrika CFA Frangı"
+    },
+    "demographics": {
+      "total_population": 2400000,
+      "life_expectancy": 66.0,
+      "birth_rate": 3.6,
+      "most_spoken_language": "Fransızca",
+      "population_pyramid": []
+    },
+    "military": {
+      "global_firepower_rank": 133,
+      "active_personnel": 4800,
+      "reserve_personnel": 0,
+      "total_personnel": 7300,
+      "defense_budget_usd": 275000000
+    }
+  },
+  "GM": {
+    "id": "GM",
+    "names": {
+      "tr": "Gambiya",
+      "en": "Gambia"
+    },
+    "codes": {
+      "alpha2": "GM",
+      "alpha3": "GMB"
+    },
+    "general_info": {
+      "description_tr": "Batı Afrika'da, Gambiya Nehri boyunca uzanan ve Senegal ile çevrili küçük bir ülkedir.",
+      "description_en": "A small West African country, bounded by Senegal, with a narrow Atlantic coastline.",
+      "flag_url": "assets/flags/gm.svg",
+      "intelligence_agency": "SIS"
+    },
+    "geography": {
+      "capital_tr": "Banjul",
+      "capital_en": "Banjul",
+      "continent_tr": "Afrika",
+      "continent_en": "Africa",
+      "area_sq_km": 11295,
+      "timezone": "UTC+00:00"
+    },
+    "politics": {
+      "government_tr": "Başkanlık Sistemi",
+      "government_en": "Presidential Republic",
+      "independence_date": "1965-02-18"
+    },
+    "economy": {
+      "gdp_usd": 2500000000,
+      "gdp_growth_rate": 5.5,
+      "gdp_per_capita_usd": 850,
+      "inflation_rate": 11.0,
+      "minimum_wage_usd": 30,
+      "unemployment_rate": 9.0,
+      "currency": "Gambiya Dalasisi"
+    },
+    "demographics": {
+      "total_population": 2700000,
+      "life_expectancy": 63.0,
+      "birth_rate": 3.9,
+      "most_spoken_language": "İngilizce",
+      "population_pyramid": []
+    },
+    "military": {
+      "global_firepower_rank": 0,
+      "active_personnel": 2500,
+      "reserve_personnel": 0,
+      "total_personnel": 2500,
+      "defense_budget_usd": 18000000
+    }
+  },
+  "GE": {
+    "id": "GE",
+    "names": {
+      "tr": "Gürcistan",
+      "en": "Georgia"
+    },
+    "codes": {
+      "alpha2": "GE",
+      "alpha3": "GEO"
+    },
+    "general_info": {
+      "description_tr": "Kafkasya'da, Karadeniz kıyısında yer alan, zengin tarihi ve şarap kültürüyle ünlü bir ülkedir.",
+      "description_en": "A country at the intersection of Europe and Asia, known for Vardzia and wine-growing regions.",
+      "flag_url": "assets/flags/ge.svg",
+      "intelligence_agency": "GIS"
+    },
+    "geography": {
+      "capital_tr": "Tiflis",
+      "capital_en": "Tbilisi",
+      "continent_tr": "Asya",
+      "continent_en": "Asia",
+      "area_sq_km": 69700,
+      "timezone": "UTC+04:00"
+    },
+    "politics": {
+      "government_tr": "Parlamenter Cumhuriyet",
+      "government_en": "Parliamentary Republic",
+      "independence_date": "1991-04-09"
+    },
+    "economy": {
+      "gdp_usd": 32000000000,
+      "gdp_growth_rate": 7.2,
+      "gdp_per_capita_usd": 8100,
+      "inflation_rate": 2.5,
+      "minimum_wage_usd": 8,
+      "unemployment_rate": 16.0,
+      "currency": "Gürcistan Larisi"
+    },
+    "demographics": {
+      "total_population": 3700000,
+      "life_expectancy": 74.0,
+      "birth_rate": 1.8,
+      "most_spoken_language": "Gürcüce",
+      "population_pyramid": []
+    },
+    "military": {
+      "global_firepower_rank": 84,
+      "active_personnel": 33000,
+      "reserve_personnel": 0,
+      "total_personnel": 33000,
+      "defense_budget_usd": 500000000
+    }
+  },
+  "DE": {
+    "id": "DE",
+    "names": {
+      "tr": "Almanya",
+      "en": "Germany"
+    },
+    "codes": {
+      "alpha2": "DE",
+      "alpha3": "DEU"
+    },
+    "general_info": {
+      "description_tr": "Orta Avrupa'da yer alan, güçlü ekonomisi ve teknolojik yenilikleriyle tanınan bir ülkedir.",
+      "description_en": "A Western European country with a landscape of forests, rivers, mountain ranges and North Sea beaches.",
+      "flag_url": "assets/flags/de.svg",
+      "intelligence_agency": "BND"
+    },
+    "geography": {
+      "capital_tr": "Berlin",
+      "capital_en": "Berlin",
+      "continent_tr": "Avrupa",
+      "continent_en": "Europe",
+      "area_sq_km": 357022,
+      "timezone": "UTC+01:00"
+    },
+    "politics": {
+      "government_tr": "Federal Cumhuriyet",
+      "government_en": "Federal Parliamentary Republic",
+      "independence_date": "1871-01-18"
+    },
+    "economy": {
+      "gdp_usd": 4590000000000,
+      "gdp_growth_rate": 0.2,
+      "gdp_per_capita_usd": 54000,
+      "inflation_rate": 2.4,
+      "minimum_wage_usd": 2000,
+      "unemployment_rate": 5.7,
+      "currency": "Euro"
+    },
+    "demographics": {
+      "total_population": 84000000,
+      "life_expectancy": 81.0,
+      "birth_rate": 1.4,
+      "most_spoken_language": "Almanca",
+      "population_pyramid": []
+    },
+    "military": {
+      "global_firepower_rank": 18,
+      "active_personnel": 181600,
+      "reserve_personnel": 34000,
+      "total_personnel": 215600,
+      "defense_budget_usd": 57800000000
+    }
+  },
+  "GH": {
+    "id": "GH",
+    "names": {
+      "tr": "Gana",
+      "en": "Ghana"
+    },
+    "codes": {
+      "alpha2": "GH",
+      "alpha3": "GHA"
+    },
+    "general_info": {
+      "description_tr": "Batı Afrika'da, altın, kakao ve petrol ihracatıyla bilinen, Gine Körfezi kıyısında bir ülkedir.",
+      "description_en": "A country on West Africa’s Gulf of Guinea, known for diverse wildlife, old forts and secluded beaches.",
+      "flag_url": "assets/flags/gh.svg",
+      "intelligence_agency": "BNI"
+    },
+    "geography": {
+      "capital_tr": "Akra",
+      "capital_en": "Accra",
+      "continent_tr": "Afrika",
+      "continent_en": "Africa",
+      "area_sq_km": 238533,
+      "timezone": "UTC+00:00"
+    },
+    "politics": {
+      "government_tr": "Başkanlık Sistemi",
+      "government_en": "Presidential Republic",
+      "independence_date": "1957-03-06"
+    },
+    "economy": {
+      "gdp_usd": 76000000000,
+      "gdp_growth_rate": 4.0,
+      "gdp_per_capita_usd": 2300,
+      "inflation_rate": 15.0,
+      "minimum_wage_usd": 55,
+      "unemployment_rate": 3.9,
+      "currency": "Gana Sedisi"
+    },
+    "demographics": {
+      "total_population": 34000000,
+      "life_expectancy": 64.0,
+      "birth_rate": 3.4,
+      "most_spoken_language": "İngilizce",
+      "population_pyramid": []
+    },
+    "military": {
+      "global_firepower_rank": 113,
+      "active_personnel": 15500,
+      "reserve_personnel": 0,
+      "total_personnel": 15500,
+      "defense_budget_usd": 260000000
+    }
+  },
+  "GR": {
+    "id": "GR",
+    "names": {
+      "tr": "Yunanistan",
+      "en": "Greece"
+    },
+    "codes": {
+      "alpha2": "GR",
+      "alpha3": "GRC"
+    },
+    "general_info": {
+      "description_tr": "Güneydoğu Avrupa'da, binlerce adasıyla ünlü, Batı medeniyetinin beşiği olarak bilinen ülkedir.",
+      "description_en": "A country in southeastern Europe with thousands of islands throughout the Aegean and Ionian seas.",
+      "flag_url": "assets/flags/gr.svg",
+      "intelligence_agency": "EYP"
+    },
+    "geography": {
+      "capital_tr": "Atina",
+      "capital_en": "Athens",
+      "continent_tr": "Avrupa",
+      "continent_en": "Europe",
+      "area_sq_km": 131957,
+      "timezone": "UTC+02:00"
+    },
+    "politics": {
+      "government_tr": "Parlamenter Cumhuriyet",
+      "government_en": "Parliamentary Republic",
+      "independence_date": "1821-03-25"
+    },
+    "economy": {
+      "gdp_usd": 240000000000,
+      "gdp_growth_rate": 2.0,
+      "gdp_per_capita_usd": 23000,
+      "inflation_rate": 2.7,
+      "minimum_wage_usd": 910,
+      "unemployment_rate": 10.5,
+      "currency": "Euro"
+    },
+    "demographics": {
+      "total_population": 10300000,
+      "life_expectancy": 82.0,
+      "birth_rate": 1.3,
+      "most_spoken_language": "Yunanca",
+      "population_pyramid": []
+    },
+    "military": {
+      "global_firepower_rank": 30,
+      "active_personnel": 130000,
+      "reserve_personnel": 220500,
+      "total_personnel": 385500,
+      "defense_budget_usd": 8000000000
+    }
+  },
+  "GD": {
+    "id": "GD",
+    "names": {
+      "tr": "Grenada",
+      "en": "Grenada"
+    },
+    "codes": {
+      "alpha2": "GD",
+      "alpha3": "GRD"
+    },
+    "general_info": {
+      "description_tr": "Karayipler'de, 'Baharat Adası' olarak bilinen, küçük hindistan cevizi üretimiyle ünlü bir ada ülkesidir.",
+      "description_en": "A Caribbean country comprising a main island, also called Grenada, and smaller surrounding islands.",
+      "flag_url": "assets/flags/gd.svg",
+      "intelligence_agency": "N/A"
+    },
+    "geography": {
+      "capital_tr": "St. George's",
+      "capital_en": "St. George's",
+      "continent_tr": "Kuzey Amerika",
+      "continent_en": "North America",
+      "area_sq_km": 344,
+      "timezone": "UTC-04:00"
+    },
+    "politics": {
+      "government_tr": "Anayasal Monarşi",
+      "government_en": "Parliamentary Democracy",
+      "independence_date": "1974-02-07"
+    },
+    "economy": {
+      "gdp_usd": 1320000000,
+      "gdp_growth_rate": 7.3,
+      "gdp_per_capita_usd": 10500,
+      "inflation_rate": 2.5,
+      "minimum_wage_usd": 500,
+      "unemployment_rate": 13.0,
+      "currency": "Doğu Karayip Doları"
+    },
+    "demographics": {
+      "total_population": 114000,
+      "life_expectancy": 72.0,
+      "birth_rate": 1.5,
+      "most_spoken_language": "İngilizce",
+      "population_pyramid": []
+    },
+    "military": {
+      "global_firepower_rank": 0,
+      "active_personnel": 0,
+      "reserve_personnel": 0,
+      "total_personnel": 0,
+      "defense_budget_usd": 0
+    }
+  },
+  "GT": {
+    "id": "GT",
+    "names": {
+      "tr": "Guatemala",
+      "en": "Guatemala"
+    },
+    "codes": {
+      "alpha2": "GT",
+      "alpha3": "GTM"
+    },
+    "general_info": {
+      "description_tr": "Orta Amerika'da, Maya uygarlığının merkezi olan, volkanlar ve yağmur ormanlarıyla kaplı bir ülkedir.",
+      "description_en": "A Central American country south of Mexico, is home to volcanoes, rainforests and ancient Mayan sites.",
+      "flag_url": "assets/flags/gt.svg",
+      "intelligence_agency": "SIE"
+    },
+    "geography": {
+      "capital_tr": "Guatemala City",
+      "capital_en": "Guatemala City",
+      "continent_tr": "Kuzey Amerika",
+      "continent_en": "North America",
+      "area_sq_km": 108889,
+      "timezone": "UTC-06:00"
+    },
+    "politics": {
+      "government_tr": "Başkanlık Sistemi",
+      "government_en": "Presidential Republic",
+      "independence_date": "1821-09-15"
+    },
+    "economy": {
+      "gdp_usd": 102000000000,
+      "gdp_growth_rate": 4.2,
+      "gdp_per_capita_usd": 5600,
+      "inflation_rate": 4.0,
+      "minimum_wage_usd": 400,
+      "unemployment_rate": 2.5,
+      "currency": "Guatemala Quetzalı"
+    },
+    "demographics": {
+      "total_population": 18100000,
+      "life_expectancy": 74.0,
+      "birth_rate": 2.3,
+      "most_spoken_language": "İspanyolca",
+      "population_pyramid": []
+    },
+    "military": {
+      "global_firepower_rank": 114,
+      "active_personnel": 21500,
+      "reserve_personnel": 64000,
+      "total_personnel": 85500,
+      "defense_budget_usd": 390000000
+    }
+  },
+  "GN": {
+    "id": "GN",
+    "names": {
+      "tr": "Gine",
+      "en": "Guinea"
+    },
+    "codes": {
+      "alpha2": "GN",
+      "alpha3": "GIN"
+    },
+    "general_info": {
+      "description_tr": "Batı Afrika'da, zengin boksit rezervlerine sahip, Atlantik Okyanusu kıyısında bir ülkedir.",
+      "description_en": "A country in West Africa, bordered on the west by the Atlantic Ocean.",
+      "flag_url": "assets/flags/gn.svg",
+      "intelligence_agency": "DGSI"
+    },
+    "geography": {
+      "capital_tr": "Konakri",
+      "capital_en": "Conakry",
+      "continent_tr": "Afrika",
+      "continent_en": "Africa",
+      "area_sq_km": 245857,
+      "timezone": "UTC+00:00"
+    },
+    "politics": {
+      "government_tr": "Başkanlık Sistemi (Cunta)",
+      "government_en": "Presidential Republic (Military Junta)",
+      "independence_date": "1958-10-02"
+    },
+    "economy": {
+      "gdp_usd": 23000000000,
+      "gdp_growth_rate": 4.0,
+      "gdp_per_capita_usd": 1500,
+      "inflation_rate": 8.0,
+      "minimum_wage_usd": 50,
+      "unemployment_rate": 4.3,
+      "currency": "Gine Frangı"
+    },
+    "demographics": {
+      "total_population": 14200000,
+      "life_expectancy": 61.0,
+      "birth_rate": 4.2,
+      "most_spoken_language": "Fransızca",
+      "population_pyramid": []
+    },
+    "military": {
+      "global_firepower_rank": 0,
+      "active_personnel": 9700,
+      "reserve_personnel": 0,
+      "total_personnel": 9700,
+      "defense_budget_usd": 235000000
+    }
+  },
+  "GW": {
+    "id": "GW",
+    "names": {
+      "tr": "Gine-Bissau",
+      "en": "Guinea-Bissau"
+    },
+    "codes": {
+      "alpha2": "GW",
+      "alpha3": "GNB"
+    },
+    "general_info": {
+      "description_tr": "Batı Afrika'da, Bijagos Takımadaları'nı içeren küçük bir tropikal ülkedir.",
+      "description_en": "A tropical country on West Africa’s Atlantic coast that's known for national parks and wildlife.",
+      "flag_url": "assets/flags/gw.svg",
+      "intelligence_agency": "SIS"
+    },
+    "geography": {
+      "capital_tr": "Bissau",
+      "capital_en": "Bissau",
+      "continent_tr": "Afrika",
+      "continent_en": "Africa",
+      "area_sq_km": 36125,
+      "timezone": "UTC+00:00"
+    },
+    "politics": {
+      "government_tr": "Yarı Başkanlık Sistemi",
+      "government_en": "Semi-Presidential Republic",
+      "independence_date": "1973-09-24"
+    },
+    "economy": {
+      "gdp_usd": 2000000000,
+      "gdp_growth_rate": 4.6,
+      "gdp_per_capita_usd": 900,
+      "inflation_rate": 4.0,
+      "minimum_wage_usd": 50,
+      "unemployment_rate": 6.8,
+      "currency": "CFA Frangı"
+    },
+    "demographics": {
+      "total_population": 2150000,
+      "life_expectancy": 59.0,
+      "birth_rate": 3.8,
+      "most_spoken_language": "Portekizce",
+      "population_pyramid": []
+    },
+    "military": {
+      "global_firepower_rank": 0,
+      "active_personnel": 4000,
+      "reserve_personnel": 0,
+      "total_personnel": 4000,
+      "defense_budget_usd": 25000000
+    }
+  },
+  "GY": {
+    "id": "GY",
+    "names": {
+      "tr": "Guyana",
+      "en": "Guyana"
+    },
+    "codes": {
+      "alpha2": "GY",
+      "alpha3": "GUY"
+    },
+    "general_info": {
+      "description_tr": "Güney Amerika'nın kuzey kıyısında, İngilizce konuşulan ve son yıllarda petrol ile büyüyen bir ülkedir.",
+      "description_en": "A country on South America’s North Atlantic coast, defined by its dense rainforest.",
+      "flag_url": "assets/flags/gy.svg",
+      "intelligence_agency": "NIO"
+    },
+    "geography": {
+      "capital_tr": "Georgetown",
+      "capital_en": "Georgetown",
+      "continent_tr": "Güney Amerika",
+      "continent_en": "South America",
+      "area_sq_km": 214969,
+      "timezone": "UTC-04:00"
+    },
+    "politics": {
+      "government_tr": "Parlamenter Cumhuriyet",
+      "government_en": "Parliamentary Republic",
+      "independence_date": "1966-05-26"
+    },
+    "economy": {
+      "gdp_usd": 16000000000,
+      "gdp_growth_rate": 63.3,
+      "gdp_per_capita_usd": 20000,
+      "inflation_rate": 4.0,
+      "minimum_wage_usd": 300,
+      "unemployment_rate": 12.4,
+      "currency": "Guyana Doları"
+    },
+    "demographics": {
+      "total_population": 800000,
+      "life_expectancy": 70.0,
+      "birth_rate": 2.4,
+      "most_spoken_language": "İngilizce",
+      "population_pyramid": []
+    },
+    "military": {
+      "global_firepower_rank": 0,
+      "active_personnel": 3000,
+      "reserve_personnel": 1500,
+      "total_personnel": 4500,
+      "defense_budget_usd": 75000000
+    }
+  },
+  "HT": {
+    "id": "HT",
+    "names": {
+      "tr": "Haiti",
+      "en": "Haiti"
+    },
+    "codes": {
+      "alpha2": "HT",
+      "alpha3": "HTI"
+    },
+    "general_info": {
+      "description_tr": "Karayipler'de Hispaniola adasını Dominik Cumhuriyeti ile paylaşan, tarihi bağımsızlık mücadelesiyle bilinen ülkedir.",
+      "description_en": "A Caribbean country that shares the island of Hispaniola with the Dominican Republic to its east.",
+      "flag_url": "assets/flags/ht.svg",
+      "intelligence_agency": "ANI"
+    },
+    "geography": {
+      "capital_tr": "Port-au-Prince",
+      "capital_en": "Port-au-Prince",
+      "continent_tr": "Kuzey Amerika",
+      "continent_en": "North America",
+      "area_sq_km": 27750,
+      "timezone": "UTC-05:00"
+    },
+    "politics": {
+      "government_tr": "Yarı Başkanlık Sistemi",
+      "government_en": "Semi-Presidential Republic",
+      "independence_date": "1804-01-01"
+    },
+    "economy": {
+      "gdp_usd": 25000000000,
+      "gdp_growth_rate": -1.7,
+      "gdp_per_capita_usd": 1700,
+      "inflation_rate": 27.8,
+      "minimum_wage_usd": 70,
+      "unemployment_rate": 14.5,
+      "currency": "Haiti Gurdu"
+    },
+    "demographics": {
+      "total_population": 11700000,
+      "life_expectancy": 64.0,
+      "birth_rate": 2.7,
+      "most_spoken_language": "Fransızca / Haiti Kreolü",
+      "population_pyramid": []
+    },
+    "military": {
+      "global_firepower_rank": 0,
+      "active_personnel": 150,
+      "reserve_personnel": 0,
+      "total_personnel": 150,
+      "defense_budget_usd": 1000000
+    }
+  },
+  "HN": {
+    "id": "HN",
+    "names": {
+      "tr": "Honduras",
+      "en": "Honduras"
+    },
+    "codes": {
+      "alpha2": "HN",
+      "alpha3": "HND"
+    },
+    "general_info": {
+      "description_tr": "Orta Amerika'da, Karayip Denizi kıyısında, Maya kalıntıları ve doğal kaynaklarıyla bilinen bir ülkedir.",
+      "description_en": "A Central American country with Caribbean Sea coastlines to the north and the Pacific Ocean to the south.",
+      "flag_url": "assets/flags/hn.svg",
+      "intelligence_agency": "DNII"
+    },
+    "geography": {
+      "capital_tr": "Tegucigalpa",
+      "capital_en": "Tegucigalpa",
+      "continent_tr": "Kuzey Amerika",
+      "continent_en": "North America",
+      "area_sq_km": 112492,
+      "timezone": "UTC-06:00"
+    },
+    "politics": {
+      "government_tr": "Başkanlık Sistemi",
+      "government_en": "Presidential Republic",
+      "independence_date": "1821-09-15"
+    },
+    "economy": {
+      "gdp_usd": 34000000000,
+      "gdp_growth_rate": 4.1,
+      "gdp_per_capita_usd": 3200,
+      "inflation_rate": 4.6,
+      "minimum_wage_usd": 300,
+      "unemployment_rate": 8.7,
+      "currency": "Honduras Lempirası"
+    },
+    "demographics": {
+      "total_population": 10600000,
+      "life_expectancy": 75.0,
+      "birth_rate": 2.5,
+      "most_spoken_language": "İspanyolca",
+      "population_pyramid": []
+    },
+    "military": {
+      "global_firepower_rank": 132,
+      "active_personnel": 14950,
+      "reserve_personnel": 60000,
+      "total_personnel": 74950,
+      "defense_budget_usd": 405000000
+    }
+  },
+  "HU": {
+    "id": "HU",
+    "names": {
+      "tr": "Macaristan",
+      "en": "Hungary"
+    },
+    "codes": {
+      "alpha2": "HU",
+      "alpha3": "HUN"
+    },
+    "general_info": {
+      "description_tr": "Orta Avrupa'da, Tuna Nehri tarafından ikiye bölünen başkenti Budapeşte ve kaplıcalarıyla ünlü ülkedir.",
+      "description_en": "A landlocked country in Central Europe. Its capital, Budapest, is bisected by the Danube River.",
+      "flag_url": "assets/flags/hu.svg",
+      "intelligence_agency": "AH"
+    },
+    "geography": {
+      "capital_tr": "Budapeşte",
+      "capital_en": "Budapest",
+      "continent_tr": "Avrupa",
+      "continent_en": "Europe",
+      "area_sq_km": 93028,
+      "timezone": "UTC+01:00"
+    },
+    "politics": {
+      "government_tr": "Parlamenter Cumhuriyet",
+      "government_en": "Parliamentary Republic",
+      "independence_date": "1000 (Kuruluş)"
+    },
+    "economy": {
+      "gdp_usd": 220000000000,
+      "gdp_growth_rate": 4.3,
+      "gdp_per_capita_usd": 23000,
+      "inflation_rate": 4.5,
+      "minimum_wage_usd": 750,
+      "unemployment_rate": 4.2,
+      "currency": "Macar Forinti"
+    },
+    "demographics": {
+      "total_population": 9600000,
+      "life_expectancy": 76.0,
+      "birth_rate": 1.5,
+      "most_spoken_language": "Macarca",
+      "population_pyramid": []
+    },
+    "military": {
+      "global_firepower_rank": 55,
+      "active_personnel": 23000,
+      "reserve_personnel": 20000,
+      "total_personnel": 43000,
+      "defense_budget_usd": 4000000000
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
 }
