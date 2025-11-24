@@ -1,21 +1,24 @@
+/* Koyu ve açık tema renk değişkenleri:
+"Tasarımda tutarlılığı sağlamak ve Dark Mode geçişini anlık yapabilmek için 
+CSS3 ile gelen 'CSS Custom Properties' (Değişkenler) kullandık."
+*/
 :root {
   --ana-renk: #5f6f52;
   --ikincil-renk: #a9b388;
   --zemin-rengi: #fefae0;
   --vurgu-rengi: #b99470;
-
   --map-bg: #a5d7e8;
   --map-fill: #ececec;
   --map-hover: #565656;
   --map-stroke: #000000;
 }
 
+/* Javascript'in <html> etiketine eklediği attribute'u yakalıyor ve değişkenleri eziyoruz. */
 [data-theme="dark"] {
   --ana-renk: #e6d6b8;
   --ikincil-renk: #5f6f52;
   --zemin-rengi: #1a1c18;
   --vurgu-rengi: #b99470;
-
   --map-bg: #34495e;
   --map-fill: #5d6d7e;
   --map-hover: #d35400;
@@ -31,7 +34,7 @@ body {
   display: flex;
   flex-direction: column;
   margin: 0;
-  transition: background-color 0.3s, color 0.3s;
+  transition: background-color 0.3s, color 0.3s; /* Tema geçişinde gözü yormayan yumuşak transition */
   overflow-x: hidden;
   overflow-y: auto;
 }
@@ -55,7 +58,7 @@ body {
 }
 
 main {
-  flex: 1;
+  flex: 1; /* İçeriğin kalan alanı kaplaması için */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -80,15 +83,15 @@ main {
   background-color: var(--map-bg);
   border-radius: 20px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-  overflow: hidden;
+  overflow: hidden; /* SVG taştığında scroll çıkmasın diye */
   margin-bottom: 20px;
-  cursor: grab;
-  user-select: none;
+  cursor: grab; /* UX için hareket ettirilebilir olduğunu belirtir */
+  user-select: none; /* Sürüklerken yanlışlıkla metin seçilmesini engelle */
   -webkit-user-select: none;
 }
 
 #map-container:active {
-  cursor: grabbing;
+  cursor: grabbing; /* UX için hareket ettirilebilir olduğunu belirtir */
 }
 
 .no-transition {
@@ -99,7 +102,7 @@ svg {
   width: 90%;
   max-width: 1200px;
   height: auto;
-  transition: transform 0.2s ease-out;
+  transition: transform 0.2s ease-out; /* Zoom işlemi için transition */
 }
 
 svg path {
@@ -128,15 +131,16 @@ svg g:hover path {
   border-radius: 4px;
   font-size: 0.85rem;
   font-weight: bold;
-  pointer-events: none;
+  pointer-events: none; /* Tooltip'in tıklamayı engellememesi için kritik. */
   z-index: 9999;
   display: none;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   white-space: nowrap;
-  transform: translate(10px, 10px);
+  transform: translate(10px, 10px); /* Mouse'un biraz sağ altına konumlandırma */
   border: 1px solid var(--zemin-rengi);
 }
 
+/* Bootstrap Popover sınıfını ezmek için */
 .popover {
   border: 2px solid var(--ana-renk);
   max-width: 350px;
@@ -179,20 +183,19 @@ svg g:hover path {
   border-color: rgba(255, 255, 255, 0.1);
 }
 
+/* Nüfus Piramidi Stilleri */
 .pyramid-container {
   display: flex;
   flex-direction: column;
   font-size: 0.65rem;
   margin-top: 5px;
 }
-
 .pyramid-row {
   display: flex;
   align-items: center;
   height: 14px;
   margin-bottom: 1px;
 }
-
 .pyramid-label {
   width: 35px;
   text-align: center;
@@ -201,7 +204,6 @@ svg g:hover path {
   font-size: 0.6rem;
   flex-shrink: 0;
 }
-
 .pyramid-bar-m,
 .pyramid-bar-f {
   flex: 1;
@@ -209,30 +211,27 @@ svg g:hover path {
   align-items: center;
   height: 85%;
 }
-
 .pyramid-bar-m {
   justify-content: flex-end;
 }
-
 .pyramid-bar-f {
   justify-content: flex-start;
 }
-
+/* Piramit barlarının genişliği Javascript ile hesaplanıyor ancak yumuşak dolum animasyonu CSS transition ile sağlanıyor. */
 .bar-fill {
   height: 100%;
   transition: width 0.3s;
 }
-
 .bar-m {
-  background-color: #3498db;
+  background-color: #3498db; /* Mavi tonları erkekler için */
   border-radius: 2px 0 0 2px;
 }
-
 .bar-f {
-  background-color: #e74c3c;
+  background-color: #e74c3c; /* Kırmızı tonları kadınlar için */
   border-radius: 0 2px 2px 0;
 }
 
+/* Footer Stilleri */
 .footer {
   background-color: var(--ana-renk);
   color: var(--zemin-rengi);
@@ -240,17 +239,14 @@ svg g:hover path {
   font-size: 0.8rem;
   width: 100%;
 }
-
 .footer a {
   color: #ffc107;
   text-decoration: none;
 }
-
 .footer a:hover {
   color: #fffff0;
   text-decoration: none;
 }
-
 .support-area {
     display: flex;
     justify-content: center;
@@ -258,7 +254,6 @@ svg g:hover path {
     flex-wrap: wrap;
     gap: 10px;
 }
-
 .btn-support {
     border: 1px solid transparent;
     transition: all 0.3s ease;
@@ -266,42 +261,34 @@ svg g:hover path {
     border-radius: 20px;
     padding: 4px 12px;
 }
-
 .btn-support:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0,0,0,0.15);
 }
-
 .btn-github {
     background-color: #24292e;
     color: white;
 }
-
 .btn-github:hover {
     background-color: #444;
     color: white;
 }
-
 .btn-patreon {
     background-color: #FF424D;
     color: white;
 }
-
 .btn-patreon:hover {
     background-color: #ff6b74;
     color: white;
 }
-
 [data-theme="dark"] .footer a {
   color: var(--ikincil-renk);
   font-weight: bold;
 }
-
 [data-theme="dark"] .footer a:hover {
   color: #d35400;
   text-decoration: none;
 }
-
 [data-theme="dark"] .btn-github {
     background-color: #f0f6fc;
     color: #24292e;
