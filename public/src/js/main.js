@@ -106,67 +106,73 @@ function initMapInteractions() {
 
 // --- 5. DETAYLI İÇERİK OLUŞTURUCU ---
 function generateDetailContent(code, pathElement) {
-  const data = globalData[code];
-  const defaultName = pathElement.getAttribute("name") || code;
+    const data = globalData[code];
+    const defaultName = pathElement.getAttribute("name") || code;
 
-  if (!data)
-    return `<strong>${defaultName}</strong><br><span class="text-muted small">Veri girilmemiş.</span>`;
+    if (!data)
+        return `<strong>${defaultName}</strong><br><span class="text-muted small">Veri girilmemiş.</span>`;
 
-  let flagUrl = `https://flagcdn.com/w80/${code.toLowerCase()}.png`;
+    let flagUrl = `https://flagcdn.com/w80/${code.toLowerCase()}.png`;
 
-  // Formatlar
-  const formatNum = (n) => (n ? new Intl.NumberFormat("tr-TR").format(n) : "-");
-  const currency = (n) => (n ? `$${formatNum(n)}` : "-");
+    const formatNum = (n) => (n ? new Intl.NumberFormat("tr-TR").format(n) : "-");
+    
+    const formatCompact = (n) => (n ? new Intl.NumberFormat("tr-TR", { notation: "compact", compactDisplay: "long", maximumFractionDigits: 1 }).format(n) : "-");
 
-  // Veri Seti
-  const nameTr = data.names?.tr || defaultName;
-  const nameEn = data.names?.en || "";
-  const desc = data.general_info?.description_tr || "";
-  const capital = data.geography?.capital_tr || "-";
-  const continent = data.geography?.continent_tr || "-";
-  const area = data.geography?.area_sq_km
-    ? formatNum(data.geography.area_sq_km) + " km²"
-    : "-";
-  const gov = data.politics?.government_tr || "-";
-  const indep = data.politics?.independence_date || "-";
+    const currencyStandard = (n) => (n ? `$${formatNum(n)}` : "-");
+    const currencyCompact = (n) => (n ? `$${formatCompact(n)}` : "-");
 
-  const gdp = data.economy?.gdp_usd ? currency(data.economy.gdp_usd) : "-";
-  const gdpPer = data.economy?.gdp_per_capita_usd
-    ? currency(data.economy.gdp_per_capita_usd)
-    : "-";
-  const inflation = data.economy?.inflation_rate
-    ? `%${data.economy.inflation_rate}`
-    : "-";
-  const unemploy = data.economy?.unemployment_rate
-    ? `%${data.economy.unemployment_rate}`
-    : "-";
-  const minWage = data.economy?.minimum_wage_usd
-    ? currency(data.economy.minimum_wage_usd)
-    : "-";
-  const money = data.economy?.currency || "-";
+    const nameTr = data.names?.tr || defaultName;
+    const nameEn = data.names?.en || "";
+    const desc = data.general_info?.description_tr || "";
+    const capital = data.geography?.capital_tr || "-";
+    const continent = data.geography?.continent_tr || "-";
+    const area = data.geography?.area_sq_km
+        ? formatNum(data.geography.area_sq_km) + " km²"
+        : "-";
+    const gov = data.politics?.government_tr || "-";
+    const indep = data.politics?.independence_date || "-";
 
-  const population = data.demographics?.total_population
-    ? formatNum(data.demographics.total_population)
-    : "-";
-  const lifeExp = data.demographics?.life_expectancy || "-";
-  const lang = data.demographics?.most_spoken_language || "-";
-  const pyramidHtml = generatePyramidChart(
-    data.demographics?.population_pyramid
-  );
+    const gdp = data.economy?.gdp_usd ? currencyCompact(data.economy.gdp_usd) : "-";
+    const gdpPer = data.economy?.gdp_per_capita_usd
+        ? currencyStandard(data.economy.gdp_per_capita_usd)
+        : "-";
+    const inflation = data.economy?.inflation_rate
+        ? `%${data.economy.inflation_rate}`
+        : "-";
+    const unemploy = data.economy?.unemployment_rate
+        ? `%${data.economy.unemployment_rate}`
+        : "-";
+    const minWage = data.economy?.minimum_wage_usd
+        ? currencyStandard(data.economy.minimum_wage_usd)
+        : "-";
+    const money = data.economy?.currency || "-";
 
-  const fireRank = data.military?.global_firepower_rank || "-";
-  const activeMil = data.military?.active_personnel
-    ? formatNum(data.military.active_personnel)
-    : "-";
-  const totalMil = data.military?.total_personnel
-    ? formatNum(data.military.total_personnel)
-    : "-";
-  const defBudget = data.military?.defense_budget_usd
-    ? currency(data.military.defense_budget_usd)
-    : "-";
-  const intel = data.general_info?.intelligence_agency || "-";
+    const population = data.demographics?.total_population
+        ? formatNum(data.demographics.total_population)
+        : "-";
+    const lifeExp = data.demographics?.life_expectancy || "-";
+    const lang = data.demographics?.most_spoken_language || "-";
+    const birthRate = data.demographics?.birth_rate || "-";
+    const pyramidHtml = generatePyramidChart(
+        data.demographics?.population_pyramid
+    );
 
-  return `
+    const fireRank = data.military?.global_firepower_rank || "-";
+    const activeMil = data.military?.active_personnel
+        ? formatNum(data.military.active_personnel)
+        : "-";
+    const reserveMil = data.military?.reserve_personnel
+        ? formatNum(data.military.reserve_personnel)
+        : "-";
+    const totalMil = data.military?.total_personnel
+        ? formatNum(data.military.total_personnel)
+        : "-";
+    const defBudget = data.military?.defense_budget_usd
+        ? currencyCompact(data.military.defense_budget_usd)
+        : "-";
+    const intel = data.general_info?.intelligence_agency || "-";
+
+    return `
         <div class="text-center mb-3">
             <img src="${flagUrl}" width="100" class="img-thumbnail mb-2 shadow-sm">
             <h5 class="fw-bold mb-0 text-dark">${nameTr}</h5>
@@ -190,6 +196,7 @@ function generateDetailContent(code, pathElement) {
             <ul class="list-unstyled small mb-2">
                 <li><strong>Nüfus:</strong> ${population}</li>
                 <li><strong>Ort. Ömür:</strong> ${lifeExp} Yıl</li>
+                <li><strong>Doğum Oranı:</strong> ${birthRate} %</li>
                 <li><strong>Dil:</strong> ${lang}</li>
             </ul>
             
@@ -220,6 +227,7 @@ function generateDetailContent(code, pathElement) {
             <ul class="list-unstyled small mb-0">
                 <li><strong>Güç Sıralaması:</strong> #${fireRank}</li>
                 <li><strong>Aktif Personel:</strong> ${activeMil}</li>
+                <li><strong>Yedek Personel:</strong> ${reserveMil}</li>
                 <li><strong>Toplam Personel:</strong> ${totalMil}</li>
                 <li><strong>Savunma Bütçesi:</strong> ${defBudget}</li>
                 <li><strong>İstihbarat:</strong> ${intel}</li>

@@ -1,4 +1,10 @@
 {
+  "name": "dijital-atlas",
+  "version": "1.0.0",
+  "description": "Interactive World Map Project",
+  "main": "index.js",
+  "license": "MIT",
+  "author": "InteractiveAtlas Team",
   "dependencies": {
     "bootstrap": "^5.3.8"
   }
