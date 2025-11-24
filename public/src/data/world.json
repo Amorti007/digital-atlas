@@ -10828,5 +10828,1179 @@
       "total_personnel": 75000,
       "defense_budget_usd": 540000000
     }
+  },
+  "TW": {
+    "id": "TW",
+    "names": {
+      "tr": "Tayvan",
+      "en": "Taiwan"
+    },
+    "codes": {
+      "alpha2": "TW",
+      "alpha3": "TWN"
+    },
+    "general_info": {
+      "description_tr": "Tayvan, Doğu Asya'da yer alan, yüksek teknolojili endüstrisi ve özellikle yarı iletken üretimiyle tanınan bir ada ülkesidir. Canlı demokrasisi ve gece pazarları ile ünlüdür.",
+      "description_en": "Taiwan is an island nation in East Asia, known for its high-tech industry, especially semiconductor manufacturing. It is famous for its vibrant democracy and night markets.",
+      "flag_url": "assets/flags/tw.svg",
+      "intelligence_agency": "National Security Bureau (NSB)"
+    },
+    "geography": {
+      "capital_tr": "Taipei",
+      "capital_en": "Taipei",
+      "continent_tr": "Asya",
+      "continent_en": "Asia",
+      "area_sq_km": 36193,
+      "timezone": "UTC+08:00"
+    },
+    "politics": {
+      "government_tr": "Yarı Başkanlık Cumhuriyeti",
+      "government_en": "Unitary semi-presidential republic",
+      "independence_date": "1912-01-01"
+    },
+    "economy": {
+      "gdp_usd": 802000000000,
+      "gdp_growth_rate": 3.9,
+      "gdp_per_capita_usd": 34000,
+      "inflation_rate": 2.1,
+      "minimum_wage_usd": 850,
+      "unemployment_rate": 3.3,
+      "currency": "Yeni Tayvan Doları",
+      "currency_en": "New Taiwan Dollar"
+    },
+    "demographics": {
+      "total_population": 23400000,
+      "life_expectancy": 81.0,
+      "birth_rate": 6.0,
+      "most_spoken_language": "Mandarin Çincesi",
+      "most_spoken_language_en": "Mandarin Chinese",
+      "population_pyramid": []
+    },
+    "military": {
+      "global_firepower_rank": 24,
+      "active_personnel": 215000,
+      "reserve_personnel": 2310000,
+      "total_personnel": 2580000,
+      "defense_budget_usd": 19700000000
+    }
+  },
+    "KY": {
+    "id": "KY",
+    "names": {
+      "tr": "Cayman Adaları",
+      "en": "Cayman Islands"
+    },
+    "codes": {
+      "alpha2": "KY",
+      "alpha3": "CYM"
+    },
+    "general_info": {
+      "description_tr": "Cayman Adaları, Karayipler'de Birleşik Krallık'a bağlı bir denizaşırı topraktır. Küresel bir finans merkezi olması ve dalış turizmi ile tanınır.",
+      "description_en": "The Cayman Islands is a British Overseas Territory in the Caribbean. It is known as a global financial hub and for its diving tourism.",
+      "flag_url": "assets/flags/ky.svg",
+      "intelligence_agency": "RCIPS Financial Crime Unit (UK Intelligence support)"
+    },
+    "geography": {
+      "capital_tr": "George Town",
+      "capital_en": "George Town",
+      "continent_tr": "Kuzey Amerika",
+      "continent_en": "North America",
+      "area_sq_km": 264,
+      "timezone": "UTC-05:00"
+    },
+    "politics": {
+      "government_tr": "Birleşik Krallık Denizaşırı Toprağı",
+      "government_en": "British Overseas Territory",
+      "independence_date": null
+    },
+    "economy": {
+      "gdp_usd": 6840000000,
+      "gdp_growth_rate": 3.8,
+      "gdp_per_capita_usd": 91000,
+      "inflation_rate": 3.6,
+      "minimum_wage_usd": 10,
+      "unemployment_rate": 2.1,
+      "currency": "Cayman Adaları Doları",
+      "currency_en": "Cayman Islands Dollar"
+    },
+    "demographics": {
+      "total_population": 74000,
+      "life_expectancy": 82.1,
+      "birth_rate": 11.9,
+      "most_spoken_language": "İngilizce",
+      "most_spoken_language_en": "English",
+      "population_pyramid": []
+    },
+    "military": {
+      "global_firepower_rank": 0,
+      "active_personnel": 0,
+      "reserve_personnel": 0,
+      "total_personnel": 0,
+      "defense_budget_usd": 0
+    }
+  },
+  
+  "AW": {
+    "id": "AW",
+    "names": {
+      "tr": "Aruba",
+      "en": "Aruba"
+    },
+    "codes": {
+      "alpha2": "AW",
+      "alpha3": "ABW"
+    },
+    "general_info": {
+      "description_tr": "Aruba, Karayipler'in güneyinde Hollanda Krallığı'na bağlı kurucu bir ülkedir. Kuru iklimi, kaktüsleri ve beyaz kumsalları ile ünlüdür.",
+      "description_en": "Aruba is a constituent country of the Kingdom of the Netherlands in the southern Caribbean. It is famous for its dry climate, cacti, and white beaches.",
+      "flag_url": "assets/flags/aw.svg",
+      "intelligence_agency": "Veiligheidsdienst Aruba (VDA)"
+    },
+    "geography": {
+      "capital_tr": "Oranjestad",
+      "capital_en": "Oranjestad",
+      "continent_tr": "Kuzey Amerika",
+      "continent_en": "North America",
+      "area_sq_km": 180,
+      "timezone": "UTC-04:00"
+    },
+    "politics": {
+      "government_tr": "Hollanda Krallığı Kurucu Ülkesi",
+      "government_en": "Constituent country of the Kingdom of the Netherlands",
+      "independence_date": "1986-01-01"
+    },
+    "economy": {
+      "gdp_usd": 3500000000,
+      "gdp_growth_rate": 2.5,
+      "gdp_per_capita_usd": 33000,
+      "inflation_rate": 4.5,
+      "minimum_wage_usd": 950,
+      "unemployment_rate": 7.3,
+      "currency": "Aruba Florini",
+      "currency_en": "Aruban Florin"
+    },
+    "demographics": {
+      "total_population": 108000,
+      "life_expectancy": 76.6,
+      "birth_rate": 11.4,
+      "most_spoken_language": "Papiamento",
+      "most_spoken_language_en": "Papiamento",
+      "population_pyramid": []
+    },
+    "military": {
+      "global_firepower_rank": 0,
+      "active_personnel": 0,
+      "reserve_personnel": 0,
+      "total_personnel": 0,
+      "defense_budget_usd": 0
+    }
+  },
+
+  "CW": {
+    "id": "CW",
+    "names": {
+      "tr": "Curaçao",
+      "en": "Curaçao"
+    },
+    "codes": {
+      "alpha2": "CW",
+      "alpha3": "CUW"
+    },
+    "general_info": {
+      "description_tr": "Curaçao, Karayipler'de Hollanda Krallığı'na bağlı bir ada ülkesidir. Hollanda kolonyal mimarisi, Handelskade ve renkli binalarıyla bilinir.",
+      "description_en": "Curaçao is an island country in the Caribbean within the Kingdom of the Netherlands. It is known for its Dutch colonial architecture and colorful buildings.",
+      "flag_url": "assets/flags/cw.svg",
+      "intelligence_agency": "Veiligheidsdienst Curaçao (VDC)"
+    },
+    "geography": {
+      "capital_tr": "Willemstad",
+      "capital_en": "Willemstad",
+      "continent_tr": "Kuzey Amerika",
+      "continent_en": "North America",
+      "area_sq_km": 444,
+      "timezone": "UTC-04:00"
+    },
+    "politics": {
+      "government_tr": "Hollanda Krallığı Kurucu Ülkesi",
+      "government_en": "Constituent country of the Kingdom of the Netherlands",
+      "independence_date": "2010-10-10"
+    },
+    "economy": {
+      "gdp_usd": 3100000000,
+      "gdp_growth_rate": 3.0,
+      "gdp_per_capita_usd": 20000,
+      "inflation_rate": 3.4,
+      "minimum_wage_usd": 580,
+      "unemployment_rate": 13.1,
+      "currency": "Hollanda Antilleri Guldeni",
+      "currency_en": "Netherlands Antillean Guilder"
+    },
+    "demographics": {
+      "total_population": 155000,
+      "life_expectancy": 79.0,
+      "birth_rate": 10.5,
+      "most_spoken_language": "Papiamento",
+      "most_spoken_language_en": "Papiamento",
+      "population_pyramid": []
+    },
+    "military": {
+      "global_firepower_rank": 0,
+      "active_personnel": 0,
+      "reserve_personnel": 0,
+      "total_personnel": 0,
+      "defense_budget_usd": 0
+    }
+  },
+
+  "TC": {
+    "id": "TC",
+    "names": {
+      "tr": "Turks ve Caicos Adaları",
+      "en": "Turks and Caicos"
+    },
+    "codes": {
+      "alpha2": "TC",
+      "alpha3": "TCA"
+    },
+    "general_info": {
+      "description_tr": "Turks ve Caicos, Atlantik Okyanusu'nda Birleşik Krallık'a bağlı bir takımadadır. Lüks turizm, mercan resifleri ve offshore finans merkeziyle tanınır.",
+      "description_en": "Turks and Caicos is a British Overseas Territory in the Atlantic. It is known for luxury tourism, coral reefs, and as an offshore financial center.",
+      "flag_url": "assets/flags/tc.svg",
+      "intelligence_agency": "Royal Turks and Caicos Islands Police Force (Intelligence Unit)"
+    },
+    "geography": {
+      "capital_tr": "Cockburn Town",
+      "capital_en": "Cockburn Town",
+      "continent_tr": "Kuzey Amerika",
+      "continent_en": "North America",
+      "area_sq_km": 948,
+      "timezone": "UTC-05:00"
+    },
+    "politics": {
+      "government_tr": "Birleşik Krallık Denizaşırı Toprağı",
+      "government_en": "British Overseas Territory",
+      "independence_date": null
+    },
+    "economy": {
+      "gdp_usd": 1400000000,
+      "gdp_growth_rate": 4.5,
+      "gdp_per_capita_usd": 30000,
+      "inflation_rate": 4.0,
+      "minimum_wage_usd": 1300,
+      "unemployment_rate": 6.0,
+      "currency": "ABD Doları",
+      "currency_en": "United States Dollar"
+    },
+    "demographics": {
+      "total_population": 46000,
+      "life_expectancy": 80.4,
+      "birth_rate": 14.2,
+      "most_spoken_language": "İngilizce",
+      "most_spoken_language_en": "English",
+      "population_pyramid": []
+    },
+    "military": {
+      "global_firepower_rank": 0,
+      "active_personnel": 0,
+      "reserve_personnel": 0,
+      "total_personnel": 0,
+      "defense_budget_usd": 0
+    }
+  },
+
+  "MS": {
+    "id": "MS",
+    "names": {
+      "tr": "Montserrat",
+      "en": "Montserrat"
+    },
+    "codes": {
+      "alpha2": "MS",
+      "alpha3": "MSR"
+    },
+    "general_info": {
+      "description_tr": "Montserrat, Karayipler'de 'Zümrüt Ada' olarak bilinen Birleşik Krallık toprağıdır. Soufrière Hills yanardağının aktif olmasıyla tanınır.",
+      "description_en": "Montserrat is a British Overseas Territory in the Caribbean known as the 'Emerald Isle'. It is famous for the active Soufrière Hills volcano.",
+      "flag_url": "assets/flags/ms.svg",
+      "intelligence_agency": "Royal Montserrat Police Service (Special Branch)"
+    },
+    "geography": {
+      "capital_tr": "Plymouth (de jure), Brades (de facto)",
+      "capital_en": "Plymouth (de jure), Brades (de facto)",
+      "continent_tr": "Kuzey Amerika",
+      "continent_en": "North America",
+      "area_sq_km": 102,
+      "timezone": "UTC-04:00"
+    },
+    "politics": {
+      "government_tr": "Birleşik Krallık Denizaşırı Toprağı",
+      "government_en": "British Overseas Territory",
+      "independence_date": null
+    },
+    "economy": {
+      "gdp_usd": 72000000,
+      "gdp_growth_rate": 1.5,
+      "gdp_per_capita_usd": 13500,
+      "inflation_rate": 2.0,
+      "minimum_wage_usd": 800,
+      "unemployment_rate": 5.6,
+      "currency": "Doğu Karayip Doları",
+      "currency_en": "East Caribbean Dollar"
+    },
+    "demographics": {
+      "total_population": 4500,
+      "life_expectancy": 75.2,
+      "birth_rate": 11.0,
+      "most_spoken_language": "İngilizce",
+      "most_spoken_language_en": "English",
+      "population_pyramid": []
+    },
+    "military": {
+      "global_firepower_rank": 0,
+      "active_personnel": 0,
+      "reserve_personnel": 0,
+      "total_personnel": 0,
+      "defense_budget_usd": 0
+    }
+  },
+
+  "VG": {
+    "id": "VG",
+    "names": {
+      "tr": "Britanya Virgin Adaları",
+      "en": "British Virgin Islands"
+    },
+    "codes": {
+      "alpha2": "VG",
+      "alpha3": "VGB"
+    },
+    "general_info": {
+      "description_tr": "Britanya Virgin Adaları, Karayipler'de Birleşik Krallık'a bağlı bir grup adadır. Offshore finans hizmetleri ve yelkencilik turizmi ile ünlüdür.",
+      "description_en": "The British Virgin Islands is a British Overseas Territory in the Caribbean. It is famous for offshore financial services and sailing tourism.",
+      "flag_url": "assets/flags/vg.svg",
+      "intelligence_agency": "Royal Virgin Islands Police Force (Intelligence Unit)"
+    },
+    "geography": {
+      "capital_tr": "Road Town",
+      "capital_en": "Road Town",
+      "continent_tr": "Kuzey Amerika",
+      "continent_en": "North America",
+      "area_sq_km": 151,
+      "timezone": "UTC-04:00"
+    },
+    "politics": {
+      "government_tr": "Birleşik Krallık Denizaşırı Toprağı",
+      "government_en": "British Overseas Territory",
+      "independence_date": null
+    },
+    "economy": {
+      "gdp_usd": 1500000000,
+      "gdp_growth_rate": 2.2,
+      "gdp_per_capita_usd": 48000,
+      "inflation_rate": 3.0,
+      "minimum_wage_usd": 1050,
+      "unemployment_rate": 2.9,
+      "currency": "ABD Doları",
+      "currency_en": "United States Dollar"
+    },
+    "demographics": {
+      "total_population": 32000,
+      "life_expectancy": 79.5,
+      "birth_rate": 10.8,
+      "most_spoken_language": "İngilizce",
+      "most_spoken_language_en": "English",
+      "population_pyramid": []
+    },
+    "military": {
+      "global_firepower_rank": 0,
+      "active_personnel": 0,
+      "reserve_personnel": 0,
+      "total_personnel": 0,
+      "defense_budget_usd": 0
+    }
+  },
+
+  "BL": {
+    "id": "BL",
+    "names": {
+      "tr": "Saint Barthélemy",
+      "en": "Saint Bathelemy"
+    },
+    "codes": {
+      "alpha2": "BL",
+      "alpha3": "BLM"
+    },
+    "general_info": {
+      "description_tr": "Saint Barthélemy (St. Barts), Karayipler'de Fransa'ya bağlı lüks bir adadır. Beyaz kumsalları ve üst düzey turizmi ile ünlüdür.",
+      "description_en": "Saint Barthélemy (St. Barts) is a French overseas collectivity in the Caribbean. It is famous for white sand beaches and high-end tourism.",
+      "flag_url": "assets/flags/bl.svg",
+      "intelligence_agency": "Gendarmerie Nationale (France)"
+    },
+    "geography": {
+      "capital_tr": "Gustavia",
+      "capital_en": "Gustavia",
+      "continent_tr": "Kuzey Amerika",
+      "continent_en": "North America",
+      "area_sq_km": 25,
+      "timezone": "UTC-04:00"
+    },
+    "politics": {
+      "government_tr": "Fransa Denizaşırı Topluluğu",
+      "government_en": "Overseas collectivity of France",
+      "independence_date": null
+    },
+    "economy": {
+      "gdp_usd": 450000000,
+      "gdp_growth_rate": 1.5,
+      "gdp_per_capita_usd": 47000,
+      "inflation_rate": 1.5,
+      "minimum_wage_usd": 1600,
+      "unemployment_rate": 4.0,
+      "currency": "Euro",
+      "currency_en": "Euro"
+    },
+    "demographics": {
+      "total_population": 10000,
+      "life_expectancy": 80.0,
+      "birth_rate": 9.5,
+      "most_spoken_language": "Fransızca",
+      "most_spoken_language_en": "French",
+      "population_pyramid": []
+    },
+    "military": {
+      "global_firepower_rank": 0,
+      "active_personnel": 0,
+      "reserve_personnel": 0,
+      "total_personnel": 0,
+      "defense_budget_usd": 0
+    }
+  },
+
+  "KN": {
+    "id": "KN",
+    "names": {
+      "tr": "Saint Kitts ve Nevis",
+      "en": "Saint Kitts and Nevis"
+    },
+    "codes": {
+      "alpha2": "KN",
+      "alpha3": "KNA"
+    },
+    "general_info": {
+      "description_tr": "Saint Kitts ve Nevis, Batı Yarımküre'nin en küçük egemen devletidir. İki adadan oluşur ve 'Yatırım Yoluyla Vatandaşlık' programıyla tanınır.",
+      "description_en": "Saint Kitts and Nevis is the smallest sovereign state in the Western Hemisphere. It consists of two islands and is known for its 'Citizenship by Investment' program.",
+      "flag_url": "assets/flags/kn.svg",
+      "intelligence_agency": "Royal St. Christopher and Nevis Police Force (Special Branch)"
+    },
+    "geography": {
+      "capital_tr": "Basseterre",
+      "capital_en": "Basseterre",
+      "continent_tr": "Kuzey Amerika",
+      "continent_en": "North America",
+      "area_sq_km": 261,
+      "timezone": "UTC-04:00"
+    },
+    "politics": {
+      "government_tr": "Anayasal Monarşi altında Federal Parlamenter Demokrasi",
+      "government_en": "Federal parliamentary democracy under constitutional monarchy",
+      "independence_date": "1983-09-19"
+    },
+    "economy": {
+      "gdp_usd": 1100000000,
+      "gdp_growth_rate": 3.8,
+      "gdp_per_capita_usd": 21000,
+      "inflation_rate": 2.5,
+      "minimum_wage_usd": 450,
+      "unemployment_rate": 5.0,
+      "currency": "Doğu Karayip Doları",
+      "currency_en": "East Caribbean Dollar"
+    },
+    "demographics": {
+      "total_population": 48000,
+      "life_expectancy": 71.8,
+      "birth_rate": 12.2,
+      "most_spoken_language": "İngilizce",
+      "most_spoken_language_en": "English",
+      "population_pyramid": []
+    },
+    "military": {
+      "global_firepower_rank": 0,
+      "active_personnel": 300,
+      "reserve_personnel": 150,
+      "total_personnel": 450,
+      "defense_budget_usd": 10000000
+    }
+  },
+
+  "AI": {
+    "id": "AI",
+    "names": {
+      "tr": "Anguilla",
+      "en": "Anguilla"
+    },
+    "codes": {
+      "alpha2": "AI",
+      "alpha3": "AIA"
+    },
+    "general_info": {
+      "description_tr": "Anguilla, Karayipler'de Birleşik Krallık'a bağlı düz ve mercan adasıdır. Sakin plajları ve lüks tatil köyleri ile tanınır.",
+      "description_en": "Anguilla is a flat, coral British Overseas Territory in the Caribbean. It is known for its quiet beaches and luxury resorts.",
+      "flag_url": "assets/flags/ai.svg",
+      "intelligence_agency": "Royal Anguilla Police Force"
+    },
+    "geography": {
+      "capital_tr": "The Valley",
+      "capital_en": "The Valley",
+      "continent_tr": "Kuzey Amerika",
+      "continent_en": "North America",
+      "area_sq_km": 91,
+      "timezone": "UTC-04:00"
+    },
+    "politics": {
+      "government_tr": "Birleşik Krallık Denizaşırı Toprağı",
+      "government_en": "British Overseas Territory",
+      "independence_date": null
+    },
+    "economy": {
+      "gdp_usd": 350000000,
+      "gdp_growth_rate": 2.0,
+      "gdp_per_capita_usd": 20000,
+      "inflation_rate": 2.8,
+      "minimum_wage_usd": 1000,
+      "unemployment_rate": 8.0,
+      "currency": "Doğu Karayip Doları",
+      "currency_en": "East Caribbean Dollar"
+    },
+    "demographics": {
+      "total_population": 16000,
+      "life_expectancy": 81.9,
+      "birth_rate": 12.1,
+      "most_spoken_language": "İngilizce",
+      "most_spoken_language_en": "English",
+      "population_pyramid": []
+    },
+    "military": {
+      "global_firepower_rank": 0,
+      "active_personnel": 0,
+      "reserve_personnel": 0,
+      "total_personnel": 0,
+      "defense_budget_usd": 0
+    }
+  },
+
+  "FK": {
+    "id": "FK",
+    "names": {
+      "tr": "Falkland Adaları",
+      "en": "Falkland Islands"
+    },
+    "codes": {
+      "alpha2": "FK",
+      "alpha3": "FLK"
+    },
+    "general_info": {
+      "description_tr": "Falkland Adaları, Güney Atlantik'te Birleşik Krallık'a bağlı bir takımadadır. Koyun yetiştiriciliği, balıkçılık ve 1982 savaşı ile bilinir.",
+      "description_en": "The Falkland Islands is a British Overseas Territory in the South Atlantic. It is known for sheep farming, fishing, and the 1982 war.",
+      "flag_url": "assets/flags/fk.svg",
+      "intelligence_agency": "British Forces South Atlantic Islands (BFSAI) Intelligence"
+    },
+    "geography": {
+      "capital_tr": "Stanley",
+      "capital_en": "Stanley",
+      "continent_tr": "Güney Amerika",
+      "continent_en": "South America",
+      "area_sq_km": 12173,
+      "timezone": "UTC-03:00"
+    },
+    "politics": {
+      "government_tr": "Birleşik Krallık Denizaşırı Toprağı",
+      "government_en": "British Overseas Territory",
+      "independence_date": null
+    },
+    "economy": {
+      "gdp_usd": 250000000,
+      "gdp_growth_rate": 1.0,
+      "gdp_per_capita_usd": 70000,
+      "inflation_rate": 2.0,
+      "minimum_wage_usd": 1200,
+      "unemployment_rate": 1.0,
+      "currency": "Falkland Adaları Lirası",
+      "currency_en": "Falkland Islands Pound"
+    },
+    "demographics": {
+      "total_population": 3700,
+      "life_expectancy": 78.0,
+      "birth_rate": 10.9,
+      "most_spoken_language": "İngilizce",
+      "most_spoken_language_en": "English",
+      "population_pyramid": []
+    },
+    "military": {
+      "global_firepower_rank": 0,
+      "active_personnel": 0,
+      "reserve_personnel": 0,
+      "total_personnel": 1500,
+      "defense_budget_usd": 0
+    }
+  },
+
+  "AS": {
+    "id": "AS",
+    "names": {
+      "tr": "Amerikan Samoası",
+      "en": "American Samoa"
+    },
+    "codes": {
+      "alpha2": "AS",
+      "alpha3": "ASM"
+    },
+    "general_info": {
+      "description_tr": "Amerikan Samoası, Güney Pasifik'te ABD'ye bağlı bir bölgedir. Ton balığı konserve endüstrisi ve geleneksel Samoalı kültürü ile bilinir.",
+      "description_en": "American Samoa is a U.S. territory in the South Pacific. It is known for its tuna canning industry and traditional Samoan culture.",
+      "flag_url": "assets/flags/as.svg",
+      "intelligence_agency": "FBI (Honolulu Field Office)"
+    },
+    "geography": {
+      "capital_tr": "Pago Pago",
+      "capital_en": "Pago Pago",
+      "continent_tr": "Okyanusya",
+      "continent_en": "Oceania",
+      "area_sq_km": 199,
+      "timezone": "UTC-11:00"
+    },
+    "politics": {
+      "government_tr": "ABD'ye Bağlı Toprak",
+      "government_en": "Unincorporated territory of the US",
+      "independence_date": null
+    },
+    "economy": {
+      "gdp_usd": 710000000,
+      "gdp_growth_rate": -1.0,
+      "gdp_per_capita_usd": 13000,
+      "inflation_rate": 3.0,
+      "minimum_wage_usd": 950,
+      "unemployment_rate": 11.0,
+      "currency": "ABD Doları",
+      "currency_en": "United States Dollar"
+    },
+    "demographics": {
+      "total_population": 49000,
+      "life_expectancy": 74.0,
+      "birth_rate": 17.0,
+      "most_spoken_language": "Samoaca",
+      "most_spoken_language_en": "Samoan",
+      "population_pyramid": []
+    },
+    "military": {
+      "global_firepower_rank": 0,
+      "active_personnel": 0,
+      "reserve_personnel": 0,
+      "total_personnel": 0,
+      "defense_budget_usd": 0
+    }
+  },
+
+  "IC": {
+    "id": "IC",
+    "names": {
+      "tr": "Kanarya Adaları",
+      "en": "Canary Islands"
+    },
+    "codes": {
+      "alpha2": "IC",
+      "alpha3": "IC"
+    },
+    "general_info": {
+      "description_tr": "Kanarya Adaları, Afrika'nın kuzeybatı kıyısında yer alan İspanya'ya bağlı özerk bir topluluktur. Volkanik doğası ve turizmi ile ünlüdür.",
+      "description_en": "The Canary Islands is a Spanish autonomous community off the coast of northwest Africa. It is famous for its volcanic nature and tourism.",
+      "flag_url": "assets/flags/es-cn.svg",
+      "intelligence_agency": "Centro Nacional de Inteligencia (CNI) - Spain"
+    },
+    "geography": {
+      "capital_tr": "Las Palmas / Santa Cruz",
+      "capital_en": "Las Palmas / Santa Cruz",
+      "continent_tr": "Afrika",
+      "continent_en": "Africa",
+      "area_sq_km": 7493,
+      "timezone": "UTC+00:00"
+    },
+    "politics": {
+      "government_tr": "İspanya Özerk Topluluğu",
+      "government_en": "Autonomous Community of Spain",
+      "independence_date": null
+    },
+    "economy": {
+      "gdp_usd": 50000000000,
+      "gdp_growth_rate": 2.0,
+      "gdp_per_capita_usd": 22000,
+      "inflation_rate": 3.0,
+      "minimum_wage_usd": 1200,
+      "unemployment_rate": 17.0,
+      "currency": "Euro",
+      "currency_en": "Euro"
+    },
+    "demographics": {
+      "total_population": 2200000,
+      "life_expectancy": 83.5,
+      "birth_rate": 6.5,
+      "most_spoken_language": "İspanyolca",
+      "most_spoken_language_en": "Spanish",
+      "population_pyramid": []
+    },
+    "military": {
+      "global_firepower_rank": 0,
+      "active_personnel": 0,
+      "reserve_personnel": 0,
+      "total_personnel": 0,
+      "defense_budget_usd": 0
+    }
+  },
+
+  "FO": {
+    "id": "FO",
+    "names": {
+      "tr": "Faroe Adaları",
+      "en": "Faroe Islands"
+    },
+    "codes": {
+      "alpha2": "FO",
+      "alpha3": "FRO"
+    },
+    "general_info": {
+      "description_tr": "Faroe Adaları, Kuzey Atlantik'te Danimarka Krallığı'na bağlı özerk bir ülkedir. Sarp kayalıkları, koyunları ve balıkçılığı ile bilinir.",
+      "description_en": "The Faroe Islands is a self-governing archipelago, part of the Kingdom of Denmark. It is known for its steep cliffs, sheep, and fishing.",
+      "flag_url": "assets/flags/fo.svg",
+      "intelligence_agency": "Politiets Efterretningstjeneste (PET) - Denmark"
+    },
+    "geography": {
+      "capital_tr": "Tórshavn",
+      "capital_en": "Tórshavn",
+      "continent_tr": "Avrupa",
+      "continent_en": "Europe",
+      "area_sq_km": 1393,
+      "timezone": "UTC+00:00"
+    },
+    "politics": {
+      "government_tr": "Danimarka Krallığı İçinde Özerk",
+      "government_en": "Autonomous country within the Kingdom of Denmark",
+      "independence_date": null
+    },
+    "economy": {
+      "gdp_usd": 3500000000,
+      "gdp_growth_rate": 2.8,
+      "gdp_per_capita_usd": 65000,
+      "inflation_rate": 3.5,
+      "minimum_wage_usd": 2500,
+      "unemployment_rate": 1.3,
+      "currency": "Danimarka Kronu",
+      "currency_en": "Danish Krone"
+    },
+    "demographics": {
+      "total_population": 54000,
+      "life_expectancy": 82.9,
+      "birth_rate": 13.2,
+      "most_spoken_language": "Faroece",
+      "most_spoken_language_en": "Faroese",
+      "population_pyramid": []
+    },
+    "military": {
+      "global_firepower_rank": 0,
+      "active_personnel": 0,
+      "reserve_personnel": 0,
+      "total_personnel": 0,
+      "defense_budget_usd": 0
+    }
+  },
+
+  "YT": {
+    "id": "YT",
+    "names": {
+      "tr": "Mayotte",
+      "en": "Mayotte"
+    },
+    "codes": {
+      "alpha2": "YT",
+      "alpha3": "MYT"
+    },
+    "general_info": {
+      "description_tr": "Mayotte, Hint Okyanusu'nda Fransa'ya bağlı bir denizaşırı ildir. Mercan resifleri ve lagünü ile ünlüdür.",
+      "description_en": "Mayotte is an overseas department of France in the Indian Ocean. It is famous for its coral reefs and lagoon.",
+      "flag_url": "assets/flags/yt.svg",
+      "intelligence_agency": "DGSE (France)"
+    },
+    "geography": {
+      "capital_tr": "Mamoudzou",
+      "capital_en": "Mamoudzou",
+      "continent_tr": "Afrika",
+      "continent_en": "Africa",
+      "area_sq_km": 374,
+      "timezone": "UTC+03:00"
+    },
+    "politics": {
+      "government_tr": "Fransa Denizaşırı İli",
+      "government_en": "Overseas department of France",
+      "independence_date": null
+    },
+    "economy": {
+      "gdp_usd": 3000000000,
+      "gdp_growth_rate": 2.0,
+      "gdp_per_capita_usd": 10000,
+      "inflation_rate": 2.5,
+      "minimum_wage_usd": 1200,
+      "unemployment_rate": 30.0,
+      "currency": "Euro",
+      "currency_en": "Euro"
+    },
+    "demographics": {
+      "total_population": 320000,
+      "life_expectancy": 76.0,
+      "birth_rate": 32.0,
+      "most_spoken_language": "Fransızca",
+      "most_spoken_language_en": "French",
+      "population_pyramid": []
+    },
+    "military": {
+      "global_firepower_rank": 0,
+      "active_personnel": 0,
+      "reserve_personnel": 0,
+      "total_personnel": 0,
+      "defense_budget_usd": 0
+    }
+  },
+
+  "PW": {
+    "id": "PW",
+    "names": {
+      "tr": "Palau",
+      "en": "Palau"
+    },
+    "codes": {
+      "alpha2": "PW",
+      "alpha3": "PLW"
+    },
+    "general_info": {
+      "description_tr": "Palau, Batı Pasifik'te 500'den fazla adadan oluşan bir takımadadır. Eşsiz deniz yaşamı ve Rock Islands ile tanınır.",
+      "description_en": "Palau is an archipelago of over 500 islands in the western Pacific. It is known for its unique marine life and the Rock Islands.",
+      "flag_url": "assets/flags/pw.svg",
+      "intelligence_agency": "Bureau of Public Safety"
+    },
+    "geography": {
+      "capital_tr": "Ngerulmud",
+      "capital_en": "Ngerulmud",
+      "continent_tr": "Okyanusya",
+      "continent_en": "Oceania",
+      "area_sq_km": 459,
+      "timezone": "UTC+09:00"
+    },
+    "politics": {
+      "government_tr": "Başkanlık Cumhuriyeti",
+      "government_en": "Presidential republic",
+      "independence_date": "1994-10-01"
+    },
+    "economy": {
+      "gdp_usd": 300000000,
+      "gdp_growth_rate": 5.5,
+      "gdp_per_capita_usd": 14500,
+      "inflation_rate": 3.0,
+      "minimum_wage_usd": 700,
+      "unemployment_rate": 1.7,
+      "currency": "ABD Doları",
+      "currency_en": "United States Dollar"
+    },
+    "demographics": {
+      "total_population": 18000,
+      "life_expectancy": 74.0,
+      "birth_rate": 11.3,
+      "most_spoken_language": "Palauca",
+      "most_spoken_language_en": "Palauan",
+      "population_pyramid": []
+    },
+    "military": {
+      "global_firepower_rank": 0,
+      "active_personnel": 0,
+      "reserve_personnel": 0,
+      "total_personnel": 0,
+      "defense_budget_usd": 0
+    }
+  },
+
+  "FM": {
+    "id": "FM",
+    "names": {
+      "tr": "Mikronezya Federal Devletleri",
+      "en": "Federated States of Micronesia"
+    },
+    "codes": {
+      "alpha2": "FM",
+      "alpha3": "FSM"
+    },
+    "general_info": {
+      "description_tr": "Mikronezya, Batı Pasifik'te 600'den fazla adadan oluşan bir ada ülkesidir. Dört eyaletten oluşur: Yap, Chuuk, Pohnpei ve Kosrae.",
+      "description_en": "Micronesia is an island nation in the western Pacific comprising more than 600 islands. It consists of four states: Yap, Chuuk, Pohnpei, and Kosrae.",
+      "flag_url": "assets/flags/fm.svg",
+      "intelligence_agency": "FSM National Police"
+    },
+    "geography": {
+      "capital_tr": "Palikir",
+      "capital_en": "Palikir",
+      "continent_tr": "Okyanusya",
+      "continent_en": "Oceania",
+      "area_sq_km": 702,
+      "timezone": "UTC+11:00"
+    },
+    "politics": {
+      "government_tr": "Federal Cumhuriyet",
+      "government_en": "Federal republic",
+      "independence_date": "1986-11-03"
+    },
+    "economy": {
+      "gdp_usd": 450000000,
+      "gdp_growth_rate": 2.8,
+      "gdp_per_capita_usd": 4000,
+      "inflation_rate": 3.5,
+      "minimum_wage_usd": 350,
+      "unemployment_rate": 16.2,
+      "currency": "ABD Doları",
+      "currency_en": "United States Dollar"
+    },
+    "demographics": {
+      "total_population": 115000,
+      "life_expectancy": 70.0,
+      "birth_rate": 18.6,
+      "most_spoken_language": "İngilizce",
+      "most_spoken_language_en": "English",
+      "population_pyramid": []
+    },
+    "military": {
+      "global_firepower_rank": 0,
+      "active_personnel": 0,
+      "reserve_personnel": 0,
+      "total_personnel": 0,
+      "defense_budget_usd": 0
+    }
+  },
+
+  "GU": {
+    "id": "GU",
+    "names": {
+      "tr": "Guam",
+      "en": "Guam"
+    },
+    "codes": {
+      "alpha2": "GU",
+      "alpha3": "GUM"
+    },
+    "general_info": {
+      "description_tr": "Guam, Batı Pasifik'te ABD'ye bağlı bir ada toprağıdır. Stratejik askeri üsleri ve Chamorro kültürü ile bilinir.",
+      "description_en": "Guam is a U.S. island territory in the Western Pacific. It is known for its strategic military bases and Chamorro culture.",
+      "flag_url": "assets/flags/gu.svg",
+      "intelligence_agency": "FBI (Honolulu Field Office)"
+    },
+    "geography": {
+      "capital_tr": "Hagåtña",
+      "capital_en": "Hagåtña",
+      "continent_tr": "Okyanusya",
+      "continent_en": "Oceania",
+      "area_sq_km": 544,
+      "timezone": "UTC+10:00"
+    },
+    "politics": {
+      "government_tr": "ABD'ye Bağlı Toprak",
+      "government_en": "Unincorporated territory of the US",
+      "independence_date": null
+    },
+    "economy": {
+      "gdp_usd": 6500000000,
+      "gdp_growth_rate": 3.0,
+      "gdp_per_capita_usd": 38000,
+      "inflation_rate": 2.5,
+      "minimum_wage_usd": 1500,
+      "unemployment_rate": 4.5,
+      "currency": "ABD Doları",
+      "currency_en": "United States Dollar"
+    },
+    "demographics": {
+      "total_population": 170000,
+      "life_expectancy": 79.9,
+      "birth_rate": 16.0,
+      "most_spoken_language": "İngilizce",
+      "most_spoken_language_en": "English",
+      "population_pyramid": []
+    },
+    "military": {
+      "global_firepower_rank": 0,
+      "active_personnel": 0,
+      "reserve_personnel": 0,
+      "total_personnel": 0,
+      "defense_budget_usd": 0
+    }
+  },
+
+  "MP": {
+    "id": "MP",
+    "names": {
+      "tr": "Kuzey Mariana Adaları",
+      "en": "Northern Mariana Islands"
+    },
+    "codes": {
+      "alpha2": "MP",
+      "alpha3": "MNP"
+    },
+    "general_info": {
+      "description_tr": "Kuzey Mariana Adaları, Pasifik Okyanusu'nda ABD'ye bağlı bir topluluktur. Saipan adası, plajları ve II. Dünya Savaşı tarihi ile tanınır.",
+      "description_en": "The Northern Mariana Islands is a U.S. commonwealth in the Pacific Ocean. Saipan island is known for its beaches and WWII history.",
+      "flag_url": "assets/flags/mp.svg",
+      "intelligence_agency": "FBI (Honolulu Field Office)"
+    },
+    "geography": {
+      "capital_tr": "Saipan",
+      "capital_en": "Saipan",
+      "continent_tr": "Okyanusya",
+      "continent_en": "Oceania",
+      "area_sq_km": 464,
+      "timezone": "UTC+10:00"
+    },
+    "politics": {
+      "government_tr": "ABD'ye Bağlı Topluluk",
+      "government_en": "Commonwealth of the United States",
+      "independence_date": null
+    },
+    "economy": {
+      "gdp_usd": 1200000000,
+      "gdp_growth_rate": 1.5,
+      "gdp_per_capita_usd": 24000,
+      "inflation_rate": 2.0,
+      "minimum_wage_usd": 1200,
+      "unemployment_rate": 11.0,
+      "currency": "ABD Doları",
+      "currency_en": "United States Dollar"
+    },
+    "demographics": {
+      "total_population": 50000,
+      "life_expectancy": 77.9,
+      "birth_rate": 10.8,
+      "most_spoken_language": "İngilizce",
+      "most_spoken_language_en": "English",
+      "population_pyramid": []
+    },
+    "military": {
+      "global_firepower_rank": 0,
+      "active_personnel": 0,
+      "reserve_personnel": 0,
+      "total_personnel": 0,
+      "defense_budget_usd": 0
+    }
+  },
+
+  "NC": {
+    "id": "NC",
+    "names": {
+      "tr": "Yeni Kaledonya",
+      "en": "New Caledonia"
+    },
+    "codes": {
+      "alpha2": "NC",
+      "alpha3": "NCL"
+    },
+    "general_info": {
+      "description_tr": "Yeni Kaledonya, Güney Pasifik'te Fransa'ya bağlı özel bir topluluktur. Büyük bariyer resifi ve nikel madenleri ile ünlüdür.",
+      "description_en": "New Caledonia is a special collectivity of France in the South Pacific. It is famous for its large barrier reef and nickel mines.",
+      "flag_url": "assets/flags/nc.svg",
+      "intelligence_agency": "DGSE (France)"
+    },
+    "geography": {
+      "capital_tr": "Nouméa",
+      "capital_en": "Nouméa",
+      "continent_tr": "Okyanusya",
+      "continent_en": "Oceania",
+      "area_sq_km": 18575,
+      "timezone": "UTC+11:00"
+    },
+    "politics": {
+      "government_tr": "Fransa'ya Bağlı Özel Topluluk",
+      "government_en": "Sui generis collectivity of France",
+      "independence_date": null
+    },
+    "economy": {
+      "gdp_usd": 9500000000,
+      "gdp_growth_rate": 1.0,
+      "gdp_per_capita_usd": 34000,
+      "inflation_rate": 1.8,
+      "minimum_wage_usd": 1500,
+      "unemployment_rate": 12.5,
+      "currency": "CFP Frangı",
+      "currency_en": "CFP Franc"
+    },
+    "demographics": {
+      "total_population": 290000,
+      "life_expectancy": 78.0,
+      "birth_rate": 14.5,
+      "most_spoken_language": "Fransızca",
+      "most_spoken_language_en": "French",
+      "population_pyramid": []
+    },
+    "military": {
+      "global_firepower_rank": 0,
+      "active_personnel": 0,
+      "reserve_personnel": 0,
+      "total_personnel": 2000,
+      "defense_budget_usd": 0
+    }
+  },
+
+  "NR": {
+    "id": "NR",
+    "names": {
+      "tr": "Nauru",
+      "en": "Nauru"
+    },
+    "codes": {
+      "alpha2": "NR",
+      "alpha3": "NRU"
+    },
+    "general_info": {
+      "description_tr": "Nauru, Mikronezya'da, Ekvator'un güneyinde yer alan küçük bir ada ülkesidir. Dünyanın en küçük cumhuriyetidir ve eskiden fosfat madenciliği ile ünlüydü.",
+      "description_en": "Nauru is a tiny island country in Micronesia, south of the Equator. It is the world's smallest republic and was formerly known for phosphate mining.",
+      "flag_url": "assets/flags/nr.svg",
+      "intelligence_agency": "Nauru Police Force"
+    },
+    "geography": {
+      "capital_tr": "Yaren (de facto)",
+      "capital_en": "Yaren (de facto)",
+      "continent_tr": "Okyanusya",
+      "continent_en": "Oceania",
+      "area_sq_km": 21,
+      "timezone": "UTC+12:00"
+    },
+    "politics": {
+      "government_tr": "Parlamenter Cumhuriyet",
+      "government_en": "Parliamentary republic",
+      "independence_date": "1968-01-31"
+    },
+    "economy": {
+      "gdp_usd": 150000000,
+      "gdp_growth_rate": 1.0,
+      "gdp_per_capita_usd": 12000,
+      "inflation_rate": 2.5,
+      "minimum_wage_usd": 0,
+      "unemployment_rate": 23.0,
+      "currency": "Avustralya Doları",
+      "currency_en": "Australian Dollar"
+    },
+    "demographics": {
+      "total_population": 12700,
+      "life_expectancy": 64.0,
+      "birth_rate": 22.0,
+      "most_spoken_language": "Nauruca",
+      "most_spoken_language_en": "Nauruan",
+      "population_pyramid": []
+    },
+    "military": {
+      "global_firepower_rank": 0,
+      "active_personnel": 0,
+      "reserve_personnel": 0,
+      "total_personnel": 0,
+      "defense_budget_usd": 0
+    }
   }
 }

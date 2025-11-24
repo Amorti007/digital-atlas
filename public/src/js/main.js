@@ -72,9 +72,14 @@ function initMapInteractions() {
   const paths = mapSvg.querySelectorAll("path");
 
   paths.forEach((path) => {
-    // Parçalı ülkeler (g) ve tekil ülkeler (path) için akıllı ID kontrolü
-    const countryCode =
-      path.getAttribute("id") || path.parentElement.getAttribute("id");
+    const parentId = path.parentElement.getAttribute("id");
+    const selfId = path.getAttribute("id");
+    let countryCode = null;
+    if (parentId && parentId.length === 2) {
+        countryCode = parentId;
+    } else {
+        countryCode = selfId;
+    }
 
     if (countryCode) {
       path.addEventListener("mouseenter", () => {
