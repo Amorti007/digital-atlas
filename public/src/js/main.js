@@ -24,9 +24,9 @@ async function loadPage(pageName) {
       // Paralel veri yükleme stratejisi
       await loadData();   // Veriyi çek
       loadSVGMap();       // SVG haritayı yükle
-
-    if(typeof updateUITexts === "function") updateUITexts();
     }
+    
+    if(typeof updateUITexts === "function") updateUITexts();
   } catch (error) {
     contentDiv.innerHTML = `<div class="alert alert-danger m-5">Hata: ${error.message}</div>`;
   }

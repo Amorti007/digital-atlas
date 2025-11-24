@@ -48,6 +48,20 @@ window.uiTranslations = {
         header_demo: "Demografi",
         header_eco: "Ekonomi",
         header_mil: "Askeri & Güvenlik",
+        // Hakkında Sayfası İçeriği
+        about_title: "Proje Hakkında",
+        about_desc: "Dünya verilerini parmaklarınızın ucuna getiren interaktif keşif aracı.",
+        about_mission_title: "Misyonumuz",
+        about_mission_text: "Karmaşık demografik, ekonomik ve askeri verileri; statik tablolardan kurtarıp, herkesin anlayabileceği görsel ve etkileşimli bir deneyime dönüştürmek.",
+        about_tech_title: "Teknolojik Altyapı",
+        about_tech_text: "Bu proje, modern web teknolojileri kullanılarak performans ve kullanıcı deneyimi odaklı geliştirilmiştir.",
+        about_team_title: "Geliştirici Ekip",
+        about_team_text: "Veri görselleştirme tutkusuyla bir araya gelen öğrenci topluluğu.",
+        about_credits_title: "Kaynaklar & Atıflar",
+        about_li_map: "Harita Altyapısı (SimpleMaps)",
+        about_li_data: "Demografik Veriler (PopulationPyramid)",
+        about_li_flags: "Bayrak API (FlagCDN)",
+        about_li_ui: "Arayüz Kütüphanesi (Bootstrap 5)"
     },
     en: {
         nav_brand: "Digital Atlas",
@@ -92,7 +106,21 @@ window.uiTranslations = {
         header_demo: "Demographics",
         header_eco: "Economy",
         header_mil: "Military & Security",
-    },
+        // About Page Content
+        about_title: "About the Project",
+        about_desc: "An interactive exploration tool bringing world data to your fingertips.",
+        about_mission_title: "Our Mission",
+        about_mission_text: "To transform complex demographic, economic, and military data from static tables into a visual and interactive experience accessible to everyone.",
+        about_tech_title: "Tech Stack",
+        about_tech_text: "This project is built using modern web technologies with a focus on performance and user experience.",
+        about_team_title: "Developer Team",
+        about_team_text: "A community of students united by a passion for data visualization.",
+        about_credits_title: "Credits & Resources",
+        about_li_map: "Map Infrastructure (SimpleMaps)",
+        about_li_data: "Demographic Data (PopulationPyramid)",
+        about_li_flags: "Flag API (FlagCDN)",
+        about_li_ui: "UI Library (Bootstrap 5)",
+    }
 };
 
 // Dil Değiştirme Fonksiyonu
