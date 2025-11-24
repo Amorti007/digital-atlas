@@ -10884,7 +10884,62 @@
       "defense_budget_usd": 19700000000
     }
   },
-    "KY": {
+  "GL": {
+    "id": "GL",
+    "names": {
+      "tr": "Grönland",
+      "en": "Greenland"
+    },
+    "codes": {
+      "alpha2": "GL",
+      "alpha3": "GRL"
+    },
+    "general_info": {
+      "description_tr": "Grönland, Arktik ve Atlantik okyanusları arasında yer alan, yüzölçümü bakımından dünyanın en büyük adasıdır. Danimarka Krallığı'na bağlı özerk bir bölgedir ve buzullarıyla tanınır.",
+      "description_en": "Greenland is the world's largest island, located between the Arctic and Atlantic oceans. It is an autonomous territory within the Kingdom of Denmark, known for its massive ice sheet.",
+      "flag_url": "assets/flags/gl.svg",
+      "intelligence_agency": "Politiets Efterretningstjeneste (PET) - Denmark"
+    },
+    "geography": {
+      "capital_tr": "Nuuk",
+      "capital_en": "Nuuk",
+      "continent_tr": "Kuzey Amerika",
+      "continent_en": "North America",
+      "area_sq_km": 2166086,
+      "timezone": "UTC-03:00"
+    },
+    "politics": {
+      "government_tr": "Danimarka Krallığına Bağlı Parlamenter Demokrasi",
+      "government_en": "Parliamentary democracy within the Kingdom of Denmark",
+      "independence_date": null
+    },
+    "economy": {
+      "gdp_usd": 3200000000,
+      "gdp_growth_rate": 2.0,
+      "gdp_per_capita_usd": 57000,
+      "inflation_rate": 2.5,
+      "minimum_wage_usd": 0,
+      "unemployment_rate": 4.6,
+      "currency": "Danimarka Kronu",
+      "currency_en": "Danish Krone"
+    },
+    "demographics": {
+      "total_population": 56600,
+      "life_expectancy": 71.5,
+      "birth_rate": 14.0,
+      "most_spoken_language": "Grönlandca",
+      "most_spoken_language_en": "Greenlandic",
+      "population_pyramid": []
+    },
+    "military": {
+      "global_firepower_rank": 0,
+      "active_personnel": 0,
+      "reserve_personnel": 0,
+      "total_personnel": 0,
+      "defense_budget_usd": 0
+    }
+  },
+  "KY": {
     "id": "KY",
     "names": {
       "tr": "Cayman Adaları",
@@ -10939,7 +10994,7 @@
       "defense_budget_usd": 0
     }
   },
-  
+
   "AW": {
     "id": "AW",
     "names": {
