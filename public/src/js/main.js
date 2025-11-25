@@ -171,12 +171,12 @@ function generateDetailContent(code, pathElement) {
     const minWage = data.economy?.minimum_wage_usd
         ? currencyStandard(data.economy.minimum_wage_usd)
         : "-";
-    const money = data.economy?.currency || "-";
+    const money = data.economy?.['currency' + sfx] || "-";
     const population = data.demographics?.total_population
         ? formatNum(data.demographics.total_population)
         : "-";
     const lifeExp = data.demographics?.life_expectancy || "-";
-    const lang = data.demographics?.most_spoken_language || "-";
+    const langSpoken = data.demographics?.['most_spoken_language' + sfx] || "-";
     const birthRate = data.demographics?.birth_rate || "-";
     const fireRank = data.military?.global_firepower_rank || "-";
     const activeMil = data.military?.active_personnel
@@ -222,7 +222,7 @@ function generateDetailContent(code, pathElement) {
                 <li><strong>${t('lbl_pop')}</strong> ${population}</li>
                 <li><strong>${t('lbl_life')}</strong> ${lifeExp} ${currentLang === 'tr' ? 'Yıl' : 'Years'}</li>
                 <li><strong>${t('lbl_birth')}</strong> ${birthRate} %</li>
-                <li><strong>${t('lbl_lang')}</strong> ${lang}</li>
+                <li><strong>${t('lbl_lang')}</strong> ${langSpoken}</li>
             </ul>
             
             <div class="mt-2 pt-2 border-top">
