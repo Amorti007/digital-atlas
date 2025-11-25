@@ -331,7 +331,7 @@ function showDetailPopover(element, code) {
   // Bootstrap Popover başlatıcı
   const popover = new bootstrap.Popover(element, {
     trigger: "manual",
-    container: "#map-container",
+    container: "body",
     html: true,
     sanitize: false,
     content: content,
@@ -422,6 +422,30 @@ function initPanZoom() {
     currentTranslateY = Math.max(-limitY, Math.min(newY, limitY));
     updateTransform();
   });
+
+  mapContainer.addEventListener("touchstart", (e) => {
+    if (e.target.closest(".popover") || e.touches.length > 1) return;
+    isDragging = true;
+    // İlk parmağın pozisyonunu al
+    startX = e.touches[0].clientX - currentTranslateX;
+    startY = e.touches[0].clientY - currentTranslateY;
+  }, { passive: false });
+
+  mapContainer.addEventListener("touchmove", (e) => {
+    if (!isDragging) return;
+    e.preventDefault(); // Sayfanın kaymasını engelle
+    currentTranslateX = e.touches[0].clientX - startX;
+    currentTranslateY = e.touches[0].clientY - startY;
+    updateTransform();
+  }, { passive: false });
+
+  mapContainer.addEventListener("touchend", stopDrag);
+}
+
+function stopDrag() {
+  isDragging = false;
+  const mapContainer = document.getElementById("map-container");
+  if(mapContainer) mapContainer.style.cursor = "grab";
 }
 
 function zoomMap(factor) {
