@@ -3200,7 +3200,7 @@
       "minimum_wage_usd": 350,
       "unemployment_rate": 5.8,
       "currency_tr": "Dominik Pesosu",
-      "currency_en": ""    },
+      "currency_en": "Dominican Peso"    },
     "demographics": {
       "total_population": 11300000,
       "life_expectancy": 74.0,
@@ -3255,7 +3255,7 @@
       "minimum_wage_usd": 460,
       "unemployment_rate": 4.0,
       "currency_tr": "Amerikan Doları",
-      "currency_en": ""    },
+      "currency_en": "American Dollar"    },
     "demographics": {
       "total_population": 18300000,
       "life_expectancy": 77.0,
@@ -3309,7 +3309,7 @@
       "minimum_wage_usd": 100,
       "unemployment_rate": 7.0,
       "currency_tr": "Mısır Lirası",
-      "currency_en": ""    },
+      "currency_en": "Egyptian Pound"    },
     "demographics": {
       "total_population": 111200000,
       "life_expectancy": 72.0,
@@ -3363,7 +3363,7 @@
       "minimum_wage_usd": 365,
       "unemployment_rate": 6.0,
       "currency_tr": "Amerikan Doları",
-      "currency_en": ""    },
+      "currency_en": "American Dollar"    },
     "demographics": {
       "total_population": 6300000,
       "life_expectancy": 73.0,
@@ -3417,7 +3417,7 @@
       "minimum_wage_usd": 220,
       "unemployment_rate": 9.0,
       "currency_tr": "Orta Afrika CFA Frangı",
-      "currency_en": ""    },
+      "currency_en": "Central African Franc"    },
     "demographics": {
       "total_population": 1700000,
       "life_expectancy": 60.0,
@@ -3471,7 +3471,7 @@
       "minimum_wage_usd": 0,
       "unemployment_rate": 6.5,
       "currency_tr": "Eritre Nakfası",
-      "currency_en": ""    },
+      "currency_en": "Eritrean Nakfa"    },
     "demographics": {
       "total_population": 3700000,
       "life_expectancy": 67.0,
@@ -3525,7 +3525,7 @@
       "minimum_wage_usd": 820,
       "unemployment_rate": 6.9,
       "currency_tr": "Euro",
-      "currency_en": ""    },
+      "currency_en": "Euro"    },
     "demographics": {
       "total_population": 1360000,
       "life_expectancy": 78.0,
@@ -3579,7 +3579,7 @@
       "minimum_wage_usd": 20,
       "unemployment_rate": 19.0,
       "currency_tr": "Etiyopya Birri",
-      "currency_en": ""    },
+      "currency_en": "Ethiopian Bir"    },
     "demographics": {
       "total_population": 126500000,
       "life_expectancy": 66.0,
@@ -3633,7 +3633,7 @@
       "minimum_wage_usd": 150,
       "unemployment_rate": 4.8,
       "currency_tr": "Fiji Doları",
-      "currency_en": ""    },
+      "currency_en": "Fijian Dollar"    },
     "demographics": {
       "total_population": 936000,
       "life_expectancy": 68.0,
@@ -3687,7 +3687,7 @@
       "minimum_wage_usd": 0,
       "unemployment_rate": 7.5,
       "currency_tr": "Euro",
-      "currency_en": ""    },
+      "currency_en": "Euro"    },
     "demographics": {
       "total_population": 5600000,
       "life_expectancy": 82.0,
@@ -3741,7 +3741,7 @@
       "minimum_wage_usd": 1766,
       "unemployment_rate": 7.4,
       "currency_tr": "Euro",
-      "currency_en": ""    },
+      "currency_en": "Euro"    },
     "demographics": {
       "total_population": 68000000,
       "life_expectancy": 83.0,
@@ -3796,7 +3796,7 @@
       "minimum_wage_usd": 250,
       "unemployment_rate": 21.5,
       "currency_tr": "Orta Afrika CFA Frangı",
-      "currency_en": ""    },
+      "currency_en": "Central African Franc"    },
     "demographics": {
       "total_population": 2400000,
       "life_expectancy": 66.0,
@@ -3850,7 +3850,7 @@
       "minimum_wage_usd": 30,
       "unemployment_rate": 9.0,
       "currency_tr": "Gambiya Dalasisi",
-      "currency_en": ""    },
+      "currency_en": "Gambian Dalasi"    },
     "demographics": {
       "total_population": 2700000,
       "life_expectancy": 63.0,
@@ -3904,7 +3904,7 @@
       "minimum_wage_usd": 8,
       "unemployment_rate": 16.0,
       "currency_tr": "Gürcistan Larisi",
-      "currency_en": ""    },
+      "currency_en": "Georgian Lari"    },
     "demographics": {
       "total_population": 3700000,
       "life_expectancy": 74.0,
@@ -3958,7 +3958,7 @@
       "minimum_wage_usd": 2000,
       "unemployment_rate": 5.7,
       "currency_tr": "Euro",
-      "currency_en": ""    },
+      "currency_en": "Euro"    },
     "demographics": {
       "total_population": 84000000,
       "life_expectancy": 81.0,
@@ -4012,7 +4012,7 @@
       "minimum_wage_usd": 55,
       "unemployment_rate": 3.9,
       "currency_tr": "Gana Sedisi",
-      "currency_en": ""    },
+      "currency_en": "Ghanaian Cedi"    },
     "demographics": {
       "total_population": 34000000,
       "life_expectancy": 64.0,
@@ -4066,7 +4066,7 @@
       "minimum_wage_usd": 910,
       "unemployment_rate": 10.5,
       "currency_tr": "Euro",
-      "currency_en": ""    },
+      "currency_en": "Euro"    },
     "demographics": {
       "total_population": 10300000,
       "life_expectancy": 82.0,
@@ -4120,7 +4120,7 @@
       "minimum_wage_usd": 500,
       "unemployment_rate": 13.0,
       "currency_tr": "Doğu Karayip Doları",
-      "currency_en": ""    },
+      "currency_en": "East Caribbean Dollar"    },
     "demographics": {
       "total_population": 114000,
       "life_expectancy": 72.0,
@@ -4174,7 +4174,7 @@
       "minimum_wage_usd": 400,
       "unemployment_rate": 2.5,
       "currency_tr": "Guatemala Quetzalı",
-      "currency_en": ""    },
+      "currency_en": "Guatemalan Quetzal"    },
     "demographics": {
       "total_population": 18100000,
       "life_expectancy": 74.0,
@@ -4228,7 +4228,7 @@
       "minimum_wage_usd": 50,
       "unemployment_rate": 4.3,
       "currency_tr": "Gine Frangı",
-      "currency_en": ""    },
+      "currency_en": "Guinea Franc"    },
     "demographics": {
       "total_population": 14200000,
       "life_expectancy": 61.0,
@@ -4282,7 +4282,7 @@
       "minimum_wage_usd": 50,
       "unemployment_rate": 6.8,
       "currency_tr": "CFA Frangı",
-      "currency_en": ""    },
+      "currency_en": "CFA Franc"    },
     "demographics": {
       "total_population": 2150000,
       "life_expectancy": 59.0,
@@ -4336,7 +4336,7 @@
       "minimum_wage_usd": 300,
       "unemployment_rate": 12.4,
       "currency_tr": "Guyana Doları",
-      "currency_en": ""    },
+      "currency_en": "Guyanese dollar"    },
     "demographics": {
       "total_population": 800000,
       "life_expectancy": 70.0,
@@ -4389,8 +4389,8 @@
       "inflation_rate": 27.8,
       "minimum_wage_usd": 70,
       "unemployment_rate": 14.5,
-      "currency_tr": "Haiti Gurdu",
-      "currency_en": ""    },
+      "currency_tr": "Haiti Gourdesi",
+      "currency_en": "Haitian Gourde"    },
     "demographics": {
       "total_population": 11700000,
       "life_expectancy": 64.0,
@@ -4444,7 +4444,7 @@
       "minimum_wage_usd": 300,
       "unemployment_rate": 8.7,
       "currency_tr": "Honduras Lempirası",
-      "currency_en": ""    },
+      "currency_en": "Honduran Lempira"    },
     "demographics": {
       "total_population": 10600000,
       "life_expectancy": 75.0,
@@ -4498,7 +4498,7 @@
       "minimum_wage_usd": 750,
       "unemployment_rate": 4.2,
       "currency_tr": "Macar Forinti",
-      "currency_en": ""    },
+      "currency_en": "Hungarian Forint"    },
     "demographics": {
       "total_population": 9600000,
       "life_expectancy": 76.0,
@@ -4552,7 +4552,7 @@
       "minimum_wage_usd": 2500,
       "unemployment_rate": 3.8,
       "currency_tr": "İzlanda Kronu",
-      "currency_en": ""    },
+      "currency_en": "Icelandic Króna"    },
     "demographics": {
       "total_population": 376000,
       "life_expectancy": 83.0,
@@ -4606,7 +4606,7 @@
       "minimum_wage_usd": 65,
       "unemployment_rate": 7.0,
       "currency_tr": "Hindistan Rupisi",
-      "currency_en": ""    },
+      "currency_en": "Indian Rupee"    },
     "demographics": {
       "total_population": 1428000000,
       "life_expectancy": 70.0,
@@ -4660,7 +4660,7 @@
       "minimum_wage_usd": 190,
       "unemployment_rate": 5.3,
       "currency_tr": "Endonezya Rupiahı",
-      "currency_en": ""    },
+      "currency_en": "Indonesian Rupiah"    },
     "demographics": {
       "total_population": 277000000,
       "life_expectancy": 72.0,
@@ -4714,7 +4714,7 @@
       "minimum_wage_usd": 100,
       "unemployment_rate": 9.6,
       "currency_tr": "İran Riyali",
-      "currency_en": ""    },
+      "currency_en": "Iranian Rial"    },
     "demographics": {
       "total_population": 89000000,
       "life_expectancy": 77.0,
@@ -4768,7 +4768,7 @@
       "minimum_wage_usd": 210,
       "unemployment_rate": 15.5,
       "currency_tr": "Irak Dinarı",
-      "currency_en": ""    },
+      "currency_en": "Iraqi Dinar"    },
     "demographics": {
       "total_population": 45500000,
       "life_expectancy": 71.0,
@@ -4822,7 +4822,7 @@
       "minimum_wage_usd": 1900,
       "unemployment_rate": 4.1,
       "currency_tr": "Euro",
-      "currency_en": ""    },
+      "currency_en": "Euro"    },
     "demographics": {
       "total_population": 5200000,
       "life_expectancy": 82.0,
@@ -4876,7 +4876,7 @@
       "minimum_wage_usd": 1600,
       "unemployment_rate": 3.4,
       "currency_tr": "Yeni İsrail Şekeli",
-      "currency_en": ""    },
+      "currency_en": "Israeli New Shekel"    },
     "demographics": {
       "total_population": 9800000,
       "life_expectancy": 83.0,
@@ -4930,7 +4930,7 @@
       "minimum_wage_usd": 0,
       "unemployment_rate": 7.6,
       "currency_tr": "Euro",
-      "currency_en": ""    },
+      "currency_en": "Euro"    },
     "demographics": {
       "total_population": 58900000,
       "life_expectancy": 84.0,
@@ -4984,7 +4984,7 @@
       "minimum_wage_usd": 300,
       "unemployment_rate": 4.5,
       "currency_tr": "Jamaika Doları",
-      "currency_en": ""    },
+      "currency_en": "Jamaican Dollar"    },
     "demographics": {
       "total_population": 2800000,
       "life_expectancy": 74.0,
@@ -5038,7 +5038,7 @@
       "minimum_wage_usd": 1300,
       "unemployment_rate": 2.6,
       "currency_tr": "Japon Yeni",
-      "currency_en": ""    },
+      "currency_en": "Japanese Yen"    },
     "demographics": {
       "total_population": 124000000,
       "life_expectancy": 84.0,
@@ -5092,7 +5092,7 @@
       "minimum_wage_usd": 370,
       "unemployment_rate": 22.0,
       "currency_tr": "Ürdün Dinarı",
-      "currency_en": ""    },
+      "currency_en": "Jordanian Dinar"    },
     "demographics": {
       "total_population": 11500000,
       "life_expectancy": 75.0,
@@ -5141,7 +5141,7 @@
       "minimum_wage_usd": 185,
       "unemployment_rate": 4.8,
       "currency_tr": "Kazakistan Tengesi",
-      "currency_en": ""    },
+      "currency_en": "Kazakhstani Tenge"    },
     "demographics": {
       "total_population": 20260000,
       "life_expectancy": 74.0,
@@ -5189,7 +5189,7 @@
       "minimum_wage_usd": 130,
       "unemployment_rate": 5.7,
       "currency_tr": "Kenya Şilini",
-      "currency_en": ""    },
+      "currency_en": "Kenyan Shilling"    },
     "demographics": {
       "total_population": 56900000,
       "life_expectancy": 67.0,
@@ -5237,7 +5237,7 @@
       "minimum_wage_usd": 0,
       "unemployment_rate": 0.0,
       "currency_tr": "Avustralya Doları",
-      "currency_en": ""    },
+      "currency_en": "Australian Dollar"    },
     "demographics": {
       "total_population": 135000,
       "life_expectancy": 67.0,
@@ -5285,7 +5285,7 @@
       "minimum_wage_usd": 264,
       "unemployment_rate": 17.0,
       "currency_tr": "Euro",
-      "currency_en": ""    },
+      "currency_en": "Euro"    },
     "demographics": {
       "total_population": 1800000,
       "life_expectancy": 73.0,
@@ -5333,7 +5333,7 @@
       "minimum_wage_usd": 240,
       "unemployment_rate": 2.5,
       "currency_tr": "Kuveyt Dinarı",
-      "currency_en": ""    },
+      "currency_en": "Kuwaiti Dinar"    },
     "demographics": {
       "total_population": 4300000,
       "life_expectancy": 76.0,
@@ -5381,7 +5381,7 @@
       "minimum_wage_usd": 25,
       "unemployment_rate": 6.0,
       "currency_tr": "Kırgızistan Somu",
-      "currency_en": ""    },
+      "currency_en": "Kyrgyz Som"    },
     "demographics": {
       "total_population": 6800000,
       "life_expectancy": 72.0,
@@ -5429,7 +5429,7 @@
       "minimum_wage_usd": 0,
       "unemployment_rate": 2.8,
       "currency_tr": "Kuzey Kore Wonu",
-      "currency_en": ""    },
+      "currency_en": "North Korean Won"    },
     "demographics": {
       "total_population": 26200000,
       "life_expectancy": 73.0,
@@ -5477,7 +5477,7 @@
       "minimum_wage_usd": 70,
       "unemployment_rate": 2.4,
       "currency_tr": "Laos Kipi",
-      "currency_en": ""    },
+      "currency_en": "Laotian Kip"    },
     "demographics": {
       "total_population": 7600000,
       "life_expectancy": 69.0,
@@ -5525,7 +5525,7 @@
       "minimum_wage_usd": 660,
       "unemployment_rate": 6.5,
       "currency_tr": "Euro",
-      "currency_en": ""    },
+      "currency_en": "Euro"    },
     "demographics": {
       "total_population": 1870000,
       "life_expectancy": 76.0,
@@ -5573,7 +5573,7 @@
       "minimum_wage_usd": 100,
       "unemployment_rate": 12.6,
       "currency_tr": "Lübnan Lirası",
-      "currency_en": ""    },
+      "currency_en": "Lebanese Pound"    },
     "demographics": {
       "total_population": 5300000,
       "life_expectancy": 79.0,
@@ -5621,7 +5621,7 @@
       "minimum_wage_usd": 110,
       "unemployment_rate": 24.0,
       "currency_tr": "Lesotho Lotisi",
-      "currency_en": ""    },
+      "currency_en": "Lesotho Loti"    },
     "demographics": {
       "total_population": 2300000,
       "life_expectancy": 55.0,
@@ -5669,7 +5669,7 @@
       "minimum_wage_usd": 70,
       "unemployment_rate": 3.0,
       "currency_tr": "Liberya Doları",
-      "currency_en": ""    },
+      "currency_en": "Liberian Dollar"    },
     "demographics": {
       "total_population": 5400000,
       "life_expectancy": 64.0,
@@ -5717,7 +5717,7 @@
       "minimum_wage_usd": 320,
       "unemployment_rate": 19.0,
       "currency_tr": "Libya Dinarı",
-      "currency_en": ""    },
+      "currency_en": "Libyan Dinar"    },
     "demographics": {
       "total_population": 6900000,
       "life_expectancy": 73.0,
@@ -5765,7 +5765,7 @@
       "minimum_wage_usd": 0,
       "unemployment_rate": 1.4,
       "currency_tr": "İsviçre Frangı",
-      "currency_en": ""    },
+      "currency_en": "Swiss Franc"    },
     "demographics": {
       "total_population": 39000,
       "life_expectancy": 84.0,
@@ -5813,7 +5813,7 @@
       "minimum_wage_usd": 924,
       "unemployment_rate": 6.8,
       "currency_tr": "Euro",
-      "currency_en": ""    },
+      "currency_en": "Euro"    },
     "demographics": {
       "total_population": 2800000,
       "life_expectancy": 76.0,
@@ -5861,7 +5861,7 @@
       "minimum_wage_usd": 2570,
       "unemployment_rate": 5.5,
       "currency_tr": "Euro",
-      "currency_en": ""    },
+      "currency_en": "Euro"    },
     "demographics": {
       "total_population": 660000,
       "life_expectancy": 83.0,
@@ -5910,7 +5910,7 @@
       "minimum_wage_usd": 45,
       "unemployment_rate": 1.9,
       "currency_tr": "Malgaş Ariarisi",
-      "currency_en": ""    },
+      "currency_en": "Malagasy Ariary"    },
     "demographics": {
       "total_population": 30300000,
       "life_expectancy": 67.0,
@@ -5958,7 +5958,7 @@
       "minimum_wage_usd": 40,
       "unemployment_rate": 6.6,
       "currency_tr": "Malavi Kvaçası",
-      "currency_en": ""    },
+      "currency_en": "Malawian Kwacha"    },
     "demographics": {
       "total_population": 21000000,
       "life_expectancy": 64.0,
@@ -6006,7 +6006,7 @@
       "minimum_wage_usd": 320,
       "unemployment_rate": 3.3,
       "currency_tr": "Malezya Ringgiti",
-      "currency_en": ""    },
+      "currency_en": "Malaysian Ringgit"    },
     "demographics": {
       "total_population": 34000000,
       "life_expectancy": 76.0,
@@ -6054,7 +6054,7 @@
       "minimum_wage_usd": 300,
       "unemployment_rate": 5.3,
       "currency_tr": "Maldiv Rufiyası",
-      "currency_en": ""    },
+      "currency_en": "Maldivian Rufiyaa"    },
     "demographics": {
       "total_population": 520000,
       "life_expectancy": 79.0,
@@ -6102,7 +6102,7 @@
       "minimum_wage_usd": 70,
       "unemployment_rate": 7.5,
       "currency_tr": "CFA Frangı",
-      "currency_en": ""    },
+      "currency_en": "CFA Franc"    },
     "demographics": {
       "total_population": 22500000,
       "life_expectancy": 60.0,
@@ -6150,7 +6150,7 @@
       "minimum_wage_usd": 900,
       "unemployment_rate": 3.0,
       "currency_tr": "Euro",
-      "currency_en": ""    },
+      "currency_en": "Euro"    },
     "demographics": {
       "total_population": 530000,
       "life_expectancy": 83.0,
@@ -6198,7 +6198,7 @@
       "minimum_wage_usd": 80,
       "unemployment_rate": 10.3,
       "currency_tr": "Moritanya Ugiyası",
-      "currency_en": ""    },
+      "currency_en": "Mauritanian ouguiya"    },
     "demographics": {
       "total_population": 4900000,
       "life_expectancy": 65.0,
@@ -6246,7 +6246,7 @@
       "minimum_wage_usd": 300,
       "unemployment_rate": 6.5,
       "currency_tr": "Mauritius Rupisi",
-      "currency_en": ""    },
+      "currency_en": "Mauritian Rupee"    },
     "demographics": {
       "total_population": 1300000,
       "life_expectancy": 75.0,
@@ -6294,7 +6294,7 @@
       "minimum_wage_usd": 400,
       "unemployment_rate": 2.8,
       "currency_tr": "Meksika Pesosu",
-      "currency_en": ""    },
+      "currency_en": "Mexican Peso"    },
     "demographics": {
       "total_population": 130000000,
       "life_expectancy": 75.0,
@@ -6342,7 +6342,7 @@
       "minimum_wage_usd": 150,
       "unemployment_rate": 6.5,
       "currency_tr": "Moğolistan Tugriki",
-      "currency_en": ""    },
+      "currency_en": "Mongolian Tugrik"    },
     "demographics": {
       "total_population": 3450000,
       "life_expectancy": 70.0,
@@ -6390,7 +6390,7 @@
       "minimum_wage_usd": 500,
       "unemployment_rate": 16.1,
       "currency_tr": "Euro",
-      "currency_en": ""    },
+      "currency_en": "Euro"    },
     "demographics": {
       "total_population": 620000,
       "life_expectancy": 76.0,
@@ -6438,7 +6438,7 @@
       "minimum_wage_usd": 300,
       "unemployment_rate": 11.8,
       "currency_tr": "Fas Dirhemi",
-      "currency_en": ""    },
+      "currency_en": "Moroccan Dirham"    },
     "demographics": {
       "total_population": 38000000,
       "life_expectancy": 77.0,
@@ -6486,7 +6486,7 @@
       "minimum_wage_usd": 75,
       "unemployment_rate": 3.2,
       "currency_tr": "Mozambik Meticalı",
-      "currency_en": ""    },
+      "currency_en": "Mozambican metical"    },
     "demographics": {
       "total_population": 34000000,
       "life_expectancy": 61.0,
@@ -6534,7 +6534,7 @@
       "minimum_wage_usd": 70,
       "unemployment_rate": 2.2,
       "currency_tr": "Myanmar Kyatı",
-      "currency_en": ""    },
+      "currency_en": "Myanmar Kyat"    },
     "demographics": {
       "total_population": 54500000,
       "life_expectancy": 67.0,
@@ -6582,7 +6582,7 @@
       "minimum_wage_usd": 150,
       "unemployment_rate": 20.0,
       "currency_tr": "Namibya Doları",
-      "currency_en": ""    },
+      "currency_en": "Namibian Dollar"    },
     "demographics": {
       "total_population": 2600000,
       "life_expectancy": 64.0,
@@ -6630,7 +6630,7 @@
       "minimum_wage_usd": 130,
       "unemployment_rate": 11.0,
       "currency_tr": "Nepal Rupisi",
-      "currency_en": ""    },
+      "currency_en": "Nepalese Rupee"    },
       "demographics": {
       "total_population": 31000000,
       "life_expectancy": 71.0,
@@ -6678,7 +6678,7 @@
       "minimum_wage_usd": 2100,
       "unemployment_rate": 3.6,
       "currency_tr": "Euro",
-      "currency_en": ""    },
+      "currency_en": "Euro"    },
     "demographics": {
       "total_population": 17900000,
       "life_expectancy": 82.0,
@@ -6726,7 +6726,7 @@
       "minimum_wage_usd": 2600,
       "unemployment_rate": 4.3,
       "currency_tr": "Yeni Zelanda Doları",
-      "currency_en": ""    },
+      "currency_en": "New Zealand Dollar"    },
     "demographics": {
       "total_population": 5200000,
       "life_expectancy": 82.0,
@@ -6774,7 +6774,7 @@
       "minimum_wage_usd": 200,
       "unemployment_rate": 6.4,
       "currency_tr": "Nikaragua Kordobası",
-      "currency_en": ""    },
+      "currency_en": "Nicaraguan Córdoba"    },
     "demographics": {
       "total_population": 7000000,
       "life_expectancy": 74.0,
@@ -6822,7 +6822,7 @@
       "minimum_wage_usd": 50,
       "unemployment_rate": 0.6,
       "currency_tr": "CFA Frangı",
-      "currency_en": ""    },
+      "currency_en": "CFA Franc"    },
     "demographics": {
       "total_population": 27000000,
       "life_expectancy": 62.0,
@@ -6870,7 +6870,7 @@
       "minimum_wage_usd": 40,
       "unemployment_rate": 4.2,
       "currency_tr": "Nijerya Nairası",
-      "currency_en": ""    },
+      "currency_en": "Nigerian Naira"    },
     "demographics": {
       "total_population": 223000000,
       "life_expectancy": 55.0,
@@ -6918,7 +6918,7 @@
       "minimum_wage_usd": 0,
       "unemployment_rate": 3.6,
       "currency_tr": "Norveç Kronu",
-      "currency_en": ""    },
+      "currency_en": "Norwegian Krone"    },
     "demographics": {
       "total_population": 5500000,
       "life_expectancy": 83.0,
