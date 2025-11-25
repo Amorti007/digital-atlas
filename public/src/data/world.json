@@ -3046,7 +3046,7 @@
     "politics": {
       "government_tr": "Parlamenter Monarşi",
       "government_en": "Parliamentary Constitutional Monarchy",
-      "independence_date": "958"
+      "independence_date": "1849-06-05"
     },
     "economy": {
       "gdp_usd": 410000000000,
@@ -3569,7 +3569,7 @@
     "politics": {
       "government_tr": "Federal Parlamenter Cumhuriyet",
       "government_en": "Federal Parliamentary Republic",
-      "independence_date": "MÖ 1000 (Efsanevi)"
+      "independence_date": "1941-05-05"
     },
     "economy": {
       "gdp_usd": 205000000000,
@@ -3731,7 +3731,7 @@
     "politics": {
       "government_tr": "Yarı Başkanlık Sistemi",
       "government_en": "Semi-Presidential Republic",
-      "independence_date": "843 (Verdun Antlaşması)"
+      "independence_date": "1789-07-14"
     },
     "economy": {
       "gdp_usd": 3050000000000,
@@ -4488,7 +4488,7 @@
     "politics": {
       "government_tr": "Parlamenter Cumhuriyet",
       "government_en": "Parliamentary Republic",
-      "independence_date": "1000 (Kuruluş)"
+      "independence_date": "1849-04-14"
     },
     "economy": {
       "gdp_usd": 220000000000,
@@ -5028,7 +5028,7 @@
     "politics": {
       "government_tr": "Anayasal Monarşi",
       "government_en": "Parliamentary Constitutional Monarchy",
-      "independence_date": "MÖ 660 (Kuruluş)"
+      "independence_date": "660-02-11"
     },
     "economy": {
       "gdp_usd": 4200000000000,
@@ -6961,7 +6961,7 @@
     },
     "politics": {
       "government_tr": "Mutlak Monarşi",
-      "government_en": "Absolute monarchy",
+      "government_en": "Absolute Monarchy",
       "independence_date": "1650-01-01"
     },
     "economy": {
@@ -7017,7 +7017,7 @@
     },
     "politics": {
       "government_tr": "Federal Parlamenter Cumhuriyet",
-      "government_en": "Federal parliamentary republic",
+      "government_en": "Federal Parliamentary Republic",
       "independence_date": "1947-08-14"
     },
     "economy": {
@@ -7073,7 +7073,7 @@
     },
     "politics": {
       "government_tr": "Başkanlık Cumhuriyeti",
-      "government_en": "Presidential republic",
+      "government_en": "Presidential Republic",
       "independence_date": "1903-11-03"
     },
     "economy": {
@@ -7129,7 +7129,7 @@
     },
     "politics": {
       "government_tr": "Anayasal Monarşi altında Parlamenter Demokrasi",
-      "government_en": "Parliamentary democracy under constitutional monarchy",
+      "government_en": "Parliamentary Democracy under Constitutional Monarchy",
       "independence_date": "1975-09-16"
     },
     "economy": {
@@ -7185,7 +7185,7 @@
     },
     "politics": {
       "government_tr": "Başkanlık Cumhuriyeti",
-      "government_en": "Presidential republic",
+      "government_en": "Presidential Republic",
       "independence_date": "1811-05-14"
     },
     "economy": {
@@ -7241,7 +7241,7 @@
     },
     "politics": {
       "government_tr": "Başkanlık Cumhuriyeti",
-      "government_en": "Presidential republic",
+      "government_en": "Presidential Republic",
       "independence_date": "1821-07-28"
     },
     "economy": {
@@ -7297,7 +7297,7 @@
     },
     "politics": {
       "government_tr": "Başkanlık Cumhuriyeti",
-      "government_en": "Presidential republic",
+      "government_en": "Presidential Republic",
       "independence_date": "1898-06-12"
     },
     "economy": {
@@ -7353,7 +7353,7 @@
     },
     "politics": {
       "government_tr": "Parlamenter Cumhuriyet",
-      "government_en": "Parliamentary republic",
+      "government_en": "Parliamentary Republic",
       "independence_date": "1918-11-11"
     },
     "economy": {
@@ -7409,7 +7409,7 @@
     },
     "politics": {
       "government_tr": "Fransa Denizaşırı Topluluğu",
-      "government_en": "Overseas collectivity of France",
+      "government_en": "Overseas Collectivity of France",
       "independence_date": "1880-06-29"
     },
     "economy": {
@@ -7465,7 +7465,7 @@
     },
     "politics": {
       "government_tr": "Yarı Başkanlık Cumhuriyeti",
-      "government_en": "Semi-presidential republic",
+      "government_en": "Semi-Presidential Republic",
       "independence_date": "1143-10-05"
     },
     "economy": {
@@ -7748,7 +7748,7 @@
     "politics": {
       "government_tr": "Fransa Denizaşırı Departmanı",
       "government_en": "Overseas Department of France",
-      "independence_date": "N/A"
+      "independence_date": ""
     },
     "economy": {
       "gdp_usd": 22000000000,
@@ -7971,7 +7971,7 @@
     },
     "politics": {
       "government_tr": "Anayasal Monarşi altında Parlamenter Demokrasi",
-      "government_en": "Parliamentary democracy under constitutional monarchy",
+      "government_en": "Parliamentary Democracy under Constitutional Monarchy",
       "independence_date": "1979-02-22"
     },
     "economy": {
@@ -8027,7 +8027,7 @@
     },
     "politics": {
       "government_tr": "Anayasal Monarşi altında Parlamenter Demokrasi",
-      "government_en": "Parliamentary democracy under constitutional monarchy",
+      "government_en": "Parliamentary Democracy under Constitutional Monarchy",
       "independence_date": "1979-10-27"
     },
     "economy": {
@@ -8083,7 +8083,7 @@
     },
     "politics": {
       "government_tr": "Üniter Parlamenter Demokrasi",
-      "government_en": "Unitary parliamentary democracy",
+      "government_en": "Unitary Parliamentary Democracy",
       "independence_date": "1962-01-01"
     },
     "economy": {
@@ -8139,7 +8139,7 @@
     },
     "politics": {
       "government_tr": "Üniter Yarı Başkanlık Cumhuriyeti",
-      "government_en": "Unitary semi-presidential republic",
+      "government_en": "Unitary Semi-Presidential Republic",
       "independence_date": "1975-07-12"
     },
     "economy": {
@@ -8195,7 +8195,7 @@
     },
     "politics": {
       "government_tr": "Üniter İslami Mutlak Monarşi",
-      "government_en": "Unitary Islamic absolute monarchy",
+      "government_en": "Unitary Islamic Absolute Monarchy",
       "independence_date": "1932-09-23"
     },
     "economy": {
@@ -8251,7 +8251,7 @@
     },
     "politics": {
       "government_tr": "Başkanlık Cumhuriyeti",
-      "government_en": "Presidential republic",
+      "government_en": "Presidential Republic",
       "independence_date": "1960-04-04"
     },
     "economy": {
@@ -8307,7 +8307,7 @@
     },
     "politics": {
       "government_tr": "Parlamenter Cumhuriyet",
-      "government_en": "Parliamentary republic",
+      "government_en": "Parliamentary Republic",
       "independence_date": "2006-06-05"
     },
     "economy": {
@@ -8363,7 +8363,7 @@
     },
     "politics": {
       "government_tr": "Başkanlık Cumhuriyeti",
-      "government_en": "Presidential republic",
+      "government_en": "Presidential Republic",
       "independence_date": "1976-06-29"
     },
     "economy": {
@@ -8419,7 +8419,7 @@
     },
     "politics": {
       "government_tr": "Başkanlık Cumhuriyeti",
-      "government_en": "Presidential republic",
+      "government_en": "Presidential Republic",
       "independence_date": "1961-04-27"
     },
     "economy": {
@@ -8475,7 +8475,7 @@
     },
     "politics": {
       "government_tr": "Parlamenter Cumhuriyet",
-      "government_en": "Parliamentary republic",
+      "government_en": "Parliamentary Republic",
       "independence_date": "1965-08-09"
     },
     "economy": {
@@ -8531,7 +8531,7 @@
     },
     "politics": {
       "government_tr": "Parlamenter Cumhuriyet",
-      "government_en": "Parliamentary republic",
+      "government_en": "Parliamentary Republic",
       "independence_date": "1993-01-01"
     },
     "economy": {
@@ -8587,7 +8587,7 @@
     },
     "politics": {
       "government_tr": "Parlamenter Cumhuriyet",
-      "government_en": "Parliamentary republic",
+      "government_en": "Parliamentary Republic",
       "independence_date": "1991-06-25"
     },
     "economy": {
@@ -8643,7 +8643,7 @@
     },
     "politics": {
       "government_tr": "Anayasal Monarşi altında Parlamenter Demokrasi",
-      "government_en": "Parliamentary democracy under constitutional monarchy",
+      "government_en": "Parliamentary Democracy under Constitutional Monarchy",
       "independence_date": "1978-07-07"
     },
     "economy": {
@@ -8699,7 +8699,7 @@
     },
     "politics": {
       "government_tr": "Federal Parlamenter Cumhuriyet",
-      "government_en": "Federal parliamentary republic",
+      "government_en": "Federal Parliamentary Republic",
       "independence_date": "1960-07-01"
     },
     "economy": {
@@ -8755,7 +8755,7 @@
     },
     "politics": {
       "government_tr": "Parlamenter Cumhuriyet",
-      "government_en": "Parliamentary republic",
+      "government_en": "Parliamentary Republic",
       "independence_date": "1910-05-31"
     },
     "economy": {
@@ -8811,7 +8811,7 @@
     },
     "politics": {
       "government_tr": "Federal Demokratik Cumhuriyet",
-      "government_en": "Federal democratic republic",
+      "government_en": "Federal Democratic Republic",
       "independence_date": "2011-07-09"
     },
     "economy": {
@@ -8867,7 +8867,7 @@
     },
     "politics": {
       "government_tr": "Parlamenter Anayasal Monarşi",
-      "government_en": "Parliamentary constitutional monarchy",
+      "government_en": "Parliamentary Constitutional Monarchy",
       "independence_date": "1492-01-02"
     },
     "economy": {
@@ -8923,7 +8923,7 @@
     },
     "politics": {
       "government_tr": "Yarı Başkanlık Cumhuriyeti",
-      "government_en": "Unitary semi-presidential republic",
+      "government_en": "Unitary Semi-Presidential Republic",
       "independence_date": "1948-02-04"
     },
     "economy": {
@@ -8979,7 +8979,7 @@
     },
     "politics": {
       "government_tr": "Yarı Başkanlık Cumhuriyeti",
-      "government_en": "Unitary semi-presidential republic",
+      "government_en": "Unitary Semi-Presidential Republic",
       "independence_date": "1988-11-15"
     },
     "economy": {
@@ -9035,7 +9035,7 @@
     },
     "politics": {
       "government_tr": "Geçici Askeri Hükümet",
-      "government_en": "Transitional military government",
+      "government_en": "Transitional Military Government",
       "independence_date": "1956-01-01"
     },
     "economy": {
@@ -9091,7 +9091,7 @@
     },
     "politics": {
       "government_tr": "Parlamenter Cumhuriyet",
-      "government_en": "Parliamentary republic",
+      "government_en": "Parliamentary Republic",
       "independence_date": "1975-11-25"
     },
     "economy": {
@@ -9147,7 +9147,7 @@
     },
     "politics": {
       "government_tr": "Mutlak Monarşi",
-      "government_en": "Absolute monarchy",
+      "government_en": "Absolute Monarchy",
       "independence_date": "1968-09-06"
     },
     "economy": {
@@ -9203,7 +9203,7 @@
     },
     "politics": {
       "government_tr": "Parlamenter Anayasal Monarşi",
-      "government_en": "Parliamentary constitutional monarchy",
+      "government_en": "Parliamentary Constitutional Monarchy",
       "independence_date": "1523-06-06"
     },
     "economy": {
@@ -9259,7 +9259,7 @@
     },
     "politics": {
       "government_tr": "Federal Yarı Doğrudan Demokrasi",
-      "government_en": "Federal semi-direct democracy",
+      "government_en": "Federal Semi-Direct Democracy",
       "independence_date": "1291-08-01"
     },
     "economy": {
@@ -9315,7 +9315,7 @@
     },
     "politics": {
       "government_tr": "Üniter Hakim Parti Yarı Başkanlık Cumhuriyeti",
-      "government_en": "Unitary dominant-party semi-presidential republic",
+      "government_en": "Unitary Dominant-Party Semi-Presidential Republic",
       "independence_date": "1946-04-17"
     },
     "economy": {
@@ -9371,7 +9371,7 @@
     },
     "politics": {
       "government_tr": "Başkanlık Cumhuriyeti",
-      "government_en": "Presidential republic",
+      "government_en": "Presidential Republic",
       "independence_date": "1991-09-09"
     },
     "economy": {
@@ -9427,7 +9427,7 @@
     },
     "politics": {
       "government_tr": "Parlamenter Cumhuriyet",
-      "government_en": "Parliamentary republic",
+      "government_en": "Parliamentary Republic",
       "independence_date": "1991-09-08"
     },
     "economy": {
@@ -9483,7 +9483,7 @@
     },
     "politics": {
       "government_tr": "Anayasal Monarşi",
-      "government_en": "Constitutional monarchy",
+      "government_en": "Constitutional Monarchy",
       "independence_date": "1238-01-01"
     },
     "economy": {
@@ -9539,7 +9539,7 @@
     },
     "politics": {
       "government_tr": "Yarı Başkanlık Cumhuriyeti",
-      "government_en": "Semi-presidential republic",
+      "government_en": "Semi-Presidential Republic",
       "independence_date": "2002-05-20"
     },
     "economy": {
@@ -9595,7 +9595,7 @@
     },
     "politics": {
       "government_tr": "Başkanlık Cumhuriyeti",
-      "government_en": "Presidential republic",
+      "government_en": "Presidential Republic",
       "independence_date": "1960-04-27"
     },
     "economy": {
@@ -9651,7 +9651,7 @@
     },
     "politics": {
       "government_tr": "Anayasal Monarşi",
-      "government_en": "Constitutional monarchy",
+      "government_en": "Constitutional Monarchy",
       "independence_date": "1970-06-04"
     },
     "economy": {
@@ -9707,7 +9707,7 @@
     },
     "politics": {
       "government_tr": "Parlamenter Cumhuriyet",
-      "government_en": "Parliamentary republic",
+      "government_en": "Parliamentary Republic",
       "independence_date": "1962-08-31"
     },
     "economy": {
@@ -9763,7 +9763,7 @@
     },
     "politics": {
       "government_tr": "Yarı Başkanlık Cumhuriyeti",
-      "government_en": "Unitary semi-presidential republic",
+      "government_en": "Unitary Semi-Presidential Republic",
       "independence_date": "1956-03-20"
     },
     "economy": {
@@ -9819,7 +9819,7 @@
     },
     "politics": {
       "government_tr": "Başkanlık Cumhuriyeti",
-      "government_en": "Presidential republic",
+      "government_en": "Presidential Republic",
       "independence_date": "1923-10-29"
     },
     "economy": {
@@ -9875,7 +9875,7 @@
     },
     "politics": {
       "government_tr": "Başkanlık Cumhuriyeti",
-      "government_en": "Presidential republic",
+      "government_en": "Presidential Republic",
       "independence_date": "1991-10-27"
     },
     "economy": {
@@ -9931,7 +9931,7 @@
     },
     "politics": {
       "government_tr": "Başkanlık Cumhuriyeti",
-      "government_en": "Presidential republic",
+      "government_en": "Presidential Republic",
       "independence_date": "1962-10-09"
     },
     "economy": {
@@ -9987,7 +9987,7 @@
     },
     "politics": {
       "government_tr": "Yarı Başkanlık Cumhuriyeti",
-      "government_en": "Semi-presidential republic",
+      "government_en": "Semi-Presidential Republic",
       "independence_date": "1991-08-24"
     },
     "economy": {
@@ -10043,7 +10043,7 @@
     },
     "politics": {
       "government_tr": "Federal Seçimli Anayasal Monarşi",
-      "government_en": "Federal elective constitutional monarchy",
+      "government_en": "Federal Elective Constitutional Monarchy",
       "independence_date": "1971-12-02"
     },
     "economy": {
@@ -10099,7 +10099,7 @@
     },
     "politics": {
       "government_tr": "Parlamenter Anayasal Monarşi",
-      "government_en": "Parliamentary constitutional monarchy",
+      "government_en": "Parliamentary Constitutional Monarchy",
       "independence_date": "1801-01-01"
     },
     "economy": {
@@ -10155,7 +10155,7 @@
     },
     "politics": {
       "government_tr": "Başkanlık Cumhuriyeti",
-      "government_en": "Presidential republic",
+      "government_en": "Presidential Republic",
       "independence_date": "1964-04-26"
     },
     "economy": {
@@ -10211,7 +10211,7 @@
     },
     "politics": {
       "government_tr": "Federal Başkanlık Cumhuriyeti",
-      "government_en": "Federal presidential republic",
+      "government_en": "Federal Presidential Republic",
       "independence_date": "1776-07-04"
     },
     "economy": {
@@ -10267,7 +10267,7 @@
     },
     "politics": {
       "government_tr": "ABD'ye Bağlı Organize Toprak",
-      "government_en": "Organized unincorporated territory of the US",
+      "government_en": "Organized Unincorporated Territory of the US",
       "independence_date": "1917-03-31"
     },
     "economy": {
@@ -10323,7 +10323,7 @@
     },
     "politics": {
       "government_tr": "Başkanlık Cumhuriyeti",
-      "government_en": "Presidential republic",
+      "government_en": "Presidential Republic",
       "independence_date": "1825-08-25"
     },
     "economy": {
@@ -10379,7 +10379,7 @@
     },
     "politics": {
       "government_tr": "Başkanlık Cumhuriyeti",
-      "government_en": "Presidential republic",
+      "government_en": "Presidential Republic",
       "independence_date": "1991-09-01"
     },
     "economy": {
@@ -10435,7 +10435,7 @@
     },
     "politics": {
       "government_tr": "Parlamenter Cumhuriyet",
-      "government_en": "Parliamentary republic",
+      "government_en": "Parliamentary Republic",
       "independence_date": "1980-07-30"
     },
     "economy": {
@@ -10491,7 +10491,7 @@
     },
     "politics": {
       "government_tr": "Federal Başkanlık Cumhuriyeti",
-      "government_en": "Federal presidential republic",
+      "government_en": "Federal Presidential Republic",
       "independence_date": "1811-07-05"
     },
     "economy": {
@@ -10547,7 +10547,7 @@
     },
     "politics": {
       "government_tr": "Sosyalist Cumhuriyet",
-      "government_en": "Socialist republic",
+      "government_en": "Socialist Republic",
       "independence_date": "1945-09-02"
     },
     "economy": {
@@ -10603,7 +10603,7 @@
     },
     "politics": {
       "government_tr": "Tartışmalı Bölge",
-      "government_en": "Disputed territory",
+      "government_en": "Disputed Territory",
       "independence_date": "1976-02-27"
     },
     "economy": {
@@ -10659,7 +10659,7 @@
     },
     "politics": {
       "government_tr": "Başkanlık Cumhuriyeti (Geçici/Bölünmüş)",
-      "government_en": "Presidential republic (Provisional/Divided)",
+      "government_en": "Presidential Republic (Provisional/Divided)",
       "independence_date": "1990-05-22"
     },
     "economy": {
@@ -10715,7 +10715,7 @@
     },
     "politics": {
       "government_tr": "Başkanlık Cumhuriyeti",
-      "government_en": "Presidential republic",
+      "government_en": "Presidential Republic",
       "independence_date": "1964-10-24"
     },
     "economy": {
@@ -10771,7 +10771,7 @@
     },
     "politics": {
       "government_tr": "Başkanlık Cumhuriyeti",
-      "government_en": "Presidential republic",
+      "government_en": "Presidential Republic",
       "independence_date": "1980-04-18"
     },
     "economy": {
@@ -10826,7 +10826,7 @@
     },
     "politics": {
       "government_tr": "Yarı Başkanlık Cumhuriyeti",
-      "government_en": "Unitary semi-presidential republic",
+      "government_en": "Unitary Semi-Presidential Republic",
       "independence_date": "1912-01-01"
     },
     "economy": {
@@ -10881,8 +10881,8 @@
     },
     "politics": {
       "government_tr": "Danimarka Krallığına Bağlı Parlamenter Demokrasi",
-      "government_en": "Parliamentary democracy within the Kingdom of Denmark",
-      "independence_date": null
+      "government_en": "Parliamentary Democracy within the Kingdom of Denmark",
+      "independence_date": ""
     },
     "economy": {
       "gdp_usd": 3200000000,
@@ -10937,7 +10937,7 @@
     "politics": {
       "government_tr": "Birleşik Krallık Denizaşırı Toprağı",
       "government_en": "British Overseas Territory",
-      "independence_date": null
+      "independence_date": ""
     },
     "economy": {
       "gdp_usd": 6840000000,
@@ -10992,7 +10992,7 @@
     },
     "politics": {
       "government_tr": "Hollanda Krallığı Kurucu Ülkesi",
-      "government_en": "Constituent country of the Kingdom of the Netherlands",
+      "government_en": "Constituent Country of the Kingdom of the Netherlands",
       "independence_date": "1986-01-01"
     },
     "economy": {
@@ -11048,7 +11048,7 @@
     },
     "politics": {
       "government_tr": "Hollanda Krallığı Kurucu Ülkesi",
-      "government_en": "Constituent country of the Kingdom of the Netherlands",
+      "government_en": "Constituent Country of the Kingdom of the Netherlands",
       "independence_date": "2010-10-10"
     },
     "economy": {
@@ -11105,7 +11105,7 @@
     "politics": {
       "government_tr": "Birleşik Krallık Denizaşırı Toprağı",
       "government_en": "British Overseas Territory",
-      "independence_date": null
+      "independence_date": ""
     },
     "economy": {
       "gdp_usd": 1400000000,
@@ -11161,7 +11161,7 @@
     "politics": {
       "government_tr": "Birleşik Krallık Denizaşırı Toprağı",
       "government_en": "British Overseas Territory",
-      "independence_date": null
+      "independence_date": ""
     },
     "economy": {
       "gdp_usd": 72000000,
@@ -11217,7 +11217,7 @@
     "politics": {
       "government_tr": "Birleşik Krallık Denizaşırı Toprağı",
       "government_en": "British Overseas Territory",
-      "independence_date": null
+      "independence_date": ""
     },
     "economy": {
       "gdp_usd": 1500000000,
@@ -11272,8 +11272,8 @@
     },
     "politics": {
       "government_tr": "Fransa Denizaşırı Topluluğu",
-      "government_en": "Overseas collectivity of France",
-      "independence_date": null
+      "government_en": "Overseas Collectivity of France",
+      "independence_date": ""
     },
     "economy": {
       "gdp_usd": 450000000,
@@ -11328,7 +11328,7 @@
     },
     "politics": {
       "government_tr": "Anayasal Monarşi altında Federal Parlamenter Demokrasi",
-      "government_en": "Federal parliamentary democracy under constitutional monarchy",
+      "government_en": "Federal Parliamentary Democracy under Constitutional Monarchy",
       "independence_date": "1983-09-19"
     },
     "economy": {
@@ -11385,7 +11385,7 @@
     "politics": {
       "government_tr": "Birleşik Krallık Denizaşırı Toprağı",
       "government_en": "British Overseas Territory",
-      "independence_date": null
+      "independence_date": ""
     },
     "economy": {
       "gdp_usd": 350000000,
@@ -11441,7 +11441,7 @@
     "politics": {
       "government_tr": "Birleşik Krallık Denizaşırı Toprağı",
       "government_en": "British Overseas Territory",
-      "independence_date": null
+      "independence_date": ""
     },
     "economy": {
       "gdp_usd": 250000000,
@@ -11496,8 +11496,8 @@
     },
     "politics": {
       "government_tr": "ABD'ye Bağlı Toprak",
-      "government_en": "Unincorporated territory of the US",
-      "independence_date": null
+      "government_en": "Unincorporated Territory of the US",
+      "independence_date": ""
     },
     "economy": {
       "gdp_usd": 710000000,
@@ -11553,7 +11553,7 @@
     "politics": {
       "government_tr": "İspanya Özerk Topluluğu",
       "government_en": "Autonomous Community of Spain",
-      "independence_date": null
+      "independence_date": ""
     },
     "economy": {
       "gdp_usd": 50000000000,
@@ -11608,8 +11608,8 @@
     },
     "politics": {
       "government_tr": "Danimarka Krallığı İçinde Özerk",
-      "government_en": "Autonomous country within the Kingdom of Denmark",
-      "independence_date": null
+      "government_en": "Autonomous Country within the Kingdom of Denmark",
+      "independence_date": ""
     },
     "economy": {
       "gdp_usd": 3500000000,
@@ -11664,8 +11664,8 @@
     },
     "politics": {
       "government_tr": "Fransa Denizaşırı İli",
-      "government_en": "Overseas department of France",
-      "independence_date": null
+      "government_en": "Overseas Department of France",
+      "independence_date": ""
     },
     "economy": {
       "gdp_usd": 3000000000,
@@ -11720,7 +11720,7 @@
     },
     "politics": {
       "government_tr": "Başkanlık Cumhuriyeti",
-      "government_en": "Presidential republic",
+      "government_en": "Presidential Republic",
       "independence_date": "1994-10-01"
     },
     "economy": {
@@ -11776,7 +11776,7 @@
     },
     "politics": {
       "government_tr": "Federal Cumhuriyet",
-      "government_en": "Federal republic",
+      "government_en": "Federal Republic",
       "independence_date": "1986-11-03"
     },
     "economy": {
@@ -11832,8 +11832,8 @@
     },
     "politics": {
       "government_tr": "ABD'ye Bağlı Toprak",
-      "government_en": "Unincorporated territory of the US",
-      "independence_date": null
+      "government_en": "Unincorporated Territory of the US",
+      "independence_date": ""
     },
     "economy": {
       "gdp_usd": 6500000000,
@@ -11889,7 +11889,7 @@
     "politics": {
       "government_tr": "ABD'ye Bağlı Topluluk",
       "government_en": "Commonwealth of the United States",
-      "independence_date": null
+      "independence_date": ""
     },
     "economy": {
       "gdp_usd": 1200000000,
@@ -11944,8 +11944,8 @@
     },
     "politics": {
       "government_tr": "Fransa'ya Bağlı Özel Topluluk",
-      "government_en": "Sui generis collectivity of France",
-      "independence_date": null
+      "government_en": "Sui Generis Collectivity of France",
+      "independence_date": ""
     },
     "economy": {
       "gdp_usd": 9500000000,
@@ -12000,7 +12000,7 @@
     },
     "politics": {
       "government_tr": "Parlamenter Cumhuriyet",
-      "government_en": "Parliamentary republic",
+      "government_en": "Parliamentary Republic",
       "independence_date": "1968-01-31"
     },
     "economy": {
