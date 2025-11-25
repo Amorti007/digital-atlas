@@ -221,7 +221,7 @@ function generateDetailContent(code, pathElement) {
             <ul class="list-unstyled small mb-2">
                 <li><strong>${t('lbl_pop')}</strong> ${population}</li>
                 <li><strong>${t('lbl_life')}</strong> ${lifeExp} ${currentLang === 'tr' ? 'Yıl' : 'Years'}</li>
-                <li><strong>${t('lbl_birth')}</strong> ${birthRate} %</li>
+                <li><strong>${t('lbl_birth')}</strong> ${birthRate}</li>
                 <li><strong>${t('lbl_lang')}</strong> ${langSpoken}</li>
             </ul>
             
