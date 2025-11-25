@@ -1,6 +1,6 @@
 # 🌍 Digital Atlas
 
-**Digital Atlas** is a modern, interactive web application designed to explore global demographic, economic, and military data through a dynamic SVG map interface.
+**Digital Atlas** is a modern, interactive web application designed to explore global demographic, economic, and military data through a dynamic SVG map interface. It features a custom-built **Multi-Language Engine** and a fully responsive design.
 
 ![Project Status](https://img.shields.io/badge/Status-Active-success?style=flat-square)
 ![License](https://img.shields.io/badge/License-MIT-blue?style=flat-square)
@@ -18,6 +18,9 @@ Digital Atlas aims to simplify access to complex country data. Instead of browsi
 * **📊 Dynamic Data Fetching:**
     * Instant data retrieval from JSON sources without page reloads (SPA feel).
     * Real-time fetching of country flags via **FlagCDN**.
+* **🌐 Multi-Language Support (i18n):**
+    * **Custom Language Engine:** A lightweight, pure JavaScript solution (`lang.js`) handles real-time translations without external libraries.
+    * **Seamless Switching:** Instantly toggles between **Turkish (TR)** and **English (EN)** without refreshing the page.
 * **👥 Live Population Pyramid:**
     * **Custom Algorithm:** Converts raw demographic data into an animated CSS-based bar chart.
     * Visualizes age and gender distribution dynamically for every country.
@@ -32,6 +35,7 @@ Digital Atlas aims to simplify access to complex country data. Instead of browsi
 | **Frontend** | HTML5, CSS3, JavaScript (ES6+) |
 | **Framework** | Bootstrap 5.3 (UI & Popovers) |
 | **Data & Assets** | JSON, SVG, FontAwesome, FlagCDN |
+| **Localization** | Custom JS Engine (`lang.js`) |
 | **Animation** | CSS3 Transitions, Custom JS Logic |
 
 ## 📂 Project Structure
@@ -41,11 +45,14 @@ digital-atlas/
 ├── public/
 │   ├── index.html          # Main entry point (Navbar & Layout)
 │   ├── world_map.html      # Dynamic map component loaded via fetch
+│   ├── about.html          # About page fragment (Mission & Team)
 │   ├── src/
 │   │   ├── assets/         # Optimized world.svg and static images
 │   │   ├── css/            # main.css (Custom styling & variables)
 │   │   ├── data/           # world.json (Comprehensive country database)
-│   │   └── js/             # main.js (Core application logic)
+│   │   └── js/
+│   │       ├── main.js     # Core application logic & Routing
+│   │       └── lang.js     # Localization engine & Translation dictionary
 ├── README.md               # Documentation
 └── package.json            # Dependency management
 ```

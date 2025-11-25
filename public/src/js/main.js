@@ -135,7 +135,7 @@ function generateDetailContent(code, pathElement) {
     const defaultName = pathElement.getAttribute("name") || code;
     
     if (!data)
-        return `<strong>${defaultName}</strong><br><span class="text-muted small">${currentLang === 'tr' ? 'Veri girilmemiş.' : 'No data available.'}</span>`;
+        return `<strong>${defaultName}</strong><br><span class="text-muted small">${t('no_data')}</span>`;
 
     // FlagCDN kullanarak bayrak URL'si oluşturma
     let flagUrl = `https://flagcdn.com/w80/${code.toLowerCase()}.png`;
@@ -266,8 +266,11 @@ function generateDetailContent(code, pathElement) {
 en yüksek değeri buluyor (Normalization) ve her yaş grubu için
 yüzdelik genişlikleri hesaplayarak CSS barlarına dönüştürüyor. */
 function generatePyramidChart(pyramidData) {
-  if (!pyramidData || !Array.isArray(pyramidData) || pyramidData.length === 0) {
-    return '<div class="text-center text-muted small py-2">Veri Yok</div>';
+  const lang = window.currentLang || 'tr';
+  const noDataMsg = window.uiTranslations?.[lang]?.['no_data'] || "Veri Yok";
+
+if (!pyramidData || !Array.isArray(pyramidData) || pyramidData.length === 0) {
+    return `<div class="text-center text-muted small py-2">${noDataMsg}</div>`;
   }
 
   // 1. Adım: Normalizasyon için maksimum değeri bul
