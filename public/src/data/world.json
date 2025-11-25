@@ -36,13 +36,13 @@
       "minimum_wage_usd": 65,
       "unemployment_rate": 13.3,
       "currency_tr": "Afganistan Afganisi",
-      "currency_en": ""    },
+      "currency_en": "Afghan Afghani" },
     "demographics": {
       "total_population": 41128771,
       "life_expectancy": 62.0,
       "birth_rate": 4.5,
       "most_spoken_language_tr": "Peştuca / Darice",
-      "most_spoken_language_en": "",
+      "most_spoken_language_en": "Pashto / Dari",
       "population_pyramid": [
         { "Age": "0-4", "M": 3462498, "F": 3315884 },
         { "Age": "5-9", "M": 3112693, "F": 2977049 },
@@ -113,13 +113,13 @@
       "minimum_wage_usd": 350,
       "unemployment_rate": 10.5,
       "currency_tr": "Arnavutluk Leki",
-      "currency_en": ""    },
+      "currency_en": "Albanian Lek"  },
     "demographics": {
       "total_population": 2800000,
       "life_expectancy": 78.5,
       "birth_rate": 1.3,
       "most_spoken_language_tr": "Arnavutça",
-      "most_spoken_language_en": "",
+      "most_spoken_language_en": "Albanian",
       "population_pyramid": [
         { "Age": "0-4", "M": 73426, "F": 68357 },
         { "Age": "5-9", "M": 82753, "F": 75958 },
@@ -190,13 +190,13 @@
       "minimum_wage_usd": 150,
       "unemployment_rate": 11.5,
       "currency_tr": "Cezayir Dinarı",
-      "currency_en": ""    },
+      "currency_en": "Algerian Dinar"},
     "demographics": {
       "total_population": 45600000,
       "life_expectancy": 76.0,
       "birth_rate": 2.8,
       "most_spoken_language_tr": "Arapça",
-      "most_spoken_language_en": "",
+      "most_spoken_language_en": "Arabic",
       "population_pyramid": [
         { "Age": "0-4", "M": 2364638, "F": 2268357 },
         { "Age": "5-9", "M": 2560280, "F": 2459736 },
@@ -267,13 +267,13 @@
       "minimum_wage_usd": 1200,
       "unemployment_rate": 2.0,
       "currency_tr": "Euro",
-      "currency_en": ""    },
+      "currency_en": "Euro"    },
     "demographics": {
       "total_population": 80000,
       "life_expectancy": 83.0,
       "birth_rate": 1.1,
       "most_spoken_language_tr": "Katalanca",
-      "most_spoken_language_en": "",
+      "most_spoken_language_en": "Catalan",
       "population_pyramid": [
         { "Age": "0-4", "M": 3199663, "F": 3149945 },
         { "Age": "5-9", "M": 2812376, "F": 2783552 },
@@ -344,13 +344,13 @@
       "minimum_wage_usd": 100,
       "unemployment_rate": 30.0,
       "currency_tr": "Angola Kvanzası",
-      "currency_en": ""    },
+      "currency_en": "Angolan Kwanza"    },
     "demographics": {
       "total_population": 37202061,
       "life_expectancy": 61.0,
       "birth_rate": 5.1,
       "most_spoken_language_tr": "Portekizce",
-      "most_spoken_language_en": "",
+      "most_spoken_language_en": "Portuguese",
       "population_pyramid": [
         { "Age": "0-4", "M": 2785, "F": 2703 },
         { "Age": "5-9", "M": 2659, "F": 2581 },
@@ -421,13 +421,13 @@
       "minimum_wage_usd": 800,
       "unemployment_rate": 11.0,
       "currency_tr": "Doğu Karayip Doları",
-      "currency_en": ""    },
+      "currency_en": "East Caribbean Dollar"    },
     "demographics": {
       "total_population": 94000,
       "life_expectancy": 77.0,
       "birth_rate": 1.6,
       "most_spoken_language_tr": "İngilizce",
-      "most_spoken_language_en": "",
+      "most_spoken_language_en": "English",
       "population_pyramid": [
         { "Age": "0-4", "M": 1333451, "F": 1269938 },
         { "Age": "5-9", "M": 1826706, "F": 1734572 },
@@ -498,13 +498,13 @@
       "minimum_wage_usd": 300,
       "unemployment_rate": 11.3,
       "currency_tr": "Arjantin Pesosu",
-      "currency_en": ""    },
+      "currency_en": "Argentine Peso"    },
     "demographics": {
       "total_population": 46200000,
       "life_expectancy": 76.0,
       "birth_rate": 1.5,
       "most_spoken_language_tr": "İspanyolca",
-      "most_spoken_language_en": "",
+      "most_spoken_language_en": "Spanish",
       "population_pyramid": [
         { "Age": "0-4", "M": 91121, "F": 85201 },
         { "Age": "5-9", "M": 99618, "F": 92657 },
@@ -575,13 +575,13 @@
       "minimum_wage_usd": 180,
       "unemployment_rate": 13.0,
       "currency_tr": "Ermenistan Dramı",
-      "currency_en": ""    },
+      "currency_en": "Armenian Dram"    },
     "demographics": {
       "total_population": 2900000,
       "life_expectancy": 75.0,
       "birth_rate": 1.7,
       "most_spoken_language_tr": "Ermenice",
-      "most_spoken_language_en": "",
+      "most_spoken_language_en": "Armenian",
       "population_pyramid": [
         { "Age": "0-4", "M": 2649, "F": 2546 },
         { "Age": "5-9", "M": 3120, "F": 3004 },
@@ -652,13 +652,13 @@
       "minimum_wage_usd": 2800,
       "unemployment_rate": 3.4,
       "currency_tr": "Avustralya Doları",
-      "currency_en": ""    },
+      "currency_en": "Australian dollar"    },
     "demographics": {
       "total_population": 26500000,
       "life_expectancy": 83.0,
       "birth_rate": 1.5,
       "most_spoken_language_tr": "İngilizce",
-      "most_spoken_language_en": "",
+      "most_spoken_language_en": "English",
       "population_pyramid": [
         { "Age": "0-4", "M": 788505, "F": 747216 },
         { "Age": "5-9", "M": 814379, "F": 769163 },
@@ -729,13 +729,13 @@
       "minimum_wage_usd": 1800,
       "unemployment_rate": 4.9,
       "currency_tr": "Euro",
-      "currency_en": ""    },
+      "currency_en": "Euro"    },
     "demographics": {
       "total_population": 9100000,
       "life_expectancy": 81.0,
       "birth_rate": 1.3,
       "most_spoken_language_tr": "Almanca",
-      "most_spoken_language_en": "",
+      "most_spoken_language_en": "German",
       "population_pyramid": [
         { "Age": "0-4", "M": 213043, "F": 202168 },
         { "Age": "5-9", "M": 231147, "F": 218215 },
@@ -806,13 +806,13 @@
       "minimum_wage_usd": 200,
       "unemployment_rate": 6.0,
       "currency_tr": "Azerbaycan Manatı",
-      "currency_en": ""    },
+      "currency_en": "Azerbaijani Manat"    },
     "demographics": {
       "total_population": 10650239,
       "life_expectancy": 73.0,
       "birth_rate": 1.6,
       "most_spoken_language_tr": "Azerbaycanca",
-      "most_spoken_language_en": "",
+      "most_spoken_language_en": "Azerbaijani",
       "population_pyramid": [
         { "Age": "0-4", "M": 346062, "F": 308896 },
         { "Age": "5-9", "M": 392286, "F": 355406 },
@@ -883,13 +883,13 @@
       "minimum_wage_usd": 1100,
       "unemployment_rate": 10.0,
       "currency_tr": "Bahama Doları",
-      "currency_en": ""    },
+      "currency_en": "Bahamian Dollar"    },
     "demographics": {
       "total_population": 413000,
       "life_expectancy": 74.0,
       "birth_rate": 1.4,
       "most_spoken_language_tr": "İngilizce",
-      "most_spoken_language_en": "",
+      "most_spoken_language_en": "English",
       "population_pyramid": [
         { "Age": "0-4", "M": 11031, "F": 10757 },
         { "Age": "5-9", "M": 11764, "F": 11472 },
@@ -960,13 +960,13 @@
       "minimum_wage_usd": 800,
       "unemployment_rate": 6.3,
       "currency_tr": "Bahreyn Dinarı",
-      "currency_en": ""    },
+      "currency_en": "Bahraini Dinar"    },
     "demographics": {
       "total_population": 1588670,
       "life_expectancy": 77.0,
       "birth_rate": 1.8,
       "most_spoken_language_tr": "Arapça",
-      "most_spoken_language_en": "",
+      "most_spoken_language_en": "Arabic",
       "population_pyramid": [
         { "Age": "0-4", "M": 48528, "F": 46905 },
         { "Age": "5-9", "M": 53315, "F": 51493 },
@@ -1037,13 +1037,13 @@
       "minimum_wage_usd": 95,
       "unemployment_rate": 3.5,
       "currency_tr": "Bangladeş Takası",
-      "currency_en": ""    },
+      "currency_en": "Bangladeshi Taka"    },
     "demographics": {
       "total_population": 171500000,
       "life_expectancy": 73.0,
       "birth_rate": 2.2,
       "most_spoken_language_tr": "Bengalce",
-      "most_spoken_language_en": "",
+      "most_spoken_language_en": "Bengali",
       "population_pyramid": [
         { "Age": "0-4", "M": 8541497, "F": 8152507 },
         { "Age": "5-9", "M": 8076803, "F": 7614096 },
@@ -1114,13 +1114,13 @@
       "minimum_wage_usd": 1200,
       "unemployment_rate": 7.5,
       "currency_tr": "Barbados Doları",
-      "currency_en": ""    },
+      "currency_en": "Barbadian Dollar"    },
     "demographics": {
       "total_population": 282000,
       "life_expectancy": 79.0,
       "birth_rate": 1.7,
       "most_spoken_language_tr": "İngilizce",
-      "most_spoken_language_en": "",
+      "most_spoken_language_en": "English",
       "population_pyramid": [
         { "Age": "0-4", "M": 7982, "F": 7729 },
         { "Age": "5-9", "M": 8183, "F": 7919 },
@@ -1191,13 +1191,13 @@
       "minimum_wage_usd": 200,
       "unemployment_rate": 4.8,
       "currency_tr": "Belarus Rublesi",
-      "currency_en": ""    },
+      "currency_en": "Belarusian Ruble"    },
     "demographics": {
       "total_population": 9400000,
       "life_expectancy": 74.0,
       "birth_rate": 1.2,
       "most_spoken_language_tr": "Belarusça / Rusça",
-      "most_spoken_language_en": "",
+      "most_spoken_language_en": "Belarusian / Russian",
       "population_pyramid": [
         { "Age": "0-4", "M": 192202, "F": 181655 },
         { "Age": "5-9", "M": 275381, "F": 259702 },
@@ -1268,13 +1268,13 @@
       "minimum_wage_usd": 1900,
       "unemployment_rate": 5.6,
       "currency_tr": "Euro",
-      "currency_en": ""    },
+      "currency_en": "Euro"    },
     "demographics": {
       "total_population": 11832049,
       "life_expectancy": 81.0,
       "birth_rate": 1.4,
       "most_spoken_language_tr": "Felemenkçe / Fransızca",
-      "most_spoken_language_en": "",
+      "most_spoken_language_en": "Dutch / French",
       "population_pyramid": [
         { "Age": "0-4", "M": 289178, "F": 276493 },
         { "Age": "5-9", "M": 321859, "F": 307987 },
@@ -1345,13 +1345,13 @@
       "minimum_wage_usd": 300,
       "unemployment_rate": 5.0,
       "currency_tr": "Belize Doları",
-      "currency_en": ""    },
+      "currency_en": "Belize Dollar"    },
     "demographics": {
       "total_population": 400000,
       "life_expectancy": 74.0,
       "birth_rate": 2.0,
       "most_spoken_language_tr": "İngilizce",
-      "most_spoken_language_en": "",
+      "most_spoken_language_en": "English",
       "population_pyramid": [
         { "Age": "0-4", "M": 18171, "F": 17316 },
         { "Age": "5-9", "M": 19862, "F": 18941 },
@@ -1422,13 +1422,13 @@
       "minimum_wage_usd": 70,
       "unemployment_rate": 1.6,
       "currency_tr": "CFA Frangı",
-      "currency_en": ""    },
+      "currency_en": "CFA Franc"    },
     "demographics": {
       "total_population": 13754688,
       "life_expectancy": 61.2,
       "birth_rate": 4.5,
       "most_spoken_language_tr": "Fransızca",
-      "most_spoken_language_en": "",
+      "most_spoken_language_en": "French",
       "population_pyramid": [
         { "Age": "0-4", "M": 1116500, "F": 1084374 },
         { "Age": "5-9", "M": 1026792, "F": 1000942 },
@@ -1499,13 +1499,13 @@
       "minimum_wage_usd": 50,
       "unemployment_rate": 5.0,
       "currency_tr": "Butan Ngultrumu",
-      "currency_en": ""    },
+      "currency_en": "Bhutanese Ngultrum"    },
     "demographics": {
       "total_population": 795000,
       "life_expectancy": 72.0,
       "birth_rate": 1.5,
       "most_spoken_language_tr": "Dzongkha",
-      "most_spoken_language_en": "",
+      "most_spoken_language_en": "Dzongkha",
       "population_pyramid": [
         { "Age": "0-4", "M": 24829, "F": 23778 },
         { "Age": "5-9", "M": 27417, "F": 25460 },
@@ -1576,13 +1576,13 @@
       "minimum_wage_usd": 325,
       "unemployment_rate": 4.5,
       "currency_tr": "Bolivya Bolivyanosu",
-      "currency_en": ""    },
+      "currency_en": "Bolivian Boliviano"    },
     "demographics": {
       "total_population": 12200000,
       "life_expectancy": 71.0,
       "birth_rate": 2.5,
       "most_spoken_language_tr": "İspanyolca / Keçuva",
-      "most_spoken_language_en": "",
+      "most_spoken_language_en": "Spanish / Quechua",
       "population_pyramid": [
         { "Age": "0-4", "M": 637793, "F": 615340 },
         { "Age": "5-9", "M": 625626, "F": 604232 },
@@ -1653,13 +1653,13 @@
       "minimum_wage_usd": 300,
       "unemployment_rate": 12.6,
       "currency_tr": "Bosna-Hersek Markı",
-      "currency_en": ""    },
+      "currency_en": "Bosnia-Herzegovina Mark"    },
     "demographics": {
       "total_population": 3450000,
       "life_expectancy": 77.0,
       "birth_rate": 1.5,
       "most_spoken_language_tr": "Boşnakça / Hırvatça",
-      "most_spoken_language_en": "",
+      "most_spoken_language_en": "Bosnian / Croatian",
       "population_pyramid": [
         { "Age": "0-4", "M": 65458, "F": 61304 },
         { "Age": "5-9", "M": 71264, "F": 66504 },
@@ -1730,13 +1730,13 @@
       "minimum_wage_usd": 100,
       "unemployment_rate": 25.0,
       "currency_tr": "Botsvana Pulası",
-      "currency_en": ""    },
+      "currency_en": "Botswana Pula"    },
     "demographics": {
       "total_population": 2630000,
       "life_expectancy": 69.0,
       "birth_rate": 2.7,
       "most_spoken_language_tr": "İngilizce / Tswana",
-      "most_spoken_language_en": "",
+      "most_spoken_language_en": "English / Tswana",
       "population_pyramid": [
         { "Age": "0-4", "M": 150073, "F": 147281 },
         { "Age": "5-9", "M": 133695, "F": 132186 },
@@ -1807,13 +1807,13 @@
       "minimum_wage_usd": 260,
       "unemployment_rate": 6.2,
       "currency_tr": "Brezilya Reali",
-      "currency_en": ""    },
+      "currency_en": "Brazilian Real"    },
     "demographics": {
       "total_population": 212583750,
       "life_expectancy": 76.0,
       "birth_rate": 1.6,
       "most_spoken_language_tr": "Portekizce",
-      "most_spoken_language_en": "",
+      "most_spoken_language_en": "Portuguese",
       "population_pyramid": [
         { "Age": "0-4", "M": 6682042, "F": 6413556 },
         { "Age": "5-9", "M": 7241538, "F": 6953921 },
@@ -1884,13 +1884,13 @@
       "minimum_wage_usd": 0,
       "unemployment_rate": 7.0,
       "currency_tr": "Brunei Doları",
-      "currency_en": ""    },
+      "currency_en": "Brunei Dollar"    },
     "demographics": {
       "total_population": 455500,
       "life_expectancy": 76.0,
       "birth_rate": 1.7,
       "most_spoken_language_tr": "Malayca",
-      "most_spoken_language_en": "",
+      "most_spoken_language_en": "Malay",
       "population_pyramid": [
         { "Age": "0-4", "M": 16198, "F": 15036 },
         { "Age": "5-9", "M": 16965, "F": 15704 },
@@ -1961,13 +1961,13 @@
       "minimum_wage_usd": 400,
       "unemployment_rate": 4.3,
       "currency_tr": "Bulgar Levası",
-      "currency_en": ""    },
+      "currency_en": "Bulgarian Lev"    },
     "demographics": {
       "total_population": 6400000,
       "life_expectancy": 75.0,
       "birth_rate": 1.7,
       "most_spoken_language_tr": "Bulgarca",
-      "most_spoken_language_en": "",
+      "most_spoken_language_en": "Bulgarian",
       "population_pyramid": [
         { "Age": "0-4", "M": 157831, "F": 149365 },
         { "Age": "5-9", "M": 168156, "F": 158929 },
@@ -2038,13 +2038,13 @@
       "minimum_wage_usd": 60,
       "unemployment_rate": 6.0,
       "currency_tr": "CFA Frangı",
-      "currency_en": ""    },
+      "currency_en": "West African Franc"    },
     "demographics": {
       "total_population": 23000000,
       "life_expectancy": 62.0,
       "birth_rate": 4.1,
       "most_spoken_language_tr": "Fransızca",
-      "most_spoken_language_en": "",
+      "most_spoken_language_en": "French",
       "population_pyramid": [
         { "Age": "0-4", "M": 1706178, "F": 1654102 },
         { "Age": "5-9", "M": 1701781, "F": 1649888 },
@@ -2115,13 +2115,13 @@
       "minimum_wage_usd": 0,
       "unemployment_rate": 1.5,
       "currency_tr": "Burundi Frangı",
-      "currency_en": ""    },
+      "currency_en": "Burundian Franc"    },
     "demographics": {
       "total_population": 14000000,
       "life_expectancy": 62.0,
       "birth_rate": 4.9,
       "most_spoken_language_tr": "Kirundi / Fransızca",
-      "most_spoken_language_en": "",
+      "most_spoken_language_en": "Kirundi / French",
       "population_pyramid": [
         { "Age": "0-4", "M": 1102302, "F": 1084288 },
         { "Age": "5-9", "M": 1053022, "F": 1040711 },
@@ -2186,13 +2186,13 @@
       "minimum_wage_usd": 140,
       "unemployment_rate": 12.1,
       "currency_tr": "Cabo Verde Esküdosu",
-      "currency_en": ""    },
+      "currency_en": "Cape Verdean Escudo"    },
     "demographics": {
       "total_population": 598000,
       "life_expectancy": 73.0,
       "birth_rate": 2.1,
       "most_spoken_language_tr": "Portekizce",
-      "most_spoken_language_en": "",
+      "most_spoken_language_en": "Portuguese",
       "population_pyramid": [{"Age":"0-4","M":18316,"F":17518},{"Age":"5-9","M":24955,"F":23780},{"Age":"10-14","M":25583,"F":23939},{"Age":"15-19","M":24930,"F":23066},{"Age":"20-24","M":22519,"F":19721},{"Age":"25-29","M":22859,"F":20697},{"Age":"30-34","M":24658,"F":22847},{"Age":"35-39","M":22792,"F":21323},{"Age":"40-44","M":19041,"F":17093},{"Age":"45-49","M":14938,"F":13289},{"Age":"50-54","M":11888,"F":11233},{"Age":"55-59","M":11060,"F":11397},{"Age":"60-64","M":9278,"F":10153},{"Age":"65-69","M":6215,"F":7903},{"Age":"70-74","M":3872,"F":5679},{"Age":"75-79","M":2228,"F":3906},{"Age":"80-84","M":1091,"F":2393},{"Age":"85-89","M":559,"F":1467},{"Age":"90-94","M":140,"F":448},{"Age":"95-99","M":18,"F":69},{"Age":"100+","M":1,"F":4}]
     },
     "military": {
@@ -2234,13 +2234,13 @@
       "minimum_wage_usd": 204,
       "unemployment_rate": 0.6,
       "currency_tr": "Kamboçya Rieli",
-      "currency_en": ""    },
+      "currency_en": "Cambodian riel"    },
     "demographics": {
       "total_population": 16900000,
       "life_expectancy": 69.6,
       "birth_rate": 2.3,
       "most_spoken_language_tr": "Kmerce",
-      "most_spoken_language_en": "",
+      "most_spoken_language_en": "Khmer",
       "population_pyramid": [[{"Age":"0-4","M":921033,"F":879399},{"Age":"5-9","M":911331,"F":872231},{"Age":"10-14","M":850778,"F":820380},{"Age":"15-19","M":830326,"F":800794},{"Age":"20-24","M":699842,"F":700567},{"Age":"25-29","M":645082,"F":674168},{"Age":"30-34","M":701871,"F":725044},{"Age":"35-39","M":666863,"F":688818},{"Age":"40-44","M":614863,"F":633711},{"Age":"45-49","M":414109,"F":431446},{"Age":"50-54","M":356712,"F":389887},{"Age":"55-59","M":332537,"F":381232},{"Age":"60-64","M":274218,"F":334347},{"Age":"65-69","M":181879,"F":266473},{"Age":"70-74","M":120689,"F":192607},{"Age":"75-79","M":70308,"F":113693},{"Age":"80-84","M":34474,"F":59114},{"Age":"85-89","M":12809,"F":24478},{"Age":"90-94","M":2975,"F":6621},{"Age":"95-99","M":269,"F":748},{"Age":"100+","M":13,"F":50}]]
     },
     "military": {
@@ -2282,13 +2282,13 @@
       "minimum_wage_usd": 60,
       "unemployment_rate": 3.8,
       "currency_tr": "Orta Afrika CFA Frangı",
-      "currency_en": ""    },
+      "currency_en": "Central African Franc"    },
     "demographics": {
       "total_population": 28600000,
       "life_expectancy": 60.3,
       "birth_rate": 4.3,
       "most_spoken_language_tr": "Fransızca / İngilizce",
-      "most_spoken_language_en": "",
+      "most_spoken_language_en": "French / English",
       "population_pyramid": [{"Age":"0-4","M":2243065,"F":2200632},{"Age":"5-9","M":2046736,"F":2014343},{"Age":"10-14","M":1791425,"F":1773325},{"Age":"15-19","M":1575308,"F":1569078},{"Age":"20-24","M":1316404,"F":1316736},{"Age":"25-29","M":1122435,"F":1129187},{"Age":"30-34","M":995725,"F":1005759},{"Age":"35-39","M":850650,"F":860718},{"Age":"40-44","M":696890,"F":707993},{"Age":"45-49","M":546355,"F":559214},{"Age":"50-54","M":424487,"F":439993},{"Age":"55-59","M":312765,"F":331729},{"Age":"60-64","M":228037,"F":250798},{"Age":"65-69","M":161655,"F":186410},{"Age":"70-74","M":102793,"F":125842},{"Age":"75-79","M":58532,"F":77290},{"Age":"80-84","M":28282,"F":40715},{"Age":"85-89","M":10050,"F":15479},{"Age":"90-94","M":2372,"F":3634},{"Age":"95-99","M":346,"F":491},{"Age":"100+","M":24,"F":31}]
     },
     "military": {
@@ -2330,13 +2330,13 @@
       "minimum_wage_usd": 2400,
       "unemployment_rate": 6.1,
       "currency_tr": "Kanada Doları",
-      "currency_en": ""    },
+      "currency_en": "Canadian Dollar"    },
     "demographics": {
       "total_population": 40100000,
       "life_expectancy": 82.0,
       "birth_rate": 1.3,
       "most_spoken_language_tr": "İngilizce / Fransızca",
-      "most_spoken_language_en": "",
+       "most_spoken_language_en": "English / French",
       "population_pyramid": [{"Age":"0-4","M":964292,"F":917488},{"Age":"5-9","M":1031990,"F":982876},{"Age":"10-14","M":1077145,"F":1031813},{"Age":"15-19","M":1104590,"F":1071570},{"Age":"20-24","M":1249729,"F":1197652},{"Age":"25-29","M":1440184,"F":1333836},{"Age":"30-34","M":1468892,"F":1397650},{"Age":"35-39","M":1410077,"F":1379343},{"Age":"40-44","M":1344926,"F":1348737},{"Age":"45-49","M":1230632,"F":1256820},{"Age":"50-54","M":1202888,"F":1224839},{"Age":"55-59","M":1243990,"F":1266523},{"Age":"60-64","M":1328224,"F":1366880},{"Age":"65-69","M":1178332,"F":1245909},{"Age":"70-74","M":944034,"F":1035193},{"Age":"75-79","M":719116,"F":820159},{"Age":"80-84","M":435516,"F":537209},{"Age":"85-89","M":233871,"F":334819},{"Age":"90-94","M":100185,"F":183539},{"Age":"95-99","M":23725,"F":63197},{"Age":"100+","M":2616,"F":11414}]
     },
     "military": {
@@ -2381,13 +2381,13 @@
       "minimum_wage_usd": 35,
       "unemployment_rate": 6.6,
       "currency_tr": "Orta Afrika CFA Frangı",
-      "currency_en": ""    },
+      "currency_en": "Central African Franc"    },
     "demographics": {
       "total_population": 5500000,
       "life_expectancy": 54.0,
       "birth_rate": 6.0,
       "most_spoken_language_tr": "Sango / Fransızca",
-      "most_spoken_language_en": "",
+      "most_spoken_language_en": "Sango / French",
       "population_pyramid": [{"Age":"0-4","M":498391,"F":490885},{"Age":"5-9","M":417784,"F":409501},{"Age":"10-14","M":401068,"F":394586},{"Age":"15-19","M":325405,"F":327881},{"Age":"20-24","M":259962,"F":282756},{"Age":"25-29","M":183264,"F":214855},{"Age":"30-34","M":121222,"F":152704},{"Age":"35-39","M":81762,"F":113640},{"Age":"40-44","M":60283,"F":83531},{"Age":"45-49","M":46883,"F":63973},{"Age":"50-54","M":43927,"F":63870},{"Age":"55-59","M":38271,"F":59799},{"Age":"60-64","M":31388,"F":48424},{"Age":"65-69","M":23986,"F":33595},{"Age":"70-74","M":14845,"F":19514},{"Age":"75-79","M":6466,"F":8411},{"Age":"80-84","M":2501,"F":3673},{"Age":"85-89","M":520,"F":992},{"Age":"90-94","M":27,"F":130},{"Age":"95-99","M":0,"F":2},{"Age":"100+","M":0,"F":0}]
     },
     "military": {
@@ -2429,13 +2429,13 @@
       "minimum_wage_usd": 100,
       "unemployment_rate": 1.4,
       "currency_tr": "Orta Afrika CFA Frangı",
-      "currency_en": ""    },
+      "currency_en": "Central African Franc"    },
     "demographics": {
       "total_population": 18000000,
       "life_expectancy": 54.0,
       "birth_rate": 5.2,
       "most_spoken_language_tr": "Fransızca / Arapça",
-      "most_spoken_language_en": "",
+      "most_spoken_language_en": "French / Arabic",
       "population_pyramid": [{"Age":"0-4","M":1870359,"F":1817975},{"Age":"5-9","M":1547536,"F":1508383},{"Age":"10-14","M":1320615,"F":1285846},{"Age":"15-19","M":1119032,"F":1091728},{"Age":"20-24","M":929161,"F":916809},{"Age":"25-29","M":778140,"F":773897},{"Age":"30-34","M":630160,"F":630471},{"Age":"35-39","M":489201,"F":494303},{"Age":"40-44","M":390098,"F":398489},{"Age":"45-49","M":327460,"F":338000},{"Age":"50-54","M":260079,"F":272894},{"Age":"55-59","M":190296,"F":205767},{"Age":"60-64","M":135203,"F":150823},{"Age":"65-69","M":89987,"F":103691},{"Age":"70-74","M":56249,"F":67459},{"Age":"75-79","M":28438,"F":35186},{"Age":"80-84","M":13043,"F":17183},{"Age":"85-89","M":4578,"F":6552},{"Age":"90-94","M":1177,"F":1749},{"Age":"95-99","M":440,"F":466},{"Age":"100+","M":100,"F":89}]
     },
     "military": {
@@ -2477,13 +2477,13 @@
       "minimum_wage_usd": 500,
       "unemployment_rate": 8.5,
       "currency_tr": "Şili Pesosu",
-      "currency_en": ""    },
+      "currency_en": "Chilean Peso"    },
     "demographics": {
       "total_population": 19600000,
       "life_expectancy": 80.0,
       "birth_rate": 1.1,
       "most_spoken_language_tr": "İspanyolca",
-      "most_spoken_language_en": "",
+      "most_spoken_language_en": "Spanish",
       "population_pyramid": [{"Age":"0-4","M":478089,"F":459414},{"Age":"5-9","M":597610,"F":576555},{"Age":"10-14","M":632672,"F":608982},{"Age":"15-19","M":618896,"F":595219},{"Age":"20-24","M":673557,"F":655022},{"Age":"25-29","M":780958,"F":763477},{"Age":"30-34","M":836453,"F":817608},{"Age":"35-39","M":791872,"F":776246},{"Age":"40-44","M":715225,"F":704117},{"Age":"45-49","M":668759,"F":663317},{"Age":"50-54","M":636517,"F":640385},{"Age":"55-59","M":592696,"F":609765},{"Age":"60-64","M":523765,"F":553821},{"Age":"65-69","M":439220,"F":475491},{"Age":"70-74","M":343231,"F":384289},{"Age":"75-79","M":230374,"F":275761},{"Age":"80-84","M":136509,"F":178090},{"Age":"85-89","M":77990,"F":114191},{"Age":"90-94","M":36119,"F":62119},{"Age":"95-99","M":11357,"F":23160},{"Age":"100+","M":1575,"F":4287}]
     },
     "military": {
@@ -2525,13 +2525,13 @@
       "minimum_wage_usd": 350,
       "unemployment_rate": 5.2,
       "currency_tr": "Çin Yuanı",
-      "currency_en": ""    },
+      "currency_en": "Chinese Yuan"    },
     "demographics": {
       "total_population": 1411000000,
       "life_expectancy": 78.0,
       "birth_rate": 1.0,
       "most_spoken_language_tr": "Mandarin",
-      "most_spoken_language_en": "",
+      "most_spoken_language_en": "Mandarin",
       "population_pyramid": [{"Age":"0-4","M":27342843,"F":24614707},{"Age":"5-9","M":45398567,"F":39756447},{"Age":"10-14","M":48445649,"F":41644072},{"Age":"15-19","M":44868456,"F":38253594},{"Age":"20-24","M":42803564,"F":36615697},{"Age":"25-29","M":45182391,"F":39287194},{"Age":"30-34","M":55935859,"F":50164764},{"Age":"35-39","M":61039493,"F":56495290},{"Age":"40-44","M":51487433,"F":48837006},{"Age":"45-49","M":48029599,"F":46313285},{"Age":"50-54","M":60406262,"F":59460159},{"Age":"55-59","M":57124174,"F":57625452},{"Age":"60-64","M":41231415,"F":42810616},{"Age":"65-69","M":35337006,"F":38857886},{"Age":"70-74","M":28412466,"F":33775418},{"Age":"75-79","M":16122783,"F":19906556},{"Age":"80-84","M":8653262,"F":12001881},{"Age":"85-89","M":3987530,"F":6766075},{"Age":"90-94","M":1092561,"F":2586829},{"Age":"95-99","M":119555,"F":484289},{"Age":"100+","M":2849,"F":40333}]
     },
     "military": {
@@ -2573,13 +2573,13 @@
       "minimum_wage_usd": 300,
       "unemployment_rate": 10.0,
       "currency_tr": "Kolombiya Pesosu",
-      "currency_en": ""    },
+      "currency_en": "Colombian Peso"    },
     "demographics": {
       "total_population": 52000000,
       "life_expectancy": 77.0,
       "birth_rate": 1.6,
       "most_spoken_language_tr": "İspanyolca",
-      "most_spoken_language_en": "",
+      "most_spoken_language_en": "Spanish",
       "population_pyramid": [{"Age":"0-4","M":1811304,"F":1737691},{"Age":"5-9","M":1791635,"F":1720805},{"Age":"10-14","M":1868180,"F":1791567},{"Age":"15-19","M":2025102,"F":1948399},{"Age":"20-24","M":2203236,"F":2153492},{"Age":"25-29","M":2305841,"F":2291923},{"Age":"30-34","M":2244138,"F":2248959},{"Age":"35-39","M":2013588,"F":2029013},{"Age":"40-44","M":1849868,"F":1893120},{"Age":"45-49","M":1625864,"F":1695090},{"Age":"50-54","M":1464985,"F":1559004},{"Age":"55-59","M":1390230,"F":1503578},{"Age":"60-64","M":1209562,"F":1338723},{"Age":"65-69","M":926686,"F":1060169},{"Age":"70-74","M":649698,"F":775869},{"Age":"75-79","M":404696,"F":523176},{"Age":"80-84","M":209773,"F":310997},{"Age":"85-89","M":77400,"F":143873},{"Age":"90-94","M":20222,"F":52487},{"Age":"95-99","M":2923,"F":11658},{"Age":"100+","M":334,"F":1493}]
     },
     "military": {
@@ -2621,13 +2621,13 @@
       "minimum_wage_usd": 120,
       "unemployment_rate": 8.5,
       "currency_tr": "Komor Frangı",
-      "currency_en": ""    },
+      "currency_en": "Comorian Franc"    },
     "demographics": {
       "total_population": 850000,
       "life_expectancy": 64.0,
       "birth_rate": 3.8,
       "most_spoken_language_tr": "Komorca / Fransızca",
-      "most_spoken_language_en": "",
+      "most_spoken_language_en": "Comorian / French",
       "population_pyramid": [{"Age":"0-4","M":58205,"F":56712},{"Age":"5-9","M":54489,"F":53126},{"Age":"10-14","M":50392,"F":48778},{"Age":"15-19","M":44709,"F":42634},{"Age":"20-24","M":40085,"F":38676},{"Age":"25-29","M":31897,"F":32974},{"Age":"30-34","M":27641,"F":29490},{"Age":"35-39","M":26973,"F":27112},{"Age":"40-44","M":24409,"F":23601},{"Age":"45-49","M":20405,"F":19472},{"Age":"50-54","M":16464,"F":15109},{"Age":"55-59","M":12879,"F":12333},{"Age":"60-64","M":9504,"F":9795},{"Age":"65-69","M":6969,"F":7789},{"Age":"70-74","M":4986,"F":5885},{"Age":"75-79","M":3381,"F":4137},{"Age":"80-84","M":1760,"F":2235},{"Age":"85-89","M":531,"F":732},{"Age":"90-94","M":119,"F":194},{"Age":"95-99","M":13,"F":22},{"Age":"100+","M":0,"F":1}]
     },
     "military": {
@@ -2672,13 +2672,13 @@
       "minimum_wage_usd": 50,
       "unemployment_rate": 5.0,
       "currency_tr": "Kongo Frangı",
-      "currency_en": ""    },
+      "currency_en": "Congolese Franc"    },
     "demographics": {
       "total_population": 102000000,
       "life_expectancy": 60.0,
       "birth_rate": 5.5,
       "most_spoken_language_tr": "Fransızca",
-      "most_spoken_language_en": "",
+      "most_spoken_language_en": "French",
       "population_pyramid": [{"Age":"0-4","M":9948880,"F":9843681},{"Age":"5-9","M":8330966,"F":8304930},{"Age":"10-14","M":6930564,"F":6944088},{"Age":"15-19","M":5679749,"F":5707427},{"Age":"20-24","M":4711437,"F":4752313},{"Age":"25-29","M":3993339,"F":4046249},{"Age":"30-34","M":3245412,"F":3306763},{"Age":"35-39","M":2647177,"F":2706138},{"Age":"40-44","M":2082958,"F":2140619},{"Age":"45-49","M":1656335,"F":1726743},{"Age":"50-54","M":1405675,"F":1492825},{"Age":"55-59","M":1159440,"F":1255215},{"Age":"60-64","M":900212,"F":996246},{"Age":"65-69","M":653981,"F":743336},{"Age":"70-74","M":433926,"F":511590},{"Age":"75-79","M":264644,"F":333305},{"Age":"80-84","M":123917,"F":170198},{"Age":"85-89","M":40232,"F":61644},{"Age":"90-94","M":7355,"F":14229},{"Age":"95-99","M":618,"F":1794},{"Age":"100+","M":10,"F":94}]
     },
     "military": {
@@ -2720,13 +2720,13 @@
       "minimum_wage_usd": 150,
       "unemployment_rate": 10.0,
       "currency_tr": "Orta Afrika CFA Frangı",
-      "currency_en": ""    },
+      "currency_en": "Central African Franc"    },
     "demographics": {
       "total_population": 6000000,
       "life_expectancy": 64.0,
       "birth_rate": 3.8,
       "most_spoken_language_tr": "Fransızca",
-      "most_spoken_language_en": "",
+      "most_spoken_language_en": "French",
       "population_pyramid": [{"Age":"0-4","M":453008,"F":444365},{"Age":"5-9","M":426807,"F":418968},{"Age":"10-14","M":412362,"F":405905},{"Age":"15-19","M":338901,"F":335189},{"Age":"20-24","M":270786,"F":268809},{"Age":"25-29","M":227199,"F":225998},{"Age":"30-34","M":200323,"F":200013},{"Age":"35-39","M":183956,"F":184942},{"Age":"40-44","M":164404,"F":163422},{"Age":"45-49","M":141713,"F":142834},{"Age":"50-54","M":111885,"F":114991},{"Age":"55-59","M":86372,"F":91824},{"Age":"60-64","M":62285,"F":66618},{"Age":"65-69","M":40759,"F":45822},{"Age":"70-74","M":23477,"F":28416},{"Age":"75-79","M":12789,"F":16299},{"Age":"80-84","M":6122,"F":8103},{"Age":"85-89","M":2324,"F":3377},{"Age":"90-94","M":536,"F":838},{"Age":"95-99","M":78,"F":124},{"Age":"100+","M":3,"F":5}]
     },
     "military": {
@@ -2768,13 +2768,13 @@
       "minimum_wage_usd": 600,
       "unemployment_rate": 7.8,
       "currency_tr": "Kosta Rika Kolonu",
-      "currency_en": ""    },
+      "currency_en": "Costa Rican Colón"    },
     "demographics": {
       "total_population": 5200000,
       "life_expectancy": 80.0,
       "birth_rate": 1.3,
       "most_spoken_language_tr": "İspanyolca",
-      "most_spoken_language_en": "",
+      "most_spoken_language_en": "Spanish",
       "population_pyramid": [{"Age":"0-4","M":138147,"F":132405},{"Age":"5-9","M":173472,"F":166307},{"Age":"10-14","M":180853,"F":173200},{"Age":"15-19","M":184770,"F":177157},{"Age":"20-24","M":192370,"F":184809},{"Age":"25-29","M":203056,"F":196794},{"Age":"30-34","M":208016,"F":202712},{"Age":"35-39","M":208496,"F":205586},{"Age":"40-44","M":188048,"F":190465},{"Age":"45-49","M":161677,"F":170225},{"Age":"50-54","M":143613,"F":155909},{"Age":"55-59","M":139621,"F":152745},{"Age":"60-64","M":129666,"F":142644},{"Age":"65-69","M":101844,"F":114727},{"Age":"70-74","M":75190,"F":86884},{"Age":"75-79","M":52637,"F":62729},{"Age":"80-84","M":31192,"F":40732},{"Age":"85-89","M":15481,"F":24042},{"Age":"90-94","M":5334,"F":11102},{"Age":"95-99","M":1121,"F":3404},{"Age":"100+","M":118,"F":599}]
     },
     "military": {
@@ -2816,13 +2816,13 @@
       "minimum_wage_usd": 120,
       "unemployment_rate": 2.5,
       "currency_tr": "Batı Afrika CFA Frangı",
-      "currency_en": ""    },
+      "currency_en": "West African Franc"    },
     "demographics": {
       "total_population": 29200000,
       "life_expectancy": 59.0,
       "birth_rate": 3.4,
       "most_spoken_language_tr": "Fransızca",
-      "most_spoken_language_en": "",
+      "most_spoken_language_en": "French",
       "population_pyramid": [{"Age":"0-4","M":2335656,"F":2301353},{"Age":"5-9","M":2245679,"F":2224069},{"Age":"10-14","M":2015281,"F":1929914},{"Age":"15-19","M":1744539,"F":1656966},{"Age":"20-24","M":1452024,"F":1327973},{"Age":"25-29","M":1175460,"F":1138075},{"Age":"30-34","M":1064581,"F":1117371},{"Age":"35-39","M":1003840,"F":1044304},{"Age":"40-44","M":887638,"F":853870},{"Age":"45-49","M":721767,"F":627519},{"Age":"50-54","M":531715,"F":447210},{"Age":"55-59","M":382047,"F":340522},{"Age":"60-64","M":273145,"F":258550},{"Age":"65-69","M":186578,"F":177064},{"Age":"70-74","M":116170,"F":112992},{"Age":"75-79","M":64142,"F":69360},{"Age":"80-84","M":30709,"F":38305},{"Age":"85-89","M":11607,"F":16172},{"Age":"90-94","M":3235,"F":4788},{"Age":"95-99","M":744,"F":1025},{"Age":"100+","M":118,"F":141}]
     },
     "military": {
@@ -2864,13 +2864,13 @@
       "minimum_wage_usd": 840,
       "unemployment_rate": 4.7,
       "currency_tr": "Euro",
-      "currency_en": ""    },
+      "currency_en": "Euro"    },
     "demographics": {
       "total_population": 3850000,
       "life_expectancy": 78.0,
       "birth_rate": 1.5,
       "most_spoken_language_tr": "Hırvatça",
-      "most_spoken_language_en": "",
+      "most_spoken_language_en": "Croatian",
       "population_pyramid": [{"Age":"0-4","M":85449,"F":80668},{"Age":"5-9","M":89440,"F":84356},{"Age":"10-14","M":102912,"F":96744},{"Age":"15-19","M":105655,"F":100227},{"Age":"20-24","M":101233,"F":95661},{"Age":"25-29","M":110928,"F":104899},{"Age":"30-34","M":109310,"F":103719},{"Age":"35-39","M":122837,"F":118675},{"Age":"40-44","M":137585,"F":133335},{"Age":"45-49","M":136547,"F":134643},{"Age":"50-54","M":130782,"F":132154},{"Age":"55-59","M":134887,"F":142427},{"Age":"60-64","M":133696,"F":147948},{"Age":"65-69","M":127901,"F":148656},{"Age":"70-74","M":104737,"F":132257},{"Age":"75-79","M":65349,"F":97801},{"Age":"80-84","M":41166,"F":74208},{"Age":"85-89","M":21500,"F":49786},{"Age":"90-94","M":6499,"F":21971},{"Age":"95-99","M":929,"F":5116},{"Age":"100+","M":55,"F":666}]
     },
     "military": {
@@ -2912,13 +2912,13 @@
       "minimum_wage_usd": 87,
       "unemployment_rate": 2.8,
       "currency_tr": "Küba Pesosu",
-      "currency_en": ""    },
+      "currency_en": "Cuban Peso"    },
     "demographics": {
       "total_population": 11000000,
       "life_expectancy": 79.0,
       "birth_rate": 1.4,
       "most_spoken_language_tr": "İspanyolca",
-      "most_spoken_language_en": "",
+      "most_spoken_language_en": "Spanish",
       "population_pyramid": [{"Age":"0-4","M":252213,"F":235351},{"Age":"5-9","M":295369,"F":274725},{"Age":"10-14","M":319489,"F":302095},{"Age":"15-19","M":297379,"F":283213},{"Age":"20-24","M":337295,"F":322789},{"Age":"25-29","M":342697,"F":325474},{"Age":"30-34","M":381158,"F":358883},{"Age":"35-39","M":394828,"F":374764},{"Age":"40-44","M":321472,"F":311877},{"Age":"45-49","M":349323,"F":350954},{"Age":"50-54","M":463692,"F":483987},{"Age":"55-59","M":464524,"F":500550},{"Age":"60-64","M":389261,"F":427167},{"Age":"65-69","M":252001,"F":290509},{"Age":"70-74","M":211225,"F":253772},{"Age":"75-79","M":159579,"F":202237},{"Age":"80-84","M":105239,"F":140531},{"Age":"85-89","M":52373,"F":77017},{"Age":"90-94","M":20822,"F":34021},{"Age":"95-99","M":5990,"F":11044},{"Age":"100+","M":947,"F":1939}]
     },
     "military": {
@@ -2960,13 +2960,13 @@
       "minimum_wage_usd": 940,
       "unemployment_rate": 6.0,
       "currency_tr": "Euro",
-      "currency_en": ""    },
+      "currency_en": "Euro"    },
     "demographics": {
       "total_population": 1250000,
       "life_expectancy": 81.0,
       "birth_rate": 1.3,
       "most_spoken_language_tr": "Yunanca / Türkçe",
-      "most_spoken_language_en": "",
+      "most_spoken_language_en": "Greek / Turkish",
       "population_pyramid": [{"Age":"0-4","M":38377,"F":36097},{"Age":"5-9","M":37830,"F":35649},{"Age":"10-14","M":36223,"F":34128},{"Age":"15-19","M":34546,"F":32602},{"Age":"20-24","M":37942,"F":36457},{"Age":"25-29","M":46653,"F":44735},{"Age":"30-34","M":62452,"F":55172},{"Age":"35-39","M":70530,"F":60635},{"Age":"40-44","M":61747,"F":57412},{"Age":"45-49","M":49193,"F":50347},{"Age":"50-54","M":42188,"F":45159},{"Age":"55-59","M":39139,"F":41560},{"Age":"60-64","M":35799,"F":37173},{"Age":"65-69","M":31208,"F":31694},{"Age":"70-74","M":24053,"F":26118},{"Age":"75-79","M":17767,"F":21156},{"Age":"80-84","M":11006,"F":14671},{"Age":"85-89","M":5399,"F":8480},{"Age":"90-94","M":1782,"F":3655},{"Age":"95-99","M":370,"F":995},{"Age":"100+","M":38,"F":132}]
     },
     "military": {
@@ -3008,13 +3008,13 @@
       "minimum_wage_usd": 800,
       "unemployment_rate": 2.6,
       "currency_tr": "Çek Korunası",
-      "currency_en": ""    },
+      "currency_en": "Czech Koruna"    },
     "demographics": {
       "total_population": 10800000,
       "life_expectancy": 79.0,
       "birth_rate": 1.5,
       "most_spoken_language_tr": "Çekçe",
-      "most_spoken_language_en": "",
+      "most_spoken_language_en": "Czech",
       "population_pyramid": [{"Age":"0-4","M":265337,"F":252933},{"Age":"5-9","M":292431,"F":278342},{"Age":"10-14","M":288810,"F":275177},{"Age":"15-19","M":295476,"F":282753},{"Age":"20-24","M":272928,"F":261336},{"Age":"25-29","M":281257,"F":267196},{"Age":"30-34","M":359044,"F":335501},{"Age":"35-39","M":374919,"F":350333},{"Age":"40-44","M":395638,"F":369442},{"Age":"45-49","M":471355,"F":445756},{"Age":"50-54","M":408682,"F":390614},{"Age":"55-59","M":338762,"F":332121},{"Age":"60-64","M":302222,"F":309556},{"Age":"65-69","M":291825,"F":326759},{"Age":"70-74","M":271034,"F":337839},{"Age":"75-79","M":207821,"F":294814},{"Age":"80-84","M":112326,"F":186440},{"Age":"85-89","M":45572,"F":94040},{"Age":"90-94","M":15803,"F":41063},{"Age":"95-99","M":2590,"F":8942},{"Age":"100+","M":210,"F":850}]
     },
     "military": {
@@ -3056,13 +3056,13 @@
       "minimum_wage_usd": 0,
       "unemployment_rate": 4.8,
       "currency_tr": "Danimarka Kronu",
-      "currency_en": ""    },
+      "currency_en": "Danish Krone"    },
     "demographics": {
       "total_population": 5900000,
       "life_expectancy": 81.0,
       "birth_rate": 1.5,
       "most_spoken_language_tr": "Danca",
-      "most_spoken_language_en": "",
+      "most_spoken_language_en": "Danish",
       "population_pyramid": [{"Age":"0-4","M":157215,"F":148982},{"Age":"5-9","M":161358,"F":152579},{"Age":"10-14","M":162986,"F":155116},{"Age":"15-19","M":179397,"F":171051},{"Age":"20-24","M":188232,"F":181598},{"Age":"25-29","M":206929,"F":198930},{"Age":"30-34","M":207238,"F":199699},{"Age":"35-39","M":184628,"F":178185},{"Age":"40-44","M":170159,"F":168462},{"Age":"45-49","M":186660,"F":187278},{"Age":"50-54","M":196308,"F":197125},{"Age":"55-59","M":207827,"F":206715},{"Age":"60-64","M":186525,"F":188973},{"Age":"65-69","M":161117,"F":168425},{"Age":"70-74","M":142341,"F":155242},{"Age":"75-79","M":135595,"F":153616},{"Age":"80-84","M":83340,"F":104066},{"Age":"85-89","M":38894,"F":57618},{"Age":"90-94","M":11960,"F":24447},{"Age":"95-99","M":2208,"F":7130},{"Age":"100+","M":175,"F":1073}]
     },
     "military": {
@@ -3104,13 +3104,13 @@
       "minimum_wage_usd": 250,
       "unemployment_rate": 11.0,
       "currency_tr": "Cibuti Frangı",
-      "currency_en": ""    },
+      "currency_en": "Djiboutian Franc"    },
     "demographics": {
       "total_population": 1100000,
       "life_expectancy": 67.0,
       "birth_rate": 2.6,
       "most_spoken_language_tr": "Fransızca / Arapça",
-      "most_spoken_language_en": "",
+      "most_spoken_language_en": "French / Arabic",
       "population_pyramid": [{"Age":"0-4","M":58254,"F":56619},{"Age":"5-9","M":57094,"F":55792},{"Age":"10-14","M":57108,"F":56049},{"Age":"15-19","M":58002,"F":57159},{"Age":"20-24","M":57368,"F":56983},{"Age":"25-29","M":49770,"F":49854},{"Age":"30-34","M":45515,"F":45861},{"Age":"35-39","M":39873,"F":40572},{"Age":"40-44","M":35699,"F":36880},{"Age":"45-49","M":32308,"F":33888},{"Age":"50-54","M":27029,"F":28825},{"Age":"55-59","M":20756,"F":22591},{"Age":"60-64","M":15191,"F":16983},{"Age":"65-69","M":10571,"F":12285},{"Age":"70-74","M":7133,"F":8703},{"Age":"75-79","M":4614,"F":5933},{"Age":"80-84","M":2138,"F":2977},{"Age":"85-89","M":728,"F":1130},{"Age":"90-94","M":144,"F":281},{"Age":"95-99","M":13,"F":37},{"Age":"100+","M":0,"F":2}]
     },
     "military": {
@@ -3152,13 +3152,13 @@
       "minimum_wage_usd": 500,
       "unemployment_rate": 23.0,
       "currency_tr": "Doğu Karayip Doları",
-      "currency_en": ""    },
+      "currency_en": "East Caribbean Dollar"    },
     "demographics": {
       "total_population": 73000,
       "life_expectancy": 77.0,
       "birth_rate": 1.5,
       "most_spoken_language_tr": "İngilizce",
-      "most_spoken_language_en": "",
+      "most_spoken_language_en": "English",
       "population_pyramid": []
     },
     "military": {
@@ -3206,7 +3206,7 @@
       "life_expectancy": 74.0,
       "birth_rate": 2.2,
       "most_spoken_language_tr": "İspanyolca",
-      "most_spoken_language_en": "",
+      "most_spoken_language_en": "Spanish",
       "population_pyramid": [{"Age":"0-4","M":505907,"F":487147},{"Age":"5-9","M":518633,"F":499351},{"Age":"10-14","M":523399,"F":502852},{"Age":"15-19","M":496632,"F":476390},{"Age":"20-24","M":492601,"F":475400},{"Age":"25-29","M":466935,"F":454345},{"Age":"30-34","M":448717,"F":442171},{"Age":"35-39","M":400204,"F":398782},{"Age":"40-44","M":361827,"F":363803},{"Age":"45-49","M":325297,"F":332150},{"Age":"50-54","M":285982,"F":298960},{"Age":"55-59","M":249113,"F":268457},{"Age":"60-64","M":214007,"F":238057},{"Age":"65-69","M":165815,"F":191757},{"Age":"70-74","M":109482,"F":133357},{"Age":"75-79","M":62623,"F":83355},{"Age":"80-84","M":31953,"F":49649},{"Age":"85-89","M":15542,"F":30514},{"Age":"90-94","M":5181,"F":14017},{"Age":"95-99","M":1156,"F":4657},{"Age":"100+","M":181,"F":1189}]
     },
     "military": {
@@ -3261,7 +3261,7 @@
       "life_expectancy": 77.0,
       "birth_rate": 1.8,
       "most_spoken_language_tr": "İspanyolca",
-      "most_spoken_language_en": "",
+      "most_spoken_language_en": "Spanish",
       "population_pyramid": [{"Age":"0-4","M":702450,"F":672928},{"Age":"5-9","M":749830,"F":719044},{"Age":"10-14","M":811871,"F":779061},{"Age":"15-19","M":804489,"F":773041},{"Age":"20-24","M":791386,"F":765550},{"Age":"25-29","M":780901,"F":763995},{"Age":"30-34","M":740726,"F":731450},{"Age":"35-39","M":676913,"F":673560},{"Age":"40-44","M":609884,"F":615771},{"Age":"45-49","M":529329,"F":540585},{"Age":"50-54","M":459041,"F":474461},{"Age":"55-59","M":387937,"F":409194},{"Age":"60-64","M":316775,"F":342076},{"Age":"65-69","M":250671,"F":279428},{"Age":"70-74","M":190896,"F":222101},{"Age":"75-79","M":126732,"F":156845},{"Age":"80-84","M":71396,"F":98864},{"Age":"85-89","M":29699,"F":50499},{"Age":"90-94","M":8676,"F":20171},{"Age":"95-99","M":1403,"F":5017},{"Age":"100+","M":121,"F":702}]
     },
     "military": {
@@ -3315,7 +3315,7 @@
       "life_expectancy": 72.0,
       "birth_rate": 2.7,
       "most_spoken_language_tr": "Arapça",
-      "most_spoken_language_en": "",
+      "most_spoken_language_en": "Arabic",
       "population_pyramid": [{"Age":"0-4","M":6038261,"F":5743073},{"Age":"5-9","M":6651664,"F":6350503},{"Age":"10-14","M":6398892,"F":6103618},{"Age":"15-19","M":5494433,"F":5257491},{"Age":"20-24","M":4977188,"F":4775475},{"Age":"25-29","M":4581685,"F":4378014},{"Age":"30-34","M":4419406,"F":4241146},{"Age":"35-39","M":4246106,"F":4149854},{"Age":"40-44","M":3715384,"F":3621739},{"Age":"45-49","M":3156672,"F":3054186},{"Age":"50-54","M":2649764,"F":2565400},{"Age":"55-59","M":2202285,"F":2202961},{"Age":"60-64","M":1739662,"F":1860945},{"Age":"65-69","M":1234403,"F":1454536},{"Age":"70-74","M":756656,"F":1001811},{"Age":"75-79","M":389147,"F":585260},{"Age":"80-84","M":136577,"F":241162},{"Age":"85-89","M":42882,"F":88983},{"Age":"90-94","M":8303,"F":19878},{"Age":"95-99","M":737,"F":1982},{"Age":"100+","M":30,"F":90}]
     },
     "military": {
@@ -3369,7 +3369,7 @@
       "life_expectancy": 73.0,
       "birth_rate": 1.8,
       "most_spoken_language_tr": "İspanyolca",
-      "most_spoken_language_en": "",
+      "most_spoken_language_en": "Spanish",
       "population_pyramid": [{"Age":"0-4","M":251667,"F":240500},{"Age":"5-9","M":266942,"F":253881},{"Age":"10-14","M":288855,"F":270414},{"Age":"15-19","M":287995,"F":269962},{"Age":"20-24","M":308918,"F":293842},{"Age":"25-29","M":320085,"F":310093},{"Age":"30-34","M":267157,"F":268412},{"Age":"35-39","M":191112,"F":219633},{"Age":"40-44","M":156761,"F":207931},{"Age":"45-49","M":144461,"F":203646},{"Age":"50-54","M":126916,"F":181613},{"Age":"55-59","M":110211,"F":159830},{"Age":"60-64","M":88442,"F":132433},{"Age":"65-69","M":71197,"F":106046},{"Age":"70-74","M":55401,"F":84065},{"Age":"75-79","M":39515,"F":60584},{"Age":"80-84","M":22726,"F":39214},{"Age":"85-89","M":9534,"F":18637},{"Age":"90-94","M":2498,"F":5736},{"Age":"95-99","M":327,"F":918},{"Age":"100+","M":8,"F":64}]
     },
     "military": {
@@ -3423,7 +3423,7 @@
       "life_expectancy": 60.0,
       "birth_rate": 4.1,
       "most_spoken_language_tr": "İspanyolca / Fransızca",
-      "most_spoken_language_en": "",
+      "most_spoken_language_en": "Spanish / French",
       "population_pyramid": [{"Age":"0-4","M":129183,"F":126559},{"Age":"5-9","M":119278,"F":117267},{"Age":"10-14","M":107433,"F":105911},{"Age":"15-19","M":91197,"F":89448},{"Age":"20-24","M":76609,"F":70027},{"Age":"25-29","M":72026,"F":63393},{"Age":"30-34","M":76600,"F":63598},{"Age":"35-39","M":78929,"F":59549},{"Age":"40-44","M":65160,"F":46073},{"Age":"45-49","M":52078,"F":36982},{"Age":"50-54","M":41333,"F":30998},{"Age":"55-59","M":31175,"F":26287},{"Age":"60-64","M":23741,"F":21881},{"Age":"65-69","M":15013,"F":15469},{"Age":"70-74","M":9721,"F":10973},{"Age":"75-79","M":4895,"F":5632},{"Age":"80-84","M":2276,"F":3140},{"Age":"85-89","M":834,"F":1200},{"Age":"90-94","M":202,"F":313},{"Age":"95-99","M":48,"F":54},{"Age":"100+","M":12,"F":6}]
     },
     "military": {
@@ -3477,7 +3477,7 @@
       "life_expectancy": 67.0,
       "birth_rate": 3.7,
       "most_spoken_language_tr": "Tigrinya / Arapça",
-      "most_spoken_language_en": "",
+      "most_spoken_language_en": "Tigrinya / Arabic",
       "population_pyramid": [{"Age":"0-4","M":236750,"F":231230},{"Age":"5-9","M":221136,"F":216872},{"Age":"10-14","M":222998,"F":219386},{"Age":"15-19","M":214265,"F":211512},{"Age":"20-24","M":180847,"F":178867},{"Age":"25-29","M":149562,"F":147950},{"Age":"30-34","M":107005,"F":106714},{"Age":"35-39","M":85291,"F":87525},{"Age":"40-44","M":68788,"F":73743},{"Age":"45-49","M":62479,"F":71097},{"Age":"50-54","M":53535,"F":62531},{"Age":"55-59","M":44726,"F":53696},{"Age":"60-64","M":34990,"F":43505},{"Age":"65-69","M":24412,"F":31935},{"Age":"70-74","M":16905,"F":23232},{"Age":"75-79","M":12388,"F":16559},{"Age":"80-84","M":6600,"F":9385},{"Age":"85-89","M":2249,"F":3589},{"Age":"90-94","M":409,"F":842},{"Age":"95-99","M":12,"F":76},{"Age":"100+","M":0,"F":0}]
     },
     "military": {
@@ -3531,7 +3531,7 @@
       "life_expectancy": 78.0,
       "birth_rate": 1.3,
       "most_spoken_language_tr": "Estonca",
-      "most_spoken_language_en": "",
+      "most_spoken_language_en": "Estonian",
       "population_pyramid": [{"Age":"0-4","M":32356,"F":30555},{"Age":"5-9","M":38062,"F":35680},{"Age":"10-14","M":38942,"F":37159},{"Age":"15-19","M":39262,"F":37074},{"Age":"20-24","M":33419,"F":31989},{"Age":"25-29","M":34622,"F":32915},{"Age":"30-34","M":46708,"F":42443},{"Age":"35-39","M":54902,"F":49757},{"Age":"40-44","M":50367,"F":47000},{"Age":"45-49","M":47839,"F":45603},{"Age":"50-54","M":46675,"F":46491},{"Age":"55-59","M":40467,"F":43441},{"Age":"60-64","M":40135,"F":46914},{"Age":"65-69","M":34997,"F":47088},{"Age":"70-74","M":27739,"F":43906},{"Age":"75-79","M":18518,"F":34729},{"Age":"80-84","M":12034,"F":28166},{"Age":"85-89","M":6912,"F":20975},{"Age":"90-94","M":2390,"F":9066},{"Age":"95-99","M":500,"F":2442},{"Age":"100+","M":41,"F":253}]
     },
     "military": {
@@ -3585,7 +3585,7 @@
       "life_expectancy": 66.0,
       "birth_rate": 3.8,
       "most_spoken_language_tr": "Amharca",
-      "most_spoken_language_en": "",
+      "most_spoken_language_en": "Amharic",
       "population_pyramid":  [{"Age":"0-4","M":9911324,"F":9479472},{"Age":"5-9","M":8643759,"F":8330532},{"Age":"10-14","M":7731642,"F":7485703},{"Age":"15-19","M":7413397,"F":7221408},{"Age":"20-24","M":6635707,"F":6542471},{"Age":"25-29","M":5708550,"F":5649183},{"Age":"30-34","M":4727022,"F":4691608},{"Age":"35-39","M":3681603,"F":3672368},{"Age":"40-44","M":2849452,"F":2869971},{"Age":"45-49","M":2362248,"F":2447729},{"Age":"50-54","M":1882373,"F":2052170},{"Age":"55-59","M":1540028,"F":1732147},{"Age":"60-64","M":1181621,"F":1350764},{"Age":"65-69","M":805852,"F":943664},{"Age":"70-74","M":528370,"F":644704},{"Age":"75-79","M":339174,"F":442625},{"Age":"80-84","M":159234,"F":226753},{"Age":"85-89","M":54118,"F":85623},{"Age":"90-94","M":10730,"F":20701},{"Age":"95-99","M":1032,"F":2708},{"Age":"100+","M":48,"F":169}]
     },
     "military": {
@@ -3639,7 +3639,7 @@
       "life_expectancy": 68.0,
       "birth_rate": 2.3,
       "most_spoken_language_tr": "İngilizce / Fijice",
-      "most_spoken_language_en": "",
+      "most_spoken_language_en": "English / Fijian",
       "population_pyramid": [{"Age":"0-4","M":42137,"F":39579},{"Age":"5-9","M":43645,"F":41957},{"Age":"10-14","M":42312,"F":42007},{"Age":"15-19","M":40576,"F":41215},{"Age":"20-24","M":36875,"F":37447},{"Age":"25-29","M":36606,"F":36660},{"Age":"30-34","M":36277,"F":36075},{"Age":"35-39","M":34446,"F":34427},{"Age":"40-44","M":33165,"F":33117},{"Age":"45-49","M":27489,"F":27283},{"Age":"50-54","M":22579,"F":22457},{"Age":"55-59","M":21252,"F":21897},{"Age":"60-64","M":17830,"F":19219},{"Age":"65-69","M":12238,"F":14179},{"Age":"70-74","M":7173,"F":9385},{"Age":"75-79","M":4029,"F":6160},{"Age":"80-84","M":1732,"F":3190},{"Age":"85-89","M":519,"F":1231},{"Age":"90-94","M":85,"F":288},{"Age":"95-99","M":5,"F":32},{"Age":"100+","M":0,"F":1}]
     },
     "military": {
@@ -3693,7 +3693,7 @@
       "life_expectancy": 82.0,
       "birth_rate": 1.3,
       "most_spoken_language_tr": "Fince / İsveççe",
-      "most_spoken_language_en": "",
+      "most_spoken_language_en": "Finnish / Swedish",
       "population_pyramid": [{"Age":"0-4","M":119807,"F":114390},{"Age":"5-9","M":138664,"F":132461},{"Age":"10-14","M":161922,"F":154746},{"Age":"15-19","M":161857,"F":154920},{"Age":"20-24","M":158767,"F":150028},{"Age":"25-29","M":170816,"F":160504},{"Age":"30-34","M":191131,"F":179151},{"Age":"35-39","M":187703,"F":175106},{"Age":"40-44","M":189627,"F":178116},{"Age":"45-49","M":179953,"F":171078},{"Age":"50-54","M":161576,"F":157059},{"Age":"55-59","M":180500,"F":180389},{"Age":"60-64","M":179603,"F":185049},{"Age":"65-69","M":168877,"F":182202},{"Age":"70-74","M":158952,"F":180936},{"Age":"75-79","M":138666,"F":169810},{"Age":"80-84","M":72906,"F":101952},{"Age":"85-89","M":39511,"F":69468},{"Age":"90-94","M":13224,"F":33155},{"Age":"95-99","M":2254,"F":9296},{"Age":"100+","M":131,"F":1039}]
     },
     "military": {
@@ -3747,7 +3747,7 @@
       "life_expectancy": 83.0,
       "birth_rate": 1.7,
       "most_spoken_language_tr": "Fransızca",
-      "most_spoken_language_en": "",
+      "most_spoken_language_en": "French",
       "population_pyramid": [{"Age":"0-4","M":1715369,"F":1639492},{"Age":"5-9","M":1860341,"F":1776272},{"Age":"10-14","M":2044563,"F":1947878},{"Age":"15-19","M":2117339,"F":2012508},{"Age":"20-24","M":2088294,"F":1982396},{"Age":"25-29","M":1947310,"F":1902513},{"Age":"30-34","M":1882615,"F":1899824},{"Age":"35-39","M":1950388,"F":2038322},{"Age":"40-44","M":2007856,"F":2095297},{"Age":"45-49","M":2025887,"F":2047171},{"Age":"50-54","M":2164348,"F":2233350},{"Age":"55-59","M":2063626,"F":2191827},{"Age":"60-64","M":2001512,"F":2174016},{"Age":"65-69","M":1829526,"F":2072469},{"Age":"70-74","M":1667692,"F":1974314},{"Age":"75-79","M":1349206,"F":1680433},{"Age":"80-84","M":769199,"F":1057648},{"Age":"85-89","M":503519,"F":847728},{"Age":"90-94","M":220406,"F":514431},{"Age":"95-99","M":48065,"F":172193},{"Age":"100+","M":4612,"F":26767}]
     },
     "military": {
@@ -3802,7 +3802,7 @@
       "life_expectancy": 66.0,
       "birth_rate": 3.6,
       "most_spoken_language_tr": "Fransızca",
-      "most_spoken_language_en": "",
+      "most_spoken_language_en": "French",
       "population_pyramid": [{"Age":"0-4","M":167351,"F":165067},{"Age":"5-9","M":157515,"F":155649},{"Age":"10-14","M":140955,"F":139786},{"Age":"15-19","M":118462,"F":118035},{"Age":"20-24","M":103287,"F":102695},{"Age":"25-29","M":96528,"F":93824},{"Age":"30-34","M":98666,"F":92050},{"Age":"35-39","M":94641,"F":85379},{"Age":"40-44","M":82130,"F":73173},{"Age":"45-49","M":65530,"F":58704},{"Age":"50-54","M":50283,"F":46155},{"Age":"55-59","M":37669,"F":35977},{"Age":"60-64","M":27790,"F":27991},{"Age":"65-69","M":19565,"F":21022},{"Age":"70-74","M":13288,"F":15349},{"Age":"75-79","M":8173,"F":9940},{"Age":"80-84","M":4375,"F":5701},{"Age":"85-89","M":1881,"F":2659},{"Age":"90-94","M":536,"F":849},{"Age":"95-99","M":101,"F":175},{"Age":"100+","M":14,"F":22}]
     },
     "military": {
@@ -3856,7 +3856,7 @@
       "life_expectancy": 63.0,
       "birth_rate": 3.9,
       "most_spoken_language_tr": "İngilizce",
-      "most_spoken_language_en": "",
+      "most_spoken_language_en": "English",
       "population_pyramid": [{"Age":"0-4","M":196242,"F":191822},{"Age":"5-9","M":186113,"F":182451},{"Age":"10-14","M":178744,"F":175467},{"Age":"15-19","M":153449,"F":150960},{"Age":"20-24","M":129385,"F":127852},{"Age":"25-29","M":114006,"F":113691},{"Age":"30-34","M":97362,"F":98072},{"Age":"35-39","M":77231,"F":78344},{"Age":"40-44","M":58954,"F":59922},{"Age":"45-49","M":45039,"F":46532},{"Age":"50-54","M":39236,"F":42840},{"Age":"55-59","M":34428,"F":38969},{"Age":"60-64","M":26388,"F":31522},{"Age":"65-69","M":17185,"F":21558},{"Age":"70-74","M":9933,"F":12599},{"Age":"75-79","M":6173,"F":7488},{"Age":"80-84","M":3113,"F":3805},{"Age":"85-89","M":1089,"F":1354},{"Age":"90-94","M":236,"F":348},{"Age":"95-99","M":22,"F":49},{"Age":"100+","M":0,"F":3}]
     },
     "military": {
@@ -3910,7 +3910,7 @@
       "life_expectancy": 74.0,
       "birth_rate": 1.8,
       "most_spoken_language_tr": "Gürcüce",
-      "most_spoken_language_en": "",
+      "most_spoken_language_en": "Georgian",
       "population_pyramid": [{"Age":"0-4","M":120050,"F":112670},{"Age":"5-9","M":146775,"F":137185},{"Age":"10-14","M":141678,"F":133590},{"Age":"15-19","M":119400,"F":113208},{"Age":"20-24","M":108639,"F":102177},{"Age":"25-29","M":114400,"F":110612},{"Age":"30-34","M":133148,"F":136923},{"Age":"35-39","M":138774,"F":145853},{"Age":"40-44","M":125340,"F":136178},{"Age":"45-49","M":112008,"F":128144},{"Age":"50-54","M":104956,"F":124364},{"Age":"55-59","M":98155,"F":125655},{"Age":"60-64","M":102070,"F":140282},{"Age":"65-69","M":83539,"F":122406},{"Age":"70-74","M":60514,"F":100835},{"Age":"75-79","M":34430,"F":65041},{"Age":"80-84","M":18540,"F":46102},{"Age":"85-89","M":10020,"F":35907},{"Age":"90-94","M":2154,"F":12203},{"Age":"95-99","M":287,"F":3102},{"Age":"100+","M":10,"F":338}]
     },
     "military": {
@@ -3964,7 +3964,7 @@
       "life_expectancy": 81.0,
       "birth_rate": 1.4,
       "most_spoken_language_tr": "Almanca",
-      "most_spoken_language_en": "",
+      "most_spoken_language_en": "German",
       "population_pyramid": [{"Age":"0-4","M":1966458,"F":1863564},{"Age":"5-9","M":2100546,"F":1994378},{"Age":"10-14","M":1971501,"F":1864904},{"Age":"15-19","M":1987325,"F":1875095},{"Age":"20-24","M":2178574,"F":2020486},{"Age":"25-29","M":2517030,"F":2292364},{"Age":"30-34","M":2749068,"F":2561168},{"Age":"35-39","M":2878290,"F":2730430},{"Age":"40-44","M":2728525,"F":2673541},{"Age":"45-49","M":2512301,"F":2495273},{"Age":"50-54","M":2774856,"F":2765078},{"Age":"55-59","M":3427271,"F":3414526},{"Age":"60-64","M":3261116,"F":3336178},{"Age":"65-69","M":2601629,"F":2794783},{"Age":"70-74","M":2105256,"F":2440885},{"Age":"75-79","M":1487282,"F":1808502},{"Age":"80-84","M":1384073,"F":1874713},{"Age":"85-89","M":836461,"F":1342987},{"Age":"90-94","M":237981,"F":497821},{"Age":"95-99","M":44608,"F":136728},{"Age":"100+","M":2883,"F":15795}]
     },
     "military": {
@@ -4018,7 +4018,7 @@
       "life_expectancy": 64.0,
       "birth_rate": 3.4,
       "most_spoken_language_tr": "İngilizce",
-      "most_spoken_language_en": "",
+      "most_spoken_language_en": "English",
       "population_pyramid": [{"Age":"0-4","M":2156193,"F":2093308},{"Age":"5-9","M":2095597,"F":2045246},{"Age":"10-14","M":1990141,"F":1950770},{"Age":"15-19","M":1766006,"F":1737487},{"Age":"20-24","M":1568347,"F":1548523},{"Age":"25-29","M":1346825,"F":1336399},{"Age":"30-34","M":1251039,"F":1245242},{"Age":"35-39","M":1132583,"F":1132404},{"Age":"40-44","M":975017,"F":982910},{"Age":"45-49","M":801104,"F":818946},{"Age":"50-54","M":634736,"F":661216},{"Age":"55-59","M":514089,"F":548969},{"Age":"60-64","M":390987,"F":426641},{"Age":"65-69","M":253669,"F":282438},{"Age":"70-74","M":156970,"F":193204},{"Age":"75-79","M":91655,"F":120832},{"Age":"80-84","M":46855,"F":71209},{"Age":"85-89","M":18081,"F":29396},{"Age":"90-94","M":3969,"F":7122},{"Age":"95-99","M":366,"F":859},{"Age":"100+","M":8,"F":45}]
     },
     "military": {
@@ -4072,7 +4072,7 @@
       "life_expectancy": 82.0,
       "birth_rate": 1.3,
       "most_spoken_language_tr": "Yunanca",
-      "most_spoken_language_en": "",
+      "most_spoken_language_en": "Greek",
       "population_pyramid": [{"Age":"0-4","M":194169,"F":182298},{"Age":"5-9","M":229967,"F":217638},{"Age":"10-14","M":259106,"F":245082},{"Age":"15-19","M":272529,"F":255671},{"Age":"20-24","M":268611,"F":242791},{"Age":"25-29","M":266044,"F":239277},{"Age":"30-34","M":267003,"F":253120},{"Age":"35-39","M":282464,"F":283348},{"Age":"40-44","M":358696,"F":358202},{"Age":"45-49","M":380054,"F":388124},{"Age":"50-54","M":373918,"F":395045},{"Age":"55-59","M":359249,"F":393747},{"Age":"60-64","M":313386,"F":362847},{"Age":"65-69","M":288755,"F":338915},{"Age":"70-74","M":249865,"F":296122},{"Age":"75-79","M":211848,"F":267910},{"Age":"80-84","M":143104,"F":195356},{"Age":"85-89","M":97327,"F":158658},{"Age":"90-94","M":41073,"F":79980},{"Age":"95-99","M":9079,"F":23656},{"Age":"100+","M":791,"F":2979}]
     },
     "military": {
@@ -4126,7 +4126,7 @@
       "life_expectancy": 72.0,
       "birth_rate": 1.5,
       "most_spoken_language_tr": "İngilizce",
-      "most_spoken_language_en": "",
+      "most_spoken_language_en": "English",
       "population_pyramid": [{"Age":"0-4","M":3505,"F":3379},{"Age":"5-9","M":3701,"F":3558},{"Age":"10-14","M":4409,"F":4232},{"Age":"15-19","M":4375,"F":4200},{"Age":"20-24","M":4249,"F":4099},{"Age":"25-29","M":4621,"F":4442},{"Age":"30-34","M":5123,"F":4954},{"Age":"35-39","M":5398,"F":5325},{"Age":"40-44","M":4215,"F":4220},{"Age":"45-49","M":3270,"F":3060},{"Age":"50-54","M":3131,"F":2938},{"Age":"55-59","M":3097,"F":3036},{"Age":"60-64","M":3163,"F":3154},{"Age":"65-69","M":2529,"F":2552},{"Age":"70-74","M":1698,"F":1753},{"Age":"75-79","M":1022,"F":1297},{"Age":"80-84","M":632,"F":983},{"Age":"85-89","M":404,"F":731},{"Age":"90-94","M":164,"F":384},{"Age":"95-99","M":38,"F":125},{"Age":"100+","M":5,"F":25}]
     },
     "military": {
@@ -4180,7 +4180,7 @@
       "life_expectancy": 74.0,
       "birth_rate": 2.3,
       "most_spoken_language_tr": "İspanyolca",
-      "most_spoken_language_en": "",
+      "most_spoken_language_en": "Spanish",
       "population_pyramid": [{"Age":"0-4","M":944562,"F":913534},{"Age":"5-9","M":1016144,"F":985998},{"Age":"10-14","M":988980,"F":962981},{"Age":"15-19","M":956552,"F":935128},{"Age":"20-24","M":934431,"F":917772},{"Age":"25-29","M":861678,"F":853433},{"Age":"30-34","M":759273,"F":757043},{"Age":"35-39","M":635091,"F":639100},{"Age":"40-44","M":515010,"F":533265},{"Age":"45-49","M":394977,"F":426896},{"Age":"50-54","M":299079,"F":341162},{"Age":"55-59","M":235136,"F":283308},{"Age":"60-64","M":187243,"F":235992},{"Age":"65-69","M":155710,"F":188988},{"Age":"70-74","M":114361,"F":136821},{"Age":"75-79","M":73343,"F":90033},{"Age":"80-84","M":39741,"F":48277},{"Age":"85-89","M":14500,"F":19866},{"Age":"90-94","M":3044,"F":6510},{"Age":"95-99","M":316,"F":998},{"Age":"100+","M":15,"F":59}]
     },
     "military": {
@@ -4234,7 +4234,7 @@
       "life_expectancy": 61.0,
       "birth_rate": 4.2,
       "most_spoken_language_tr": "Fransızca",
-      "most_spoken_language_en": "",
+      "most_spoken_language_en": "French",
       "population_pyramid": [{"Age":"0-4","M":1127290,"F":1093194},{"Age":"5-9","M":1017375,"F":989333},{"Age":"10-14","M":916352,"F":891333},{"Age":"15-19","M":810372,"F":790115},{"Age":"20-24","M":703798,"F":689045},{"Age":"25-29","M":627367,"F":618552},{"Age":"30-34","M":519476,"F":523704},{"Age":"35-39","M":396138,"F":415919},{"Age":"40-44","M":287525,"F":322475},{"Age":"45-49","M":219537,"F":261980},{"Age":"50-54","M":183590,"F":222543},{"Age":"55-59","M":155010,"F":187992},{"Age":"60-64","M":122655,"F":152314},{"Age":"65-69","M":88660,"F":116275},{"Age":"70-74","M":60608,"F":83297},{"Age":"75-79","M":37316,"F":52675},{"Age":"80-84","M":19262,"F":28312},{"Age":"85-89","M":7227,"F":11185},{"Age":"90-94","M":1550,"F":2847},{"Age":"95-99","M":153,"F":399},{"Age":"100+","M":2,"F":25}]
     },
     "military": {
@@ -4288,7 +4288,7 @@
       "life_expectancy": 59.0,
       "birth_rate": 3.8,
       "most_spoken_language_tr": "Portekizce",
-      "most_spoken_language_en": "",
+      "most_spoken_language_en": "Portuguese",
       "population_pyramid": [{"Age":"0-4","M":152216,"F":147948},{"Age":"5-9","M":143598,"F":140006},{"Age":"10-14","M":136479,"F":133566},{"Age":"15-19","M":120921,"F":118994},{"Age":"20-24","M":104308,"F":103325},{"Age":"25-29","M":90166,"F":90066},{"Age":"30-34","M":76986,"F":77420},{"Age":"35-39","M":66193,"F":67193},{"Age":"40-44","M":55259,"F":56659},{"Age":"45-49","M":43591,"F":47243},{"Age":"50-54","M":33133,"F":37677},{"Age":"55-59","M":22233,"F":27422},{"Age":"60-64","M":15797,"F":22680},{"Age":"65-69","M":11587,"F":18632},{"Age":"70-74","M":7930,"F":12814},{"Age":"75-79","M":4493,"F":6827},{"Age":"80-84","M":2113,"F":3185},{"Age":"85-89","M":776,"F":1272},{"Age":"90-94","M":193,"F":346},{"Age":"95-99","M":30,"F":57},{"Age":"100+","M":2,"F":4}]
     },
     "military": {
@@ -4342,7 +4342,7 @@
       "life_expectancy": 70.0,
       "birth_rate": 2.4,
       "most_spoken_language_tr": "İngilizce",
-      "most_spoken_language_en": "",
+      "most_spoken_language_en": "English",
       "population_pyramid": [{"Age":"0-4","M":41660,"F":40417},{"Age":"5-9","M":41499,"F":40310},{"Age":"10-14","M":39816,"F":38646},{"Age":"15-19","M":36666,"F":35433},{"Age":"20-24","M":36390,"F":35280},{"Age":"25-29","M":37565,"F":37980},{"Age":"30-34","M":30609,"F":33250},{"Age":"35-39","M":22779,"F":25890},{"Age":"40-44","M":21040,"F":23951},{"Age":"45-49","M":21048,"F":23828},{"Age":"50-54","M":19725,"F":22300},{"Age":"55-59","M":17556,"F":20032},{"Age":"60-64","M":14566,"F":16870},{"Age":"65-69","M":10323,"F":12830},{"Age":"70-74","M":6347,"F":8612},{"Age":"75-79","M":3931,"F":5514},{"Age":"80-84","M":1929,"F":2997},{"Age":"85-89","M":835,"F":1569},{"Age":"90-94","M":235,"F":580},{"Age":"95-99","M":53,"F":168},{"Age":"100+","M":7,"F":40}]
     },
     "military": {
@@ -4396,7 +4396,7 @@
       "life_expectancy": 64.0,
       "birth_rate": 2.7,
       "most_spoken_language_tr": "Fransızca / Haiti Kreolü",
-      "most_spoken_language_en": "",
+      "most_spoken_language_en": "French / Haitian Creole",
       "population_pyramid": [{"Age":"0-4","M":621330,"F":608984},{"Age":"5-9","M":618869,"F":609345},{"Age":"10-14","M":610420,"F":602751},{"Age":"15-19","M":584355,"F":578448},{"Age":"20-24","M":549390,"F":548396},{"Age":"25-29","M":511101,"F":513554},{"Age":"30-34","M":473898,"F":478804},{"Age":"35-39","M":415375,"F":421880},{"Age":"40-44","M":347785,"F":355162},{"Age":"45-49","M":290045,"F":298820},{"Age":"50-54","M":234173,"F":246072},{"Age":"55-59","M":187237,"F":203168},{"Age":"60-64","M":144615,"F":164650},{"Age":"65-69","M":105165,"F":128243},{"Age":"70-74","M":68177,"F":91218},{"Age":"75-79","M":38651,"F":56433},{"Age":"80-84","M":18162,"F":28639},{"Age":"85-89","M":5709,"F":10380},{"Age":"90-94","M":864,"F":2070},{"Age":"95-99","M":31,"F":179},{"Age":"100+","M":0,"F":1}]
     },
     "military": {
@@ -4450,7 +4450,7 @@
       "life_expectancy": 75.0,
       "birth_rate": 2.5,
       "most_spoken_language_tr": "İspanyolca",
-      "most_spoken_language_en": "",
+      "most_spoken_language_en": "Spanish",
       "population_pyramid": [{"Age":"0-4","M":584983,"F":558295},{"Age":"5-9","M":563241,"F":537483},{"Age":"10-14","M":548300,"F":522658},{"Age":"15-19","M":543630,"F":518689},{"Age":"20-24","M":540518,"F":518061},{"Age":"25-29","M":502617,"F":485083},{"Age":"30-34","M":448164,"F":434989},{"Age":"35-39","M":392096,"F":383793},{"Age":"40-44","M":342177,"F":337505},{"Age":"45-49","M":281487,"F":282451},{"Age":"50-54","M":211494,"F":220176},{"Age":"55-59","M":157820,"F":173279},{"Age":"60-64","M":120840,"F":137618},{"Age":"65-69","M":92614,"F":107457},{"Age":"70-74","M":64024,"F":77925},{"Age":"75-79","M":34440,"F":44709},{"Age":"80-84","M":14867,"F":22487},{"Age":"85-89","M":5350,"F":9873},{"Age":"90-94","M":1169,"F":2772},{"Age":"95-99","M":126,"F":404},{"Age":"100+","M":3,"F":25}]
     },
     "military": {
@@ -4504,7 +4504,7 @@
       "life_expectancy": 76.0,
       "birth_rate": 1.5,
       "most_spoken_language_tr": "Macarca",
-      "most_spoken_language_en": "",
+      "most_spoken_language_en": "Hungarian",
       "population_pyramid": [{"Age":"0-4","M":234068,"F":221010},{"Age":"5-9","M":244138,"F":231223},{"Age":"10-14","M":237830,"F":225227},{"Age":"15-19","M":258757,"F":245450},{"Age":"20-24","M":259690,"F":245240},{"Age":"25-29","M":289152,"F":271946},{"Age":"30-34","M":329435,"F":308150},{"Age":"35-39","M":321260,"F":301967},{"Age":"40-44","M":340845,"F":331716},{"Age":"45-49","M":428081,"F":419548},{"Age":"50-54","M":363290,"F":363126},{"Age":"55-59","M":306849,"F":323522},{"Age":"60-64","M":251354,"F":291925},{"Age":"65-69","M":264943,"F":347610},{"Age":"70-74","M":223325,"F":328917},{"Age":"75-79","M":147345,"F":245833},{"Age":"80-84","M":89626,"F":178596},{"Age":"85-89","M":38247,"F":97401},{"Age":"90-94","M":14626,"F":41001},{"Age":"95-99","M":3087,"F":9419},{"Age":"100+","M":321,"F":1030}]
     },
     "military": {
@@ -4558,7 +4558,7 @@
       "life_expectancy": 83.0,
       "birth_rate": 1.5,
       "most_spoken_language_tr": "İzlandaca",
-      "most_spoken_language_en": "",
+      "most_spoken_language_en": "Icelandic",
       "population_pyramid": [{"Age":"0-4","M":12065,"F":11290},{"Age":"5-9","M":11517,"F":10796},{"Age":"10-14","M":12343,"F":11868},{"Age":"15-19","M":12811,"F":12173},{"Age":"20-24","M":13100,"F":12872},{"Age":"25-29","M":15510,"F":14629},{"Age":"30-34","M":17824,"F":15657},{"Age":"35-39","M":15499,"F":13394},{"Age":"40-44","M":14535,"F":12833},{"Age":"45-49","M":12666,"F":11728},{"Age":"50-54","M":11982,"F":11202},{"Age":"55-59","M":11093,"F":10989},{"Age":"60-64","M":10662,"F":10806},{"Age":"65-69","M":9723,"F":9709},{"Age":"70-74","M":7940,"F":7919},{"Age":"75-79","M":5889,"F":6134},{"Age":"80-84","M":3414,"F":4149},{"Age":"85-89","M":1864,"F":2311},{"Age":"90-94","M":804,"F":1145},{"Age":"95-99","M":176,"F":310},{"Age":"100+","M":18,"F":37}]
     },
     "military": {
@@ -4612,7 +4612,7 @@
       "life_expectancy": 70.0,
       "birth_rate": 2.0,
       "most_spoken_language_tr": "Hintçe / İngilizce",
-      "most_spoken_language_en": "",
+      "most_spoken_language_en": "Hindi / English",
       "population_pyramid": [{"Age":"0-4","M":58920509,"F":54737622},{"Age":"5-9","M":61965433,"F":56915847},{"Age":"10-14","M":65253769,"F":59483836},{"Age":"15-19","M":66730579,"F":60645953},{"Age":"20-24","M":68155217,"F":61835076},{"Age":"25-29","M":65258361,"F":59211687},{"Age":"30-34","M":61846646,"F":56880627},{"Age":"35-39","M":57979905,"F":53665702},{"Age":"40-44","M":51622180,"F":48012516},{"Age":"45-49","M":44391110,"F":41973609},{"Age":"50-54","M":38222139,"F":36894343},{"Age":"55-59","M":32137630,"F":31528368},{"Age":"60-64","M":26519323,"F":26456422},{"Age":"65-69","M":20613163,"F":21207800},{"Age":"70-74","M":14224239,"F":15290500},{"Age":"75-79","M":7793933,"F":9016760},{"Age":"80-84","M":4098889,"F":5163753},{"Age":"85-89","M":1863044,"F":2613279},{"Age":"90-94","M":594804,"F":879272},{"Age":"95-99","M":119656,"F":178967},{"Age":"100+","M":12893,"F":20419}]
     },
     "military": {
@@ -4666,7 +4666,7 @@
       "life_expectancy": 72.0,
       "birth_rate": 2.1,
       "most_spoken_language_tr": "Endonezce",
-      "most_spoken_language_en": "",
+      "most_spoken_language_en": "Indonesian",
       "population_pyramid": [{"Age":"0-4","M":11414146,"F":10808559},{"Age":"5-9","M":11855423,"F":11251375},{"Age":"10-14","M":12517801,"F":11884480},{"Age":"15-19","M":11968518,"F":11368416},{"Age":"20-24","M":11239481,"F":10690743},{"Age":"25-29","M":11273309,"F":10760394},{"Age":"30-34","M":10796006,"F":10304846},{"Age":"35-39","M":10601582,"F":10168733},{"Age":"40-44","M":10534164,"F":10219386},{"Age":"45-49","M":9610648,"F":9488316},{"Age":"50-54","M":8591960,"F":8652189},{"Age":"55-59","M":7331465,"F":7582240},{"Age":"60-64","M":5734471,"F":6176969},{"Age":"65-69","M":4036060,"F":4642213},{"Age":"70-74","M":2453421,"F":3091894},{"Age":"75-79","M":1384766,"F":2047912},{"Age":"80-84","M":725435,"F":1242429},{"Age":"85-89","M":273464,"F":539079},{"Age":"90-94","M":58813,"F":139797},{"Age":"95-99","M":6661,"F":18904},{"Age":"100+","M":318,"F":1134}]
     },
     "military": {
@@ -4720,7 +4720,7 @@
       "life_expectancy": 77.0,
       "birth_rate": 1.7,
       "most_spoken_language_tr": "Farsça",
-      "most_spoken_language_en": "",
+      "most_spoken_language_en": "Persian",
       "population_pyramid": [{"Age":"0-4","M":3083560,"F":2930877},{"Age":"5-9","M":3832963,"F":3622647},{"Age":"10-14","M":3642693,"F":3435582},{"Age":"15-19","M":3261344,"F":3094209},{"Age":"20-24","M":2977541,"F":2844581},{"Age":"25-29","M":3135112,"F":3031243},{"Age":"30-34","M":4040200,"F":3890050},{"Age":"35-39","M":4640817,"F":4490268},{"Age":"40-44","M":4244833,"F":4077956},{"Age":"45-49","M":3259343,"F":3122258},{"Age":"50-54","M":2734728,"F":2608449},{"Age":"55-59","M":2192875,"F":2178546},{"Age":"60-64","M":1822931,"F":1827847},{"Age":"65-69","M":1427295,"F":1448137},{"Age":"70-74","M":1127110,"F":1127829},{"Age":"75-79","M":650215,"F":687346},{"Age":"80-84","M":317509,"F":385469},{"Age":"85-89","M":116377,"F":177527},{"Age":"90-94","M":22397,"F":48074},{"Age":"95-99","M":2136,"F":6449},{"Age":"100+","M":73,"F":331}]
     },
     "military": {
@@ -4774,7 +4774,7 @@
       "life_expectancy": 71.0,
       "birth_rate": 3.1,
       "most_spoken_language_tr": "Arapça / Kürtçe",
-      "most_spoken_language_en": "",
+      "most_spoken_language_en": "Arabic / Kurdish",
       "population_pyramid": [{"Age":"0-4","M":2876398,"F":2733908},{"Age":"5-9","M":2850551,"F":2711417},{"Age":"10-14","M":2905604,"F":2764911},{"Age":"15-19","M":2446293,"F":2333268},{"Age":"20-24","M":2173161,"F":2083456},{"Age":"25-29","M":1952305,"F":1891460},{"Age":"30-34","M":1710226,"F":1673555},{"Age":"35-39","M":1402832,"F":1395421},{"Age":"40-44","M":1196528,"F":1209713},{"Age":"45-49","M":1032281,"F":1057173},{"Age":"50-54","M":855839,"F":902093},{"Age":"55-59","M":644921,"F":727018},{"Age":"60-64","M":422457,"F":517168},{"Age":"65-69","M":258824,"F":342284},{"Age":"70-74","M":202725,"F":289308},{"Age":"75-79","M":108838,"F":166750},{"Age":"80-84","M":51615,"F":89273},{"Age":"85-89","M":16639,"F":34073},{"Age":"90-94","M":2822,"F":7752},{"Age":"95-99","M":211,"F":887},{"Age":"100+","M":7,"F":42}]
     },
     "military": {
@@ -4828,7 +4828,7 @@
       "life_expectancy": 82.0,
       "birth_rate": 1.6,
       "most_spoken_language_tr": "İngilizce / İrlandaca",
-      "most_spoken_language_en": "",
+      "most_spoken_language_en": "English / Irish",
       "population_pyramid": [{"Age":"0-4","M":147384,"F":140005},{"Age":"5-9","M":166392,"F":159396},{"Age":"10-14","M":185115,"F":176800},{"Age":"15-19","M":182938,"F":174119},{"Age":"20-24","M":172180,"F":167277},{"Age":"25-29","M":161147,"F":156354},{"Age":"30-34","M":155952,"F":155020},{"Age":"35-39","M":167751,"F":179195},{"Age":"40-44","M":197615,"F":212120},{"Age":"45-49","M":195189,"F":201833},{"Age":"50-54","M":178263,"F":181442},{"Age":"55-59","M":156989,"F":159979},{"Age":"60-64","M":141823,"F":147600},{"Age":"65-69","M":123872,"F":128511},{"Age":"70-74","M":103081,"F":108679},{"Age":"75-79","M":81061,"F":88554},{"Age":"80-84","M":48790,"F":58378},{"Age":"85-89","M":24772,"F":35813},{"Age":"90-94","M":9023,"F":16787},{"Age":"95-99","M":1832,"F":5100},{"Age":"100+","M":158,"F":718}]
     },
     "military": {
@@ -4882,7 +4882,7 @@
       "life_expectancy": 83.0,
       "birth_rate": 2.9,
       "most_spoken_language_tr": "İbranice",
-      "most_spoken_language_en": "",
+      "most_spoken_language_en": "Hebrew",
       "population_pyramid": [{"Age":"0-4","M":446812,"F":424248},{"Age":"5-9","M":450186,"F":426393},{"Age":"10-14","M":423175,"F":402098},{"Age":"15-19","M":382366,"F":364570},{"Age":"20-24","M":359886,"F":345211},{"Age":"25-29","M":327257,"F":315550},{"Age":"30-34","M":306527,"F":298733},{"Age":"35-39","M":291692,"F":290094},{"Age":"40-44","M":279462,"F":281592},{"Age":"45-49","M":265741,"F":270392},{"Age":"50-54","M":238687,"F":245136},{"Age":"55-59","M":198000,"F":205708},{"Age":"60-64","M":177028,"F":192149},{"Age":"65-69","M":161154,"F":182127},{"Age":"70-74","M":145533,"F":170417},{"Age":"75-79","M":108897,"F":134631},{"Age":"80-84","M":54405,"F":73797},{"Age":"85-89","M":36555,"F":55336},{"Age":"90-94","M":14791,"F":24805},{"Age":"95-99","M":4651,"F":8400},{"Age":"100+","M":1099,"F":1724}]
     },
     "military": {
@@ -4936,7 +4936,7 @@
       "life_expectancy": 84.0,
       "birth_rate": 1.2,
       "most_spoken_language_tr": "İtalyanca",
-      "most_spoken_language_en": "",
+      "most_spoken_language_en": "Italian",
       "population_pyramid": [{"Age":"0-4","M":1042119,"F":985271},{"Age":"5-9","M":1206548,"F":1142248},{"Age":"10-14","M":1379370,"F":1301677},{"Age":"15-19","M":1494220,"F":1410716},{"Age":"20-24","M":1564211,"F":1459856},{"Age":"25-29","M":1625829,"F":1477175},{"Age":"30-34","M":1689200,"F":1612171},{"Age":"35-39","M":1692191,"F":1664551},{"Age":"40-44","M":1853660,"F":1831439},{"Age":"45-49","M":2151185,"F":2154403},{"Age":"50-54","M":2351271,"F":2400823},{"Age":"55-59","M":2372583,"F":2459742},{"Age":"60-64","M":2138358,"F":2268995},{"Age":"65-69","M":1785137,"F":1951579},{"Age":"70-74","M":1542846,"F":1751284},{"Age":"75-79","M":1336044,"F":1610394},{"Age":"80-84","M":936449,"F":1278864},{"Age":"85-89","M":580220,"F":948554},{"Age":"90-94","M":215944,"F":472928},{"Age":"95-99","M":42705,"F":137951},{"Age":"100+","M":3699,"F":18447}]
     },
     "military": {
@@ -4990,7 +4990,7 @@
       "life_expectancy": 74.0,
       "birth_rate": 1.4,
       "most_spoken_language_tr": "İngilizce",
-      "most_spoken_language_en": "",
+      "most_spoken_language_en": "English",
       "population_pyramid": [{"Age":"0-4","M":83105,"F":80235},{"Age":"5-9","M":88043,"F":84966},{"Age":"10-14","M":99067,"F":95576},{"Age":"15-19","M":113203,"F":109368},{"Age":"20-24","M":119065,"F":115137},{"Age":"25-29","M":131755,"F":127618},{"Age":"30-34","M":133066,"F":129157},{"Age":"35-39","M":119729,"F":116586},{"Age":"40-44","M":109016,"F":106842},{"Age":"45-49","M":92930,"F":93365},{"Age":"50-54","M":81783,"F":87371},{"Age":"55-59","M":71304,"F":82366},{"Age":"60-64","M":60926,"F":74503},{"Age":"65-69","M":43452,"F":54986},{"Age":"70-74","M":26170,"F":34007},{"Age":"75-79","M":17353,"F":22656},{"Age":"80-84","M":9648,"F":13138},{"Age":"85-89","M":3257,"F":5214},{"Age":"90-94","M":959,"F":1770},{"Age":"95-99","M":122,"F":311},{"Age":"100+","M":5,"F":32}]
     },
     "military": {
@@ -5044,7 +5044,7 @@
       "life_expectancy": 84.0,
       "birth_rate": 1.2,
       "most_spoken_language_tr": "Japonca",
-      "most_spoken_language_en": "",
+      "most_spoken_language_en": "Japanese",
       "population_pyramid": [{"Age":"0-4","M":2055581,"F":1957753},{"Age":"5-9","M":2467140,"F":2339476},{"Age":"10-14","M":2741601,"F":2590970},{"Age":"15-19","M":2905586,"F":2747227},{"Age":"20-24","M":3123806,"F":2969008},{"Age":"25-29","M":3112116,"F":2991052},{"Age":"30-34","M":3105947,"F":2985897},{"Age":"35-39","M":3403799,"F":3288952},{"Age":"40-44","M":3770818,"F":3693873},{"Age":"45-49","M":4461369,"F":4392177},{"Age":"50-54","M":4975377,"F":4889269},{"Age":"55-59","M":4226205,"F":4118071},{"Age":"60-64","M":3816980,"F":3768372},{"Age":"65-69","M":3611321,"F":3698376},{"Age":"70-74","M":3946723,"F":4293059},{"Age":"75-79","M":3756507,"F":4473210},{"Age":"80-84","M":2634814,"F":3586305},{"Age":"85-89","M":1491180,"F":2519061},{"Age":"90-94","M":613916,"F":1479586},{"Age":"95-99","M":133604,"F":495871},{"Age":"100+","M":17162,"F":103910}]
     },
     "military": {
@@ -5098,7 +5098,7 @@
       "life_expectancy": 75.0,
       "birth_rate": 2.6,
       "most_spoken_language_tr": "Arapça",
-      "most_spoken_language_en": "",
+      "most_spoken_language_en": "Arabic",
       "population_pyramid": [{"Age":"0-4","M":589893,"F":564030},{"Age":"5-9","M":598370,"F":572027},{"Age":"10-14","M":617985,"F":600780},{"Age":"15-19","M":568880,"F":567257},{"Age":"20-24","M":502371,"F":493565},{"Age":"25-29","M":505969,"F":472657},{"Age":"30-34","M":497840,"F":434299},{"Age":"35-39","M":434194,"F":380151},{"Age":"40-44","M":371686,"F":335199},{"Age":"45-49","M":322641,"F":289390},{"Age":"50-54","M":289344,"F":253970},{"Age":"55-59","M":236530,"F":208233},{"Age":"60-64","M":167931,"F":155123},{"Age":"65-69","M":109603,"F":107204},{"Age":"70-74","M":71933,"F":71725},{"Age":"75-79","M":41348,"F":45550},{"Age":"80-84","M":21075,"F":27221},{"Age":"85-89","M":8049,"F":12956},{"Age":"90-94","M":1589,"F":3580},{"Age":"95-99","M":138,"F":546},{"Age":"100+","M":3,"F":32}]
     },
     "military": {
@@ -5147,7 +5147,7 @@
       "life_expectancy": 74.0,
       "birth_rate": 3.0,
       "most_spoken_language_tr": "Kazakça / Rusça",
-      "most_spoken_language_en": "",
+      "most_spoken_language_en": "Kazakh / Russian",
       "population_pyramid": [{"Age":"0-4","M":1085109,"F":1027646},{"Age":"5-9","M":1030904,"F":996643},{"Age":"10-14","M":973641,"F":934770},{"Age":"15-19","M":816770,"F":780130},{"Age":"20-24","M":621352,"F":597397},{"Age":"25-29","M":642925,"F":622114},{"Age":"30-34","M":781595,"F":764922},{"Age":"35-39","M":793910,"F":785254},{"Age":"40-44","M":669631,"F":681713},{"Age":"45-49","M":576506,"F":617200},{"Age":"50-54","M":510325,"F":572824},{"Age":"55-59","M":457560,"F":537070},{"Age":"60-64","M":418992,"F":513738},{"Age":"65-69","M":315080,"F":447783},{"Age":"70-74","M":186358,"F":306852},{"Age":"75-79","M":84137,"F":172428},{"Age":"80-84","M":37042,"F":103805},{"Age":"85-89","M":22618,"F":76270},{"Age":"90-94","M":4488,"F":18607},{"Age":"95-99","M":911,"F":5104},{"Age":"100+","M":47,"F":390}]
     },
     "military": {
@@ -5195,7 +5195,7 @@
       "life_expectancy": 67.0,
       "birth_rate": 3.2,
       "most_spoken_language_tr": "Svahili / İngilizce",
-      "most_spoken_language_en": "",
+      "most_spoken_language_en": "Swahili / English",
       "population_pyramid": [{"Age":"0-4","M":3581308,"F":3528897},{"Age":"5-9","M":3435928,"F":3388382},{"Age":"10-14","M":3448232,"F":3404924},{"Age":"15-19","M":3249793,"F":3248339},{"Age":"20-24","M":2746677,"F":2825518},{"Age":"25-29","M":2272318,"F":2398974},{"Age":"30-34","M":2007389,"F":2074899},{"Age":"35-39","M":1809226,"F":1785063},{"Age":"40-44","M":1485485,"F":1431402},{"Age":"45-49","M":1172637,"F":1143515},{"Age":"50-54","M":921713,"F":923017},{"Age":"55-59","M":702619,"F":729898},{"Age":"60-64","M":497449,"F":545438},{"Age":"65-69","M":318515,"F":374732},{"Age":"70-74","M":189472,"F":236247},{"Age":"75-79","M":122037,"F":154522},{"Age":"80-84","M":55117,"F":96643},{"Age":"85-89","M":25502,"F":54103},{"Age":"90-94","M":10639,"F":23047},{"Age":"95-99","M":3257,"F":7325},{"Age":"100+","M":753,"F":1982}]
     },
     "military": {
@@ -5243,7 +5243,7 @@
       "life_expectancy": 67.0,
       "birth_rate": 3.1,
       "most_spoken_language_tr": "Gilbertese / İngilizce",
-      "most_spoken_language_en": "",
+      "most_spoken_language_en": "Gilbertese / English",
       "population_pyramid": [{"Age":"0-4","M":8371,"F":7896},{"Age":"5-9","M":7893,"F":7611},{"Age":"10-14","M":7419,"F":7477},{"Age":"15-19","M":6101,"F":6281},{"Age":"20-24","M":5494,"F":5402},{"Age":"25-29","M":5688,"F":5885},{"Age":"30-34","M":5014,"F":5446},{"Age":"35-39","M":4331,"F":4825},{"Age":"40-44","M":3657,"F":4060},{"Age":"45-49","M":2744,"F":3086},{"Age":"50-54","M":2286,"F":2760},{"Age":"55-59","M":2304,"F":2779},{"Age":"60-64","M":1765,"F":2237},{"Age":"65-69","M":1034,"F":1431},{"Age":"70-74","M":603,"F":970},{"Age":"75-79","M":348,"F":604},{"Age":"80-84","M":172,"F":341},{"Age":"85-89","M":43,"F":114},{"Age":"90-94","M":8,"F":26},{"Age":"95-99","M":0,"F":2},{"Age":"100+","M":0,"F":0}]
     },
     "military": {
@@ -5291,7 +5291,7 @@
       "life_expectancy": 73.0,
       "birth_rate": 1.5,
       "most_spoken_language_tr": "Arnavutça / Sırpça",
-      "most_spoken_language_en": "",
+      "most_spoken_language_en": "Albanian / Serbian",
       "population_pyramid": []
     },
     "military": {
@@ -5339,7 +5339,7 @@
       "life_expectancy": 76.0,
       "birth_rate": 1.5,
       "most_spoken_language_tr": "Arapça",
-      "most_spoken_language_en": "",
+      "most_spoken_language_en": "Arabic",
       "population_pyramid": [{"Age":"0-4","M":134392,"F":130398},{"Age":"5-9","M":158355,"F":151740},{"Age":"10-14","M":166818,"F":157305},{"Age":"15-19","M":145592,"F":137978},{"Age":"20-24","M":126199,"F":114394},{"Age":"25-29","M":281285,"F":147014},{"Age":"30-34","M":343259,"F":177294},{"Age":"35-39","M":407814,"F":218603},{"Age":"40-44","M":398933,"F":200150},{"Age":"45-49","M":303256,"F":160462},{"Age":"50-54","M":227061,"F":120339},{"Age":"55-59","M":155579,"F":80954},{"Age":"60-64","M":85341,"F":50780},{"Age":"65-69","M":43199,"F":31370},{"Age":"70-74","M":20811,"F":18866},{"Age":"75-79","M":9935,"F":11492},{"Age":"80-84","M":4900,"F":5904},{"Age":"85-89","M":2204,"F":2680},{"Age":"90-94","M":588,"F":933},{"Age":"95-99","M":103,"F":201},{"Age":"100+","M":3,"F":16}]
     },
     "military": {
@@ -5387,7 +5387,7 @@
       "life_expectancy": 72.0,
       "birth_rate": 2.7,
       "most_spoken_language_tr": "Kırgızca / Rusça",
-      "most_spoken_language_en": "",
+      "most_spoken_language_en": "Kyrgyz / Russian",
       "population_pyramid": [{"Age":"0-4","M":394594,"F":373689},{"Age":"5-9","M":415570,"F":394847},{"Age":"10-14","M":383192,"F":362174},{"Age":"15-19","M":314564,"F":296027},{"Age":"20-24","M":261617,"F":266013},{"Age":"25-29","M":268943,"F":274722},{"Age":"30-34","M":277740,"F":283140},{"Age":"35-39","M":256750,"F":262215},{"Age":"40-44","M":208374,"F":215576},{"Age":"45-49","M":180270,"F":187114},{"Age":"50-54","M":159311,"F":170638},{"Age":"55-59","M":140824,"F":158677},{"Age":"60-64","M":122786,"F":148329},{"Age":"65-69","M":83379,"F":110186},{"Age":"70-74","M":48814,"F":69318},{"Age":"75-79","M":19656,"F":31119},{"Age":"80-84","M":9399,"F":16321},{"Age":"85-89","M":5523,"F":11051},{"Age":"90-94","M":959,"F":2282},{"Age":"95-99","M":64,"F":227},{"Age":"100+","M":0,"F":2}]
     },
     "military": {
@@ -5435,7 +5435,7 @@
       "life_expectancy": 73.0,
       "birth_rate": 1.8,
       "most_spoken_language_tr": "Korece",
-      "most_spoken_language_en": "",
+      "most_spoken_language_en": "Korean",
       "population_pyramid": []
     },
     "military": {
@@ -5483,7 +5483,7 @@
       "life_expectancy": 69.0,
       "birth_rate": 2.2,
       "most_spoken_language_tr": "Laoca",
-      "most_spoken_language_en": "",
+      "most_spoken_language_en": "Lao",
       "population_pyramid": [{"Age":"0-4","M":404556,"F":387144},{"Age":"5-9","M":406305,"F":390476},{"Age":"10-14","M":385573,"F":372306},{"Age":"15-19","M":373986,"F":363101},{"Age":"20-24","M":361471,"F":352878},{"Age":"25-29","M":348761,"F":342223},{"Age":"30-34","M":325058,"F":321625},{"Age":"35-39","M":293805,"F":287568},{"Age":"40-44","M":243903,"F":237735},{"Age":"45-49","M":197308,"F":195112},{"Age":"50-54","M":161492,"F":163478},{"Age":"55-59","M":131608,"F":140359},{"Age":"60-64","M":104116,"F":115343},{"Age":"65-69","M":75270,"F":82821},{"Age":"70-74","M":47210,"F":54405},{"Age":"75-79","M":25609,"F":32733},{"Age":"80-84","M":12213,"F":17307},{"Age":"85-89","M":4592,"F":6918},{"Age":"90-94","M":1047,"F":1899},{"Age":"95-99","M":136,"F":311},{"Age":"100+","M":11,"F":37}]
     },
     "military": {
@@ -5531,7 +5531,7 @@
       "life_expectancy": 76.0,
       "birth_rate": 1.4,
       "most_spoken_language_tr": "Letonca",
-      "most_spoken_language_en": "",
+      "most_spoken_language_en": "Latvian",
       "population_pyramid": [{"Age":"0-4","M":42379,"F":39840},{"Age":"5-9","M":55120,"F":50980},{"Age":"10-14","M":51671,"F":48525},{"Age":"15-19","M":52424,"F":50164},{"Age":"20-24","M":45821,"F":43599},{"Age":"25-29","M":44426,"F":40917},{"Age":"30-34","M":61852,"F":58090},{"Age":"35-39","M":71289,"F":67426},{"Age":"40-44","M":65202,"F":63652},{"Age":"45-49","M":60807,"F":63452},{"Age":"50-54","M":62228,"F":67819},{"Age":"55-59","M":57717,"F":66816},{"Age":"60-64","M":58359,"F":74421},{"Age":"65-69","M":49534,"F":70926},{"Age":"70-74","M":35710,"F":61505},{"Age":"75-79","M":23881,"F":49542},{"Age":"80-84","M":16896,"F":44528},{"Age":"85-89","M":9067,"F":28671},{"Age":"90-94","M":2819,"F":10674},{"Age":"95-99","M":557,"F":2327},{"Age":"100+","M":41,"F":186}]
     },
     "military": {
@@ -5579,7 +5579,7 @@
       "life_expectancy": 79.0,
       "birth_rate": 2.2,
       "most_spoken_language_tr": "Arapça",
-      "most_spoken_language_en": "",
+      "most_spoken_language_en": "Arabic",
       "population_pyramid": [{"Age":"0-4","M":233064,"F":221105},{"Age":"5-9","M":256476,"F":242083},{"Age":"10-14","M":290241,"F":277403},{"Age":"15-19","M":271472,"F":251772},{"Age":"20-24","M":250209,"F":225071},{"Age":"25-29","M":207951,"F":210063},{"Age":"30-34","M":158759,"F":197135},{"Age":"35-39","M":163921,"F":187650},{"Age":"40-44","M":165576,"F":186146},{"Age":"45-49","M":147529,"F":174236},{"Age":"50-54","M":148155,"F":169945},{"Age":"55-59","M":148216,"F":168107},{"Age":"60-64","M":123721,"F":141304},{"Age":"65-69","M":97049,"F":116064},{"Age":"70-74","M":75770,"F":81420},{"Age":"75-79","M":48551,"F":61275},{"Age":"80-84","M":22559,"F":39023},{"Age":"85-89","M":10693,"F":21950},{"Age":"90-94","M":3296,"F":8625},{"Age":"95-99","M":410,"F":1804},{"Age":"100+","M":7,"F":142}]
     },
     "military": {
@@ -5627,7 +5627,7 @@
       "life_expectancy": 55.0,
       "birth_rate": 2.8,
       "most_spoken_language_tr": "Sotho / İngilizce",
-      "most_spoken_language_en": "",
+      "most_spoken_language_en": "Sesotho / English",
       "population_pyramid": [{"Age":"0-4","M":132744,"F":130608},{"Age":"5-9","M":138828,"F":137177},{"Age":"10-14","M":134200,"F":133303},{"Age":"15-19","M":120710,"F":120380},{"Age":"20-24","M":110130,"F":110855},{"Age":"25-29","M":100330,"F":102663},{"Age":"30-34","M":98448,"F":102145},{"Age":"35-39","M":90337,"F":95589},{"Age":"40-44","M":65748,"F":71541},{"Age":"45-49","M":43421,"F":46985},{"Age":"50-54","M":29671,"F":32472},{"Age":"55-59","M":23621,"F":29456},{"Age":"60-64","M":18946,"F":26967},{"Age":"65-69","M":14136,"F":22080},{"Age":"70-74","M":8175,"F":15470},{"Age":"75-79","M":4877,"F":10097},{"Age":"80-84","M":2764,"F":6191},{"Age":"85-89","M":1355,"F":3269},{"Age":"90-94","M":385,"F":1048},{"Age":"95-99","M":58,"F":206},{"Age":"100+","M":4,"F":23}]
     },
     "military": {
@@ -5675,7 +5675,7 @@
       "life_expectancy": 64.0,
       "birth_rate": 4.0,
       "most_spoken_language_tr": "İngilizce",
-      "most_spoken_language_en": "",
+      "most_spoken_language_en": "English",
       "population_pyramid": []
     },
     "military": {
@@ -5723,7 +5723,7 @@
       "life_expectancy": 73.0,
       "birth_rate": 2.4,
       "most_spoken_language_tr": "Arapça",
-      "most_spoken_language_en": "",
+      "most_spoken_language_en": "Arabic",
       "population_pyramid": [{"Age":"0-4","M":395934,"F":385583},{"Age":"5-9","M":370788,"F":361772},{"Age":"10-14","M":356518,"F":348127},{"Age":"15-19","M":323725,"F":317001},{"Age":"20-24","M":266812,"F":263003},{"Age":"25-29","M":214699,"F":213688},{"Age":"30-34","M":176693,"F":178015},{"Age":"35-39","M":157450,"F":159694},{"Age":"40-44","M":136923,"F":140026},{"Age":"45-49","M":111321,"F":115702},{"Age":"50-54","M":85488,"F":92179},{"Age":"55-59","M":67989,"F":76100},{"Age":"60-64","M":52273,"F":59804},{"Age":"65-69","M":37118,"F":43499},{"Age":"70-74","M":23912,"F":28637},{"Age":"75-79","M":14266,"F":16664},{"Age":"80-84","M":7140,"F":8221},{"Age":"85-89","M":2344,"F":2661},{"Age":"90-94","M":457,"F":503},{"Age":"95-99","M":37,"F":41},{"Age":"100+","M":0,"F":0}]
     },
     "military": {
@@ -5771,7 +5771,7 @@
       "life_expectancy": 84.0,
       "birth_rate": 1.4,
       "most_spoken_language_tr": "Almanca",
-      "most_spoken_language_en": "",
+      "most_spoken_language_en": "German",
       "population_pyramid": []
     },
     "military": {
@@ -5819,7 +5819,7 @@
       "life_expectancy": 76.0,
       "birth_rate": 1.2,
       "most_spoken_language_tr": "Litvanca",
-      "most_spoken_language_en": "",
+      "most_spoken_language_en": "Lithuanian",
       "population_pyramid": [{"Age":"0-4","M":62722,"F":59504},{"Age":"5-9","M":77693,"F":73534},{"Age":"10-14","M":75222,"F":71784},{"Age":"15-19","M":71836,"F":69572},{"Age":"20-24","M":79824,"F":77063},{"Age":"25-29","M":95024,"F":88578},{"Age":"30-34","M":111537,"F":99762},{"Age":"35-39","M":108695,"F":95490},{"Age":"40-44","M":95248,"F":85578},{"Age":"45-49","M":91515,"F":89512},{"Age":"50-54","M":96265,"F":100972},{"Age":"55-59","M":92407,"F":105003},{"Age":"60-64","M":92569,"F":115614},{"Age":"65-69","M":72331,"F":103643},{"Age":"70-74","M":50275,"F":85818},{"Age":"75-79","M":32985,"F":68431},{"Age":"80-84","M":24055,"F":59687},{"Age":"85-89","M":13703,"F":40026},{"Age":"90-94","M":4670,"F":16252},{"Age":"95-99","M":837,"F":3496},{"Age":"100+","M":75,"F":294}]
     },
     "military": {
@@ -5867,7 +5867,7 @@
       "life_expectancy": 83.0,
       "birth_rate": 1.3,
       "most_spoken_language_tr": "Lüksemburgca / Fransızca",
-      "most_spoken_language_en": "",
+      "most_spoken_language_en": "Luxembourgish / French",
       "population_pyramid": [{"Age":"0-4","M":17624,"F":16989},{"Age":"5-9","M":18186,"F":17420},{"Age":"10-14","M":18456,"F":17510},{"Age":"15-19","M":18102,"F":16960},{"Age":"20-24","M":19304,"F":18087},{"Age":"25-29","M":24844,"F":23429},{"Age":"30-34","M":27654,"F":26208},{"Age":"35-39","M":26910,"F":26384},{"Age":"40-44","M":26018,"F":25554},{"Age":"45-49","M":24507,"F":23971},{"Age":"50-54","M":24094,"F":23028},{"Age":"55-59","M":24378,"F":22466},{"Age":"60-64","M":20787,"F":19998},{"Age":"65-69","M":15964,"F":16282},{"Age":"70-74","M":12249,"F":13174},{"Age":"75-79","M":9138,"F":10235},{"Age":"80-84","M":5742,"F":7621},{"Age":"85-89","M":3275,"F":5337},{"Age":"90-94","M":1266,"F":2727},{"Age":"95-99","M":244,"F":791},{"Age":"100+","M":14,"F":98}]
     },
     "military": {
@@ -5916,7 +5916,7 @@
       "life_expectancy": 67.0,
       "birth_rate": 3.5,
       "most_spoken_language_tr": "Malgaşça / Fransızca",
-      "most_spoken_language_en": "",
+      "most_spoken_language_en": "Malagasy / French",
       "population_pyramid": [{"Age":"0-4","M":2361116,"F":2294991},{"Age":"5-9","M":2092342,"F":2037800},{"Age":"10-14","M":1903399,"F":1858787},{"Age":"15-19","M":1719525,"F":1689273},{"Age":"20-24","M":1530568,"F":1511382},{"Age":"25-29","M":1353600,"F":1341621},{"Age":"30-34","M":1089772,"F":1082943},{"Age":"35-39","M":883139,"F":880318},{"Age":"40-44","M":752211,"F":756008},{"Age":"45-49","M":635933,"F":644316},{"Age":"50-54","M":511224,"F":523741},{"Age":"55-59","M":390066,"F":405832},{"Age":"60-64","M":303689,"F":322900},{"Age":"65-69","M":228106,"F":249765},{"Age":"70-74","M":154797,"F":175386},{"Age":"75-79","M":72738,"F":89200},{"Age":"80-84","M":33718,"F":44568},{"Age":"85-89","M":13278,"F":18227},{"Age":"90-94","M":2974,"F":4718},{"Age":"95-99","M":314,"F":613},{"Age":"100+","M":14,"F":35}]
     },
     "military": {
@@ -5964,7 +5964,7 @@
       "life_expectancy": 64.0,
       "birth_rate": 3.2,
       "most_spoken_language_tr": "İngilizce / Çiçeva",
-      "most_spoken_language_en": "",
+      "most_spoken_language_en": "English / Chichewa",
       "population_pyramid": [{"Age":"0-4","M":1569127,"F":1560565},{"Age":"5-9","M":1443018,"F":1440789},{"Age":"10-14","M":1395700,"F":1405703},{"Age":"15-19","M":1274895,"F":1296125},{"Age":"20-24","M":1048560,"F":1070910},{"Age":"25-29","M":867533,"F":899693},{"Age":"30-34","M":708727,"F":781788},{"Age":"35-39","M":583796,"F":688203},{"Age":"40-44","M":506996,"F":564553},{"Age":"45-49","M":382755,"F":374408},{"Age":"50-54","M":253216,"F":269019},{"Age":"55-59","M":172250,"F":230625},{"Age":"60-64","M":130253,"F":176040},{"Age":"65-69","M":92923,"F":116193},{"Age":"70-74","M":61459,"F":82380},{"Age":"75-79","M":42233,"F":66078},{"Age":"80-84","M":22385,"F":39846},{"Age":"85-89","M":8540,"F":18075},{"Age":"90-94","M":2217,"F":5759},{"Age":"95-99","M":402,"F":1281},{"Age":"100+","M":53,"F":203}]
     },
     "military": {
@@ -6012,7 +6012,7 @@
       "life_expectancy": 76.0,
       "birth_rate": 1.6,
       "most_spoken_language_tr": "Malayca",
-      "most_spoken_language_en": "",
+      "most_spoken_language_en": "Malay",
       "population_pyramid": [{"Age":"0-4","M":1145086,"F":1078077},{"Age":"5-9","M":1398089,"F":1331436},{"Age":"10-14","M":1454940,"F":1339106},{"Age":"15-19","M":1460300,"F":1347858},{"Age":"20-24","M":1641974,"F":1470114},{"Age":"25-29","M":1707100,"F":1443532},{"Age":"30-34","M":1735207,"F":1434297},{"Age":"35-39","M":1664462,"F":1417108},{"Age":"40-44","M":1486731,"F":1268941},{"Age":"45-49","M":1168956,"F":1034013},{"Age":"50-54","M":947846,"F":887963},{"Age":"55-59","M":793557,"F":776574},{"Age":"60-64","M":691655,"F":681344},{"Age":"65-69","M":531074,"F":540122},{"Age":"70-74","M":381664,"F":404041},{"Age":"75-79","M":221023,"F":246348},{"Age":"80-84","M":112178,"F":133057},{"Age":"85-89","M":53915,"F":70188},{"Age":"90-94","M":17312,"F":26722},{"Age":"95-99","M":4102,"F":7524},{"Age":"100+","M":617,"F":1509}]
     },
     "military": {
@@ -6060,7 +6060,7 @@
       "life_expectancy": 79.0,
       "birth_rate": 1.6,
       "most_spoken_language_tr": "Divehi",
-      "most_spoken_language_en": "",
+      "most_spoken_language_en": "Divehi",
       "population_pyramid": [{"Age":"0-4","M":15383,"F":14296},{"Age":"5-9","M":18375,"F":16214},{"Age":"10-14","M":21179,"F":17958},{"Age":"15-19","M":17301,"F":15051},{"Age":"20-24","M":19135,"F":12864},{"Age":"25-29","M":38708,"F":16838},{"Age":"30-34","M":49596,"F":20660},{"Age":"35-39","M":45802,"F":21249},{"Age":"40-44","M":33854,"F":16622},{"Age":"45-49","M":21437,"F":12071},{"Age":"50-54","M":14754,"F":10201},{"Age":"55-59","M":10433,"F":8319},{"Age":"60-64","M":8026,"F":6975},{"Age":"65-69","M":5594,"F":4916},{"Age":"70-74","M":2957,"F":2732},{"Age":"75-79","M":2084,"F":1880},{"Age":"80-84","M":1393,"F":1262},{"Age":"85-89","M":585,"F":617},{"Age":"90-94","M":176,"F":214},{"Age":"95-99","M":26,"F":47},{"Age":"100+","M":0,"F":3}]
     },
     "military": {
@@ -6108,7 +6108,7 @@
       "life_expectancy": 60.0,
       "birth_rate": 5.4,
       "most_spoken_language_tr": "Bambara / Fransızca",
-      "most_spoken_language_en": "",
+      "most_spoken_language_en": "Bambara / French",
       "population_pyramid": [{"Age":"0-4","M":2146719,"F":2101699},{"Age":"5-9","M":1893092,"F":1853208},{"Age":"10-14","M":1669731,"F":1630532},{"Age":"15-19","M":1406815,"F":1371454},{"Age":"20-24","M":1122777,"F":1092908},{"Age":"25-29","M":874632,"F":850079},{"Age":"30-34","M":723259,"F":703815},{"Age":"35-39","M":623423,"F":603544},{"Age":"40-44","M":529247,"F":512702},{"Age":"45-49","M":416260,"F":405662},{"Age":"50-54","M":304263,"F":299429},{"Age":"55-59","M":216065,"F":219683},{"Age":"60-64","M":157143,"F":166874},{"Age":"65-69","M":115337,"F":128880},{"Age":"70-74","M":79524,"F":93816},{"Age":"75-79","M":45925,"F":57580},{"Age":"80-84","M":20771,"F":27633},{"Age":"85-89","M":5147,"F":7223},{"Age":"90-94","M":628,"F":1056},{"Age":"95-99","M":10,"F":41},{"Age":"100+","M":0,"F":0}]
     },
     "military": {
@@ -6156,7 +6156,7 @@
       "life_expectancy": 83.0,
       "birth_rate": 1.1,
       "most_spoken_language_tr": "Maltaca / İngilizce",
-      "most_spoken_language_en": "",
+      "most_spoken_language_en": "Maltese / English",
       "population_pyramid": [{"Age":"0-4","M":11420,"F":10643},{"Age":"5-9","M":12659,"F":11736},{"Age":"10-14","M":12334,"F":11520},{"Age":"15-19","M":11889,"F":10959},{"Age":"20-24","M":13487,"F":12081},{"Age":"25-29","M":20779,"F":16623},{"Age":"30-34","M":27078,"F":22488},{"Age":"35-39","M":26542,"F":21917},{"Age":"40-44","M":23990,"F":20036},{"Age":"45-49","M":21116,"F":18090},{"Age":"50-54","M":17424,"F":15394},{"Age":"55-59","M":15052,"F":14014},{"Age":"60-64","M":15928,"F":15335},{"Age":"65-69","M":15244,"F":15339},{"Age":"70-74","M":13287,"F":14106},{"Age":"75-79","M":11888,"F":13596},{"Age":"80-84","M":5492,"F":7253},{"Age":"85-89","M":3137,"F":5170},{"Age":"90-94","M":1067,"F":2469},{"Age":"95-99","M":201,"F":616},{"Age":"100+","M":30,"F":166}]
     },
     "military": {
@@ -6204,7 +6204,7 @@
       "life_expectancy": 65.0,
       "birth_rate": 3.4,
       "most_spoken_language_tr": "Arapça",
-      "most_spoken_language_en": "",
+      "most_spoken_language_en": "Arabic",
       "population_pyramid": [{"Age":"0-4","M":412319,"F":402122},{"Age":"5-9","M":371494,"F":363058},{"Age":"10-14","M":333980,"F":324936},{"Age":"15-19","M":280805,"F":280335},{"Age":"20-24","M":225800,"F":235436},{"Age":"25-29","M":186607,"F":201324},{"Age":"30-34","M":155507,"F":171814},{"Age":"35-39","M":129620,"F":145728},{"Age":"40-44","M":105065,"F":120822},{"Age":"45-49","M":85204,"F":99693},{"Age":"50-54","M":71270,"F":81932},{"Age":"55-59","M":57281,"F":65217},{"Age":"60-64","M":44605,"F":50524},{"Age":"65-69","M":32585,"F":37224},{"Age":"70-74","M":21368,"F":25077},{"Age":"75-79","M":12636,"F":15574},{"Age":"80-84","M":6389,"F":8246},{"Age":"85-89","M":2437,"F":3368},{"Age":"90-94","M":619,"F":1005},{"Age":"95-99","M":120,"F":207},{"Age":"100+","M":10,"F":21}]
     },
     "military": {
@@ -6252,7 +6252,7 @@
       "life_expectancy": 75.0,
       "birth_rate": 1.3,
       "most_spoken_language_tr": "İngilizce / Fransızca",
-      "most_spoken_language_en": "",
+      "most_spoken_language_en": "English / French",
       "population_pyramid": [{"Age":"0-4","M":29636,"F":30210},{"Age":"5-9","M":30075,"F":30614},{"Age":"10-14","M":33316,"F":34418},{"Age":"15-19","M":42260,"F":43204},{"Age":"20-24","M":47258,"F":46131},{"Age":"25-29","M":50870,"F":47109},{"Age":"30-34","M":55520,"F":50100},{"Age":"35-39","M":49186,"F":44293},{"Age":"40-44","M":50006,"F":46805},{"Age":"45-49","M":47777,"F":46530},{"Age":"50-54","M":40101,"F":39805},{"Age":"55-59","M":41480,"F":42060},{"Age":"60-64","M":39081,"F":41380},{"Age":"65-69","M":31146,"F":33976},{"Age":"70-74","M":22971,"F":26646},{"Age":"75-79","M":13044,"F":16871},{"Age":"80-84","M":6308,"F":8762},{"Age":"85-89","M":3075,"F":4982},{"Age":"90-94","M":1081,"F":2134},{"Age":"95-99","M":277,"F":530},{"Age":"100+","M":41,"F":90}]
     },
     "military": {
@@ -6300,7 +6300,7 @@
       "life_expectancy": 75.0,
       "birth_rate": 1.6,
       "most_spoken_language_tr": "İspanyolca",
-      "most_spoken_language_en": "",
+      "most_spoken_language_en": "Spanish",
       "population_pyramid": [{"Age":"0-4","M":5201545,"F":5019427},{"Age":"5-9","M":5389126,"F":5202440},{"Age":"10-14","M":5727382,"F":5533448},{"Age":"15-19","M":5655760,"F":5490066},{"Age":"20-24","M":5582719,"F":5500026},{"Age":"25-29","M":5265580,"F":5331637},{"Age":"30-34","M":5038110,"F":5295976},{"Age":"35-39","M":4541739,"F":4947408},{"Age":"40-44","M":3998830,"F":4638836},{"Age":"45-49","M":3632460,"F":4316389},{"Age":"50-54","M":3359197,"F":3951454},{"Age":"55-59","M":2891713,"F":3396316},{"Age":"60-64","M":2356150,"F":2803104},{"Age":"65-69","M":1791144,"F":2159386},{"Age":"70-74","M":1278748,"F":1574834},{"Age":"75-79","M":850807,"F":1086916},{"Age":"80-84","M":517251,"F":674078},{"Age":"85-89","M":261119,"F":340051},{"Age":"90-94","M":94579,"F":114637},{"Age":"95-99","M":22630,"F":22786},{"Age":"100+","M":2987,"F":2206}]
     },
     "military": {
@@ -6348,7 +6348,7 @@
       "life_expectancy": 70.0,
       "birth_rate": 2.8,
       "most_spoken_language_tr": "Moğolca",
-      "most_spoken_language_en": "",
+      "most_spoken_language_en": "Mongolian",
       "population_pyramid": [{"Age":"0-4","M":174258,"F":167017},{"Age":"5-9","M":205281,"F":193368},{"Age":"10-14","M":195735,"F":183231},{"Age":"15-19","M":140453,"F":131190},{"Age":"20-24","M":111075,"F":104223},{"Age":"25-29","M":120184,"F":114218},{"Age":"30-34","M":136114,"F":129863},{"Age":"35-39","M":145097,"F":140803},{"Age":"40-44","M":118087,"F":116530},{"Age":"45-49","M":104237,"F":105598},{"Age":"50-54","M":86982,"F":94103},{"Age":"55-59","M":70604,"F":83180},{"Age":"60-64","M":55210,"F":70331},{"Age":"65-69","M":34446,"F":49151},{"Age":"70-74","M":16724,"F":26432},{"Age":"75-79","M":9584,"F":16530},{"Age":"80-84","M":5692,"F":9930},{"Age":"85-89","M":2294,"F":4810},{"Age":"90-94","M":637,"F":1842},{"Age":"95-99","M":103,"F":344},{"Age":"100+","M":7,"F":30}]
     },
     "military": {
@@ -6396,7 +6396,7 @@
       "life_expectancy": 76.0,
       "birth_rate": 1.7,
       "most_spoken_language_tr": "Karadağca",
-      "most_spoken_language_en": "",
+      "most_spoken_language_en": "Montenegrin",
       "population_pyramid": [{"Age":"0-4","M":18951,"F":17669},{"Age":"5-9","M":20097,"F":18551},{"Age":"10-14","M":20944,"F":19523},{"Age":"15-19","M":20241,"F":19234},{"Age":"20-24","M":20016,"F":19486},{"Age":"25-29","M":19695,"F":19153},{"Age":"30-34","M":19509,"F":19062},{"Age":"35-39","M":21181,"F":20935},{"Age":"40-44","M":22251,"F":22940},{"Age":"45-49","M":20682,"F":22524},{"Age":"50-54","M":19241,"F":21482},{"Age":"55-59","M":19216,"F":21104},{"Age":"60-64","M":19039,"F":21893},{"Age":"65-69","M":17827,"F":20620},{"Age":"70-74","M":13784,"F":17972},{"Age":"75-79","M":7353,"F":11764},{"Age":"80-84","M":4287,"F":8590},{"Age":"85-89","M":2284,"F":5735},{"Age":"90-94","M":599,"F":2255},{"Age":"95-99","M":91,"F":605},{"Age":"100+","M":5,"F":78}]
     },
     "military": {
@@ -6444,7 +6444,7 @@
       "life_expectancy": 77.0,
       "birth_rate": 2.2,
       "most_spoken_language_tr": "Arapça / Berberice",
-      "most_spoken_language_en": "",
+      "most_spoken_language_en": "Arabic / Berber",
       "population_pyramid": [{"Age":"0-4","M":1606550,"F":1539194},{"Age":"5-9","M":1668547,"F":1586622},{"Age":"10-14","M":1726426,"F":1633972},{"Age":"15-19","M":1632220,"F":1558191},{"Age":"20-24","M":1503111,"F":1427890},{"Age":"25-29","M":1463762,"F":1399296},{"Age":"30-34","M":1489869,"F":1425600},{"Age":"35-39","M":1439171,"F":1407282},{"Age":"40-44","M":1327132,"F":1315874},{"Age":"45-49","M":1174484,"F":1182157},{"Age":"50-54","M":1029904,"F":1032154},{"Age":"55-59","M":890315,"F":920466},{"Age":"60-64","M":786414,"F":815272},{"Age":"65-69","M":646939,"F":648547},{"Age":"70-74","M":431239,"F":452214},{"Age":"75-79","M":228048,"F":283208},{"Age":"80-84","M":107994,"F":162542},{"Age":"85-89","M":39797,"F":67210},{"Age":"90-94","M":9063,"F":18605},{"Age":"95-99","M":995,"F":2706},{"Age":"100+","M":38,"F":144}]
     },
     "military": {
@@ -6492,7 +6492,7 @@
       "life_expectancy": 61.0,
       "birth_rate": 4.6,
       "most_spoken_language_tr": "Portekizce",
-      "most_spoken_language_en": "",
+      "most_spoken_language_en": "Portuguese",
       "population_pyramid": [{"Age":"0-4","M":2907985,"F":2876906},{"Age":"5-9","M":2557086,"F":2535115},{"Age":"10-14","M":2269585,"F":2257216},{"Age":"15-19","M":1881492,"F":1885988},{"Age":"20-24","M":1595809,"F":1624075},{"Age":"25-29","M":1331627,"F":1384024},{"Age":"30-34","M":1075928,"F":1149680},{"Age":"35-39","M":850292,"F":951413},{"Age":"40-44","M":653892,"F":774544},{"Age":"45-49","M":487540,"F":612374},{"Age":"50-54","M":414754,"F":482235},{"Age":"55-59","M":290508,"F":350952},{"Age":"60-64","M":172078,"F":304991},{"Age":"65-69","M":124332,"F":280369},{"Age":"70-74","M":94518,"F":200956},{"Age":"75-79","M":56690,"F":103412},{"Age":"80-84","M":27668,"F":40658},{"Age":"85-89","M":8506,"F":11857},{"Age":"90-94","M":1587,"F":2510},{"Age":"95-99","M":188,"F":372},{"Age":"100+","M":11,"F":32}]
     },
     "military": {
@@ -6540,7 +6540,7 @@
       "life_expectancy": 67.0,
       "birth_rate": 2.0,
       "most_spoken_language_tr": "Birmanca",
-      "most_spoken_language_en": "",
+      "most_spoken_language_en": "Burmese",
       "population_pyramid": [{"Age":"0-4","M":2262003,"F":2136998},{"Age":"5-9","M":2296005,"F":2175046},{"Age":"10-14","M":2240380,"F":2133378},{"Age":"15-19","M":2245970,"F":2149082},{"Age":"20-24","M":2293265,"F":2210828},{"Age":"25-29","M":2226149,"F":2166067},{"Age":"30-34","M":2151765,"F":2108804},{"Age":"35-39","M":2076859,"F":2049106},{"Age":"40-44","M":1973497,"F":1969723},{"Age":"45-49","M":1746199,"F":1771712},{"Age":"50-54","M":1549184,"F":1608376},{"Age":"55-59","M":1319033,"F":1420017},{"Age":"60-64","M":1048766,"F":1190954},{"Age":"65-69","M":774551,"F":945146},{"Age":"70-74","M":504651,"F":674790},{"Age":"75-79","M":254613,"F":373634},{"Age":"80-84","M":116471,"F":189673},{"Age":"85-89","M":40735,"F":76980},{"Age":"90-94","M":8082,"F":18703},{"Age":"95-99","M":652,"F":2142},{"Age":"100+","M":8,"F":85}]
     },
     "military": {
@@ -6588,7 +6588,7 @@
       "life_expectancy": 64.0,
       "birth_rate": 2.8,
       "most_spoken_language_tr": "İngilizce",
-      "most_spoken_language_en": "",
+      "most_spoken_language_en": "English",
       "population_pyramid": [{"Age":"0-4","M":202998,"F":202812},{"Age":"5-9","M":190503,"F":192360},{"Age":"10-14","M":164522,"F":167338},{"Age":"15-19","M":142279,"F":141543},{"Age":"20-24","M":131359,"F":129505},{"Age":"25-29","M":127489,"F":129331},{"Age":"30-34","M":119030,"F":125583},{"Age":"35-39","M":96216,"F":101571},{"Age":"40-44","M":80136,"F":84132},{"Age":"45-49","M":66392,"F":67825},{"Age":"50-54","M":51440,"F":55124},{"Age":"55-59","M":37515,"F":44245},{"Age":"60-64","M":28590,"F":38990},{"Age":"65-69","M":18783,"F":27139},{"Age":"70-74","M":11427,"F":18374},{"Age":"75-79","M":6704,"F":12350},{"Age":"80-84","M":3109,"F":7152},{"Age":"85-89","M":1039,"F":3380},{"Age":"90-94","M":234,"F":1215},{"Age":"95-99","M":34,"F":302},{"Age":"100+","M":2,"F":48}]
     },
     "military": {
@@ -6636,7 +6636,7 @@
       "life_expectancy": 71.0,
       "birth_rate": 1.9,
       "most_spoken_language_tr": "Nepalce",
-      "most_spoken_language_en": "",
+      "most_spoken_language_en": "Nepali",
       "population_pyramid": [{"Age":"0-4","M":1411493,"F":1351878},{"Age":"5-9","M":1450604,"F":1348013},{"Age":"10-14","M":1478751,"F":1388807},{"Age":"15-19","M":1478941,"F":1463584},{"Age":"20-24","M":1397816,"F":1497773},{"Age":"25-29","M":1224684,"F":1431878},{"Age":"30-34","M":997376,"F":1265787},{"Age":"35-39","M":843013,"F":1113916},{"Age":"40-44","M":776115,"F":974566},{"Age":"45-49","M":689254,"F":816108},{"Age":"50-54","M":627224,"F":706724},{"Age":"55-59","M":501231,"F":571692},{"Age":"60-64","M":439311,"F":476161},{"Age":"65-69","M":356405,"F":391873},{"Age":"70-74","M":260182,"F":303705},{"Age":"75-79","M":161341,"F":199548},{"Age":"80-84","M":77452,"F":102989},{"Age":"85-89","M":24147,"F":36265},{"Age":"90-94","M":4507,"F":8487},{"Age":"95-99","M":406,"F":970},{"Age":"100+","M":16,"F":48}]
     },
     "military": {
@@ -6684,7 +6684,7 @@
       "life_expectancy": 82.0,
       "birth_rate": 1.4,
       "most_spoken_language_tr": "Felemenkçe",
-      "most_spoken_language_en": "",
+      "most_spoken_language_en": "Dutch",
       "population_pyramid": [{"Age":"0-4","M":456862,"F":435609},{"Age":"5-9","M":462653,"F":440900},{"Age":"10-14","M":482960,"F":460002},{"Age":"15-19","M":517949,"F":496720},{"Age":"20-24","M":601269,"F":582009},{"Age":"25-29","M":621104,"F":607282},{"Age":"30-34","M":631497,"F":614183},{"Age":"35-39","M":591791,"F":579912},{"Age":"40-44","M":549790,"F":546273},{"Age":"45-49","M":524551,"F":528099},{"Age":"50-54","M":611870,"F":617159},{"Age":"55-59","M":646635,"F":644923},{"Age":"60-64","M":616618,"F":623940},{"Age":"65-69","M":528560,"F":543600},{"Age":"70-74","M":451476,"F":475337},{"Age":"75-79","M":387268,"F":431389},{"Age":"80-84","M":220511,"F":276758},{"Age":"85-89","M":110007,"F":170938},{"Age":"90-94","M":35903,"F":76668},{"Age":"95-99","M":6187,"F":18927},{"Age":"100+","M":513,"F":2131}]
     },
     "military": {
@@ -6732,7 +6732,7 @@
       "life_expectancy": 82.0,
       "birth_rate": 1.5,
       "most_spoken_language_tr": "İngilizce / Maorice",
-      "most_spoken_language_en": "",
+      "most_spoken_language_en": "English / Maori",
       "population_pyramid": [{"Age":"0-4","M":152906,"F":145342},{"Age":"5-9","M":160501,"F":151830},{"Age":"10-14","M":171385,"F":162733},{"Age":"15-19","M":169902,"F":161150},{"Age":"20-24","M":169003,"F":160272},{"Age":"25-29","M":180769,"F":169059},{"Age":"30-34","M":198072,"F":192790},{"Age":"35-39","M":181433,"F":184001},{"Age":"40-44","M":163734,"F":166345},{"Age":"45-49","M":151822,"F":155820},{"Age":"50-54","M":162709,"F":170279},{"Age":"55-59","M":155490,"F":163876},{"Age":"60-64","M":152544,"F":163595},{"Age":"65-69","M":131352,"F":141393},{"Age":"70-74","M":109585,"F":117989},{"Age":"75-79","M":86452,"F":95450},{"Age":"80-84","M":52829,"F":63413},{"Age":"85-89","M":26800,"F":36189},{"Age":"90-94","M":10617,"F":16564},{"Age":"95-99","M":2454,"F":4675},{"Age":"100+","M":234,"F":577}]
     },
     "military": {
@@ -6780,7 +6780,7 @@
       "life_expectancy": 74.0,
       "birth_rate": 2.2,
       "most_spoken_language_tr": "İspanyolca",
-      "most_spoken_language_en": "",
+      "most_spoken_language_en": "Spanish",
       "population_pyramid": [{"Age":"0-4","M":332511,"F":322245},{"Age":"5-9","M":337745,"F":327722},{"Age":"10-14","M":339225,"F":329554},{"Age":"15-19","M":330300,"F":321408},{"Age":"20-24","M":313478,"F":305852},{"Age":"25-29","M":305360,"F":299906},{"Age":"30-34","M":286643,"F":289481},{"Age":"35-39","M":249095,"F":263690},{"Age":"40-44","M":211938,"F":232420},{"Age":"45-49","M":181857,"F":197551},{"Age":"50-54","M":150814,"F":163266},{"Age":"55-59","M":117342,"F":132390},{"Age":"60-64","M":86806,"F":104823},{"Age":"65-69","M":63131,"F":80988},{"Age":"70-74","M":46070,"F":63432},{"Age":"75-79","M":27554,"F":40023},{"Age":"80-84","M":15463,"F":24382},{"Age":"85-89","M":5523,"F":11370},{"Age":"90-94","M":997,"F":3171},{"Age":"95-99","M":96,"F":472},{"Age":"100+","M":4,"F":29}]
     },
     "military": {
@@ -6828,7 +6828,7 @@
       "life_expectancy": 62.0,
       "birth_rate": 6.6,
       "most_spoken_language_tr": "Fransızca",
-      "most_spoken_language_en": "",
+      "most_spoken_language_en": "French",
       "population_pyramid":[{"Age":"0-4","M":2428334,"F":2354535},{"Age":"5-9","M":2117101,"F":2048057},{"Age":"10-14","M":1856871,"F":1792480},{"Age":"15-19","M":1560940,"F":1505457},{"Age":"20-24","M":1263698,"F":1216876},{"Age":"25-29","M":996365,"F":956976},{"Age":"30-34","M":777899,"F":745221},{"Age":"35-39","M":628459,"F":600097},{"Age":"40-44","M":524587,"F":497973},{"Age":"45-49","M":423177,"F":403247},{"Age":"50-54","M":336793,"F":327501},{"Age":"55-59","M":271737,"F":268946},{"Age":"60-64","M":212116,"F":215640},{"Age":"65-69","M":152607,"F":160444},{"Age":"70-74","M":98845,"F":107971},{"Age":"75-79","M":49907,"F":66104},{"Age":"80-84","M":20257,"F":30230},{"Age":"85-89","M":5016,"F":8134},{"Age":"90-94","M":592,"F":1128},{"Age":"95-99","M":23,"F":61},{"Age":"100+","M":0,"F":0}]
     },
     "military": {
@@ -6876,7 +6876,7 @@
       "life_expectancy": 55.0,
       "birth_rate": 4.5,
       "most_spoken_language_tr": "İngilizce",
-      "most_spoken_language_en": "",
+      "most_spoken_language_en": "English",
       "population_pyramid":[{"Age":"0-4","M":17124785,"F":16704305},{"Age":"5-9","M":16125159,"F":15675357},{"Age":"10-14","M":15152791,"F":14648403},{"Age":"15-19","M":13280320,"F":12786667},{"Age":"20-24","M":11130512,"F":10731427},{"Age":"25-29","M":9017930,"F":8715678},{"Age":"30-34","M":7538669,"F":7304101},{"Age":"35-39","M":6415363,"F":6256760},{"Age":"40-44","M":5608713,"F":5475974},{"Age":"45-49","M":4630435,"F":4548940},{"Age":"50-54","M":3531761,"F":3525540},{"Age":"55-59","M":2703817,"F":2751296},{"Age":"60-64","M":2046329,"F":2154828},{"Age":"65-69","M":1476034,"F":1601161},{"Age":"70-74","M":961962,"F":1073053},{"Age":"75-79","M":566305,"F":629688},{"Age":"80-84","M":264848,"F":299181},{"Age":"85-89","M":82397,"F":100226},{"Age":"90-94","M":14369,"F":20622},{"Age":"95-99","M":1218,"F":2352},{"Age":"100+","M":49,"F":142}]
     },
     "military": {
@@ -6924,7 +6924,7 @@
       "life_expectancy": 83.0,
       "birth_rate": 1.4,
       "most_spoken_language_tr": "Norveççe",
-      "most_spoken_language_en": "",
+      "most_spoken_language_en": "Norwegian",
       "population_pyramid": [{"Age":"0-4","M":141102,"F":134196},{"Age":"5-9","M":155228,"F":146253},{"Age":"10-14","M":167116,"F":158895},{"Age":"15-19","M":173193,"F":164404},{"Age":"20-24","M":175813,"F":167218},{"Age":"25-29","M":190674,"F":180818},{"Age":"30-34","M":203162,"F":194893},{"Age":"35-39","M":196850,"F":189260},{"Age":"40-44","M":186590,"F":177901},{"Age":"45-49","M":181276,"F":173658},{"Age":"50-54","M":193666,"F":185855},{"Age":"55-59","M":187438,"F":179708},{"Age":"60-64","M":164076,"F":159822},{"Age":"65-69","M":147208,"F":148300},{"Age":"70-74","M":126946,"F":131404},{"Age":"75-79","M":111292,"F":120180},{"Age":"80-84","M":64015,"F":76920},{"Age":"85-89","M":30765,"F":45610},{"Age":"90-94","M":11349,"F":23032},{"Age":"95-99","M":2421,"F":6935},{"Age":"100+","M":223,"F":986}]
     },
     "military": {
