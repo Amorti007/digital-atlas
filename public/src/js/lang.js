@@ -29,6 +29,7 @@ window.uiTranslations = {
         footer_support: "Projeye Destek Ol:",
         btn_sponsor: "Sponsor Ol",
         btn_patreon: "Destekle",
+        no_data: "Veri bulunamadı.",
         // Dinamik İçerik Etiketleri
         lbl_capital: "Başkent:",
         lbl_continent: "Kıta:",
@@ -89,6 +90,7 @@ window.uiTranslations = {
         footer_support: "Support Project:",
         btn_sponsor: "Sponsor",
         btn_patreon: "Support",
+        no_data: "No data.",
         // Dynamic Content Labels
         lbl_capital: "Capital:",
         lbl_continent: "Continent:",
