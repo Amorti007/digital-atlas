@@ -1,9 +1,15 @@
 // DIJITAL ATLAS - DİL VE LOKALİZASYON MOTORU
 
+/* Bu dosya, Dijital Atlas projesinin çok dilli desteğini yönetir.
+Dil yönetimini ana JavaScript dosyasından ayırarak ilgi alanlarının ayrımı (SoC) prensibini benimsedik.
+Bu sayede 'main.js' sadece iş mantığına odaklanırken, bu dosya sadece çeviri işlevini yönetiyor. */
+
 // Global Dil Değişkeni
 window.currentLang = "tr";
 
 // Çeviri Sözlüğü
+/* Çevirileri sözlük formatında tutarak yönetimi kolaylaştırdık.
+Ayrıca O(1) zaman karmaşıklığında veri erişimi sağladık. */
 window.uiTranslations = {
     tr: {
         nav_brand: "Dijital Atlas",
@@ -21,6 +27,8 @@ window.uiTranslations = {
         footer_icons: "İkonlar:",
         footer_ui: "Arayüz:",
         footer_support: "Projeye Destek Ol:",
+        btn_sponsor: "Sponsor Ol",
+        btn_patreon: "Destekle",
         // Dinamik İçerik Etiketleri
         lbl_capital: "Başkent:",
         lbl_continent: "Kıta:",
@@ -79,6 +87,8 @@ window.uiTranslations = {
         footer_icons: "Icons:",
         footer_ui: "UI:",
         footer_support: "Support Project:",
+        btn_sponsor: "Sponsor",
+        btn_patreon: "Support",
         // Dynamic Content Labels
         lbl_capital: "Capital:",
         lbl_continent: "Continent:",
@@ -124,6 +134,7 @@ window.uiTranslations = {
 };
 
 // Dil Değiştirme Fonksiyonu
+// Dil değiştirme işlemi SPA ve DOM yapısına uygun bir şekilde çalışarak tüm sayfayı yenilemez.
 function changeLanguage(lang) {
     window.currentLang = lang;
     updateUITexts(); // Arayüzdeki metinleri güncelle
@@ -141,6 +152,7 @@ function changeLanguage(lang) {
 
 // UI Metinlerini Güncelleyen Fonksiyon
 function updateUITexts() {
+    // 'querySelectorAll' ile 'data-lang' niteliğine sahip tüm elementleri tek seferde bulup döngüye sokuyoruz.
     document.querySelectorAll("[data-lang]").forEach((el) => {
         const key = el.getAttribute("data-lang");
         if (uiTranslations[window.currentLang][key]) {
