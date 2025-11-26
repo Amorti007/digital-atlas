@@ -138,7 +138,11 @@ function generateDetailContent(code, pathElement) {
         return `<strong>${defaultName}</strong><br><span class="text-muted small">${t('no_data')}</span>`;
 
     // FlagCDN kullanarak bayrak URL'si oluşturma
-    let flagUrl = `https://flagcdn.com/w80/${code.toLowerCase()}.png`;
+    const customFlags = {
+      "NC": "https://upload.wikimedia.org/wikipedia/commons/1/1e/Flag_of_the_Turkish_Republic_of_Northern_Cyprus.svg",
+      "IC": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Flag_of_the_Canary_Islands_%28simple%29.svg"
+    }
+    let flagUrl = customFlags[code] || `https://flagcdn.com/w80/${code.toLowerCase()}.png`;
 
     //Sayı formatlayıcılar
     const locale = currentLang === 'tr' ? 'tr-TR' : 'en-US';
@@ -259,6 +263,10 @@ function generateDetailContent(code, pathElement) {
                 <li><strong>${t('lbl_budget')}</strong> ${defBudget}</li>
                 <li><strong>${t('lbl_intel')}</strong> ${intel}</li>
             </ul>
+        </div>
+
+        <div class="text-center text-muted mt-2 pt-2 border-top" style="font-size: 0.65rem;">
+            <i class="fas fa-info-circle me-1"></i> ${t('lbl_data_year') || 'Veriler 2024 yılına aittir.'}
         </div>
     `;
 }
@@ -397,6 +405,7 @@ function initPanZoom() {
   });
 
   // Sürükleme mantığı
+  let lastTouchDistance = 0;
   mapContainer.addEventListener("mousedown", (e) => {
     if (e.button !== 0 || e.target.closest(".popover")) return;
     isDragging = true;
@@ -421,28 +430,61 @@ function initPanZoom() {
     e.preventDefault();
     let newX = e.clientX - startX,
       newY = e.clientY - startY;
-    const limitX = 500 * currentScale,
-      limitY = 300 * currentScale;
+    const isMobile = window.innerWidth < 768;
+    const baseLimitX = isMobile ? 250 : 500; 
+    const baseLimitY = isMobile ? 150 : 300;
+    const limitX = baseLimitX * currentScale;
+    const limitY = baseLimitY * currentScale;
     currentTranslateX = Math.max(-limitX, Math.min(newX, limitX));
     currentTranslateY = Math.max(-limitY, Math.min(newY, limitY));
     updateTransform();
   });
 
+  const getTouchDistance = (touches) => {
+    return Math.hypot(
+      touches[0].pageX - touches[1].pageX,
+      touches[0].pageY - touches[1].pageY
+    );
+  };
   mapContainer.addEventListener("touchstart", (e) => {
-    if (e.target.closest(".popover") || e.touches.length > 1) return;
-    isDragging = true;
-    // İlk parmağın pozisyonunu al
-    startX = e.touches[0].clientX - currentTranslateX;
-    startY = e.touches[0].clientY - currentTranslateY;
+    if (e.target.closest(".popover")) return;
+    if (e.touches.length === 1) {
+        isDragging = true;
+        startX = e.touches[0].clientX - currentTranslateX;
+        startY = e.touches[0].clientY - currentTranslateY;
+    }
+    else if (e.touches.length === 2) {
+        isDragging = false;
+        lastTouchDistance = getTouchDistance(e.touches);
+    }
   }, { passive: false });
 
   mapContainer.addEventListener("touchmove", (e) => {
-    if (!isDragging) return;
-    e.preventDefault(); // Sayfanın kaymasını engelle
-    currentTranslateX = e.touches[0].clientX - startX;
-    currentTranslateY = e.touches[0].clientY - startY;
-    updateTransform();
-  }, { passive: false });
+    e.preventDefault();
+    if (e.touches.length === 1 && isDragging) {
+        let newX = e.touches[0].clientX - startX;
+        let newY = e.touches[0].clientY - startY;
+        const isMobile = window.innerWidth < 768;
+        const baseLimitX = isMobile ? 250 : 500; 
+        const baseLimitY = isMobile ? 150 : 300;
+        const limitX = baseLimitX * currentScale;
+        const limitY = baseLimitY * currentScale;
+        currentTranslateX = Math.max(-limitX, Math.min(newX, limitX));
+        currentTranslateY = Math.max(-limitY, Math.min(newY, limitY));
+        updateTransform();
+    }
+    else if (e.touches.length === 2) {
+      const newDistance = getTouchDistance(e.touches);
+      if (lastTouchDistance > 0) {
+            const zoomSensitivity = 0.005;
+            const diff = newDistance - lastTouchDistance;
+            const newScale = currentScale + (diff * zoomSensitivity);
+            currentScale = Math.max(0.5, Math.min(newScale, 5));
+            updateTransform();
+        }
+        lastTouchDistance = newDistance;
+      }
+    }, { passive: false });
 
   mapContainer.addEventListener("touchend", stopDrag);
 }

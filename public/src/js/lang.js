@@ -53,6 +53,7 @@ window.uiTranslations = {
         lbl_total: "Toplam Personel:",
         lbl_budget: "Savunma Bütçesi:",
         lbl_intel: "İstihbarat:",
+        lbl_data_year: "Veriler 2024 yılına aittir.",
         // Bölüm Başlıkları
         header_geo: "Coğrafya & Politika",
         header_demo: "Demografi",
@@ -115,6 +116,7 @@ window.uiTranslations = {
         lbl_total: "Total Personnel:",
         lbl_budget: "Defense Budget:",
         lbl_intel: "Intelligence:",
+        lbl_data_year: "Data is from 2024.",
         // Section Headers
         header_geo: "Geography & Politics",
         header_demo: "Demographics",
