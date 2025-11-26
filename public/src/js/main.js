@@ -156,6 +156,7 @@ function generateDetailContent(code, pathElement) {
     const area = data.geography?.area_sq_km
         ? formatNum(data.geography.area_sq_km) + " km²"
         : "-";
+    const timezone = data.geography?.timezone || "-";
     const gov = data.politics?.['government' + sfx] || "-";
     const indep = data.politics?.independence_date || "-";
     const gdp = data.economy?.gdp_usd ? currencyCompact(data.economy.gdp_usd) : "-";
@@ -212,6 +213,7 @@ function generateDetailContent(code, pathElement) {
                 <li><strong>${t('lbl_continent')}</strong> ${continent}</li>
                 <li><strong>${t('lbl_area')}</strong> ${area}</li>
                 <li><strong>${t('lbl_gov')}</strong> ${gov}</li>
+                <li><strong>${t('lbl_timezone')}</strong> ${timezone}</li>
                 <li><strong>${t('lbl_indep')}</strong> ${indep}</li>
             </ul>
         </div>
