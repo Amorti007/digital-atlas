@@ -19,7 +19,7 @@ async function loadPage(pageName) {
     if (!pageResponse.ok) throw new Error("Sayfa yüklenemedi");
     const html = await pageResponse.text();
     contentDiv.innerHTML = html;
-
+    initUITooltips();
     if (pageName === "world_map") {
       // Paralel veri yükleme stratejisi
       await loadData();   // Veriyi çek
@@ -531,6 +531,27 @@ function trackMouse() {
   });
 }
 
+function initUITooltips() {
+  const triggers = document.querySelectorAll('[data-tooltip-text]');
+
+  triggers.forEach((btn) => {
+    btn.addEventListener("mouseenter", () => {
+      if (hoverTimer) clearTimeout(hoverTimer); // Haritadan kalan zamanlayıcı varsa temizle (Çakışmayı önle)
+
+      const text = btn.getAttribute("data-tooltip-text");
+      if (hoverTooltip && text) {
+        hoverTooltip.innerHTML = text;
+        hoverTooltip.style.display = "block";
+        updateTooltipPosition();  // Mouse hareketini beklemeden hemen konumla
+      }
+    });
+
+    btn.addEventListener("mouseleave", () => {
+      if (hoverTooltip) hoverTooltip.style.display = "none";
+    });
+  });
+}
+
 function updateTooltipPosition() {
   hoverTooltip.style.left = cursorX + 15 + "px";
   hoverTooltip.style.top = cursorY + 15 + "px";
@@ -568,5 +589,7 @@ function toggleTheme() {
 
 // --- SAYFA YÜKLEME BAŞLANGICI ---
 document.addEventListener("DOMContentLoaded", () => {
+  createHoverTooltip();
+  trackMouse();
   loadPage("world_map");
 });
