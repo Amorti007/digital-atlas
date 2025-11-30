@@ -116,9 +116,9 @@ svg path {
 
 svg > path:hover,
 svg g:hover path {
-  fill: var(--map-hover) !important;
   stroke: #ffc107 !important;
   stroke-width: 1px;
+  transition: stroke 0.2s;
 }
 
 .floating-tooltip {
@@ -231,6 +231,16 @@ svg g:hover path {
   border-radius: 0 2px 2px 0;
 }
 
+.flag-anim {
+    transform-origin: center;
+    transform-box: fill-box; /* KRİTİK EKLEME: Dönüşüm merkezini resme odaklar */
+    animation: flagZoom 0.2s ease-out forwards;
+}
+
+@keyframes flagZoom {
+    0% { transform: scale(0.9); }
+    100% { transform: scale(1.15); } /* %35 büyüme yeterli */
+}
 /* Footer Stilleri */
 .footer {
   background-color: var(--ana-renk);

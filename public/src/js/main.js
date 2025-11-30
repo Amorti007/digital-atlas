@@ -74,50 +74,182 @@ async function loadSVGMap() {
   }
 }
 
-// --- 4. ETKİLEŞİMLER (EVENT DELEGASYONLARI) ---
+// --- 4. ETKİLEŞİMLER (FINAL FIX: Animation Reset & Balanced Vignette) ---
 function initMapInteractions() {
   const mapSvg = document.getElementById("world-map-svg");
   if (!mapSvg) return;
 
+  const svgNS = "http://www.w3.org/2000/svg";
+  const xlinkNS = "http://www.w3.org/1999/xlink";
+
+  // <defs> alanı kontrolü
+  let defs = mapSvg.querySelector("defs");
+  if (!defs) {
+    defs = document.createElementNS(svgNS, "defs");
+    mapSvg.prepend(defs);
+  }
+
+  // Global Vinyet Gradyanı (DENGELENMİŞ VERSİYON)
+  // Overlay olduğu için vinyeti biraz yumuşattık.
+  if (!document.getElementById("vignette-gradient")) {
+      const radGrad = document.createElementNS(svgNS, "radialGradient");
+      radGrad.setAttribute("id", "vignette-gradient");
+      radGrad.setAttribute("cx", "50%");
+      radGrad.setAttribute("cy", "50%");
+      radGrad.setAttribute("r", "70%"); // %65 yerine %70 (biraz daha geniş)
+      radGrad.innerHTML = `
+          <stop offset="60%" stop-color="transparent" />
+          <stop offset="100%" stop-color="rgba(0,0,0,0.6)" />
+      `;
+      defs.appendChild(radGrad);
+  }
+
+  // İSTİSNA LİSTESİ (Dağınık Ülkeler)
+  const disjointedCountries = ["FR", "NL", "US"];
+
+  // Yardımcı Fonksiyon: Bayrak Deseni Oluşturucu
+  const createFlagPattern = (uniqueId, bbox, countryCode) => {
+    // Desen zaten varsa, içindeki resmi bul ve döndür
+    const existingPattern = document.getElementById(uniqueId);
+    if (existingPattern) {
+        return existingPattern.querySelector("image");
+    }
+
+    const customFlags = {
+        "NC": "https://upload.wikimedia.org/wikipedia/commons/1/1e/Flag_of_the_Turkish_Republic_of_Northern_Cyprus.svg",
+        "IC": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Flag_of_the_Canary_Islands_%28simple%29.svg"
+    };
+    const flagUrl = customFlags[countryCode] || `https://flagcdn.com/w640/${countryCode.toLowerCase()}.png`;
+
+    const pattern = document.createElementNS(svgNS, "pattern");
+    pattern.setAttribute("id", uniqueId);
+    pattern.setAttribute("patternUnits", "userSpaceOnUse");
+    pattern.setAttribute("x", bbox.x);
+    pattern.setAttribute("y", bbox.y);
+    pattern.setAttribute("width", bbox.width);
+    pattern.setAttribute("height", bbox.height);
+    pattern.setAttribute("preserveAspectRatio", "none"); 
+
+    // 1. Katman: Zemin (Gri)
+    const bgRect = document.createElementNS(svgNS, "rect");
+    bgRect.setAttribute("width", bbox.width);
+    bgRect.setAttribute("height", bbox.height);
+    bgRect.setAttribute("fill", "#cccccc");
+
+    // 2. Katman: Resim 
+    const img = document.createElementNS(svgNS, "image");
+    img.setAttribute("href", flagUrl);
+    img.setAttributeNS(xlinkNS, "href", flagUrl);
+    img.setAttribute("width", bbox.width);
+    img.setAttribute("height", bbox.height);
+    img.setAttribute("preserveAspectRatio", "xMidYMid slice");
+    // Not: Animasyon sınıfını (flag-anim) burada eklemiyoruz, trigger fonksiyonunda ekleyeceğiz.
+
+    // 3. Katman: Overlay (Hafif Karartma - Bunu sabit tuttuk)
+    const overlayRect = document.createElementNS(svgNS, "rect");
+    overlayRect.setAttribute("width", bbox.width);
+    overlayRect.setAttribute("height", bbox.height);
+    overlayRect.setAttribute("fill", "rgba(0,0,0,0.3)"); 
+
+    // 4. Katman: Vinyet (Kenar Gölgeleri)
+    const vigRect = document.createElementNS(svgNS, "rect");
+    vigRect.setAttribute("width", bbox.width);
+    vigRect.setAttribute("height", bbox.height);
+    vigRect.setAttribute("fill", "url(#vignette-gradient)");
+
+    pattern.appendChild(bgRect);
+    pattern.appendChild(img);
+    pattern.appendChild(overlayRect); 
+    pattern.appendChild(vigRect);
+    defs.appendChild(pattern);
+
+    return img;
+  };
+
+  // Animasyonu Resetleme Fonksiyonu (DÜZELTİLDİ)
+  const triggerAnimation = (imgElement) => {
+      if(!imgElement) return;
+      
+      // 1. Sınıfı kaldır
+      imgElement.classList.remove("flag-anim");
+      
+      // 2. Tarayıcıya nefes aldır (SetTimeout Hack)
+      // SVG desenlerinde reflow (offsetWidth) bazen çalışmaz.
+      // 10ms gecikme, tarayıcının değişikliği "paint" etmesini garantiler.
+      setTimeout(() => {
+          imgElement.classList.add("flag-anim");
+      }, 10);
+  };
+
   const paths = mapSvg.querySelectorAll("path");
 
   paths.forEach((path) => {
-    // Bazı ülkeler grup (g) içinde olabilir, bunu kontrol ediyoruz
-    const parentId = path.parentElement.getAttribute("id");
-    const selfId = path.getAttribute("id");
-    let countryCode = null;
-    if (parentId && parentId.length === 2) {
-        countryCode = parentId;
-    } else {
-        countryCode = selfId;
-    }
+    const parent = path.parentElement;
+    const parentId = parent.getAttribute("id");
+    const isGrouped = parentId && parentId.length === 2;
+    const countryCode = isGrouped ? parentId : path.getAttribute("id");
+    const scopeElement = isGrouped ? parent : path;
 
     if (countryCode) {
       path.addEventListener("mouseenter", () => {
         if (hoverTimer) clearTimeout(hoverTimer);
-        if (activeDetailPopover) return;    // Detay penceresi açıksa tooltip gösterme
 
-        // Kullanıcı hızlıca mouse gezdirirken tooltip yanıp sönmesin diye 500ms (0.5s) gecikme
+        const isDisjointed = disjointedCountries.includes(countryCode);
+        const targets = isGrouped ? parent.querySelectorAll("path") : [path];
+
+        if (isDisjointed) {
+            // SENARYO A: Parçalı
+            targets.forEach((target, index) => {
+                const bbox = target.getBBox();
+                const uniqueId = `flag-pattern-${countryCode}-part${index}`;
+                
+                const imgEl = createFlagPattern(uniqueId, bbox, countryCode);
+                triggerAnimation(imgEl); // Her parça için animasyonu tetikle
+                
+                target.style.fill = `url(#${uniqueId})`;
+                target.style.fillOpacity = "1";
+            });
+
+        } else {
+            // SENARYO B: Bütünleşik
+            const bbox = scopeElement.getBBox();
+            const uniqueId = `flag-pattern-${countryCode}-global`;
+
+            const imgEl = createFlagPattern(uniqueId, bbox, countryCode);
+            triggerAnimation(imgEl); // Ana animasyonu tetikle
+
+            targets.forEach((target) => {
+                target.style.fill = `url(#${uniqueId})`;
+                target.style.fillOpacity = "1";
+            });
+        }
+
+        // Tooltip
+        if (activeDetailPopover) return;
         hoverTimer = setTimeout(() => {
-          const countryName =
-            getCountryName(countryCode) ||
-            path.getAttribute("name") ||
-            countryCode;
-          hoverTooltip.innerHTML = countryName;
-          updateTooltipPosition();
-          hoverTooltip.style.display = "block";
+          const name = getCountryName(countryCode) || path.getAttribute("name") || countryCode;
+          if(hoverTooltip) {
+             hoverTooltip.innerHTML = name;
+             updateTooltipPosition();
+             hoverTooltip.style.display = "block";
+          }
         }, 500);
       });
 
       path.addEventListener("mouseleave", () => {
         if (hoverTimer) clearTimeout(hoverTimer);
-        hoverTooltip.style.display = "none";
+        if(hoverTooltip) hoverTooltip.style.display = "none";
+        
+        const targets = isGrouped ? parent.querySelectorAll("path") : [path];
+        targets.forEach((target) => {
+            target.style.fill = ""; 
+        });
       });
 
       path.addEventListener("click", (e) => {
         e.stopPropagation();
         if (hoverTimer) clearTimeout(hoverTimer);
-        hoverTooltip.style.display = "none";
+        if(hoverTooltip) hoverTooltip.style.display = "none";
         showDetailPopover(path, countryCode);
       });
     }
@@ -400,7 +532,7 @@ function initPanZoom() {
     const zoomSensitivity = 0.001;
     const delta = -e.deltaY * zoomSensitivity;
     // Limitli zoom aralığı
-    currentScale = Math.max(0.5, Math.min(currentScale + delta, 5));
+    currentScale = Math.max(0.7, Math.min(currentScale + delta, 7));
     updateTransform();
   });
 
@@ -497,7 +629,7 @@ function stopDrag() {
 
 function zoomMap(factor) {
   // Zoom butonları ile kontrol
-  currentScale = Math.max(0.5, Math.min(currentScale * factor, 5));
+  currentScale = Math.max(0.7, Math.min(currentScale * factor, 7));
   updateTransform();
 }
 
