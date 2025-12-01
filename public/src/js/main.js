@@ -532,7 +532,7 @@ function initPanZoom() {
     const zoomSensitivity = 0.001;
     const delta = -e.deltaY * zoomSensitivity;
     // Limitli zoom aralığı
-    currentScale = Math.max(0.7, Math.min(currentScale + delta, 7));
+    currentScale = Math.max(0.7, Math.min(currentScale + delta, 10));
     updateTransform();
   });
 
@@ -629,7 +629,7 @@ function stopDrag() {
 
 function zoomMap(factor) {
   // Zoom butonları ile kontrol
-  currentScale = Math.max(0.7, Math.min(currentScale * factor, 7));
+  currentScale = Math.max(0.7, Math.min(currentScale * factor, 10));
   updateTransform();
 }
 
