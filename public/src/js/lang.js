@@ -72,7 +72,24 @@ window.uiTranslations = {
         about_li_map: "Harita Altyapısı (SimpleMaps)",
         about_li_data: "Demografik Veriler (PopulationPyramid)",
         about_li_flags: "Bayrak API (FlagCDN)",
-        about_li_ui: "Arayüz Kütüphanesi (Bootstrap 5)"
+        about_li_ui: "Arayüz Kütüphanesi (Bootstrap 5)",
+        // --- ARAÇ ÇUBUĞU ---
+        tool_search_label: "Ülke Ara",
+        tool_search_ph: "TR, Almanya...",
+        tool_search_btn: "Bul",
+        tool_filter_label: "Bölge Filtrele",
+        tool_filter_all: "Tümü",
+        tool_filter_eu: "Avrupa",
+        tool_filter_asia: "Asya",
+        tool_filter_pop: "Nüfus > 100M",
+        tool_layers_label: "Gösterilecek Veriler",
+        tool_layer_geo: "Coğrafya",
+        tool_layer_demo: "Nüfus",
+        tool_layer_eco: "Ekonomi",
+        tool_layer_mil: "Askeri",
+        tool_layer_socio: "Sosyo-Ekonomik",
+        tool_layer_env: "Enerji & Çevre",
+        tool_layer_tech: "Teknoloji & Altyapı",
     },
     en: {
         nav_brand: "Digital Atlas",
@@ -136,6 +153,23 @@ window.uiTranslations = {
         about_li_data: "Demographic Data (PopulationPyramid)",
         about_li_flags: "Flag API (FlagCDN)",
         about_li_ui: "UI Library (Bootstrap 5)",
+        // --- TOOLBAR ---
+        tool_search_label: "Search Country",
+        tool_search_ph: "TR, Germany...",
+        tool_search_btn: "Find",
+        tool_filter_label: "Filter Region",
+        tool_filter_all: "All",
+        tool_filter_eu: "Europe",
+        tool_filter_asia: "Asia",
+        tool_filter_pop: "Pop. > 100M",
+        tool_layers_label: "Data Layers",
+        tool_layer_geo: "Geography",
+        tool_layer_demo: "Population",
+        tool_layer_eco: "Economy",
+        tool_layer_mil: "Military",
+        tool_layer_socio: "Socio-Economic",
+        tool_layer_env: "Energy & Env.",
+        tool_layer_tech: "Tech & Infra"
     }
 };
 
@@ -143,16 +177,22 @@ window.uiTranslations = {
 // Dil değiştirme işlemi SPA ve DOM yapısına uygun bir şekilde çalışarak tüm sayfayı yenilemez.
 function changeLanguage(lang) {
     window.currentLang = lang;
-    updateUITexts(); // Arayüzdeki metinleri güncelle
     
-    // Navbar'daki dil butonunun metnini güncelle
+    // UI Metinlerini Güncelle
+    if (typeof updateUITexts === 'function') updateUITexts();
+    
+    // Navbar butonunu güncelle
     const langBtn = document.getElementById('languageDropdown');
     if(langBtn) langBtn.innerText = lang.toUpperCase();
 
-    // Eğer açık bir popover varsa kapat (İçeriği eski dilde kalacağı için)
+    // Varsa açık popover'ı kapat
     const openPopover = document.querySelector('.popover');
-    if (openPopover) {
-        openPopover.remove();
+    if (openPopover) openPopover.remove();
+
+    // --- YENİ EKLENEN KISIM ---
+    // Harita üzerindeki ülke isimlerini yeni dile çevir
+    if (typeof window.updateLabelsLanguage === 'function') {
+        window.updateLabelsLanguage();
     }
 }
 
@@ -163,6 +203,14 @@ function updateUITexts() {
         const key = el.getAttribute("data-lang");
         if (uiTranslations[window.currentLang][key]) {
         el.innerText = uiTranslations[window.currentLang][key];
+        }
+    });
+
+    document.querySelectorAll("[data-lang-placeholder]").forEach((el) => {
+        const key = el.getAttribute("data-lang-placeholder");
+        // 'translations' yerine 'window.uiTranslations' yazıldı
+        if (window.uiTranslations[currentLang] && window.uiTranslations[currentLang][key]) {
+            el.setAttribute("placeholder", window.uiTranslations[currentLang][key]);
         }
     });
 }

@@ -102,7 +102,8 @@ svg {
   width: 90%;
   max-width: 1200px;
   height: auto;
-  transition: transform 0.2s ease-out; /* Zoom işlemi için transition */
+  transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Zoom işlemi için transition */
+  transform-origin: 0 0;
 }
 
 svg path {
@@ -139,7 +140,43 @@ svg g:hover path {
   transform: translate(10px, 10px); /* Mouse'un biraz sağ altına konumlandırma */
   border: 1px solid var(--zemin-rengi);
 }
+#tools-btn {
+    /* Varsayılan Hal: Tamamen yuvarlak köşeler */
+    border-radius: 1rem; /* rounded-4 ile aynı değer */
+    transition: border-radius 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    z-index: 1003; /* Menünün üstünde dursun */
+}
 
+/* Menü Açıldığında (aria-expanded="true" olduğunda) */
+#tools-btn[aria-expanded="true"] {
+    /* Alt köşeleri düzleştir -> Menüyle birleşir */
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    
+    /* İsteğe bağlı: Açıkken butonun gölgesini kaldırıp bütünlüğü artırabilirsiniz */
+    /* box-shadow: none !important; */
+    
+    /* Ayrım çizgisini yok etmek için */
+    border-bottom: 1px solid rgba(0,0,0,0.05); 
+}
+
+/* Menü Kartı */
+#toolsMenu .card {
+    /* Üst kısmı butonun hemen altına yapışsın */
+    margin-top: -1px; /* 1px yukarı çekerek olası çizgileri kapatır */
+    position: relative;
+    z-index: 1002;
+}
+#country-search:focus {
+    box-shadow: none;
+    border-color: #86b7fe;
+}
+
+#search-container:focus-within .input-group {
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+    transition: box-shadow 0.3s;
+}
 /* Bootstrap Popover sınıfını ezmek için */
 .popover {
   border: 2px solid var(--ana-renk);
@@ -235,6 +272,33 @@ svg g:hover path {
     transform-origin: center;
     transform-box: fill-box; /* KRİTİK EKLEME: Dönüşüm merkezini resme odaklar */
     animation: flagZoom 0.2s ease-out forwards;
+}
+
+.country-label {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Zoom yaptıkça fontu dinamik küçült (Sabit görünüm için) */
+    font-size: calc(21px / var(--map-scale, 1)); 
+    font-weight: normal;
+    fill: #222;
+    opacity: 0;            /* Varsayılan: Hepsi gizli */
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    text-anchor: middle;
+    dominant-baseline: middle;
+    text-shadow: 
+        -1px -1px 0 #fff,  
+         1px -1px 0 #fff,
+        -1px  1px 0 #fff,
+         1px  1px 0 #fff;
+    user-select: none;
+}
+
+#map-container.zoom-medium .country-label.label-tier-1 {
+    opacity: 0.7;
+}
+
+#map-container.zoom-high .country-label {
+    opacity: 0.7;
 }
 
 @keyframes flagZoom {

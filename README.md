@@ -33,6 +33,7 @@ Digital Atlas aims to simplify access to complex country data. Instead of browsi
 | Category | Technologies |
 |----------|--------------|
 | **Frontend** | HTML5, CSS3, JavaScript (ES6+) |
+| **Backend** | Python 3.13.3, Flask |
 | **Framework** | Bootstrap 5.3 (UI & Popovers) |
 | **Data & Assets** | JSON, SVG, FontAwesome, FlagCDN |
 | **Localization** | Custom JS Engine (`lang.js`) |
