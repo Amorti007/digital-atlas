@@ -59,6 +59,30 @@ window.uiTranslations = {
         header_demo: "Demografi",
         header_eco: "Ekonomi",
         header_mil: "Askeri & Güvenlik",
+        // Karşılaştırma Modalı
+        tray_header_title: "KARŞILAŞTIR",
+        modal_compare_title: "Karşılaştırma Tablosu",
+        modal_btn_close: "Kapat",
+        // Switch Kategorileri (Kısa)
+        cat_geo: "Coğrafya",
+        cat_demo: "Nüfus",
+        cat_eco: "Ekonomi",
+        cat_mil: "Askeri",
+        cat_socio: "Sosyoekonomik",
+        cat_env: "Enerji & Çevre",
+        cat_tech: "Teknoloji & Altyapı",
+        // Yeni Veri Etiketleri
+        lbl_employment: "İstihdam Oranı",
+        lbl_literacy: "Okuryazarlık",
+        lbl_co2: "CO2 Emisyonu",
+        lbl_renew: "Yenilenebilir En.",
+        lbl_internet: "İnternet Kull.",
+        lbl_mobile: "Mobil Hat",
+        // Karşılaştırma Tepsisi
+        tray_selected: "Ülke Seçildi",
+        tray_btn_compare: "Kıyasla",
+        btn_add_compare: "Karşılaştır",
+        btn_remove: "Kaldır",
         // Hakkında Sayfası İçeriği
         about_title: "Proje Hakkında",
         about_desc: "Dünya verilerini parmaklarınızın ucuna getiren interaktif keşif aracı.",
@@ -73,7 +97,7 @@ window.uiTranslations = {
         about_li_data: "Demografik Veriler (PopulationPyramid)",
         about_li_flags: "Bayrak API (FlagCDN)",
         about_li_ui: "Arayüz Kütüphanesi (Bootstrap 5)",
-        // --- ARAÇ ÇUBUĞU ---
+        // Araç Çubuğu
         tool_search_label: "Ülke Ara",
         tool_search_ph: "TR, Almanya...",
         tool_search_btn: "Bul",
@@ -87,7 +111,7 @@ window.uiTranslations = {
         tool_layer_demo: "Nüfus",
         tool_layer_eco: "Ekonomi",
         tool_layer_mil: "Askeri",
-        tool_layer_socio: "Sosyo-Ekonomik",
+        tool_layer_socio: "Sosyoekonomik",
         tool_layer_env: "Enerji & Çevre",
         tool_layer_tech: "Teknoloji & Altyapı",
     },
@@ -139,6 +163,30 @@ window.uiTranslations = {
         header_demo: "Demographics",
         header_eco: "Economy",
         header_mil: "Military & Security",
+        // Comparison Modal
+        tray_header_title: "COMPARE",
+        modal_compare_title: "Comparison Table",
+        modal_btn_close: "Close",
+        // Switch Categories (Short)
+        cat_geo: "Geography",
+        cat_demo: "Demographics",
+        cat_eco: "Economy",
+        cat_mil: "Military",
+        cat_socio: "Socio-Economic",
+        cat_env: "Energy & Env.",
+        cat_tech: "Tech & Infra",
+        // New Data Labels
+        lbl_employment: "Employment Rate",
+        lbl_literacy: "Literacy Rate",
+        lbl_co2: "CO2 Emissions",
+        lbl_renew: "Renewable Energy",
+        lbl_internet: "Internet Usage",
+        lbl_mobile: "Mobile Subs.",
+        // Comparison Tray
+        tray_selected: "Countries Selected",
+        tray_btn_compare: "Compare",
+        btn_add_compare: "Compare",
+        btn_remove: "Remove",
         // About Page Content
         about_title: "About the Project",
         about_desc: "An interactive exploration tool bringing world data to your fingertips.",
@@ -153,7 +201,7 @@ window.uiTranslations = {
         about_li_data: "Demographic Data (PopulationPyramid)",
         about_li_flags: "Flag API (FlagCDN)",
         about_li_ui: "UI Library (Bootstrap 5)",
-        // --- TOOLBAR ---
+        // Toolbar
         tool_search_label: "Search Country",
         tool_search_ph: "TR, Germany...",
         tool_search_btn: "Find",
@@ -193,6 +241,11 @@ function changeLanguage(lang) {
     // Harita üzerindeki ülke isimlerini yeni dile çevir
     if (typeof window.updateLabelsLanguage === 'function') {
         window.updateLabelsLanguage();
+    }
+
+    // 4. KRİTİK EKLEME: Karşılaştırma Tepsisini Yeniden Çiz (Buton dili düzelir)
+    if (typeof window.updateComparisonTray === 'function') {
+        window.updateComparisonTray();
     }
 }
 

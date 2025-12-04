@@ -44,7 +44,7 @@ body {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 0;
-  z-index: 9999;
+  z-index: 1020;
 }
 
 .navbar-brand,
@@ -179,6 +179,88 @@ svg g:hover path {
     box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
     transition: box-shadow 0.3s;
 }
+
+/* --- ARAMA ÖNERİLERİ --- */
+#search-suggestions {
+    background-color: rgba(255, 255, 255, 0.95); /* Hafif saydam beyaz */
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(0,0,0,0.1);
+}
+
+.search-feedback {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    margin-top: 5px;
+    padding: 6px 10px;
+    font-size: 0.8rem;
+    color: #dc3545;
+    background-color: #fff;
+    border: 1px solid #dc3545;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(220, 53, 69, 0.1);
+    z-index: 1060;
+    animation: fadeIn 0.2s ease-out;
+}
+
+/* Öneri Öğesi (Tekil Satır) */
+.suggestion-item {
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: none;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    color: #333;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    background-color: transparent !important;
+}
+
+.suggestion-item:last-child {
+    border-bottom: none;
+}
+
+.suggestion-item:hover, 
+.suggestion-item.active {
+    background-color: var(--ana-renk) !important; /* Temanın ana rengi */
+    color: var(--zemin-rengi) !important; /* Temanın zemin rengi (genelde açık) */
+}
+
+.suggestion-item:hover small,
+.suggestion-item.active small {
+    color: var(--zemin-rengi) !important;
+    opacity: 0.8 !important;
+}
+
+/* Koyu mod desteği */
+[data-theme="dark"] #search-suggestions {
+    background-color: rgba(30, 30, 30, 0.95);
+    border-color: rgba(255,255,255,0.1);
+}
+[data-theme="dark"] .suggestion-item {
+    color: #eee;
+    border-bottom-color: rgba(255,255,255,0.1);
+}
+[data-theme="dark"] .suggestion-item:hover {
+    background-color: var(--ana-renk) !important;
+    color: var(--zemin-rengi) !important;
+}
+
+path.dimmed {
+    opacity: 0.15;
+    pointer-events: none; /* Tıklamayı engeller */
+    fill: #808080 !important; /* Rengini grileştirir */
+    transition: opacity 0.4s ease, fill 0.4s ease;
+}
+
+[data-theme="dark"] path.dimmed {
+    opacity: 0.3;
+    fill: #444 !important;
+}
+
 /* Bootstrap Popover sınıfını ezmek için */
 .popover {
   border: 2px solid var(--ana-renk);
@@ -270,6 +352,163 @@ svg g:hover path {
   border-radius: 0 2px 2px 0;
 }
 
+/* --- KARŞILAŞTIRMA TABLOSU --- */
+#comparisonModal {
+    z-index: 1055 !important; /* Navbar'ın üstüne çıkar */
+}
+.modal-backdrop {
+    z-index: 1050 !important;
+}
+#comparison-controls {
+    background-color: var(--zemin-rengi) !important; /* Temaya uygun zemin */
+    color: var(--ana-renk); /* Temaya uygun yazı */
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+#comparisonModal .modal-header {
+    background-color: var(--ana-renk);
+    color: var(--zemin-rengi); /* Yazı rengi zemin rengi olsun (Okunabilirlik için) */
+}
+#comparisonModal .modal-body {
+    background-color: var(--zemin-rengi);
+}
+#comparisonModal .modal-content {
+    overflow: hidden; /* Köşelerin taşmasını önler */
+}
+#comparisonModal .table {
+    --bs-table-bg: transparent; /* Bootstrap varsayılanını ez */
+    color: var(--ana-renk);
+}
+#comparisonModal .table th {
+    font-weight: 600;
+    border-top: none;
+    vertical-align: middle;
+    background-color: var(--zemin-rengi);
+    color: var(--ana-renk);
+}
+#comparisonModal .table td {
+    font-size: 0.9rem;
+    padding: 12px 8px;
+    vertical-align: middle;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.val-winner {
+    font-weight: 900 !important; /* Ekstra Kalın */
+    color: var(--ana-renk);      /* Tema rengi */
+    text-decoration: underline;  /* Hafif alt çizgi (opsiyonel) */
+    text-decoration-thickness: 2px;
+    text-decoration-color: rgba(95, 111, 82, 0.3);
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) > * {
+    background-color: rgba(95, 111, 82, 0.05) !important;
+    box-shadow: none !important;
+}
+
+/* --- KARŞILAŞTIRMA MODALI (KOYU MOD & UX DÜZELTMELERİ) --- */
+
+#comparisonModal .modal-content {
+    background-color: #fff; /* Light Mode Zemin */
+    color: #333;
+    border: none;
+}
+
+/* 2. HEADER (BAŞLIK) */
+#comparisonModal .modal-header {
+    background-color: var(--ana-renk); /* Yeşil (#5f6f52) */
+    color: var(--zemin-rengi); /* Krem (#fefae0) */
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+#comparisonModal .btn-close {
+    filter: invert(1) grayscale(100%) brightness(200%); /* Beyaz çarpı */
+}
+
+/* 3. KONTROL PANELİ & TABLO BAŞLIKLARI */
+/* Mavi-gri yerine zemin rengini kullanıyoruz */
+#comparison-controls,
+#comparisonModal .table thead th {
+    background-color: #f8f9fa; /* Light Mode için çok açık gri */
+    color: var(--ana-renk);
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+/* 4. TABLO GÖVDESİ */
+#comparisonModal .table td {
+    vertical-align: middle;
+    padding: 12px 8px;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+/* Zebra Striping (Çok hafif tema rengi) */
+.table-striped > tbody > tr:nth-of-type(odd) > * {
+    background-color: rgba(95, 111, 82, 0.05) !important; /* --ana-renk %5 */
+    box-shadow: none !important;
+}
+
+/* Kazanan Stili (Yeşil değil, Tema Rengi) */
+.val-winner {
+    font-weight: 800;
+    color: var(--ana-renk);
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-decoration-color: rgba(95, 111, 82, 0.3);
+}
+
+/* 5. FOOTER */
+#comparisonModal .modal-footer {
+    background-color: #f8f9fa;
+    border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+/* --- KOYU MOD (DARK MODE) AYARLARI --- */
+[data-theme="dark"] #comparisonModal .modal-content {
+    background-color: var(--zemin-rengi); /* Koyu Siyah/Yeşil (#1a1c18) */
+    color: var(--ana-renk); /* Bej (#e6d6b8) */
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Header: Koyu modda ana renk (Bej) olduğu için yazı koyu olmalı */
+[data-theme="dark"] #comparisonModal .modal-header {
+    background-color: var(--ikincil-renk); /* Koyu Yeşil (#5f6f52) kullanıyoruz ki yazı okunsun */
+    color: #fff;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Kontroller ve Tablo Başlığı: Mavi-gri YOK! */
+[data-theme="dark"] #comparison-controls,
+[data-theme="dark"] #comparisonModal .table thead th {
+    background-color: var(--zemin-rengi) !important; /* Zeminle aynı */
+    color: var(--ana-renk) !important;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Tablo Satırları */
+[data-theme="dark"] #comparisonModal .table {
+    color: var(--ana-renk);
+    --bs-table-bg: transparent;
+}
+[data-theme="dark"] #comparisonModal .table td {
+    color: var(--ana-renk);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+/* Zebra Striping (Koyu mod) */
+[data-theme="dark"] .table-striped > tbody > tr:nth-of-type(odd) > * {
+    background-color: rgba(255, 255, 255, 0.03) !important; /* Çok hafif aydınlık */
+}
+
+/* Footer: Mavi-gri YOK! */
+[data-theme="dark"] #comparisonModal .modal-footer {
+    background-color: var(--zemin-rengi) !important;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Kazanan (Koyu Mod) */
+[data-theme="dark"] .val-winner {
+    color: #fff; /* Parlak beyaz */
+    text-decoration-color: var(--ana-renk);
+}
+
 .flag-anim {
     transform-origin: center;
     transform-box: fill-box; /* KRİTİK EKLEME: Dönüşüm merkezini resme odaklar */
@@ -307,6 +546,132 @@ svg g:hover path {
     0% { transform: scale(0.9); }
     100% { transform: scale(1.15); } /* %35 büyüme yeterli */
 }
+
+#comparison-tray {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%) translateY(150%); /* Başlangıçta aşağıda gizli */
+    display: flex;
+    align-items: flex-end;
+    gap: 10px;
+    padding: 10px 15px;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(8px);
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1); /* Yaylanma efekti */
+    z-index: 900;
+    max-width: 90%;
+}
+
+#comparison-tray.active {
+    transform: translateX(-50%) translateY(0); /* Yukarı fırlar */
+}
+
+/* Tepsideki Ülke Kartları */
+.compare-card {
+    position: relative;
+    width: 70px;
+    height: 85px;
+    background: #fff;
+    border-radius: 8px;
+    border: 1px solid rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: transform 0.2s;
+}
+
+.compare-card:hover {
+    transform: translateY(-3px);
+}
+
+.compare-card img {
+    width: 40px;
+    height: 26px;
+    object-fit: cover;
+    border-radius: 3px;
+    margin-bottom: 6px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.compare-card span {
+    font-size: 0.65rem;
+    font-weight: 600;
+    text-align: center;
+    line-height: 1.1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 90%;
+}
+
+/* Silme Butonu (Kartın üzerinde) */
+.btn-remove-card {
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    width: 20px;
+    height: 20px;
+    background: #dc3545;
+    color: white;
+    border-radius: 50%;
+    border: 2px solid white;
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.2s;
+    z-index: 10;
+}
+
+.compare-card:hover .btn-remove-card {
+    opacity: 1;
+}
+
+[data-theme="dark"] .search-feedback {
+    background-color: #2c3e50;
+    color: #e74c3c;
+    border-color: #c0392b;
+}
+[data-theme="dark"] .compare-card {
+    background-color: #34495e;
+    color: #ecf0f1;
+    border-color: rgba(255,255,255,0.1);
+}
+
+/* Karşılaştır Aksiyon Butonu */
+.btn-compare-action {
+    height: 80px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    background-color: var(--ana-renk);
+    color: var(--zemin-rengi);
+    border: none;
+    transition: all 0.2s;
+}
+
+.btn-compare-action:hover {
+    filter: brightness(1.1);
+    transform: scale(1.05);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
 /* Footer Stilleri */
 .footer {
   background-color: var(--ana-renk);

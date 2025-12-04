@@ -1,10 +1,10 @@
 // DIJITAL ATLAS - ANA JAVASCRIPT MOTORU
 
 // --- GLOBAL DEĞİŞKENLER ---
+window.globalData = {};         // Dünya verisi
 let activeDetailPopover = null; // Açık olan detay penceresi
 let hoverTooltip = null;        // Mouse ile gezilen tooltip
 let hoverTimer = null;          // Hover zamanlayıcı 
-let globalData = {};            // Dünya verisi
 let cursorX = 0;                // Mouse X koordinatı
 let cursorY = 0;                // Mouse Y koordinatı
 let selectedCountryCode = null; // Seçili ülke kodu
@@ -20,16 +20,29 @@ async function loadPage(pageName) {
     if (!pageResponse.ok) throw new Error("Sayfa yüklenemedi");
     const html = await pageResponse.text();
     contentDiv.innerHTML = html;
+    
+    // 1. Tooltipleri Başlat
     initUITooltips();
+
+    // 2. Eğer Harita Sayfasıysa Motorları Başlat
     if (pageName === "world_map") {
-      // Paralel veri yükleme stratejisi
-      await loadData();   // Veriyi çek
-      loadSVGMap();       // SVG haritayı yükle
+      // Arama ve Filtreleri Başlat (HTML artık var!)
+      if (typeof initSearchSuggestions === 'function') initSearchSuggestions();
+      if (typeof initFilterListeners === 'function') initFilterListeners();
+
+      // Veriyi ve Haritayı Yükle
+      initCollapseIcons();
+      
+      await loadData(); 
+      loadSVGMap();       
     }
     
+    // 3. Dil Çevirilerini Uygula
     if(typeof updateUITexts === "function") updateUITexts();
+
   } catch (error) {
     contentDiv.innerHTML = `<div class="alert alert-danger m-5">Hata: ${error.message}</div>`;
+    console.error(error);
   }
 }
 
@@ -149,8 +162,8 @@ function initMapInteractions() {
 
       targets.forEach((target) => {
           target.style.fill = ""; 
-          // (Opsiyonel) Animasyon sınıfını temizle ki sonraki girişte temiz başlasın
-          // Ama createFlagPattern içindeki resimden silmek daha zordur, paintCountry zaten siliyor.
+          target.style.fillOpacity = ""; // Opaklığı sil
+          target.classList.remove("flag-anim"); // Animasyon sınıfını sil
       });
   };
 
@@ -164,7 +177,13 @@ function initMapInteractions() {
   };
 
   window.resetCountry = (code) => {
-      clearCountry(code);
+      const targetCode = code || selectedCountryCode;
+      if (targetCode) {
+          clearCountry(targetCode);
+          if (targetCode === selectedCountryCode) {
+              selectedCountryCode = null;
+          }
+      }
   };
 
   // EVENT LISTENERS
@@ -658,91 +677,104 @@ function updateLabelsLanguage() {
 }
 
 // --- 5. DETAYLI İÇERİK OLUŞTURUCU ---
+// --- 5. DETAYLI İÇERİK OLUŞTURUCU (TAM VERİ SETİ + FİLTRELER + KARŞILAŞTIRMA) ---
 function generateDetailContent(code, pathElement) {
-    // Dil ayarlarını al
+    // 1. DİL VE VERİ AYARLARI
     const currentLang = window.currentLang || 'tr';
     const sfx = "_" + currentLang;
     const t = (key) => window.uiTranslations?.[currentLang]?.[key] || key;
 
-    const data = globalData[code];
+    // Veriyi güvenli al
+    const data = (window.globalData && window.globalData[code]) ? window.globalData[code] : null;
     const defaultName = pathElement.getAttribute("name") || code;
     
-    if (!data)
-        return `<strong>${defaultName}</strong><br><span class="text-muted small">${t('no_data')}</span>`;
+    if (!data) return `<strong>${defaultName}</strong><br><span class="text-muted small">${t('no_data')}</span>`;
 
-    // FlagCDN kullanarak bayrak URL'si oluşturma
-    const customFlags = {
-      "NC": "https://upload.wikimedia.org/wikipedia/commons/1/1e/Flag_of_the_Turkish_Republic_of_Northern_Cyprus.svg",
-      "IC": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Flag_of_the_Canary_Islands_%28simple%29.svg"
-    }
-    let flagUrl = customFlags[code] || `https://flagcdn.com/w80/${code.toLowerCase()}.png`;
-
-    //Sayı formatlayıcılar
+    // 2. FORMATLAYICILAR
     const locale = currentLang === 'tr' ? 'tr-TR' : 'en-US';
     const formatNum = (n) => (n ? new Intl.NumberFormat(locale).format(n) : "-");    
     const formatCompact = (n) => (n ? new Intl.NumberFormat(locale, { notation: "compact", compactDisplay: "long", maximumFractionDigits: 1 }).format(n) : "-");
     const currencyStandard = (n) => (n ? `$${formatNum(n)}` : "-");
     const currencyCompact = (n) => (n ? `$${formatCompact(n)}` : "-");
+    const fmt = (n, suffix="") => n ? formatNum(n) + suffix : "-"; // Yardımcı kısa format
 
-    // Veri parçalarını al (Veri yoksa "-" koyarak "null" görünmesini engelliyoruz.)
+    // 3. BAYRAK
+    const customFlags = {
+      "NC": "https://upload.wikimedia.org/wikipedia/commons/1/1e/Flag_of_the_Turkish_Republic_of_Northern_Cyprus.svg",
+      "IC": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Flag_of_the_Canary_Islands_%28simple%29.svg"
+    };
+    let flagUrl = customFlags[code] || `https://flagcdn.com/w80/${code.toLowerCase()}.png`;
+
+    // 4. MEVCUT VERİLERİ HAZIRLA (Sizin kodunuzdaki değişkenler)
     const nameTr = data.names?.[currentLang] || defaultName;
     const nameEn = data.names?.en || "";
     const desc = data.general_info?.['description' + sfx] || "";
     const capital = data.geography?.['capital' + sfx] || "-";
     const continent = data.geography?.['continent' + sfx] || "-";
-    const area = data.geography?.area_sq_km
-        ? formatNum(data.geography.area_sq_km) + " km²"
-        : "-";
+    const area = data.geography?.area_sq_km ? formatNum(data.geography.area_sq_km) + " km²" : "-";
     const timezone = data.geography?.timezone || "-";
     const gov = data.politics?.['government' + sfx] || "-";
     const indep = data.politics?.independence_date || "-";
     const gdp = data.economy?.gdp_usd ? currencyCompact(data.economy.gdp_usd) : "-";
-    const gdpPer = data.economy?.gdp_per_capita_usd
-        ? currencyStandard(data.economy.gdp_per_capita_usd)
-        : "-";
-    const inflation = data.economy?.inflation_rate
-        ? `%${data.economy.inflation_rate}`
-        : "-";
-    const unemploy = data.economy?.unemployment_rate
-        ? `%${data.economy.unemployment_rate}`
-        : "-";
-    const minWage = data.economy?.minimum_wage_usd
-        ? currencyStandard(data.economy.minimum_wage_usd)
-        : "-";
+    const gdpPer = data.economy?.gdp_per_capita_usd ? currencyStandard(data.economy.gdp_per_capita_usd) : "-";
+    const inflation = data.economy?.inflation_rate ? `%${data.economy.inflation_rate}` : "-";
+    const unemploy = data.economy?.unemployment_rate ? `%${data.economy.unemployment_rate}` : "-";
+    const minWage = data.economy?.minimum_wage_usd ? currencyStandard(data.economy.minimum_wage_usd) : "-";
     const money = data.economy?.['currency' + sfx] || "-";
-    const population = data.demographics?.total_population
-        ? formatNum(data.demographics.total_population)
-        : "-";
+    const population = data.demographics?.total_population ? formatNum(data.demographics.total_population) : "-";
     const lifeExp = data.demographics?.life_expectancy || "-";
     const langSpoken = data.demographics?.['most_spoken_language' + sfx] || "-";
     const birthRate = data.demographics?.birth_rate || "-";
     const fireRank = data.military?.global_firepower_rank || "-";
-    const activeMil = data.military?.active_personnel
-        ? formatNum(data.military.active_personnel)
-        : "-";
-    const reserveMil = data.military?.reserve_personnel
-        ? formatNum(data.military.reserve_personnel)
-        : "-";
-    const totalMil = data.military?.total_personnel
-        ? formatNum(data.military.total_personnel)
-        : "-";
-    const defBudget = data.military?.defense_budget_usd
-        ? currencyCompact(data.military.defense_budget_usd)
-        : "-";
+    const activeMil = data.military?.active_personnel ? formatNum(data.military.active_personnel) : "-";
+    const reserveMil = data.military?.reserve_personnel ? formatNum(data.military.reserve_personnel) : "-";
+    const totalMil = data.military?.total_personnel ? formatNum(data.military.total_personnel) : "-";
+    const defBudget = data.military?.defense_budget_usd ? currencyCompact(data.military.defense_budget_usd) : "-";
     const intel = data.general_info?.intelligence_agency || "-";
 
-    // Nüfus piramidi grafiğini oluşturma
-    const pyramidHtml = generatePyramidChart(
-        data.demographics?.population_pyramid);
-    
-    return `
-        <div class="text-center mb-3">
-            <img src="${flagUrl}" width="100" class="img-thumbnail mb-2 shadow-sm">
-            <h5 class="fw-bold mb-0 text-dark">${nameTr}</h5>
-            <small class="text-muted d-block">${nameEn}</small>
-            <p class="small mt-2 mb-0 fst-italic text-secondary px-2 border-top pt-2" style="font-size: 0.8rem;">"${desc}"</p>
-        </div>
+    // 5. YENİ VERİLER (Socio, Energy, Tech)
+    const literacy = data.demographics?.literacy_rate ? `%${data.demographics.literacy_rate}` : "-";
+    const employment = data.economy?.employment_rate ? `%${data.economy.employment_rate}` : "-";
+    const co2 = data.energy_environment?.co2_emissions_mt ? formatNum(data.energy_environment.co2_emissions_mt) + " Mt" : "-";
+    const renewable = data.energy_environment?.renewable_energy_percent ? `%${data.energy_environment.renewable_energy_percent}` : "-";
+    const internet = data.technology?.internet_users_percent ? `%${data.technology.internet_users_percent}` : "-";
+    const mobile = data.technology?.mobile_subscriptions_per_100 ? data.technology.mobile_subscriptions_per_100 + " / 100" : "-";
 
+    // 6. GÖRÜNÜRLÜK KONTROLÜ (Switchler)
+    const showGeo = document.getElementById("showGeo")?.checked ?? true;
+    const showDemo = document.getElementById("showDemo")?.checked ?? true;
+    const showEco = document.getElementById("showEco")?.checked ?? true;
+    const showMil = document.getElementById("showMil")?.checked ?? true;
+    const showSocio = document.getElementById("showSocioeconomics")?.checked ?? false;
+    const showEnv = document.getElementById("showEnvironment")?.checked ?? false;
+    const showTech = document.getElementById("showTechnology")?.checked ?? false;
+
+    // --- HTML İNŞASI ---
+    
+    // BAŞLIK (Header + Compare Button)
+    let html = `
+        <div class="d-flex align-items-center justify-content-between mb-3 border-bottom pb-2">
+            <div class="text-start">
+                <div class="d-flex align-items-center">
+                    <img src="${flagUrl}" width="40" class="img-thumbnail me-2 shadow-sm">
+                    <h5 class="fw-bold mb-0 text-dark">${nameTr}</h5>
+                </div>
+                <small class="text-muted d-block mt-1">${nameEn}</small>
+                <p class="small mt-1 mb-0 fst-italic text-secondary" style="font-size: 0.75rem; line-height: 1.2;">"${desc}"</p>
+            </div>
+            
+            <button class="btn btn-success rounded-circle shadow-sm ms-2 d-flex align-items-center justify-content-center border-0" 
+                    onclick="if(window.addToComparison) window.addToComparison('${code}')" 
+                    title="${currentLang==='tr'?'Karşılaştırmaya Ekle':'Add to Compare'}"
+                    style="width: 32px; height: 32px; flex-shrink: 0; background-color: #28a745;">
+                <i class="fas fa-plus text-white" style="font-size: 0.8rem;"></i>
+            </button>
+        </div>
+    `;
+
+    // A. COĞRAFYA (showGeo)
+    if (showGeo) {
+        html += `
         <div class="info-box">
             <h6 class="border-bottom pb-1 text-success fw-bold small"><i class="fas fa-globe-americas me-2"></i>${t('header_geo')}</h6>
             <ul class="list-unstyled small mb-0">
@@ -753,8 +785,14 @@ function generateDetailContent(code, pathElement) {
                 <li><strong>${t('lbl_timezone')}</strong> ${timezone}</li>
                 <li><strong>${t('lbl_indep')}</strong> ${indep}</li>
             </ul>
-        </div>
+        </div>`;
+    }
 
+    // B. DEMOGRAFİ (showDemo)
+    if (showDemo) {
+        // Piramit HTML'i
+        const pyramidHtml = generatePyramidChart(data.demographics?.population_pyramid);
+        html += `
         <div class="info-box">
             <h6 class="border-bottom pb-1 text-primary fw-bold small"><i class="fas fa-users me-2"></i>${t('header_demo')}</h6>
             <ul class="list-unstyled small mb-2">
@@ -763,7 +801,6 @@ function generateDetailContent(code, pathElement) {
                 <li><strong>${t('lbl_birth')}</strong> ${birthRate}</li>
                 <li><strong>${t('lbl_lang')}</strong> ${langSpoken}</li>
             </ul>
-            
             <div class="mt-2 pt-2 border-top">
                 <div class="d-flex justify-content-between small text-muted mb-1" style="font-size:0.6rem">
                     <span><i class="fas fa-male text-primary"></i> ${currentLang === 'tr' ? 'Erkek' : 'Male'}</span>
@@ -772,8 +809,12 @@ function generateDetailContent(code, pathElement) {
                 </div>
                 ${pyramidHtml}
             </div>
-        </div>
+        </div>`;
+    }
 
+    // C. EKONOMİ (showEco)
+    if (showEco) {
+        html += `
         <div class="info-box">
             <h6 class="border-bottom pb-1 text-warning fw-bold small"><i class="fas fa-coins me-2"></i>${t('header_eco')}</h6>
             <ul class="list-unstyled small mb-0">
@@ -784,9 +825,13 @@ function generateDetailContent(code, pathElement) {
                 <li><strong>${t('lbl_wage')}</strong> ${minWage}</li>
                 <li><strong>${t('lbl_currency')}</strong> ${money}</li>
             </ul>
-        </div>
+        </div>`;
+    }
 
-        <div class="info-box mb-0">
+    // D. ASKERİ (showMil)
+    if (showMil) {
+        html += `
+        <div class="info-box mb-2">
             <h6 class="border-bottom pb-1 text-danger fw-bold small"><i class="fas fa-shield-alt me-2"></i>${t('header_mil')}</h6>
             <ul class="list-unstyled small mb-0">
                 <li><strong>${t('lbl_rank')}</strong> #${fireRank}</li>
@@ -796,13 +841,90 @@ function generateDetailContent(code, pathElement) {
                 <li><strong>${t('lbl_budget')}</strong> ${defBudget}</li>
                 <li><strong>${t('lbl_intel')}</strong> ${intel}</li>
             </ul>
-        </div>
+        </div>`;
+    }
 
+    // --- YENİ EKLENEN KATEGORİLER ---
+
+    // E. SOSYO-EKONOMİK (showSocio)
+    if (showSocio) {
+        html += `
+        <div class="info-box mb-2">
+            <h6 class="text-info fw-bold small border-bottom pb-1"><i class="fas fa-briefcase me-2"></i>Sosyo-Ekonomik</h6>
+            <ul class="list-unstyled small mb-0">
+                <li><strong>İstihdam Oranı:</strong> ${employment}</li>
+                <li><strong>Okuryazarlık:</strong> ${literacy}</li>
+                <li><strong>Asgari Ücret:</strong> ${minWage}</li> 
+            </ul>
+        </div>`;
+    }
+
+    // F. ENERJİ & ÇEVRE (showEnv)
+    if (showEnv) {
+        html += `
+        <div class="info-box mb-2">
+            <h6 class="text-success fw-bold small border-bottom pb-1"><i class="fas fa-leaf me-2"></i>Enerji & Çevre</h6>
+            <ul class="list-unstyled small mb-0">
+                <li><strong>CO2 Emisyonu:</strong> ${co2}</li>
+                <li><strong>Yenilenebilir Enerji:</strong> ${renewable}</li>
+            </ul>
+        </div>`;
+    }
+
+    // G. TEKNOLOJİ (showTech)
+    if (showTech) {
+        html += `
+        <div class="info-box mb-2">
+            <h6 class="text-secondary fw-bold small border-bottom pb-1"><i class="fas fa-wifi me-2"></i>Teknoloji</h6>
+            <ul class="list-unstyled small mb-0">
+                <li><strong>İnternet Kull.:</strong> ${internet}</li>
+                <li><strong>Mobil Hat:</strong> ${mobile}</li>
+            </ul>
+        </div>`;
+    }
+
+    // FOOTER (Veri Yılı)
+    html += `
         <div class="text-center text-muted mt-2 pt-2 border-top" style="font-size: 0.65rem;">
             <i class="fas fa-info-circle me-1"></i> ${t('lbl_data_year') || 'Veriler 2024 yılına aittir.'}
         </div>
     `;
+
+    return html;
 }
+
+window.refreshActivePopover = function() {
+    // 1. Açık bir popover ve seçili ülke var mı?
+    if (!activeDetailPopover || !selectedCountryCode) return;
+
+    // 2. Hedef elementi bul
+    let element = document.getElementById(selectedCountryCode);
+    if (!element) {
+        const group = document.querySelector(`g#${selectedCountryCode}`);
+        if(group) element = group.querySelector("path");
+    }
+    if (!element) return;
+
+    // 3. İçeriği yeni switch ayarlarına göre oluştur
+    const newContent = generateDetailContent(selectedCountryCode, element);
+
+    // 4. Popover gövdesini bul ve içeriği değiştir
+    const popoverBody = document.querySelector('.popover-body');
+    if (popoverBody) {
+        popoverBody.innerHTML = newContent;
+
+        // --- KRİTİK: Piramit Animasyonunu Tekrar Tetikle ---
+        const bars = popoverBody.querySelectorAll(".bar-fill");
+        if (bars.length > 0) {
+            setTimeout(() => {
+                bars.forEach((bar) => {
+                    const targetWidth = bar.getAttribute("data-width");
+                    if(targetWidth) bar.style.width = targetWidth;
+                });
+            }, 50);
+        }
+    }
+};
 
 // --- 6. PİRAMİT GRAFİĞİ OLUŞTURUCU ---
 /* Burası projenin en karmaşık algoritmik kısmı. Ham veriyi alıp, 
@@ -909,6 +1031,41 @@ function showDetailPopover(element, code) {
   activeDetailPopover = popover;
 }
 
+function initCollapseIcons() {
+    // 1. Üst Araç Çubuğu (Aşağı Açılır)
+    const toolsMenu = document.getElementById('toolsMenu');
+    const toggleIcon = document.getElementById('toggleIcon');
+    
+    if (toolsMenu && toggleIcon) {
+        // Bootstrap eventlerini dinle
+        toolsMenu.addEventListener('show.bs.collapse', () => {
+            toggleIcon.classList.remove('fa-chevron-down');
+            toggleIcon.classList.add('fa-chevron-up');
+        });
+        toolsMenu.addEventListener('hide.bs.collapse', () => {
+            toggleIcon.classList.remove('fa-chevron-up');
+            toggleIcon.classList.add('fa-chevron-down');
+        });
+    }
+
+    // 2. Alt Karşılaştırma Tepsisi (Yukarı Açılır)
+    // Not: Bu elementler dinamik olarak görünür/gizlenir ama DOM'da vardır.
+    const compareTray = document.getElementById('compareTray');
+    const compareIcon = document.getElementById('compareIcon');
+
+    if (compareTray && compareIcon) {
+        // Tepsi açıldığında (Yukarı çıktığında) -> İkon Aşağı baksın (Kapatmak için)
+        compareTray.addEventListener('show.bs.collapse', () => {
+            compareIcon.classList.remove('fa-chevron-up');
+            compareIcon.classList.add('fa-chevron-down');
+        });
+        // Tepsi kapandığında (Aşağı indiğinde) -> İkon Yukarı baksın (Açmak için)
+        compareTray.addEventListener('hide.bs.collapse', () => {
+            compareIcon.classList.remove('fa-chevron-down');
+            compareIcon.classList.add('fa-chevron-up');
+        });
+    }
+}
 // --- ZOOM & PAN (MOUSE TEKERLEĞİ İÇİN DÜZELTİLMİŞ) ---
 let currentScale = 1,
   currentTranslateX = 0,
