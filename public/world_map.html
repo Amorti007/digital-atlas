@@ -1,131 +1,332 @@
 <div class="info-header text-center fade-in mb-4">
-   <h1 class="display-6 fw-bold" style="color: var(--ana-renk)" data-lang="map_header_title">Dünya Nüfus ve İstatistik Atlası</h1>
-   <p class="lead fs-6" data-lang="map_header_desc">
-      Ülkelerin üzerine gelerek temel bilgilere, tıklayarak detaylı verilere ulaşabilirsiniz.
-   </p>
+  <h1
+    class="display-6 fw-bold"
+    style="color: var(--ana-renk)"
+    data-lang="map_header_title"
+  >
+    Dünya Nüfus ve İstatistik Atlası
+  </h1>
+  <p class="lead fs-6" data-lang="map_header_desc">
+    Ülkelerin üzerine gelerek temel bilgilere, tıklayarak detaylı verilere
+    ulaşabilirsiniz.
+  </p>
 </div>
-<div class="w-100 px-3 px-md-4 mb-3 fade-in" style="z-index: 1002;">
-    
-    <button id="tools-btn" class="btn w-100 shadow-sm py-1 border-0" 
-            type="button" 
-            data-bs-toggle="collapse" 
-            data-bs-target="#toolsMenu" 
-            aria-expanded="false" 
-            aria-controls="toolsMenu"
-            style="height: 30px; line-height: 1; 
-                   background-color: var(--ana-renk); 
-                   color: var(--zemin-rengi);"> 
-        <i class="fas fa-chevron-down small"></i>
-    </button>
+<div class="w-100 px-3 px-md-4 mb-3 fade-in" style="z-index: 1002">
+  <button
+    id="tools-btn"
+    class="btn w-100 shadow-sm py-1 border-0"
+    type="button"
+    data-bs-toggle="collapse"
+    data-bs-target="#toolsMenu"
+    aria-expanded="false"
+    aria-controls="toolsMenu"
+    style="
+      height: 30px;
+      line-height: 1;
+      background-color: var(--ana-renk);
+      color: var(--zemin-rengi);
+    "
+  >
+    <i class="fas fa-chevron-down small"></i>
+  </button>
 
-    <div class="collapse mt-0" id="toolsMenu">
-        <div class="card card-body shadow-sm border-0 rounded-top-0 rounded-bottom-4 backdrop-blur"
-             style="background-color: var(--ikincil-renk); color: #333;">
-            <div class="container-fluid px-0">
-                <div class="row g-0">
-                    
-                    <div class="col-lg-4 col-md-12 border-end border-dark border-opacity-10 p-3 text-start">
-                        <label class="small fw-bold mb-2 opacity-75 d-block" data-lang="tool_search_label">
-                            <i class="fas fa-search me-1"></i>Ülke Ara
-                        </label>
-                        <div class="input-group input-group-sm">
-                            <span class="input-group-text bg-transparent border-dark border-opacity-25 border-end-0 text-dark">
-                                <i class="fas fa-globe"></i>
-                            </span>
-                            <input type="text" id="country-search" 
-                                   class="form-control bg-transparent border-dark border-opacity-25 border-start-0 ps-0 text-dark placeholder-dark" 
-                                   data-lang-placeholder="tool_search_ph"
-                                   placeholder="Türkiye, Almanya..." 
-                                   onkeydown="if(event.key === 'Enter') searchCountry()">
-                            <button class="btn btn-outline-dark border-opacity-25" type="button" onclick="searchCountry()" data-lang="tool_search_btn">
-                                Bul
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-2 col-md-4 border-end border-dark border-opacity-10 p-3 text-start">
-                        <label class="small fw-bold mb-2 opacity-75 d-block" data-lang="tool_filter_label">
-                            <i class="fas fa-filter me-1"></i>Bölge Filtrele
-                        </label>
-                        <div class="d-flex flex-column gap-1">
-                            <div class="form-check d-flex align-items-center gap-2 mb-0 min-h-0">
-                                <input class="form-check-input mt-0" type="radio" name="mapFilter" id="filterAll" value="all" checked style="accent-color: var(--ana-renk);">
-                                <label class="form-check-label small lh-1 pt-1" for="filterAll" data-lang="tool_filter_all">Tümü</label>
-                            </div>
-                            <div class="form-check d-flex align-items-center gap-2 mb-0 min-h-0">
-                                <input class="form-check-input mt-0" type="radio" name="mapFilter" id="filterEU" value="eu" style="accent-color: var(--ana-renk);">
-                                <label class="form-check-label small lh-1 pt-1" for="filterEU" data-lang="tool_filter_eu">Avrupa</label>
-                            </div>
-                            <div class="form-check d-flex align-items-center gap-2 mb-0 min-h-0">
-                                <input class="form-check-input mt-0" type="radio" name="mapFilter" id="filterAsia" value="asia" style="accent-color: var(--ana-renk);">
-                                <label class="form-check-label small lh-1 pt-1" for="filterAsia" data-lang="tool_filter_asia">Asya</label>
-                            </div>
-                            <div class="form-check d-flex align-items-center gap-2 mb-0 min-h-0">
-                                <input class="form-check-input mt-0" type="radio" name="mapFilter" id="filterPop" value="pop100" style="accent-color: var(--ana-renk);">
-                                <label class="form-check-label small lh-1 pt-1" for="filterPop" data-lang="tool_filter_pop">Nüfus > 100M</label>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-6 col-md-8 p-3 text-start">
-                        <label class="small fw-bold mb-2 opacity-75 d-block" data-lang="tool_layers_label">
-                            <i class="fas fa-layer-group me-1"></i>Gösterilecek Veriler
-                        </label>
-                        
-                        <div class="row g-2">
-                            <div class="col-6">
-                                <div class="form-check form-switch d-flex align-items-center gap-2 mb-1 ps-0">
-                                    <input class="form-check-input ms-0 mt-0" type="checkbox" id="showGeo" checked style="accent-color: var(--ana-renk);">
-                                    <label class="form-check-label small lh-1 pt-1" for="showGeo" data-lang="tool_layer_geo">Coğrafya</label>
-                                </div>
-                                <div class="form-check form-switch d-flex align-items-center gap-2 mb-1 ps-0">
-                                    <input class="form-check-input ms-0 mt-0" type="checkbox" id="showDemo" checked style="accent-color: var(--ana-renk);">
-                                    <label class="form-check-label small lh-1 pt-1" for="showDemo" data-lang="tool_layer_demo">Nüfus</label>
-                                </div>
-                                 <div class="form-check form-switch d-flex align-items-center gap-2 mb-1 ps-0">
-                                    <input class="form-check-input ms-0 mt-0" type="checkbox" id="showEco" checked style="accent-color: var(--ana-renk);">
-                                    <label class="form-check-label small lh-1 pt-1" for="showEco" data-lang="tool_layer_eco">Ekonomi</label>
-                                </div>
-                                <div class="form-check form-switch d-flex align-items-center gap-2 mb-1 ps-0">
-                                    <input class="form-check-input ms-0 mt-0" type="checkbox" id="showMil" checked style="accent-color: var(--ana-renk);">
-                                    <label class="form-check-label small lh-1 pt-1" for="showMil" data-lang="tool_layer_mil">Askeri</label>
-                                </div>
-                            </div>
-
-                            <div class="col-6">
-                                 <div class="form-check form-switch d-flex align-items-center gap-2 mb-1 ps-0">
-                                    <input class="form-check-input ms-0 mt-0" type="checkbox" id="showSocioeconomics" style="accent-color: var(--ana-renk);">
-                                    <label class="form-check-label small lh-1 pt-1" for="showSocioeconomics" data-lang="tool_layer_socio">Sosyo-Ekonomik</label>
-                                </div>
-                                 <div class="form-check form-switch d-flex align-items-center gap-2 mb-1 ps-0">
-                                    <input class="form-check-input ms-0 mt-0" type="checkbox" id="showEnvironment" style="accent-color: var(--ana-renk);">
-                                    <label class="form-check-label small lh-1 pt-1" for="showEnvironment" data-lang="tool_layer_env">Enerji & Çevre</label>
-                                </div>
-                                 <div class="form-check form-switch d-flex align-items-center gap-2 mb-1 ps-0">
-                                    <input class="form-check-input ms-0 mt-0" type="checkbox" id="showTechnology" style="accent-color: var(--ana-renk);">
-                                    <label class="form-check-label small lh-1 pt-1" for="showTechnology" data-lang="tool_layer_tech">Teknoloji & Altyapı</label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
+  <div class="collapse mt-0" id="toolsMenu">
+    <div
+      class="card card-body shadow-sm border-0 rounded-top-0 rounded-bottom-4 backdrop-blur"
+      style="background-color: var(--ikincil-renk); color: #333"
+    >
+      <div class="container-fluid px-0">
+        <div class="row g-0">
+          <div
+            class="col-lg-4 col-md-12 border-end border-dark border-opacity-10 p-3 text-start"
+          >
+            <label
+              class="small fw-bold mb-2 opacity-75 d-block"
+              data-lang="tool_search_label"
+            >
+              <i class="fas fa-search me-1"></i>Ülke Ara
+            </label>
+            <div class="input-group input-group-sm">
+              <span
+                class="input-group-text bg-transparent border-dark border-opacity-25 border-end-0 text-dark"
+              >
+                <i class="fas fa-globe"></i>
+              </span>
+              <input
+                type="text"
+                id="country-search"
+                class="form-control bg-transparent border-dark border-opacity-25 border-start-0 ps-0 text-dark placeholder-dark"
+                data-lang-placeholder="tool_search_ph"
+                placeholder="Türkiye, Almanya..."
+                onkeydown="if(event.key === 'Enter') searchCountry()"
+              />
+              <button
+                class="btn btn-outline-dark border-opacity-25"
+                type="button"
+                onclick="searchCountry()"
+                data-lang="tool_search_btn"
+              >
+                Bul
+              </button>
             </div>
+          </div>
+
+          <div
+            class="col-lg-2 col-md-4 border-end border-dark border-opacity-10 p-3 text-start"
+          >
+            <label
+              class="small fw-bold mb-2 opacity-75 d-block"
+              data-lang="tool_filter_label"
+            >
+              <i class="fas fa-filter me-1"></i>Bölge Filtrele
+            </label>
+            <div class="d-flex flex-column gap-1">
+              <div
+                class="form-check d-flex align-items-center gap-2 mb-0 min-h-0"
+              >
+                <input
+                  class="form-check-input mt-0"
+                  type="radio"
+                  name="mapFilter"
+                  id="filterAll"
+                  value="all"
+                  checked
+                  style="accent-color: var(--ana-renk)"
+                />
+                <label
+                  class="form-check-label small lh-1 pt-1"
+                  for="filterAll"
+                  data-lang="tool_filter_all"
+                  >Tümü</label
+                >
+              </div>
+              <div
+                class="form-check d-flex align-items-center gap-2 mb-0 min-h-0"
+              >
+                <input
+                  class="form-check-input mt-0"
+                  type="radio"
+                  name="mapFilter"
+                  id="filterEU"
+                  value="eu"
+                  style="accent-color: var(--ana-renk)"
+                />
+                <label
+                  class="form-check-label small lh-1 pt-1"
+                  for="filterEU"
+                  data-lang="tool_filter_eu"
+                  >Avrupa</label
+                >
+              </div>
+              <div
+                class="form-check d-flex align-items-center gap-2 mb-0 min-h-0"
+              >
+                <input
+                  class="form-check-input mt-0"
+                  type="radio"
+                  name="mapFilter"
+                  id="filterAsia"
+                  value="asia"
+                  style="accent-color: var(--ana-renk)"
+                />
+                <label
+                  class="form-check-label small lh-1 pt-1"
+                  for="filterAsia"
+                  data-lang="tool_filter_asia"
+                  >Asya</label
+                >
+              </div>
+              <div
+                class="form-check d-flex align-items-center gap-2 mb-0 min-h-0"
+              >
+                <input
+                  class="form-check-input mt-0"
+                  type="radio"
+                  name="mapFilter"
+                  id="filterPop"
+                  value="pop100"
+                  style="accent-color: var(--ana-renk)"
+                />
+                <label
+                  class="form-check-label small lh-1 pt-1"
+                  for="filterPop"
+                  data-lang="tool_filter_pop"
+                  >Nüfus > 100M</label
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-md-8 p-3 text-start">
+            <label
+              class="small fw-bold mb-2 opacity-75 d-block"
+              data-lang="tool_layers_label"
+            >
+              <i class="fas fa-layer-group me-1"></i>Gösterilecek Veriler
+            </label>
+
+            <div class="row g-2">
+              <div class="col-6">
+                <div
+                  class="form-check form-switch d-flex align-items-center gap-2 mb-1 ps-0"
+                >
+                  <input
+                    class="form-check-input ms-0 mt-0"
+                    type="checkbox"
+                    id="showGeo"
+                    checked
+                    style="accent-color: var(--ana-renk)"
+                  />
+                  <label
+                    class="form-check-label small lh-1 pt-1"
+                    for="showGeo"
+                    data-lang="tool_layer_geo"
+                    >Coğrafya</label
+                  >
+                </div>
+                <div
+                  class="form-check form-switch d-flex align-items-center gap-2 mb-1 ps-0"
+                >
+                  <input
+                    class="form-check-input ms-0 mt-0"
+                    type="checkbox"
+                    id="showDemo"
+                    checked
+                    style="accent-color: var(--ana-renk)"
+                  />
+                  <label
+                    class="form-check-label small lh-1 pt-1"
+                    for="showDemo"
+                    data-lang="tool_layer_demo"
+                    >Nüfus</label
+                  >
+                </div>
+                <div
+                  class="form-check form-switch d-flex align-items-center gap-2 mb-1 ps-0"
+                >
+                  <input
+                    class="form-check-input ms-0 mt-0"
+                    type="checkbox"
+                    id="showEco"
+                    checked
+                    style="accent-color: var(--ana-renk)"
+                  />
+                  <label
+                    class="form-check-label small lh-1 pt-1"
+                    for="showEco"
+                    data-lang="tool_layer_eco"
+                    >Ekonomi</label
+                  >
+                </div>
+                <div
+                  class="form-check form-switch d-flex align-items-center gap-2 mb-1 ps-0"
+                >
+                  <input
+                    class="form-check-input ms-0 mt-0"
+                    type="checkbox"
+                    id="showMil"
+                    checked
+                    style="accent-color: var(--ana-renk)"
+                  />
+                  <label
+                    class="form-check-label small lh-1 pt-1"
+                    for="showMil"
+                    data-lang="tool_layer_mil"
+                    >Askeri</label
+                  >
+                </div>
+              </div>
+
+              <div class="col-6">
+                <div
+                  class="form-check form-switch d-flex align-items-center gap-2 mb-1 ps-0"
+                >
+                  <input
+                    class="form-check-input ms-0 mt-0"
+                    type="checkbox"
+                    id="showSocioeconomics"
+                    style="accent-color: var(--ana-renk)"
+                    disabled
+                  />
+                  <label
+                    class="form-check-label small lh-1 pt-1"
+                    for="showSocioeconomics"
+                    data-lang="tool_layer_socio"
+                    >Sosyo-Ekonomik</label
+                  >
+                </div>
+                <div
+                  class="form-check form-switch d-flex align-items-center gap-2 mb-1 ps-0"
+                >
+                  <input
+                    class="form-check-input ms-0 mt-0"
+                    type="checkbox"
+                    id="showEnvironment"
+                    style="accent-color: var(--ana-renk)"
+                    disabled
+                  />
+                  <label
+                    class="form-check-label small lh-1 pt-1"
+                    for="showEnvironment"
+                    data-lang="tool_layer_env"
+                    >Enerji & Çevre</label
+                  >
+                </div>
+                <div
+                  class="form-check form-switch d-flex align-items-center gap-2 mb-1 ps-0"
+                >
+                  <input
+                    class="form-check-input ms-0 mt-0"
+                    type="checkbox"
+                    id="showTechnology"
+                    style="accent-color: var(--ana-renk)"
+                    disabled
+                  />
+                  <label
+                    class="form-check-label small lh-1 pt-1"
+                    for="showTechnology"
+                    data-lang="tool_layer_tech"
+                    >Teknoloji & Altyapı</label
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
+  </div>
 </div>
 <div id="map-container">
-   <div class="btn-group-vertical position-absolute top-0 end-0 mt-2 me-2 z-3">
-      <!-- Harita kontrol butonları, SVG'nin içine gömülü kontroller yerine CSS ve JS ile dışarıda oluşturuldu -->
-      <button class="btn btn-sm btn-light border shadow-sm" onclick="zoomMap(1.2)"><i class="fas fa-plus"></i></button>
-      <button class="btn btn-sm btn-light border shadow-sm" onclick="zoomMap(0.8)"><i class="fas fa-minus"></i></button>
-      <button class="btn btn-sm btn-warning text-white border shadow-sm" onclick="resetMap()"><i class="fas fa-compress"></i></button>
-   </div>
-   <div id="svg-placeholder" class="d-flex justify-content-center align-items-center w-100 h-100">
-      <!-- SVG dosyası özellikle internet kalitesi iyi olmadığı durumda yüklenmesi zaman alabilir,
+  <div class="btn-group-vertical position-absolute top-0 end-0 mt-2 me-2 z-3">
+    <!-- Harita kontrol butonları, SVG'nin içine gömülü kontroller yerine CSS ve JS ile dışarıda oluşturuldu -->
+    <button
+      class="btn btn-sm btn-light border shadow-sm"
+      onclick="zoomMap(1.2)"
+    >
+      <i class="fas fa-plus"></i>
+    </button>
+    <button
+      class="btn btn-sm btn-light border shadow-sm"
+      onclick="zoomMap(0.8)"
+    >
+      <i class="fas fa-minus"></i>
+    </button>
+    <button
+      class="btn btn-sm btn-warning text-white border shadow-sm"
+      onclick="resetMap()"
+    >
+      <i class="fas fa-compress"></i>
+    </button>
+  </div>
+  <div
+    id="svg-placeholder"
+    class="d-flex justify-content-center align-items-center w-100 h-100"
+  >
+    <!-- SVG dosyası özellikle internet kalitesi iyi olmadığı durumda yüklenmesi zaman alabilir,
       bu yüzden UX için yüklenene kadar bir geri bildirim sağlıyoruz. (Asenkron yükleme) -->
-      <div class="spinner-border text-secondary" role="status">
-         <span class="visually-hidden">Harita Yükleniyor...</span>
-      </div>
-   </div>
+    <div class="spinner-border text-secondary" role="status">
+      <span class="visually-hidden">Harita Yükleniyor...</span>
+    </div>
+  </div>
 </div>
