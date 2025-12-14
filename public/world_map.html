@@ -92,91 +92,53 @@
             </div>
           </div>
 
-          <div
-            class="col-lg-2 col-md-4 border-end border-dark border-opacity-10 p-3 text-start"
-          >
-            <label
-              class="small fw-bold mb-2 opacity-75 d-block"
-              data-lang="tool_filter_label"
-            >
-              <i class="fas fa-filter me-1"></i>Bölge Filtrele
-            </label>
-            <div class="d-flex flex-column gap-1">
-              <div
-                class="form-check d-flex align-items-center gap-2 mb-0 min-h-0"
-              >
-                <input
-                  class="form-check-input mt-0"
-                  type="radio"
-                  name="mapFilter"
-                  id="filterAll"
-                  value="all"
-                  checked
-                  style="accent-color: var(--ana-renk)"
-                />
-                <label
-                  class="form-check-label small lh-1 pt-1"
-                  for="filterAll"
-                  data-lang="tool_filter_all"
-                  >Tümü</label
-                >
-              </div>
-              <div
-                class="form-check d-flex align-items-center gap-2 mb-0 min-h-0"
-              >
-                <input
-                  class="form-check-input mt-0"
-                  type="radio"
-                  name="mapFilter"
-                  id="filterEU"
-                  value="eu"
-                  style="accent-color: var(--ana-renk)"
-                />
-                <label
-                  class="form-check-label small lh-1 pt-1"
-                  for="filterEU"
-                  data-lang="tool_filter_eu"
-                  >Avrupa</label
-                >
-              </div>
-              <div
-                class="form-check d-flex align-items-center gap-2 mb-0 min-h-0"
-              >
-                <input
-                  class="form-check-input mt-0"
-                  type="radio"
-                  name="mapFilter"
-                  id="filterAsia"
-                  value="asia"
-                  style="accent-color: var(--ana-renk)"
-                />
-                <label
-                  class="form-check-label small lh-1 pt-1"
-                  for="filterAsia"
-                  data-lang="tool_filter_asia"
-                  >Asya</label
-                >
-              </div>
-              <div
-                class="form-check d-flex align-items-center gap-2 mb-0 min-h-0"
-              >
-                <input
-                  class="form-check-input mt-0"
-                  type="radio"
-                  name="mapFilter"
-                  id="filterPop"
-                  value="pop100"
-                  style="accent-color: var(--ana-renk)"
-                />
-                <label
-                  class="form-check-label small lh-1 pt-1"
-                  for="filterPop"
-                  data-lang="tool_filter_pop"
-                  >Nüfus > 100M</label
-                >
-              </div>
-            </div>
-          </div>
+<div class="col-lg-2 col-md-4 border-end border-dark border-opacity-10 p-3 text-start">
+    <label class="small fw-bold mb-2 opacity-75 d-block" data-lang="tool_filter_label">
+        <i class="fas fa-filter me-1"></i>Bölge Filtrele
+    </label>
+    <div class="d-flex flex-column gap-1" style="max-height: 160px; overflow-y: auto;">
+        
+        <div class="form-check d-flex align-items-center gap-2 mb-0 min-h-0">
+            <input class="form-check-input mt-0" type="radio" name="mapFilter" id="filterAll" value="all" checked style="accent-color: var(--ana-renk);">
+            <label class="form-check-label small lh-1 pt-1" for="filterAll" data-lang="tool_filter_all">Tümü</label>
+        </div>
+
+        <div class="form-check d-flex align-items-center gap-2 mb-0 min-h-0">
+            <input class="form-check-input mt-0" type="radio" name="mapFilter" id="filterEU" value="eu" style="accent-color: var(--ana-renk);">
+            <label class="form-check-label small lh-1 pt-1" for="filterEU" data-lang="tool_filter_eu">Avrupa</label>
+        </div>
+        <div class="form-check d-flex align-items-center gap-2 mb-0 min-h-0">
+            <input class="form-check-input mt-0" type="radio" name="mapFilter" id="filterAsia" value="asia" style="accent-color: var(--ana-renk);">
+            <label class="form-check-label small lh-1 pt-1" for="filterAsia" data-lang="tool_filter_asia">Asya</label>
+        </div>
+        <div class="form-check d-flex align-items-center gap-2 mb-0 min-h-0">
+            <input class="form-check-input mt-0" type="radio" name="mapFilter" id="filterNA" value="na" style="accent-color: var(--ana-renk);">
+            <label class="form-check-label small lh-1 pt-1" for="filterNA" data-lang="tool_filter_na">K. Amerika</label>
+        </div>
+        <div class="form-check d-flex align-items-center gap-2 mb-0 min-h-0">
+            <input class="form-check-input mt-0" type="radio" name="mapFilter" id="filterSA" value="sa" style="accent-color: var(--ana-renk);">
+            <label class="form-check-label small lh-1 pt-1" for="filterSA" data-lang="tool_filter_sa">G. Amerika</label>
+        </div>
+        <div class="form-check d-flex align-items-center gap-2 mb-0 min-h-0">
+            <input class="form-check-input mt-0" type="radio" name="mapFilter" id="filterAfrica" value="africa" style="accent-color: var(--ana-renk);">
+            <label class="form-check-label small lh-1 pt-1" for="filterAfrica" data-lang="tool_filter_af">Afrika</label>
+        </div>
+        <div class="form-check d-flex align-items-center gap-2 mb-0 min-h-0">
+            <input class="form-check-input mt-0" type="radio" name="mapFilter" id="filterOceania" value="oceania" style="accent-color: var(--ana-renk);">
+            <label class="form-check-label small lh-1 pt-1" for="filterOceania" data-lang="tool_filter_oc">Okyanusya</label>
+        </div>
+
+        <hr class="my-1 opacity-25">
+        <div class="form-check d-flex align-items-center gap-2 mb-0 min-h-0">
+            <input class="form-check-input mt-0" type="radio" name="mapFilter" id="filterPop" value="pop100" style="accent-color: var(--ana-renk);">
+            <label class="form-check-label small lh-1 pt-1" for="filterPop" data-lang="tool_filter_pop">Nüfus > 100M</label>
+        </div>
+        <div class="form-check d-flex align-items-center gap-2 mb-0 min-h-0">
+            <input class="form-check-input mt-0" type="radio" name="mapFilter" id="filterArea" value="area1m" style="accent-color: var(--ana-renk);">
+            <label class="form-check-label small lh-1 pt-1" for="filterArea" data-lang="tool_filter_area">Alan > 1M km²</label>
+        </div>
+    </div>
+</div>
 
           <div class="col-lg-6 col-md-8 p-3 text-start">
             <div class="d-flex justify-content-between align-items-center mb-2">

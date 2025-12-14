@@ -105,7 +105,12 @@ window.uiTranslations = {
         tool_filter_all: "Tümü",
         tool_filter_eu: "Avrupa",
         tool_filter_asia: "Asya",
+        tool_filter_na: "Kuzey Amerika",
+        tool_filter_sa: "Güney Amerika",
+        tool_filter_af: "Afrika",
+        tool_filter_oc: "Okyanusya",
         tool_filter_pop: "Nüfus > 100M",
+        tool_filter_area: "Alan > 1M km²",
         tool_layers_label: "Gösterilecek Veriler",
         tool_layer_geo: "Coğrafya",
         tool_layer_demo: "Nüfus",
@@ -114,6 +119,11 @@ window.uiTranslations = {
         tool_layer_socio: "Sosyoekonomik",
         tool_layer_env: "Enerji & Çevre",
         tool_layer_tech: "Teknoloji & Altyapı",
+        // Hata Mesajları
+        toast_already_in_list: "Bu ülke zaten listede!",
+        toast_max_limit: "En fazla 3 ülke karşılaştırabilirsiniz.",
+        err_map_data_missing: "Harita verisi eksik.",
+        err_country_not_found: "bulunamadı.",
     },
     en: {
         nav_brand: "Digital Atlas",
@@ -209,6 +219,11 @@ window.uiTranslations = {
         tool_filter_all: "All",
         tool_filter_eu: "Europe",
         tool_filter_asia: "Asia",
+        tool_filter_na: "North America",
+        tool_filter_sa: "South America",
+        tool_filter_af: "Africa",
+        tool_filter_oc: "Oceania",
+        tool_filter_area: "Area > 1M km²",
         tool_filter_pop: "Pop. > 100M",
         tool_layers_label: "Data Layers",
         tool_layer_geo: "Geography",
@@ -217,7 +232,12 @@ window.uiTranslations = {
         tool_layer_mil: "Military",
         tool_layer_socio: "Socio-Economic",
         tool_layer_env: "Energy & Env.",
-        tool_layer_tech: "Tech & Infra"
+        tool_layer_tech: "Tech & Infra",
+        // Error Messages
+        toast_already_in_list: "This country is already in the list!",
+        toast_max_limit: "You can compare up to 3 countries.",
+        err_map_data_missing: "Map data is missing.",
+        err_country_not_found: "not found."
     }
 };
 

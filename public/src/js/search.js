@@ -1,49 +1,120 @@
 // ============================================================
-// --- DIGITAL ATLAS - ARAMA, FİLTRELEME VE ARAÇLAR MOTORU ---
+// --- DIGITAL ATLAS v1.2 - ARAMA, FİLTRELEME VE ARAÇLAR MOTORU ---
 // ============================================================
 
 let comparisonList = [];
 
-// --- 1. ARAMA FONKSİYONU ---
+// --- YARDIMCI: SKORLAMA VE SIRALAMA ALGORİTMASI (V1.2 YENİ) ---
+// Bu fonksiyon arama sonuçlarını alaka düzeyine göre sıralar.
+function getSortedMatches(query, dataObj) {
+    if (!query || !dataObj) return [];
+
+    const results = [];
+    
+    // 1. Aktif Dili Belirle (Varsayılan: tr)
+    const currentLang = window.currentLang || 'tr';
+    
+    // 2. Sorguyu dile uygun küçült (TR için 'İ' -> 'i', EN için 'I' -> 'i' farkı)
+    const locale = currentLang === 'tr' ? 'tr-TR' : 'en-US';
+    const q = query.toLocaleLowerCase(locale);
+
+    Object.keys(dataObj).forEach(key => {
+        const data = dataObj[key];
+        const code = key.toLowerCase();
+        
+        // İsimleri Hazırla
+        const nameTr = (data.names?.tr || "").toLocaleLowerCase('tr-TR');
+        const nameEn = (data.names?.en || "").toLowerCase();
+
+        // 3. AKTİF İSMİ SEÇ (Kritik Nokta)
+        // Eğer dil TR ise, primaryName Türkçe olandır. Değilse İngilizce olandır.
+        let primaryName, secondaryName;
+        
+        if (currentLang === 'tr') {
+            primaryName = nameTr;   // Öncelikli İsim
+            secondaryName = nameEn; // Yedek İsim
+        } else {
+            primaryName = nameEn;   // Öncelikli İsim
+            secondaryName = nameTr; // Yedek İsim
+        }
+
+        let score = 0;
+
+        // --- PUANLAMA KURALLARI ---
+
+        // A. TAM EŞLEŞME (Zirve)
+        // Aktif dildeki isim tam tutuyorsa (Örn: TR modunda "Almanya")
+        if (primaryName === q) score += 2000;
+        
+        // KOD tam tutuyorsa (Örn: "AL") -> İsimden düşük ama yüksek puan
+        if (code === q) score += 500;
+        
+        // Diğer dildeki isim tam tutuyorsa
+        if (secondaryName === q) score += 400;
+
+
+        // B. BAŞLANGIÇ EŞLEŞMESİ (Önemli)
+        // Aktif dildeki isim bununla mı başlıyor? (Örn: TR modunda "Al" -> "Almanya")
+        // Bu puan (1000), Kod puanından (500) yüksek olduğu için İsim kazanır.
+        if (primaryName.startsWith(q)) score += 1000;
+
+        // Kod bununla mı başlıyor? (Örn: "Al" -> "AL")
+        if (code.startsWith(q)) score += 50;
+
+        // Diğer dildeki isim bununla mı başlıyor? (Örn: EN modunda "Al" -> "Almanya" düşük puan alır)
+        if (secondaryName.startsWith(q)) score += 10;
+
+
+        // C. İÇERİK EŞLEŞMESİ (En düşük)
+        if (primaryName.includes(q)) score += 5;
+        else if (secondaryName.includes(q)) score += 2;
+        
+        
+        if (score > 0) {
+            results.push({ code: key, score: score, data: data });
+        }
+    });
+
+    // Puanı yüksek olan en üste
+    return results.sort((a, b) => b.score - a.score);
+}
+
+// --- 1. ARAMA FONKSİYONU (GÜNCELLENDİ) ---
 function searchCountry() {
+    // Dil desteği
+    const t = (key) => window.uiTranslations?.[window.currentLang]?.[key] || key;
+    
     const searchInput = document.getElementById("country-search");
-    const errorMsg = document.getElementById("search-error-msg"); // Hata kutusu
+    const errorMsg = document.getElementById("search-error-msg");
     if (!searchInput) return;
     
-    const query = searchInput.value.trim().toLocaleLowerCase('tr-TR');
+    const query = searchInput.value.trim(); // toLocaleLowerCase burada değil, algoritma içinde yapılıyor
     
     // Hataları temizle
     searchInput.classList.remove('is-invalid');
     if(errorMsg) errorMsg.style.display = 'none';
 
     if (!query) return;
-
     if (typeof window.globalData === 'undefined') return;
-    const globalData = window.globalData;
 
+    // --- YENİ MANTIK: PUANLI ARAMA ---
+    const sortedResults = getSortedMatches(query, window.globalData);
     let foundCode = null;
-    const keys = Object.keys(globalData);
-    
-    for (const key of keys) {
-        const data = globalData[key];
-        const code = key.toLowerCase();
-        const nameTr = (data.names?.tr || "").toLocaleLowerCase('tr-TR');
-        const nameEn = (data.names?.en || "").toLowerCase();
 
-        if (code === query || nameTr.includes(query) || nameEn.includes(query)) {
-            foundCode = key;
-            break;
-        }
+    if (sortedResults.length > 0) {
+        foundCode = sortedResults[0].code; // En yüksek puanlı sonucu al
     }
 
     if (foundCode) {
-        let path = document.getElementById(foundCode);
-        if (!path) {
+        // Haritada bul (Grup veya Path)
+        // Main.js'deki yeni mantığa uygun olarak önce ID'yi arıyoruz
+        let target = document.getElementById(foundCode);
+        if (!target) {
            const group = document.querySelector(`g#${foundCode}`);
-           if (group) path = group.querySelector("path");
+           if (group) target = group.querySelector("path"); // Grubun ilk parçasına odaklan
         }
 
-        if (path) {
+        if (target) {
             // Başarılı: İşlemleri yap
             if (typeof resetMap === 'function') {
                 const svgEl = document.getElementById("world-map-svg");
@@ -53,17 +124,20 @@ function searchCountry() {
             }
 
             setTimeout(() => {
-                if (typeof zoomToCountry === 'function') zoomToCountry(path, foundCode);
+                // Zoom ve Highlight fonksiyonlarını çağır
+                if (typeof zoomToCountry === 'function') zoomToCountry(target, foundCode);
                 if (typeof window.highlightCountry === 'function') window.highlightCountry(foundCode);
                 
+                // Mobilde menüyü kapat
                 const toolsMenu = document.getElementById('toolsMenu');
                 if (toolsMenu && typeof bootstrap !== 'undefined') {
-                    bootstrap.Collapse.getOrCreateInstance(toolsMenu).hide();
+                    const bsCollapse = bootstrap.Collapse.getInstance(toolsMenu);
+                    if (bsCollapse) bsCollapse.hide();
                 }
             }, 50);
 
             setTimeout(() => {
-                if (typeof showDetailPopover === 'function') showDetailPopover(path, foundCode);
+                if (typeof showDetailPopover === 'function') showDetailPopover(target, foundCode);
             }, 1000);
 
             searchInput.value = "";
@@ -74,11 +148,11 @@ function searchCountry() {
 
         } else {
              // HATA: Veri var ama harita yok
-             showSearchError("Harita verisi eksik.");
+             showSearchError(t('err_map_data_missing') || "Harita verisi eksik.");
         }
     } else {
-        // HATA: Ülke bulunamadı (Modern Yöntem)
-        showSearchError(`"${searchInput.value}" bulunamadı.`);
+        // HATA: Ülke bulunamadı
+        showSearchError(`"${searchInput.value}" ${t('err_country_not_found') || "bulunamadı."}`);
     }
 }
 
@@ -102,15 +176,17 @@ function resetSwitches() {
     });
 
     if (typeof resetMap === 'function') resetMap();
-    if (typeof window.resetCountry === 'function' && typeof selectedCountryCode !== 'undefined') {
-        window.resetCountry(selectedCountryCode);
+    
+    // Parametresiz çağırarak seçili olanı sıfırla
+    if (typeof window.resetCountry === 'function') {
+        window.resetCountry();
     }
     
     // Açık popover varsa güncelle
     if(typeof window.refreshActivePopover === 'function') window.refreshActivePopover();
 }
 
-// --- 3. FİLTRELEME & KATMANLAR MOTORU ---
+// --- 3. FİLTRELEME & KATMANLAR MOTORU (GÜNCELLENDİ) ---
 function initFilterListeners() {
     // A. Radio Butonları (Bölge Filtreleme)
     const filters = document.querySelectorAll('input[name="mapFilter"]');
@@ -124,7 +200,6 @@ function initFilterListeners() {
     const switches = document.querySelectorAll('.form-check-input[type="checkbox"]');
     switches.forEach(sw => {
         sw.addEventListener('change', () => {
-            // Bir switch değişince, main.js'deki fonksiyonu çağırıp popover'ı yenile
             if(typeof window.refreshActivePopover === 'function') {
                 window.refreshActivePopover();
             }
@@ -135,14 +210,20 @@ function initFilterListeners() {
 function applyMapFilter(filterType) {
     const mapSvg = document.getElementById("world-map-svg");
     if (!mapSvg) return;
+    
+    // Tüm pathleri al ama sadece geçerli ID'si olanları işle
     const paths = mapSvg.querySelectorAll("path");
     const globalData = window.globalData || {};
 
     paths.forEach(path => {
+        // ID Tespiti (Main.js mantığıyla uyumlu)
         let code = path.getAttribute("id");
         if (!code || code.length !== 2) {
-             if (path.parentElement.id.length === 2) code = path.parentElement.id;
-             else return;
+             if (path.parentElement.id && path.parentElement.id.length === 2) {
+                 code = path.parentElement.id;
+             } else {
+                 return; // ID yoksa atla
+             }
         }
 
         const data = globalData[code];
@@ -151,19 +232,37 @@ function applyMapFilter(filterType) {
         if (!data) {
             isMatch = false; 
         } else {
-            // Filtre Mantığı
+            const continent = data.geography?.continent_en;
+
+            // --- YENİ: AVRASYA FİX ---
+            // TR, RU, AZ, GE, KZ -> Hem Asya hem Avrupa'da görünsün
+            const isEurasia = (code === 'TR' || code === 'RU');
+
+            // Filtre Mantığı (Genişletildi)
             switch (filterType) {
                 case 'eu':
-                    isMatch = (data.geography?.continent_en === "Europe");
+                    isMatch = (continent === "Europe" || isEurasia);
                     break;
                 case 'asia':
-                    isMatch = (data.geography?.continent_en === "Asia");
+                    isMatch = (continent === "Asia" || isEurasia);
+                    break;
+                case 'na':
+                    isMatch = (continent === "North America");
+                    break;
+                case 'sa':
+                    isMatch = (continent === "South America");
+                    break;
+                case 'africa':
+                    isMatch = (continent === "Africa");
+                    break;
+                case 'oceania':
+                    isMatch = (continent === "Oceania");
                     break;
                 case 'pop100':
                     isMatch = (data.demographics?.total_population > 100000000);
                     break;
-                case 'gdp50k':
-                    isMatch = (data.economy?.gdp_per_capita_usd > 50000);
+                case 'area1m': // İsim değişikliği (HTML ile uyumlu olsun diye area1m yaptım)
+                    isMatch = (data.geography?.area_sq_km > 1000000);
                     break;
                 case 'all':
                 default:
@@ -181,7 +280,7 @@ function applyMapFilter(filterType) {
     });
 }
 
-// --- 4. ARAMA ÖNERİLERİ (AUTOCOMPLETE) ---
+// --- 4. ARAMA ÖNERİLERİ (AUTOCOMPLETE - GÜNCELLENDİ) ---
 function initSearchSuggestions() {
     const input = document.getElementById("country-search");
     const suggestionsBox = document.getElementById("search-suggestions");
@@ -189,7 +288,7 @@ function initSearchSuggestions() {
     if (!input || !suggestionsBox) return;
 
     input.addEventListener("input", function() {
-        const query = this.value.trim().toLocaleLowerCase('tr-TR');
+        const query = this.value.trim(); // Raw query alıyoruz
 
         // 1. Yazmaya başlayınca hata mesajını ve kırmızılığı KALDIR
         const errorMsg = document.getElementById("search-error-msg");
@@ -201,43 +300,37 @@ function initSearchSuggestions() {
         suggestionsBox.style.display = "none";
 
         if (query.length < 2) return;
-
         if (typeof window.globalData === 'undefined') return;
-        const globalData = window.globalData;
 
-        const matches = Object.keys(globalData).filter(key => {
-            const data = globalData[key];
-            const code = key.toLowerCase();
-            const nameTr = (data.names?.tr || "").toLocaleLowerCase('tr-TR');
-            const nameEn = (data.names?.en || "").toLowerCase();
-            return code.includes(query) || nameTr.includes(query) || nameEn.includes(query);
-        });
-
-        const topMatches = matches.slice(0, 5);
+        // --- YENİ MANTIK: PUANLI ÖNERİLER ---
+        const sortedResults = getSortedMatches(query, window.globalData);
+        const topMatches = sortedResults.slice(0, 5); // İlk 5 sonucu göster
 
         if (topMatches.length > 0) {
-            topMatches.forEach(code => {
-                const data = globalData[code];
+            topMatches.forEach(item => {
+                const code = item.code;
+                const data = item.data;
+                // Mevcut dile göre isim, yoksa İngilizce
                 const name = data.names?.[window.currentLang || 'tr'] || data.names?.en;
                 
                 const customFlags = { "NC": "", "IC": "" };
                 const flagUrl = customFlags[code] || `https://flagcdn.com/w40/${code.toLowerCase()}.png`;
 
-                const item = document.createElement("a");
-                item.className = "list-group-item list-group-item-action suggestion-item";
-                item.innerHTML = `
+                const link = document.createElement("a");
+                link.className = "list-group-item list-group-item-action suggestion-item";
+                link.innerHTML = `
                     <img src="${flagUrl}" width="24" class="me-2 rounded shadow-sm" alt="${code}">
                     <span>${name}</span>
                     <small class="ms-auto opacity-50" style="font-size:0.7em">${code}</small>
                 `;
 
-                item.addEventListener("click", function() {
+                link.addEventListener("click", function() {
                     input.value = name; 
                     suggestionsBox.style.display = "none";
                     searchCountry(); 
                 });
 
-                suggestionsBox.appendChild(item);
+                suggestionsBox.appendChild(link);
             });
             suggestionsBox.style.display = "block";
         }
@@ -258,26 +351,25 @@ function initSearchSuggestions() {
     });
 }
 
-// --- 5. KARŞILAŞTIRMA SİSTEMİ ---
+// --- 5. KARŞILAŞTIRMA SİSTEMİ (AYNEN KORUNDU) ---
 window.addToComparison = function(code) {
+    const t = (key) => window.uiTranslations?.[window.currentLang]?.[key] || key;
+
     // 1. Zaten Listede mi?
     if (comparisonList.includes(code)) {
-        showNotification("Bu ülke zaten karşılaştırma listesinde!", "warning");
+        showNotification(t('toast_already_in_list') || "Bu ülke zaten listede!", "warning");
         return;
     }
     
     // 2. Limit Dolu mu?
     if (comparisonList.length >= 3) {
-        showNotification("En fazla 3 ülke karşılaştırabilirsiniz.", "danger");
+        showNotification(t('toast_max_limit') || "En fazla 3 ülke karşılaştırabilirsiniz.", "danger");
         return;
     }
 
     // 3. Ekle
     comparisonList.push(code);
     updateComparisonTray();
-    
-    // Başarı Bildirimi (Opsiyonel - Yeşil)
-    // showNotification("Ülke eklendi.", "success");
 };
 
 window.removeFromComparison = function(code) {
@@ -285,7 +377,7 @@ window.removeFromComparison = function(code) {
     updateComparisonTray();
 };
 
-function updateComparisonTray() {
+window.updateComparisonTray = function() {
     const container = document.getElementById("compare-ui-container");
     const list = document.getElementById("comparison-list");
     
@@ -340,7 +432,6 @@ function showNotification(msg, type = 'danger') {
     if (!toastEl || !msgEl) return;
 
     // A. Renk ve İkon Ayarla
-    // Bootstrap classlarını sıfırla ve yenisini ekle
     toastEl.className = `toast align-items-center text-bg-${type} border-0 shadow-lg rounded-4`;
     
     // İkon Seçimi
@@ -357,7 +448,8 @@ function showNotification(msg, type = 'danger') {
         toast.show();
     }
 }
-// --- KARŞILAŞTIRMA MODALI (SWITCHLER GERİ GELDİ) ---
+
+// --- KARŞILAŞTIRMA MODALI (AYNEN KORUNDU) ---
 function openComparisonModal() {
     const tableContainer = document.getElementById("comparison-table-container");
     if (!tableContainer || comparisonList.length < 2) return;
@@ -367,7 +459,7 @@ function openComparisonModal() {
     const t = (key) => window.uiTranslations?.[currentLang]?.[key] || key;
     const globalData = window.globalData;
 
-    // 1. METRİK TANIMLARI (Etiketler t() ile çevriliyor)
+    // 1. METRİK TANIMLARI
     const metrics = [
         { id: 'capital', label: t('lbl_capital'), path: `geography.capital${sfx}`, type: 'text', cat: 'geo' },
         { id: 'cont', label: t('lbl_continent'), path: `geography.continent${sfx}`, type: 'text', cat: 'geo' },
@@ -393,7 +485,7 @@ function openComparisonModal() {
         { id: 'total', label: t('lbl_total'), path: 'military.total_personnel', type: 'num', good: 'max', cat: 'mil' },
         { id: 'budget', label: t('lbl_budget'), path: 'military.defense_budget_usd', type: 'currency', good: 'max', cat: 'mil' },
 
-        // Yeni Kategoriler (t() ile çevriliyor)
+        // Yeni Kategoriler
         { id: 'emp', label: t('lbl_employment'), path: 'economy.employment_rate', type: 'percent', cat: 'socio' },
         { id: 'lit', label: t('lbl_literacy'), path: 'demographics.literacy_rate', type: 'percent', cat: 'socio' },
 
@@ -404,7 +496,7 @@ function openComparisonModal() {
         { id: 'mob', label: t('lbl_mobile'), path: 'technology.mobile_subscriptions_per_100', type: 'num', cat: 'tech' }
     ];
 
-    // 2. SWITCH HTML (Kategori isimleri çevriliyor)
+    // 2. SWITCH HTML
     const categories = [
         { id: 'geo', label: t('cat_geo'), disabled: false },
         { id: 'demo', label: t('cat_demo'), disabled: false },
@@ -449,7 +541,7 @@ function openComparisonModal() {
             <tbody>
     `;
 
-    // 4. TABLO GÖVDESİ (Aynen Kalıyor)
+    // 4. TABLO GÖVDESİ
     metrics.forEach(metric => {
         const rowValues = comparisonList.map(code => getNestedValue(globalData[code], metric.path));
 
@@ -513,13 +605,13 @@ function getNestedValue(obj, path) {
     return path.split('.').reduce((acc, part) => acc && acc[part], obj);
 }
 
-// Yardımcı Hata Gösterici
+// Yardımcı Hata Gösterici (searchCountry içinde kullanılıyor)
 function showSearchError(msg) {
     const searchInput = document.getElementById("country-search");
     const errorMsg = document.getElementById("search-error-msg");
     const suggestionsBox = document.getElementById("search-suggestions");
     
-    // 1. Önerileri GİZLE (Çakışmayı önler)
+    // 1. Önerileri GİZLE
     if(suggestionsBox) suggestionsBox.style.display = 'none';
 
     if(searchInput) {
@@ -531,7 +623,6 @@ function showSearchError(msg) {
         errorMsg.innerText = msg;
         errorMsg.style.display = 'block';
         
-        // 3 saniye sonra kaybolsun
         setTimeout(() => {
             errorMsg.style.display = 'none';
             if(searchInput) searchInput.classList.remove('is-invalid');

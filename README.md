@@ -1,23 +1,27 @@
 # 🌍 Digital Atlas
 
-**Digital Atlas** is a modern, interactive web application designed to explore global demographic, economic, and military data through a dynamic SVG map interface. It features a custom-built **Multi-Language Engine** and a fully responsive design.
+**Digital Atlas** is a modern, interactive web application designed to explore global demographic, economic, and military data through a dynamic SVG map interface. It features a custom-built **Multi-Language Engine**, a smart search algorithm, and a fully responsive design.
 
 ![Project Status](https://img.shields.io/badge/Status-Active-success?style=flat-square)
 ![License](https://img.shields.io/badge/License-MIT-blue?style=flat-square)
-![Version](https://img.shields.io/badge/Version-1.0.2-orange?style=flat-square)
+![Version](https://img.shields.io/badge/Version-1.2.0-orange?style=flat-square)
 
 ## 📖 About The Project
 
-Digital Atlas aims to simplify access to complex country data. Instead of browsing through boring tables, users can interact with a responsive world map to instantly retrieve live data visualizations, including a dynamic **Population Pyramid**.
+Digital Atlas aims to simplify access to complex country data. Instead of browsing through boring tables, users can interact with a responsive world map to instantly retrieve live data visualizations, including a dynamic **Population Pyramid** and side-by-side country comparisons.
 
 ## 🚀 Key Features
 
 * **🗺️ Interactive SVG Map:**
-    * Vector-based map with hover effects and click interactions.
+    * Vector-based map with hover effects and smart click interactions.
+    * **Smart Dependency Logic:** Automatically links territories (e.g., French Guiana) to their parent countries (France).
     * Smart pan & zoom capabilities for better navigation on mobile and desktop.
-* **📊 Dynamic Data Fetching:**
-    * Instant data retrieval from JSON sources without page reloads (SPA feel).
-    * Real-time fetching of country flags via **FlagCDN**.
+* **🔍 Intelligent Search & Filters:**
+    * **Scoring Algorithm:** Context-aware search that prioritizes results based on the active language (e.g., "Al" finds "Almanya" in TR mode, "Albania" in EN mode).
+    * **Advanced Filtering:** Filter countries by region (including Eurasia logic for TR/RU) or statistical metrics (Pop > 100M).
+* **⚖️ Comparison Mode:**
+    * Select and compare up to **3 countries** side-by-side.
+    * Visual comparison of economic, military, and demographic metrics.
 * **🌐 Multi-Language Support (i18n):**
     * **Custom Language Engine:** A lightweight, pure JavaScript solution (`lang.js`) handles real-time translations without external libraries.
     * **Seamless Switching:** Instantly toggles between **Turkish (TR)** and **English (EN)** without refreshing the page.
@@ -37,7 +41,7 @@ Digital Atlas aims to simplify access to complex country data. Instead of browsi
 | **Framework** | Bootstrap 5.3 (UI & Popovers) |
 | **Data & Assets** | JSON, SVG, FontAwesome, FlagCDN |
 | **Localization** | Custom JS Engine (`lang.js`) |
-| **Animation** | CSS3 Transitions, Custom JS Logic |
+| **Algorithms** | Weighted Search Scoring, SVG Grouping Logic |
 
 ## 📂 Project Structure
 
@@ -52,7 +56,8 @@ digital-atlas/
 │   │   ├── css/            # main.css (Custom styling & variables)
 │   │   ├── data/           # world.json (Comprehensive country database)
 │   │   └── js/
-│   │       ├── main.js     # Core application logic & Routing
+│   │       ├── main.js     # Core application logic & SVG interactions
+│   │       ├── search.js   # Search engine, filters & comparison logic
 │   │       └── lang.js     # Localization engine & Translation dictionary
 ├── README.md               # Documentation
 └── package.json            # Dependency management
