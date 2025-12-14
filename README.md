@@ -4,7 +4,7 @@
 
 ![Project Status](https://img.shields.io/badge/Status-Active-success?style=flat-square)
 ![License](https://img.shields.io/badge/License-MIT-blue?style=flat-square)
-![Version](https://img.shields.io/badge/Version-1.2.0-orange?style=flat-square)
+![Version](https://img.shields.io/badge/Version-1.1.1-orange?style=flat-square)
 
 ## 📖 About The Project
 
@@ -77,4 +77,5 @@ This project makes use of the following open-source resources:
 
 <p align="center">
   Made with ❤️ by the Digital Atlas Team
+
 </p>
