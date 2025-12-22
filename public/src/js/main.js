@@ -225,6 +225,7 @@ function initMapInteractions() {
 
   // --- EVENT HANDLER (TEK NOKTADAN YÖNETİM) ---
   const handleInteraction = (e, type) => {
+      if (typeof isDragging !== 'undefined' && isDragging && type === 'mouseover') return;
       const target = e.target.closest('path');
       
       // Boşa tıklandıysa
