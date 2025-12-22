@@ -1198,6 +1198,37 @@ function initPanZoom() {
 
   mapContainer.addEventListener("mouseup", stopDrag);
   mapContainer.addEventListener("mouseleave", stopDrag);
+  mapContainer.addEventListener("touchstart", (e) => {
+    if (e.target.closest(".popover")) return;
+    
+    // Sadece tek parmakla dokunuluyorsa sürüklemeyi başlat
+    if (e.touches.length === 1) {
+        isDragging = true;
+        startX = e.touches[0].clientX - currentTranslateX;
+        startY = e.touches[0].clientY - currentTranslateY;
+
+        // Mobilde gecikmeyi önlemek için geçiş efektini (transition) kapat
+        const mapSvg = document.getElementById("world-map-svg");
+        if(mapSvg) mapSvg.style.transition = "none";
+    }
+  }, { passive: false });
+
+  mapContainer.addEventListener("touchmove", (e) => {
+    if (!isDragging) return;
+    e.preventDefault(); // Sayfanın aşağı-yukarı kaymasını engelle
+    
+    // Sürükleme sırasında transition'ın kapalı olduğundan emin ol
+    const mapSvg = document.getElementById("world-map-svg");
+    if(mapSvg && mapSvg.style.transition !== 'none') {
+        mapSvg.style.transition = 'none';
+    }
+
+    currentTranslateX = e.touches[0].clientX - startX;
+    currentTranslateY = e.touches[0].clientY - startY;
+    updateTransform();
+  }, { passive: false });
+
+  mapContainer.addEventListener("touchend", stopDrag);
 }
 
 function zoomMap(factor) {
