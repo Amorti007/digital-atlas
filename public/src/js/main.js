@@ -8,6 +8,8 @@ let hoverTimer = null;          // Hover zamanlayıcı
 let cursorX = 0;                // Mouse X koordinatı
 let cursorY = 0;                // Mouse Y koordinatı
 let selectedCountryCode = null; // Seçili ülke kodu
+let initialPinchDistance = null; // Pinch başlangıç mesafesi
+let initialPinchScale = null;    // Pinch başlangıç ölçeği
 
 // --- 1. SAYFA YÜKLEME (SPA YÖNLENDİRME) ---
 // Sayfa yenilenmeden içeriği yüklemesi için basit bir yönlendirme fonksiyonu
@@ -1168,7 +1170,7 @@ function initPanZoom() {
     if (!isDragging) return;
     e.preventDefault(); // Sayfanın aşağı-yukarı kaymasını engelle
     
-    // Sürükleme sırasında transition'ın kapalı olduğundan emin ol
+    // Sürükleme sırasında transition kapalı
     const mapSvg = document.getElementById("world-map-svg");
     if(mapSvg && mapSvg.style.transition !== 'none') {
         mapSvg.style.transition = 'none';
@@ -1180,6 +1182,52 @@ function initPanZoom() {
   }, { passive: false });
 
   mapContainer.addEventListener("touchend", stopDrag);
+  mapContainer.addEventListener("touchstart", (e) => {
+    // Eğer iki parmak varsa, varsayılan sürüklemeyi (isDragging) iptal et ve ölçümleri al
+    if (e.touches.length === 2) {
+      isDragging = false; 
+      initialPinchDistance = Math.hypot(
+        e.touches[0].clientX - e.touches[1].clientX,
+        e.touches[0].clientY - e.touches[1].clientY
+      );
+      initialPinchScale = currentScale;
+    }
+  }, { passive: false });
+
+  mapContainer.addEventListener("touchmove", (e) => {
+    // Sadece iki parmak varsa ve başlangıç değeri alınmışsa çalışır
+    if (e.touches.length === 2 && initialPinchDistance) {
+      const currentDistance = Math.hypot(
+        e.touches[0].clientX - e.touches[1].clientX,
+        e.touches[0].clientY - e.touches[1].clientY
+      );
+
+      if (currentDistance > 0) {
+        // İki parmağın orta noktasını bul
+        const midX = (e.touches[0].clientX + e.touches[1].clientX) / 2;
+        const midY = (e.touches[0].clientY + e.touches[1].clientY) / 2;
+
+        const rect = mapContainer.getBoundingClientRect();
+        const offsetX = midX - rect.left;
+        const offsetY = midY - rect.top;
+
+        // O anki mouse/parmak konumunun dünya koordinatındaki karşılığını bul
+        const worldX = (offsetX - currentTranslateX) / currentScale;
+        const worldY = (offsetY - currentTranslateY) / currentScale;
+
+        // Yeni ölçeği hesapla
+        let newScale = initialPinchScale * (currentDistance / initialPinchDistance);
+        newScale = Math.max(0.7, Math.min(newScale, 20)); 
+
+        // Yeni konumu hesapla (Merkeze doğru zoom)
+        currentTranslateX = offsetX - (worldX * newScale);
+        currentTranslateY = offsetY - (worldY * newScale);
+        currentScale = newScale;
+
+        updateTransform();
+      }
+    }
+  }, { passive: false });
 }
 
 function zoomMap(factor) {
