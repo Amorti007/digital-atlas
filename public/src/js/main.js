@@ -1197,6 +1197,7 @@ function initPanZoom() {
   mapContainer.addEventListener("touchmove", (e) => {
     // Sadece iki parmak varsa ve başlangıç değeri alınmışsa çalışır
     if (e.touches.length === 2 && initialPinchDistance) {
+        e.preventDefault();
       const currentDistance = Math.hypot(
         e.touches[0].clientX - e.touches[1].clientX,
         e.touches[0].clientY - e.touches[1].clientY
