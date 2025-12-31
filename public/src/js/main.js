@@ -14,8 +14,8 @@ let selectedCountryCode = null; // Seçili ülke kodu
 /* Bu fonksiyon, istenen HTML parçasını asenkron (Ana akıştan bağımsız) olarak çeker
 DOM'a (Belge Nesne Modeli / Document Object Model) enjekte eder. */
 async function loadPage(pageName) {
-  const contentDiv = document.getElementById("app-content");
-  try {
+    const contentDiv = document.getElementById("app-content");
+    try {
     const pageResponse = await fetch(`${pageName}.html`);
     if (!pageResponse.ok) throw new Error("Sayfa yüklenemedi");
     const html = await pageResponse.text();
@@ -26,44 +26,43 @@ async function loadPage(pageName) {
 
     // 2. Eğer Harita Sayfasıysa Motorları Başlat
     if (pageName === "world_map") {
-      // Arama ve Filtreleri Başlat (HTML artık var!)
-      if (typeof initSearchSuggestions === 'function') initSearchSuggestions();
-      if (typeof initFilterListeners === 'function') initFilterListeners();
+      // Arama ve Filtreleri Başlat
+        if (typeof initSearchSuggestions === 'function') initSearchSuggestions();
+        if (typeof initFilterListeners === 'function') initFilterListeners();
 
       // Veriyi ve Haritayı Yükle
-      initCollapseIcons();
-      
-      await loadData(); 
-      loadSVGMap();       
+        initCollapseIcons();
+        await loadData(); 
+        loadSVGMap();       
     }
     
     // 3. Dil Çevirilerini Uygula
     if(typeof updateUITexts === "function") updateUITexts();
 
-  } catch (error) {
+} catch (error) {
     contentDiv.innerHTML = `<div class="alert alert-danger m-5">Hata: ${error.message}</div>`;
     console.error(error);
-  }
+    }
 }
 
 // --- 2. VERİ ÇEKME (FETCH API) ---
 async function loadData() {
-  try {
-    const response = await fetch("src/data/world.json");
-    if (!response.ok) throw new Error("Veri bulunamadı");
-    globalData = await response.json();
-  } catch (error) {
-    console.error(error);
-    globalData = {};
-  }
+    try {
+        const response = await fetch("src/data/world.json");
+        if (!response.ok) throw new Error("Veri bulunamadı");
+        globalData = await response.json();
+    } catch (error) {
+        console.error(error);
+        globalData = {};
+    }
 }
 
 // --- 3. SVG YÜKLEME ---
 /* "SVG dosyasını doğrudan 'inline HTML' olarak yüklüyoruz.
 Bu sayede her bir ülkenin rengini CSS ile, tıklama olaylarını JS ile yönetebiliyoruz." */
 async function loadSVGMap() {
-  const placeholder = document.getElementById("svg-placeholder");
-  try {
+    const placeholder = document.getElementById("svg-placeholder");
+    try {
     const response = await fetch("src/assets/world.svg");
     if (!response.ok) throw new Error("Harita bulunamadı");
     const svgText = await response.text();
@@ -73,205 +72,198 @@ async function loadSVGMap() {
 
     const svgElement = document.querySelector("#map-container svg");
     if (svgElement) {
-      svgElement.id = "world-map-svg";
+        svgElement.id = "world-map-svg";
 
       // Başlatıcılar
-      createHoverTooltip();
-      initMapInteractions();
-      initPanZoom();
-      initGlobalClicks();
-      trackMouse();
-      setTimeout(createCountryLabels, 500);
+        createHoverTooltip();
+        initMapInteractions();
+        initPanZoom();
+        initGlobalClicks();
+        trackMouse();
+        setTimeout(createCountryLabels, 500);
     }
-  } catch (error) {
+    } catch (error) {
     if (placeholder)
-      placeholder.innerHTML = `<p class="text-danger">Hata: ${error.message}</p>`;
-  }
+        placeholder.innerHTML = `<p class="text-danger">Hata: ${error.message}</p>`;
+    }
 }
 
 // --- 4. ETKİLEŞİMLER (DOM HIYERARŞİSİ ÇÖZÜMÜ) ---
 function initMapInteractions() {
-  const mapSvg = document.getElementById("world-map-svg");
-  if (!mapSvg) return;
+    const mapSvg = document.getElementById("world-map-svg");
+    if (!mapSvg) return;
 
-  const svgNS = "http://www.w3.org/2000/svg";
-  
+    const svgNS = "http://www.w3.org/2000/svg";
+
   // 1. HARİCİ BAĞIMLILIKLAR (SVG'de Gruplanmamış Olanlar İçin)
-  // Eğer SVG'de Grönland, Danimarka grubunun DIŞINDAYSA burası devreye girer.
-  const externalDependencies = {
+    const externalDependencies = {
       "GL": "DK", "FO": "DK", // Danimarka
       "AW": "NL", "CW": "NL", "SX": "NL", "BQ": "NL", // Hollanda
       "PR": "US", "GU": "US", "VI": "US", "AS": "US", "MP": "US" // ABD
-  };
+    };
 
-  // 2. KODU BULMA MANTIĞI (En Önemli Kısım)
-  const getCountryCodeFromTarget = (target) => {
-      // A. Önce Ebeveyn GRUP ID'sine bak (En Güçlü Otorite)
-      // Sizin SVG'de Fransa <g id="FR"> içinde toplanmış.
-      // GF'ye tıklasanız bile babası FR olduğu için FR döner.
-      if (target.parentElement && target.parentElement.tagName === 'g') {
-          const parentId = target.parentElement.id;
-          if (parentId && parentId.length === 2) {
-              return parentId; // Doğrudan "FR" döndürür, "GF"yi ezer.
-          }
-      }
+  // 2. KODU BULMA MANTIĞI 
+    const getCountryCodeFromTarget = (target) => {
+        // A. Önce Ebeveyn GRUP ID'sine bak 
+        if (target.parentElement && target.parentElement.tagName === 'g') {
+            const parentId = target.parentElement.id;
+            if (parentId && parentId.length === 2) {
+                return parentId; // Doğrudan "FR" döndürür, "GF"yi ezer.
+            }
+        }
+        // B. Grup yoksa, Path ID'sine bak
+        const ownId = target.getAttribute("id");
+        if (ownId && ownId.length >= 2) {
+            // Harici listede var mı kontrol et (Örn: GL -> DK)
+            return externalDependencies[ownId] || ownId;
+        }
 
-      // B. Grup yoksa, Path ID'sine bak
-      const ownId = target.getAttribute("id");
-      if (ownId && ownId.length >= 2) {
-          // Harici listede var mı kontrol et (Örn: GL -> DK)
-          return externalDependencies[ownId] || ownId;
-      }
+        return null;
+    };
 
-      return null;
-  };
-
-  // Vinyet Gradyanı
-  let defs = mapSvg.querySelector("defs");
-  if (!defs) {
+    // Vinyet Gradyanı
+    let defs = mapSvg.querySelector("defs");
+    if (!defs) {
     defs = document.createElementNS(svgNS, "defs");
     mapSvg.prepend(defs);
-  }
-  if (!document.getElementById("vignette-gradient")) {
-      const radGrad = document.createElementNS(svgNS, "radialGradient");
-      radGrad.setAttribute("id", "vignette-gradient");
-      radGrad.setAttribute("cx", "50%");
-      radGrad.setAttribute("cy", "50%");
-      radGrad.setAttribute("r", "70%");
-      radGrad.innerHTML = `<stop offset="60%" stop-color="transparent" /><stop offset="100%" stop-color="rgba(0,0,0,0.6)" />`;
-      defs.appendChild(radGrad);
-  }
+    }
+    if (!document.getElementById("vignette-gradient")) {
+        const radGrad = document.createElementNS(svgNS, "radialGradient");
+        radGrad.setAttribute("id", "vignette-gradient");
+        radGrad.setAttribute("cx", "50%");
+        radGrad.setAttribute("cy", "50%");
+        radGrad.setAttribute("r", "70%");
+        radGrad.innerHTML = `<stop offset="60%" stop-color="transparent" /><stop offset="100%" stop-color="rgba(0,0,0,0.6)" />`;
+        defs.appendChild(radGrad);
+    }
 
-  // YARDIMCI: Ülkeyi Boya (Grup ID'sine göre)
-  const paintCountry = (code, animate = false) => {
-      // 1. Önce GRUP elementini bul (<g id="FR">)
-      const groupElement = document.querySelector(`g#${code}`);
-      
-      // 2. Yoksa tekil path'e bak (<path id="TR">)
-      const targetElement = document.getElementById(code);
-      
-      let targets = [];
+    // YARDIMCI: Ülkeyi Boya (Grup ID'sine göre)
+    const paintCountry = (code, animate = false) => {
+        // 1. Önce GRUP elementini bul (<g id="FR">)
+        const groupElement = document.querySelector(`g#${code}`);
 
-      if (groupElement) {
-          // Grubun içindeki TÜM path'leri al (GF, MQ ve ID'si olmayan ana kara dahil)
-          targets = Array.from(groupElement.querySelectorAll("path"));
-      } else if (targetElement) {
-          targets = [targetElement];
-      }
+        // 2. Yoksa tekil path'e bak (<path id="TR">)
+        const targetElement = document.getElementById(code);
 
-      if (targets.length === 0) return;
+        let targets = [];
 
-      targets.forEach((target, index) => {
-          try {
-              const bbox = target.getBBox();
-              const uniqueId = `flag-pattern-${code}-${index}`;
-              
-              if (typeof createFlagPattern === 'function') {
-                  const imgEl = createFlagPattern(uniqueId, bbox, code); 
-                  target.style.fill = `url(#${uniqueId})`;
-                  target.style.fillOpacity = "1";
-                  
-                  if (animate && imgEl) {
-                      imgEl.classList.remove("flag-anim");
-                      requestAnimationFrame(() => {
-                          requestAnimationFrame(() => {
-                              imgEl.classList.add("flag-anim");
-                          });
-                      });
-                  }
-              } else { 
-                  target.style.fill = "#ffc107"; 
-              }
-          } catch (e) {}
-      });
-  };
+        if (groupElement) {
+            // Grubun içindeki TÜM path'leri al (GF, MQ ve ID'si olmayan ana kara dahil)
+            targets = Array.from(groupElement.querySelectorAll("path"));
+        } else if (targetElement) {
+            targets = [targetElement];
+        }
 
-  // YARDIMCI: Temizle
-  const clearCountry = (code) => {
-      if (!code) return;
+        if (targets.length === 0) return;
 
-      const groupElement = document.querySelector(`g#${code}`);
-      const targetElement = document.getElementById(code);
-      
-      let targets = [];
-      if (groupElement) targets = Array.from(groupElement.querySelectorAll("path"));
-      else if (targetElement) targets = [targetElement];
+        targets.forEach((target, index) => {
+            try {
+                const bbox = target.getBBox();
+                const uniqueId = `flag-pattern-${code}-${index}`;
+                if (typeof createFlagPattern === 'function') {
+                    const imgEl = createFlagPattern(uniqueId, bbox, code); 
+                    target.style.fill = `url(#${uniqueId})`;
+                    target.style.fillOpacity = "1";
+                if (animate && imgEl) {
+                    imgEl.classList.remove("flag-anim");
+                    requestAnimationFrame(() => {
+                        requestAnimationFrame(() => {
+                            imgEl.classList.add("flag-anim");
+                        });
+                    });
+                }
+                } else { 
+                    target.style.fill = "#ffc107"; 
+                }
+            } catch (e) {}
+        });
+    };
 
-      targets.forEach((target) => {
-          target.style.fill = ""; 
-          target.style.fillOpacity = "";
-          target.classList.remove("flag-anim");
-      });
-  };
+    // YARDIMCI: Temizle
+    const clearCountry = (code) => {
+        if (!code) return;
 
-  // GLOBAL FONKSİYONLAR
-  window.highlightCountry = (code) => {
-      if (selectedCountryCode && selectedCountryCode !== code) {
-          window.resetCountry(selectedCountryCode);
-      }
-      selectedCountryCode = code;
-      paintCountry(code, true);
-  };
+    const groupElement = document.querySelector(`g#${code}`);
+    const targetElement = document.getElementById(code);
 
-  window.resetCountry = (code) => {
-      const codeToReset = code || selectedCountryCode;
-      if (codeToReset) {
-          clearCountry(codeToReset);
-          if (codeToReset === selectedCountryCode) {
-              selectedCountryCode = null;
-          }
-      }
-  };
+    let targets = [];
+    if (groupElement) targets = Array.from(groupElement.querySelectorAll("path"));
+    else if (targetElement) targets = [targetElement];
 
-  // --- EVENT HANDLER (TEK NOKTADAN YÖNETİM) ---
-  const handleInteraction = (e, type) => {
-      if (typeof isDragging !== 'undefined' && isDragging && type === 'mouseover') return;
-      const target = e.target.closest('path');
-      
-      // Boşa tıklandıysa
-      if (!target) {
-          if (type === 'click') {
-              if (selectedCountryCode) window.resetCountry(selectedCountryCode);
-              if (activeDetailPopover) {
-                  activeDetailPopover.dispose();
-                  activeDetailPopover = null;
-              }
-          }
-          return;
-      }
+    targets.forEach((target) => {
+        target.style.fill = ""; 
+        target.style.fillOpacity = "";
+        target.classList.remove("flag-anim");
+        });
+    };
 
-      // KODU TESPİT ET (Grup Öncelikli)
-      const code = getCountryCodeFromTarget(target);
+    // GLOBAL FONKSİYONLAR
+    window.highlightCountry = (code) => {
+        if (selectedCountryCode && selectedCountryCode !== code) {
+            window.resetCountry(selectedCountryCode);
+        }
+        selectedCountryCode = code;
+        paintCountry(code, true);
+    };
 
-      if (code) {
-          if (type === 'click') {
-              e.stopPropagation();
-              window.highlightCountry(code); // FR boyanır
-              showDetailPopover(target, code); // FR verisi gösterilir
-          } else if (type === 'mouseover') {
-              if (hoverTimer) clearTimeout(hoverTimer);
-              hoverTimer = setTimeout(() => {
-                  const name = getCountryName(code);
-                  if (hoverTooltip && name) {
-                      hoverTooltip.innerHTML = name;
-                      updateTooltipPosition();
-                      hoverTooltip.style.display = "block";
-                  }
-              }, 100);
-              if (selectedCountryCode !== code) paintCountry(code, true);
-          } else if (type === 'mouseout') {
-              if (hoverTimer) clearTimeout(hoverTimer);
-              if (hoverTooltip) hoverTooltip.style.display = "none";
-              if (selectedCountryCode !== code) clearCountry(code);
-          }
-      }
-  };
+    window.resetCountry = (code) => {
+        const codeToReset = code || selectedCountryCode;
+        if (codeToReset) {
+            clearCountry(codeToReset);
+            if (codeToReset === selectedCountryCode) {
+                selectedCountryCode = null;
+            }
+        }
+    };
 
-  // Event Listener'ları Bağla
-  mapSvg.addEventListener('click', (e) => handleInteraction(e, 'click'));
-  mapSvg.addEventListener('mouseover', (e) => handleInteraction(e, 'mouseover'));
-  mapSvg.addEventListener('mouseout', (e) => handleInteraction(e, 'mouseout'));
-}
+    // --- EVENT HANDLER (TEK NOKTADAN YÖNETİM) ---
+    const handleInteraction = (e, type) => {
+        if (typeof isDragging !== 'undefined' && isDragging && type === 'mouseover') return;
+        const target = e.target.closest('path');
+        // Boşa tıklandıysa
+        if (!target) {
+            if (type === 'click') {
+                if (selectedCountryCode) window.resetCountry(selectedCountryCode);
+                if (activeDetailPopover) {
+                    activeDetailPopover.dispose();
+                    activeDetailPopover = null;
+                }
+            }
+        return;
+    }
+
+        // KODU TESPİT ET (Grup Öncelikli)
+        const code = getCountryCodeFromTarget(target);
+
+        if (code) {
+            if (type === 'click') {
+                e.stopPropagation();
+                window.highlightCountry(code); // FR boyanır
+                showDetailPopover(target, code); // FR verisi gösterilir
+            } else if (type === 'mouseover') {
+                if (hoverTimer) clearTimeout(hoverTimer);
+                hoverTimer = setTimeout(() => {
+                const name = getCountryName(code);
+                if (hoverTooltip && name) {
+                    hoverTooltip.innerHTML = name;
+                    updateTooltipPosition();
+                    hoverTooltip.style.display = "block";
+                }
+            }, 100);
+            if (selectedCountryCode !== code) paintCountry(code, true);
+            } else if (type === 'mouseout') {
+                if (hoverTimer) clearTimeout(hoverTimer);
+                if (hoverTooltip) hoverTooltip.style.display = "none";
+                if (selectedCountryCode !== code) clearCountry(code);
+            }
+        }
+    };
+
+    // Event Listener'ları Bağla
+    mapSvg.addEventListener('click', (e) => handleInteraction(e, 'click'));
+    mapSvg.addEventListener('mouseover', (e) => handleInteraction(e, 'mouseover'));
+    mapSvg.addEventListener('mouseout', (e) => handleInteraction(e, 'mouseout'));
+    }
 
 // --- DESEN OLUŞTURUCU (Overlay + Resim Dönüşü) ---
 function createFlagPattern(uniqueId, bbox, countryCode) {
@@ -343,105 +335,101 @@ function createFlagPattern(uniqueId, bbox, countryCode) {
     return img;
 }
 
-// --- ETKİLEŞİMLER (Bütünleşik Desen + Animasyon Reset Fix) ---
+// --- ETKİLEŞİMLER ---
 function initMapInteractions() {
-  const mapSvg = document.getElementById("world-map-svg");
-  if (!mapSvg) return;
+    const mapSvg = document.getElementById("world-map-svg");
+    if (!mapSvg) return;
 
-  const svgNS = "http://www.w3.org/2000/svg";
+    const svgNS = "http://www.w3.org/2000/svg";
   
-  // Vinyet Gradyanı
-  let defs = mapSvg.querySelector("defs");
-  if (!defs) {
-    defs = document.createElementNS(svgNS, "defs");
-    mapSvg.prepend(defs);
-  }
-  if (!document.getElementById("vignette-gradient")) {
-      const radGrad = document.createElementNS(svgNS, "radialGradient");
-      radGrad.setAttribute("id", "vignette-gradient");
-      radGrad.setAttribute("cx", "50%");
-      radGrad.setAttribute("cy", "50%");
-      radGrad.setAttribute("r", "70%");
-      radGrad.innerHTML = `<stop offset="60%" stop-color="transparent" /><stop offset="100%" stop-color="rgba(0,0,0,0.6)" />`;
-      defs.appendChild(radGrad);
-  }
+    // Vinyet Gradyanı
+    let defs = mapSvg.querySelector("defs");
+    if (!defs) {
+        defs = document.createElementNS(svgNS, "defs");
+        mapSvg.prepend(defs);
+    }
+    if (!document.getElementById("vignette-gradient")) {
+        const radGrad = document.createElementNS(svgNS, "radialGradient");
+        radGrad.setAttribute("id", "vignette-gradient");
+        radGrad.setAttribute("cx", "50%");
+        radGrad.setAttribute("cy", "50%");
+        radGrad.setAttribute("r", "70%");
+        radGrad.innerHTML = `<stop offset="60%" stop-color="transparent" /><stop offset="100%" stop-color="rgba(0,0,0,0.6)" />`;
+        defs.appendChild(radGrad);
+    }
 
-  // YARDIMCI: Ülkeyi Boya
-  const paintCountry = (code, animate = false) => {
-      const targetElement = document.getElementById(code);
-      const groupElement = document.querySelector(`g#${code}`);
-      
-      let targets = [];
-      if (groupElement) targets = Array.from(groupElement.querySelectorAll("path"));
-      else if (targetElement) targets = [targetElement];
+    // YARDIMCI: Ülkeyi Boya
+    const paintCountry = (code, animate = false) => {
+        const targetElement = document.getElementById(code);
+        const groupElement = document.querySelector(`g#${code}`);
 
-      if (targets.length === 0) return;
+        let targets = [];
+        if (groupElement) targets = Array.from(groupElement.querySelectorAll("path"));
+        else if (targetElement) targets = [targetElement];
 
-      // PARÇALI ÜLKELER (Ayrı ayrı desen: Fransa, Hollanda, ABD)
-      const disjointedCountries = ["FR", "NL", "US"];
-      const isDisjointed = disjointedCountries.includes(code);
+        if (targets.length === 0) return;
 
-      if (isDisjointed) {
-          targets.forEach((target, index) => {
-              try {
-                  const bbox = target.getBBox();
-                  const uniqueId = `flag-pattern-${code}-part${index}`;
-                  
-                  if (typeof createFlagPattern === 'function') {
-                      const imgEl = createFlagPattern(uniqueId, bbox, code); 
-                      target.style.fill = `url(#${uniqueId})`;
-                      target.style.fillOpacity = "1";
-                      
-                      // Animasyon Reset (setTimeout ile GARANTİ)
-                      if (animate && imgEl) {
-                          imgEl.classList.remove("flag-anim");
-                          setTimeout(() => {
-                              imgEl.classList.add("flag-anim");
+    // PARÇALI ÜLKELER (Ayrı ayrı desen: Fransa, Hollanda, ABD)
+        const disjointedCountries = ["FR", "NL", "US"];
+        const isDisjointed = disjointedCountries.includes(code);
+
+    if (isDisjointed) {
+        targets.forEach((target, index) => {
+            try {
+                const bbox = target.getBBox();
+                const uniqueId = `flag-pattern-${code}-part${index}`;
+                if (typeof createFlagPattern === 'function') {
+                    const imgEl = createFlagPattern(uniqueId, bbox, code); 
+                    target.style.fill = `url(#${uniqueId})`;
+                    target.style.fillOpacity = "1";
+                    // Animasyon Reset (setTimeout ile GARANTİ)
+                    if (animate && imgEl) {
+                        imgEl.classList.remove("flag-anim");
+                        setTimeout(() => {
+                            imgEl.classList.add("flag-anim");
                           }, 20); // 20ms gecikme tarayıcının değişikliği görmesini sağlar
-                      }
-                  } else { target.style.fill = "#ffc107"; }
-              } catch (e) {}
-          });
+                    }
+                } else { target.style.fill = "#ffc107"; }
+            } catch (e) {}
+        });
+    } else {
+        // BÜTÜNLEŞİK ÜLKELER (Tek desen: Rusya, Kanada, Japonya vb.)
+        // Tüm parçaları kapsayan tek bir BBox hesapla
+        let globalBBox = { x: Infinity, y: Infinity, x2: -Infinity, y2: -Infinity };
+            targets.forEach(path => {
+                try {
+                    const b = path.getBBox();
+                    if (b.x < globalBBox.x) globalBBox.x = b.x;
+                    if (b.y < globalBBox.y) globalBBox.y = b.y;
+                    if (b.x + b.width > globalBBox.x2) globalBBox.x2 = b.x + b.width;
+                    if (b.y + b.height > globalBBox.y2) globalBBox.y2 = b.y + b.height;
+                } catch(e){}
+            });
 
-      } else {
-          // BÜTÜNLEŞİK ÜLKELER (Tek desen: Rusya, Kanada, Japonya vb.)
-          // Tüm parçaları kapsayan tek bir BBox hesapla
-          let globalBBox = { x: Infinity, y: Infinity, x2: -Infinity, y2: -Infinity };
-          
-          targets.forEach(path => {
-              try {
-                  const b = path.getBBox();
-                  if (b.x < globalBBox.x) globalBBox.x = b.x;
-                  if (b.y < globalBBox.y) globalBBox.y = b.y;
-                  if (b.x + b.width > globalBBox.x2) globalBBox.x2 = b.x + b.width;
-                  if (b.y + b.height > globalBBox.y2) globalBBox.y2 = b.y + b.height;
-              } catch(e){}
-          });
+            const finalBBox = {
+                x: globalBBox.x,
+                y: globalBBox.y,
+                width: globalBBox.x2 - globalBBox.x,
+                height: globalBBox.y2 - globalBBox.y
+            };
 
-          const finalBBox = {
-              x: globalBBox.x,
-              y: globalBBox.y,
-              width: globalBBox.x2 - globalBBox.x,
-              height: globalBBox.y2 - globalBBox.y
-          };
+            const uniqueId = `flag-pattern-${code}-global`;
+            let imgEl = null;
 
-          const uniqueId = `flag-pattern-${code}-global`;
-          let imgEl = null;
+            if (typeof createFlagPattern === 'function') {
+                imgEl = createFlagPattern(uniqueId, finalBBox, code);
+            }
 
-          if (typeof createFlagPattern === 'function') {
-              imgEl = createFlagPattern(uniqueId, finalBBox, code);
-          }
+            targets.forEach(target => {
+                if(imgEl) {
+                    target.style.fill = `url(#${uniqueId})`;
+                    target.style.fillOpacity = "1";
+                } else {
+                    target.style.fill = "#ffc107";
+                }
+            });
 
-          targets.forEach(target => {
-              if(imgEl) {
-                  target.style.fill = `url(#${uniqueId})`;
-                  target.style.fillOpacity = "1";
-              } else {
-                  target.style.fill = "#ffc107";
-              }
-          });
-
-          // Animasyon Reset (setTimeout ile GARANTİ)
+          // Animasyon Reset
           if (animate && imgEl) {
               imgEl.classList.remove("flag-anim");
               setTimeout(() => {
@@ -569,52 +557,36 @@ function createCountryLabels() {
     labelGroup.id = "label-group";
     mapSvg.appendChild(labelGroup);
 
-    // Manuel Düzeltmeler (Aynen koruyoruz)
     const manualCorrections = {
-    // --- Sorunlu Büyük Ülkeler (Denizaşırı topraklar yüzünden kayanlar) ---
-    
-    // ABD: Hawaii yüzünden merkez pasifikte kalıyor. Bayağı sağa (Doğuya) ve biraz yukarı çekiyoruz.
+    // --- Sorunlu Ülkeler İçin Manuel Düzeltme ---
     "US": { x: -5, y: -15 },   
-
-    // Fransa: Guyanadan dolayı merkez okyanusta. Sağa (Avrupa'ya) ve Yukarı çekiyoruz.
-    "FR": { x: 5, y: 0 },   
-
-    // Hollanda: Karayipler yüzünden aşağı kayıyor. Yukarı çekiyoruz.
-    "NL": { x: 0, y: 0 },    
-
-    // --- İskandinavya Ayarları ---
-    
-    // İsveç: Merkez denize kayıyor, biraz sola (batıya) ve hafif yukarı alalım.
+    "FR": { x: 5, y: 0 },  
     "SE": { x: -10, y: 5 },    
-
-    // Norveç: Şekli çok ince uzun, sola ve aşağı çekerek İsveç'ten uzaklaştırıyoruz.
     "NO": { x: -30, y: 20 },   
-
-    // --- Diğer Düzeltmeler ---
-    "GN": { x: 10, y: 0 },     // Gine (Kıyıdan içeri)
-    "AT": { x: 5, y: 2 },      // Avusturya
-    "CA": { x: -30, y: 0 },    // Kanada (Kuzey adalarından anakaraya)
-    "CL": { x: -20, y: 0 },     // Şili (İnce uzun, kıyıdan içeri)
-    "JP": { x: 15, y: 0 },    // Japonya
-    "ID": { x: 100, y: 0 },     // Endonezya
-    "PH": { x: 5, y: 20 },      // Filipinler
-    "NZ": { x: 25, y: -10 },     // Yeni Zelanda
-    "GR": { x: -2, y: 0 },      // Yunanistan (Adalardan anakaraya)
-    "IT": { x: 5, y: 5 },     // İtalya
-    "HR": { x: 0, y: -7 },     // Hırvatistan (Hilal şekli)
-    "VN": { x: 15, y: 0 },      // Vietnam
-    "PT": { x: 0, y: 0 },     // Portekiz (İspanya'dan uzaklaştır)
-    "TH": { x: 0, y: -12 },    // Tayland: Biraz Yukarı
-    "NP": { x: 0, y: 3 },      // Nepal: Biraz Aşağı
-    "IN": { x: -10, y: 0 },    // Hindistan: Biraz Sola
-    "PK": { x: 10, y: 0 },     // Pakistan: Biraz Sağa
-    "AF": { x: -8, y: 0 },     // Afganistan: Biraz Sola
-    "CM": { x: 8, y: 0 },      // Kamerun: Biraz Sağa
-    "CG": { x: 8, y: 0 },      // Kongo Cumhuriyeti: Biraz Sağa
-    "NA": { x: -10, y: 0 },    // Namibya: Biraz Sola
-    "MZ": { x: 0, y: -12 },    // Mozambik: Biraz Yukarı
-    "ZM": { x: 0, y: 8 },      // Zambiya: Biraz Aşağı
-    "MW": { x: -1, y: 0 }      // Malavi: Biraz Sola
+    "GN": { x: 10, y: 0 },     
+    "AT": { x: 5, y: 2 },      
+    "CA": { x: -30, y: 0 },    
+    "CL": { x: -20, y: 0 },     
+    "JP": { x: 15, y: 0 },    
+    "ID": { x: 100, y: 0 },     
+    "PH": { x: 5, y: 20 },    
+    "NZ": { x: 25, y: -10 },     
+    "GR": { x: -2, y: 0 },      
+    "IT": { x: 5, y: 5 },     
+    "HR": { x: 0, y: -7 },     
+    "VN": { x: 15, y: 0 },      
+    "PT": { x: 0, y: 0 },     
+    "TH": { x: 0, y: -12 },    
+    "NP": { x: 0, y: 3 },      
+    "IN": { x: -10, y: 0 },    
+    "PK": { x: 10, y: 0 },     
+    "AF": { x: -8, y: 0 },     
+    "CM": { x: 8, y: 0 },      
+    "CG": { x: 8, y: 0 },      
+    "NA": { x: -10, y: 0 },    
+    "MZ": { x: 0, y: -12 },    
+    "ZM": { x: 0, y: 8 },      
+    "MW": { x: -1, y: 0 }      
     };
 
     // Ülke verilerini topla
@@ -642,7 +614,7 @@ function createCountryLabels() {
     const sortedCountries = Object.values(countryMap);
 
     sortedCountries.forEach(country => {
-        // Çok çok küçük adaları yine filtreleyelim (İsteğe bağlı)
+        // Çok çok küçük adaları filtrele
         if (country.maxArea < 10) return; 
 
         const name = getCountryName(country.code);
@@ -657,7 +629,7 @@ function createCountryLabels() {
             centerY += manualCorrections[country.code].y;
         }
 
-        // --- KRİTİK NOKTA: BÜYÜKLÜK KONTROLÜ ---
+        // --- BÜYÜKLÜK KONTROLÜ ---
         // Eşik değerini 350 birim belirledik. 
         // Türkiye, Almanya, Fransa gibi ülkeler > 350'dir (Tier 1).
         // Belçika, Balkan ülkeleri < 350'dir (Tier 2).
@@ -690,7 +662,6 @@ function updateLabelsLanguage() {
 }
 
 // --- 5. DETAYLI İÇERİK OLUŞTURUCU ---
-// --- 5. DETAYLI İÇERİK OLUŞTURUCU (TAM VERİ SETİ + FİLTRELER + KARŞILAŞTIRMA) ---
 function generateDetailContent(code, pathElement) {
     // 1. DİL VE VERİ AYARLARI
     const currentLang = window.currentLang || 'tr';
@@ -718,7 +689,7 @@ function generateDetailContent(code, pathElement) {
     };
     let flagUrl = customFlags[code] || `https://flagcdn.com/w80/${code.toLowerCase()}.png`;
 
-    // 4. MEVCUT VERİLERİ HAZIRLA (Sizin kodunuzdaki değişkenler)
+    // 4. MEVCUT VERİLERİ HAZIRLA 
     const nameTr = data.names?.[currentLang] || defaultName;
     const nameEn = data.names?.en || "";
     const desc = data.general_info?.['description' + sfx] || "";
@@ -745,7 +716,6 @@ function generateDetailContent(code, pathElement) {
     const defBudget = data.military?.defense_budget_usd ? currencyCompact(data.military.defense_budget_usd) : "-";
     const intel = data.general_info?.intelligence_agency || "-";
 
-    // 5. YENİ VERİLER (Socio, Energy, Tech)
     const literacy = data.demographics?.literacy_rate ? `%${data.demographics.literacy_rate}` : "-";
     const employment = data.economy?.employment_rate ? `%${data.economy.employment_rate}` : "-";
     const co2 = data.energy_environment?.co2_emissions_mt ? formatNum(data.energy_environment.co2_emissions_mt) + " Mt" : "-";
@@ -764,7 +734,7 @@ function generateDetailContent(code, pathElement) {
 
     // --- HTML İNŞASI ---
     
-    // BAŞLIK (Header + Compare Button)
+    // BAŞLIK
     let html = `
         <div class="d-flex align-items-center justify-content-between mb-3 border-bottom pb-2">
             <div class="text-start">
@@ -784,7 +754,6 @@ function generateDetailContent(code, pathElement) {
             </button>
         </div>
     `;
-
     // A. COĞRAFYA (showGeo)
     if (showGeo) {
         html += `
@@ -800,7 +769,6 @@ function generateDetailContent(code, pathElement) {
             </ul>
         </div>`;
     }
-
     // B. DEMOGRAFİ (showDemo)
     if (showDemo) {
         // Piramit HTML'i
@@ -824,7 +792,6 @@ function generateDetailContent(code, pathElement) {
             </div>
         </div>`;
     }
-
     // C. EKONOMİ (showEco)
     if (showEco) {
         html += `
@@ -840,7 +807,6 @@ function generateDetailContent(code, pathElement) {
             </ul>
         </div>`;
     }
-
     // D. ASKERİ (showMil)
     if (showMil) {
         html += `
@@ -856,9 +822,6 @@ function generateDetailContent(code, pathElement) {
             </ul>
         </div>`;
     }
-
-    // --- YENİ EKLENEN KATEGORİLER ---
-
     // E. SOSYO-EKONOMİK (showSocio)
     if (showSocio) {
         html += `
@@ -871,7 +834,6 @@ function generateDetailContent(code, pathElement) {
             </ul>
         </div>`;
     }
-
     // F. ENERJİ & ÇEVRE (showEnv)
     if (showEnv) {
         html += `
@@ -883,7 +845,6 @@ function generateDetailContent(code, pathElement) {
             </ul>
         </div>`;
     }
-
     // G. TEKNOLOJİ (showTech)
     if (showTech) {
         html += `
@@ -895,8 +856,7 @@ function generateDetailContent(code, pathElement) {
             </ul>
         </div>`;
     }
-
-    // FOOTER (Veri Yılı)
+    // FOOTER
     html += `
         <div class="text-center text-muted mt-2 pt-2 border-top" style="font-size: 0.65rem;">
             <i class="fas fa-info-circle me-1"></i> ${t('lbl_data_year') || 'Veriler 2024 yılına aittir.'}
@@ -926,7 +886,7 @@ window.refreshActivePopover = function() {
     if (popoverBody) {
         popoverBody.innerHTML = newContent;
 
-        // --- KRİTİK: Piramit Animasyonunu Tekrar Tetikle ---
+        // --- Piramit Animasyonunu Tekrar Tetikle ---
         const bars = popoverBody.querySelectorAll(".bar-fill");
         if (bars.length > 0) {
             setTimeout(() => {
@@ -1001,7 +961,7 @@ if (!pyramidData || !Array.isArray(pyramidData) || pyramidData.length === 0) {
 
 // --- 7. DETAY POPOVER GÖSTERİCİ ---
 function showDetailPopover(element, code) {
-  // Önceki popover varsa kapat (Singleton tasarım kalıbı yaklaşımı)
+  // Önceki popover varsa kapat
   if (activeDetailPopover) {
     activeDetailPopover.dispose();
     activeDetailPopover = null;
@@ -1062,7 +1022,6 @@ function initCollapseIcons() {
     }
 
     // 2. Alt Karşılaştırma Tepsisi (Yukarı Açılır)
-    // Not: Bu elementler dinamik olarak görünür/gizlenir ama DOM'da vardır.
     const compareTray = document.getElementById('compareTray');
     const compareIcon = document.getElementById('compareIcon');
 
@@ -1079,7 +1038,7 @@ function initCollapseIcons() {
         });
     }
 }
-// --- ZOOM & PAN (MOUSE TEKERLEĞİ İÇİN DÜZELTİLMİŞ) ---
+// --- ZOOM & PAN ---
 let currentScale = 1,
   currentTranslateX = 0,
   currentTranslateY = 0,
@@ -1105,7 +1064,7 @@ function updateTransform() {
   }
 }
 
-// --- MOUSE KONTROLLERİ (HIZLI & AKICI) ---
+// --- MOUSE KONTROLLERİ ---
 function initPanZoom() {
   const mapContainer = document.getElementById("map-container");
   
@@ -1117,23 +1076,16 @@ function initPanZoom() {
     const mapSvg = document.getElementById("world-map-svg");
     if (!mapSvg) return;
 
-    // A. HIZLI MOD (Scroll Sırasında)
-    // 0.1s transition: "Küt" diye atlamaz, akıcı hissettirir ama sakız gibi uzamaz.
     mapSvg.style.transition = "transform 0.15s ease-out"; 
-    
-    // B. NORMALE DÖNÜŞ (Scroll Bittiğinde)
-    // 200ms boyunca yeni hareket gelmezse, yumuşak moda (0.7s) geri dön.
     clearTimeout(zoomTimeout);
     zoomTimeout = setTimeout(() => {
         mapSvg.style.transition = "transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94)";
     }, 200);
 
-    // C. HESAPLAMALAR (Sol-Üst Orijin Uyumlu)
     const rect = mapContainer.getBoundingClientRect();
     const mouseX = e.clientX - rect.left;
     const mouseY = e.clientY - rect.top;
 
-    // Mouse'un altındaki dünya koordinatı (sabit kalmalı)
     const worldX = (mouseX - currentTranslateX) / currentScale;
     const worldY = (mouseY - currentTranslateY) / currentScale;
 
@@ -1145,7 +1097,7 @@ function initPanZoom() {
     // Sınırlar
     newScale = Math.max(0.7, Math.min(newScale, 20));
 
-    // Yeni Konum (Mouse imlecini koruyacak şekilde)
+    // Yeni Konum 
     currentTranslateX = mouseX - (worldX * newScale);
     currentTranslateY = mouseY - (worldY * newScale);
 
@@ -1153,7 +1105,7 @@ function initPanZoom() {
     updateTransform();
   }, { passive: false });
 
-  // 2. SÜRÜKLEME (DRAG)
+  // 2. SÜRÜKLEME 
   mapContainer.addEventListener("mousedown", (e) => {
     if (e.button !== 0 || e.target.closest(".popover")) return;
     isDragging = true;
@@ -1161,7 +1113,7 @@ function initPanZoom() {
     startY = e.clientY - currentTranslateY;
     mapContainer.style.cursor = "grabbing";
     
-    // Sürüklerken gecikme olmaması için transition'ı kapatıyoruz (En doğrusu budur)
+    // Sürüklerken gecikme olmaması için transition'ı kapatıyoruz 
     const mapSvg = document.getElementById("world-map-svg");
     if(mapSvg) mapSvg.style.transition = "none";
   });
@@ -1174,7 +1126,6 @@ function initPanZoom() {
         // Sürükleme bitti, yumuşak animasyonu geri aç
         const mapSvg = document.getElementById("world-map-svg");
         if(mapSvg) {
-             // Tarayıcıya bir "nefes" (reflow) aldırıp öyle açıyoruz ki atlama yapmasın
              requestAnimationFrame(() => {
                  mapSvg.style.transition = "transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94)";
              });
@@ -1186,7 +1137,6 @@ function initPanZoom() {
     if (!isDragging) return;
     e.preventDefault();
     
-    // Sürüklerken "none" olduğundan emin ol
     const mapSvg = document.getElementById("world-map-svg");
     if(mapSvg && mapSvg.style.transition !== 'none') {
         mapSvg.style.transition = 'none';
@@ -1237,7 +1187,7 @@ function zoomMap(factor) {
   const mapSvg = document.getElementById("world-map-svg");
   if (!mapContainer || !mapSvg) return;
 
-  // 1. Geçiş efektini aç (Butonla basınca animasyonlu olsun)
+  // 1. Geçiş efektini aç
   mapSvg.style.transition = "transform 0.5s ease-out";
 
   // 2. Ekranın merkezini bul
@@ -1246,7 +1196,6 @@ function zoomMap(factor) {
   const centerY = rect.height / 2;
 
   // 3. Mevcut merkezin "Dünya Koordinatı"nı bul
-  // Formül: (EkranMerkezi - Translate) / Scale
   const worldX = (centerX - currentTranslateX) / currentScale;
   const worldY = (centerY - currentTranslateY) / currentScale;
 
@@ -1255,7 +1204,6 @@ function zoomMap(factor) {
   newScale = Math.max(0.7, Math.min(newScale, 20)); // Sınırlar
 
   // 5. Yeni Translate hesapla (Merkezi sabit tutmak için)
-  // Formül: EkranMerkezi - (DünyaNoktası * YeniScale)
   currentTranslateX = centerX - (worldX * newScale);
   currentTranslateY = centerY - (worldY * newScale);
   
@@ -1300,7 +1248,7 @@ function initUITooltips() {
 
   triggers.forEach((btn) => {
     btn.addEventListener("mouseenter", () => {
-      if (hoverTimer) clearTimeout(hoverTimer); // Haritadan kalan zamanlayıcı varsa temizle (Çakışmayı önle)
+      if (hoverTimer) clearTimeout(hoverTimer); // Haritadan kalan zamanlayıcı varsa temizle
 
       const text = btn.getAttribute("data-tooltip-text");
       if (hoverTooltip && text) {
@@ -1351,7 +1299,7 @@ function toggleTheme() {
   }
 }
 
-// --- AKILLI ZOOM (ARAMA İÇİN - SOL ÜST ORİJİN) ---
+// --- AKILLI ZOOM ---
 function zoomToCountry(pathElement, code) {
     const mapContainer = document.getElementById("map-container");
     const mapSvg = document.getElementById("world-map-svg"); 
@@ -1360,15 +1308,14 @@ function zoomToCountry(pathElement, code) {
     // A. Animasyonu Aç
     mapSvg.style.transition = "transform 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94)";
 
-    // B. Oran Hesabı (1 SVG birimi = Kaç Piksel?)
-    // getBBox yerine viewBox kullanmak en güvenlisidir
+    // B. Oran Hesabı
     const viewBox = mapSvg.viewBox.baseVal;
     const vbW = (viewBox && viewBox.width > 0) ? viewBox.width : 2000; // Yedek 2000
     // SVG'nin şu anki genişliği (Scale 1 iken)
     const clientWidth = mapSvg.clientWidth || mapContainer.clientWidth;
     const baseRatio = clientWidth / vbW;
 
-    // C. Hedefin Merkezini Bul (SVG Koordinatı)
+    // C. Hedefin Merkezini Bul 
     const bbox = pathElement.getBBox();
     let cx = bbox.x + (bbox.width / 2);
     let cy = bbox.y + (bbox.height / 2);
@@ -1387,9 +1334,7 @@ function zoomToCountry(pathElement, code) {
     else if (area > 1000) targetScale = 6.5;  
     else targetScale = 12.0;                  
 
-    // E. NİHAİ KOORDİNAT HESABI (Sol-Üst Orijine Göre)
-    // Formül: (EkranYarısı) - (ÜlkeMerkezi * Oran * HedefZoom)
-    // "viewBox.x" değerini de hesaba katıyoruz (bazı haritalar 0'dan başlamaz)
+    // E. NİHAİ KOORDİNAT HESABI
     const vbX = viewBox ? viewBox.x : 0;
     const vbY = viewBox ? viewBox.y : 0;
 

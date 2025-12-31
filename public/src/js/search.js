@@ -1,10 +1,8 @@
-// ============================================================
-// --- DIGITAL ATLAS v1.2 - ARAMA, FİLTRELEME VE ARAÇLAR MOTORU ---
-// ============================================================
+// DIJITAL ATLAS - ARAMA VE ARAÇ MOTORU
+
 
 let comparisonList = [];
 
-// --- YARDIMCI: SKORLAMA VE SIRALAMA ALGORİTMASI (V1.2 YENİ) ---
 // Bu fonksiyon arama sonuçlarını alaka düzeyine göre sıralar.
 function getSortedMatches(query, dataObj) {
     if (!query || !dataObj) return [];
@@ -26,7 +24,6 @@ function getSortedMatches(query, dataObj) {
         const nameTr = (data.names?.tr || "").toLocaleLowerCase('tr-TR');
         const nameEn = (data.names?.en || "").toLowerCase();
 
-        // 3. AKTİF İSMİ SEÇ (Kritik Nokta)
         // Eğer dil TR ise, primaryName Türkçe olandır. Değilse İngilizce olandır.
         let primaryName, secondaryName;
         
@@ -40,35 +37,23 @@ function getSortedMatches(query, dataObj) {
 
         let score = 0;
 
-        // --- PUANLAMA KURALLARI ---
-
-        // A. TAM EŞLEŞME (Zirve)
-        // Aktif dildeki isim tam tutuyorsa (Örn: TR modunda "Almanya")
+        //Puanlama
+        // Tam Eşleşme
         if (primaryName === q) score += 2000;
-        
-        // KOD tam tutuyorsa (Örn: "AL") -> İsimden düşük ama yüksek puan
+        // Kod Eşleşmesi
         if (code === q) score += 500;
-        
         // Diğer dildeki isim tam tutuyorsa
         if (secondaryName === q) score += 400;
-
-
-        // B. BAŞLANGIÇ EŞLEŞMESİ (Önemli)
-        // Aktif dildeki isim bununla mı başlıyor? (Örn: TR modunda "Al" -> "Almanya")
-        // Bu puan (1000), Kod puanından (500) yüksek olduğu için İsim kazanır.
+        // Başlangıç Eşleşmesi
         if (primaryName.startsWith(q)) score += 1000;
-
-        // Kod bununla mı başlıyor? (Örn: "Al" -> "AL")
+        // Kod Başlangıç Eşleşmesi
         if (code.startsWith(q)) score += 50;
-
-        // Diğer dildeki isim bununla mı başlıyor? (Örn: EN modunda "Al" -> "Almanya" düşük puan alır)
+        // Diğer dildeki kod başlangıç eşleşmesi
         if (secondaryName.startsWith(q)) score += 10;
-
-
-        // C. İÇERİK EŞLEŞMESİ (En düşük)
+        // İçerik eşleşmesi
         if (primaryName.includes(q)) score += 5;
+        // Diğer dilde içerik eşleşmesi
         else if (secondaryName.includes(q)) score += 2;
-        
         
         if (score > 0) {
             results.push({ code: key, score: score, data: data });
@@ -79,25 +64,22 @@ function getSortedMatches(query, dataObj) {
     return results.sort((a, b) => b.score - a.score);
 }
 
-// --- 1. ARAMA FONKSİYONU (GÜNCELLENDİ) ---
+// --- 1. ARAMA FONKSİYONU ---
 function searchCountry() {
-    // Dil desteği
     const t = (key) => window.uiTranslations?.[window.currentLang]?.[key] || key;
     
     const searchInput = document.getElementById("country-search");
     const errorMsg = document.getElementById("search-error-msg");
     if (!searchInput) return;
     
-    const query = searchInput.value.trim(); // toLocaleLowerCase burada değil, algoritma içinde yapılıyor
+    const query = searchInput.value.trim();
     
-    // Hataları temizle
     searchInput.classList.remove('is-invalid');
     if(errorMsg) errorMsg.style.display = 'none';
 
     if (!query) return;
     if (typeof window.globalData === 'undefined') return;
 
-    // --- YENİ MANTIK: PUANLI ARAMA ---
     const sortedResults = getSortedMatches(query, window.globalData);
     let foundCode = null;
 
@@ -107,15 +89,13 @@ function searchCountry() {
 
     if (foundCode) {
         // Haritada bul (Grup veya Path)
-        // Main.js'deki yeni mantığa uygun olarak önce ID'yi arıyoruz
         let target = document.getElementById(foundCode);
         if (!target) {
-           const group = document.querySelector(`g#${foundCode}`);
-           if (group) target = group.querySelector("path"); // Grubun ilk parçasına odaklan
+            const group = document.querySelector(`g#${foundCode}`);
+            if (group) target = group.querySelector("path"); // Grubun ilk parçasına odaklan
         }
 
         if (target) {
-            // Başarılı: İşlemleri yap
             if (typeof resetMap === 'function') {
                 const svgEl = document.getElementById("world-map-svg");
                 if(svgEl) svgEl.style.transition = "none"; 
@@ -147,16 +127,14 @@ function searchCountry() {
             if(suggestionsBox) suggestionsBox.style.display = 'none';
 
         } else {
-             // HATA: Veri var ama harita yok
-             showSearchError(t('err_map_data_missing') || "Harita verisi eksik.");
+            showSearchError(t('err_map_data_missing') || "Harita verisi eksik.");
         }
     } else {
-        // HATA: Ülke bulunamadı
         showSearchError(`"${searchInput.value}" ${t('err_country_not_found') || "bulunamadı."}`);
     }
 }
 
-// --- 2. SIFIRLA (RESET) ---
+// --- 2. SIFIRLA ---
 function resetSwitches() {
     const searchInput = document.getElementById("country-search");
     if(searchInput) searchInput.value = "";
@@ -186,7 +164,7 @@ function resetSwitches() {
     if(typeof window.refreshActivePopover === 'function') window.refreshActivePopover();
 }
 
-// --- 3. FİLTRELEME & KATMANLAR MOTORU (GÜNCELLENDİ) ---
+// --- 3. FİLTRELEME & KATMANLAR MOTORU ---
 function initFilterListeners() {
     // A. Radio Butonları (Bölge Filtreleme)
     const filters = document.querySelectorAll('input[name="mapFilter"]');
@@ -216,14 +194,13 @@ function applyMapFilter(filterType) {
     const globalData = window.globalData || {};
 
     paths.forEach(path => {
-        // ID Tespiti (Main.js mantığıyla uyumlu)
         let code = path.getAttribute("id");
         if (!code || code.length !== 2) {
-             if (path.parentElement.id && path.parentElement.id.length === 2) {
-                 code = path.parentElement.id;
-             } else {
+            if (path.parentElement.id && path.parentElement.id.length === 2) {
+                code = path.parentElement.id;
+            } else {
                  return; // ID yoksa atla
-             }
+            }
         }
 
         const data = globalData[code];
@@ -234,11 +211,9 @@ function applyMapFilter(filterType) {
         } else {
             const continent = data.geography?.continent_en;
 
-            // --- YENİ: AVRASYA FİX ---
-            // TR, RU, AZ, GE, KZ -> Hem Asya hem Avrupa'da görünsün
+            // TR, RU Hem Asya hem Avrupa'da görünsün
             const isEurasia = (code === 'TR' || code === 'RU');
 
-            // Filtre Mantığı (Genişletildi)
             switch (filterType) {
                 case 'eu':
                     isMatch = (continent === "Europe" || isEurasia);
@@ -270,8 +245,7 @@ function applyMapFilter(filterType) {
                     break;
             }
         }
-
-        // Görsel Uygulama (CSS Class ile)
+        // Görsel Uygulama
         if (isMatch) {
             path.classList.remove('dimmed');
         } else {
@@ -280,7 +254,7 @@ function applyMapFilter(filterType) {
     });
 }
 
-// --- 4. ARAMA ÖNERİLERİ (AUTOCOMPLETE - GÜNCELLENDİ) ---
+// --- 4. ARAMA ÖNERİLERİ ---
 function initSearchSuggestions() {
     const input = document.getElementById("country-search");
     const suggestionsBox = document.getElementById("search-suggestions");
@@ -288,9 +262,9 @@ function initSearchSuggestions() {
     if (!input || !suggestionsBox) return;
 
     input.addEventListener("input", function() {
-        const query = this.value.trim(); // Raw query alıyoruz
+        const query = this.value.trim();
 
-        // 1. Yazmaya başlayınca hata mesajını ve kırmızılığı KALDIR
+        // Yazmaya başlayınca hata mesajını kaldır
         const errorMsg = document.getElementById("search-error-msg");
         if(errorMsg) errorMsg.style.display = 'none';
         this.classList.remove('is-invalid');
@@ -302,7 +276,6 @@ function initSearchSuggestions() {
         if (query.length < 2) return;
         if (typeof window.globalData === 'undefined') return;
 
-        // --- YENİ MANTIK: PUANLI ÖNERİLER ---
         const sortedResults = getSortedMatches(query, window.globalData);
         const topMatches = sortedResults.slice(0, 5); // İlk 5 sonucu göster
 
@@ -351,7 +324,7 @@ function initSearchSuggestions() {
     });
 }
 
-// --- 5. KARŞILAŞTIRMA SİSTEMİ (AYNEN KORUNDU) ---
+// --- 5. KARŞILAŞTIRMA SİSTEMİ ---
 window.addToComparison = function(code) {
     const t = (key) => window.uiTranslations?.[window.currentLang]?.[key] || key;
 
@@ -449,7 +422,6 @@ function showNotification(msg, type = 'danger') {
     }
 }
 
-// --- KARŞILAŞTIRMA MODALI (AYNEN KORUNDU) ---
 function openComparisonModal() {
     const tableContainer = document.getElementById("comparison-table-container");
     if (!tableContainer || comparisonList.length < 2) return;
@@ -459,7 +431,6 @@ function openComparisonModal() {
     const t = (key) => window.uiTranslations?.[currentLang]?.[key] || key;
     const globalData = window.globalData;
 
-    // 1. METRİK TANIMLARI
     const metrics = [
         { id: 'capital', label: t('lbl_capital'), path: `geography.capital${sfx}`, type: 'text', cat: 'geo' },
         { id: 'cont', label: t('lbl_continent'), path: `geography.continent${sfx}`, type: 'text', cat: 'geo' },
@@ -485,7 +456,6 @@ function openComparisonModal() {
         { id: 'total', label: t('lbl_total'), path: 'military.total_personnel', type: 'num', good: 'max', cat: 'mil' },
         { id: 'budget', label: t('lbl_budget'), path: 'military.defense_budget_usd', type: 'currency', good: 'max', cat: 'mil' },
 
-        // Yeni Kategoriler
         { id: 'emp', label: t('lbl_employment'), path: 'economy.employment_rate', type: 'percent', cat: 'socio' },
         { id: 'lit', label: t('lbl_literacy'), path: 'demographics.literacy_rate', type: 'percent', cat: 'socio' },
 
@@ -496,7 +466,6 @@ function openComparisonModal() {
         { id: 'mob', label: t('lbl_mobile'), path: 'technology.mobile_subscriptions_per_100', type: 'num', cat: 'tech' }
     ];
 
-    // 2. SWITCH HTML
     const categories = [
         { id: 'geo', label: t('cat_geo'), disabled: false },
         { id: 'demo', label: t('cat_demo'), disabled: false },
@@ -520,7 +489,6 @@ function openComparisonModal() {
     });
     controlsHTML += `</div>`;
 
-    // 3. TABLO BAŞLIĞI
     let tableHTML = `
         <table class="table table-striped table-hover mb-0 text-center align-middle">
             <thead class="sticky-top" style="top: 58px; z-index: 1010;">
@@ -541,7 +509,6 @@ function openComparisonModal() {
             <tbody>
     `;
 
-    // 4. TABLO GÖVDESİ
     metrics.forEach(metric => {
         const rowValues = comparisonList.map(code => getNestedValue(globalData[code], metric.path));
 
@@ -605,13 +572,13 @@ function getNestedValue(obj, path) {
     return path.split('.').reduce((acc, part) => acc && acc[part], obj);
 }
 
-// Yardımcı Hata Gösterici (searchCountry içinde kullanılıyor)
+// Yardımcı Metod: Hata Gösterici
 function showSearchError(msg) {
     const searchInput = document.getElementById("country-search");
     const errorMsg = document.getElementById("search-error-msg");
     const suggestionsBox = document.getElementById("search-suggestions");
     
-    // 1. Önerileri GİZLE
+    // Önerileri gizle
     if(suggestionsBox) suggestionsBox.style.display = 'none';
 
     if(searchInput) {

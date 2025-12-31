@@ -12,7 +12,6 @@ CSS3 ile gelen 'CSS Custom Properties' (Değişkenler) kullandık."
   --map-hover: #565656;
   --map-stroke: #000000;
 }
-
 /* Javascript'in <html> etiketine eklediği attribute'u yakalıyor ve değişkenleri eziyoruz. */
 [data-theme="dark"] {
   --ana-renk: #e6d6b8;
@@ -39,6 +38,7 @@ body {
   overflow-y: auto;
 }
 
+/* Navbar Stilleri */
 .navbar {
   background-color: var(--ana-renk) !important;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -46,7 +46,6 @@ body {
   top: 0;
   z-index: 1020;
 }
-
 .navbar-brand,
 .nav-link,
 .btn-link {
@@ -54,11 +53,11 @@ body {
   font-weight: 500;
   transition: color 0.2s ease;
 }
-
 .navbar .nav-link:hover {
   color: #ffc107 !important;
 }
 
+/* Ana Dosya Stilleri */
 main {
   flex: 1; /* İçeriğin kalan alanı kaplaması için */
   display: flex;
@@ -69,11 +68,11 @@ main {
   width: 100%;
 }
 
+/* Harita Stilleri */
 .info-header {
   margin-bottom: 10px;
   max-width: 800px;
 }
-
 #map-container {
   width: 100%;
   min-height: 500px;
@@ -91,15 +90,9 @@ main {
   user-select: none; /* Sürüklerken yanlışlıkla metin seçilmesini engelle */
   -webkit-user-select: none;
 }
-
 #map-container:active {
   cursor: grabbing; /* UX için hareket ettirilebilir olduğunu belirtir */
 }
-
-.no-transition {
-  transition: none !important;
-}
-
 svg {
   width: 90%;
   max-width: 1200px;
@@ -107,7 +100,6 @@ svg {
   transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Zoom işlemi için transition */
   transform-origin: 0 0;
 }
-
 svg path {
   fill: var(--map-fill);
   stroke: var(--map-stroke);
@@ -116,7 +108,6 @@ svg path {
   transition: fill 0.2s ease;
   pointer-events: all;
 }
-
 svg > path:hover,
 svg g:hover path {
   stroke: #ffc107 !important;
@@ -124,6 +115,12 @@ svg g:hover path {
   transition: stroke 0.2s;
 }
 
+/* Yardımcı sınıf: Geçişleri devre dışı bırakmak için */
+.no-transition {
+  transition: none !important;
+}
+
+/* Floating Tooltip Stilleri */
 .floating-tooltip {
   position: fixed;
   top: 0;
@@ -142,22 +139,19 @@ svg g:hover path {
   transform: translate(10px, 10px); /* Mouse'un biraz sağ altına konumlandırma */
   border: 1px solid var(--zemin-rengi);
 }
+
+/* Araç Seçim Butonu ve Menü Stilleri */
 #tools-btn {
-    /* Varsayılan Hal: Tamamen yuvarlak köşeler */
-    border-radius: 1rem; /* rounded-4 ile aynı değer */
+    border-radius: 1rem;
     transition: border-radius 0.3s ease, box-shadow 0.3s ease;
     position: relative;
     z-index: 1003; /* Menünün üstünde dursun */
 }
-
 /* Menü Açıldığında (aria-expanded="true" olduğunda) */
 #tools-btn[aria-expanded="true"] {
     /* Alt köşeleri düzleştir -> Menüyle birleşir */
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
-    
-    /* İsteğe bağlı: Açıkken butonun gölgesini kaldırıp bütünlüğü artırabilirsiniz */
-    /* box-shadow: none !important; */
     
     /* Ayrım çizgisini yok etmek için */
     border-bottom: 1px solid rgba(0,0,0,0.05); 
@@ -174,19 +168,17 @@ svg g:hover path {
     box-shadow: none;
     border-color: #86b7fe;
 }
-
 #search-container:focus-within .input-group {
     box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
     transition: box-shadow 0.3s;
 }
 
-/* --- ARAMA ÖNERİLERİ --- */
+/* Arama Önerisi Stilleri */
 #search-suggestions {
     background-color: rgba(255, 255, 255, 0.95); /* Hafif saydam beyaz */
     backdrop-filter: blur(10px);
     border: 1px solid rgba(0,0,0,0.1);
 }
-
 .search-feedback {
     display: none;
     position: absolute;
@@ -204,7 +196,6 @@ svg g:hover path {
     z-index: 1060;
     animation: fadeIn 0.2s ease-out;
 }
-
 /* Öneri Öğesi (Tekil Satır) */
 .suggestion-item {
     cursor: pointer;
@@ -218,23 +209,19 @@ svg g:hover path {
     padding: 8px 12px;
     background-color: transparent !important;
 }
-
 .suggestion-item:last-child {
     border-bottom: none;
 }
-
 .suggestion-item:hover, 
 .suggestion-item.active {
     background-color: var(--ana-renk) !important; /* Temanın ana rengi */
     color: var(--zemin-rengi) !important; /* Temanın zemin rengi (genelde açık) */
 }
-
 .suggestion-item:hover small,
 .suggestion-item.active small {
     color: var(--zemin-rengi) !important;
     opacity: 0.8 !important;
 }
-
 /* Koyu mod desteği */
 [data-theme="dark"] #search-suggestions {
     background-color: rgba(30, 30, 30, 0.95);
@@ -249,13 +236,13 @@ svg g:hover path {
     color: var(--zemin-rengi) !important;
 }
 
+/* Yardımcı Sınıf: Harita Üzerindeki Ülkeleri Kısmen Gizleme (Dim Etme) */
 path.dimmed {
     opacity: 0.15;
     pointer-events: none; /* Tıklamayı engeller */
     fill: #808080 !important; /* Rengini grileştirir */
     transition: opacity 0.4s ease, fill 0.4s ease;
 }
-
 [data-theme="dark"] path.dimmed {
     opacity: 0.3;
     fill: #444 !important;
@@ -271,25 +258,21 @@ path.dimmed {
   -webkit-user-select: text !important;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
-
 .popover-header {
   background-color: var(--ana-renk);
   color: var(--zemin-rengi);
   font-weight: bold;
   text-align: center;
 }
-
 .popover-body {
   max-height: 400px;
   overflow-y: auto;
   padding-right: 10px;
   font-size: 0.85rem;
 }
-
 .popover a {
   cursor: pointer;
 }
-
 .info-box {
   background-color: #fff;
   border: 1px solid rgba(0, 0, 0, 0.1);
@@ -298,7 +281,6 @@ path.dimmed {
   margin-bottom: 15px;
   box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.05);
 }
-
 [data-theme="dark"] .info-box {
   background-color: rgba(255, 255, 255, 0.05);
   border-color: rgba(255, 255, 255, 0.1);
@@ -352,7 +334,7 @@ path.dimmed {
   border-radius: 0 2px 2px 0;
 }
 
-/* --- KARŞILAŞTIRMA TABLOSU --- */
+/* Karşılaştırma Modalı Stilleri */
 #comparisonModal {
     z-index: 1055 !important; /* Navbar'ın üstüne çıkar */
 }
@@ -391,7 +373,6 @@ path.dimmed {
     vertical-align: middle;
     border-bottom: 1px solid rgba(0,0,0,0.05);
 }
-
 .val-winner {
     font-weight: 900 !important; /* Ekstra Kalın */
     color: var(--ana-renk);      /* Tema rengi */
@@ -399,53 +380,38 @@ path.dimmed {
     text-decoration-thickness: 2px;
     text-decoration-color: rgba(95, 111, 82, 0.3);
 }
-
 .table-striped > tbody > tr:nth-of-type(odd) > * {
     background-color: rgba(95, 111, 82, 0.05) !important;
     box-shadow: none !important;
 }
-
-/* --- KARŞILAŞTIRMA MODALI (KOYU MOD & UX DÜZELTMELERİ) --- */
-
 #comparisonModal .modal-content {
     background-color: #fff; /* Light Mode Zemin */
     color: #333;
     border: none;
 }
-
-/* 2. HEADER (BAŞLIK) */
 #comparisonModal .modal-header {
-    background-color: var(--ana-renk); /* Yeşil (#5f6f52) */
-    color: var(--zemin-rengi); /* Krem (#fefae0) */
+    background-color: var(--ana-renk); 
+    color: var(--zemin-rengi); 
     border-bottom: 1px solid rgba(0,0,0,0.1);
 }
 #comparisonModal .btn-close {
     filter: invert(1) grayscale(100%) brightness(200%); /* Beyaz çarpı */
 }
-
-/* 3. KONTROL PANELİ & TABLO BAŞLIKLARI */
-/* Mavi-gri yerine zemin rengini kullanıyoruz */
 #comparison-controls,
 #comparisonModal .table thead th {
     background-color: #f8f9fa; /* Light Mode için çok açık gri */
     color: var(--ana-renk);
     border-bottom: 1px solid rgba(0,0,0,0.1);
 }
-
-/* 4. TABLO GÖVDESİ */
 #comparisonModal .table td {
     vertical-align: middle;
     padding: 12px 8px;
     border-bottom: 1px solid rgba(0,0,0,0.05);
 }
-
-/* Zebra Striping (Çok hafif tema rengi) */
 .table-striped > tbody > tr:nth-of-type(odd) > * {
     background-color: rgba(95, 111, 82, 0.05) !important; /* --ana-renk %5 */
     box-shadow: none !important;
 }
-
-/* Kazanan Stili (Yeşil değil, Tema Rengi) */
 .val-winner {
     font-weight: 800;
     color: var(--ana-renk);
@@ -453,27 +419,21 @@ path.dimmed {
     text-decoration-thickness: 2px;
     text-decoration-color: rgba(95, 111, 82, 0.3);
 }
-
-/* 5. FOOTER */
 #comparisonModal .modal-footer {
     background-color: #f8f9fa;
     border-top: 1px solid rgba(0,0,0,0.1);
 }
-
-/* --- KOYU MOD (DARK MODE) AYARLARI --- */
 [data-theme="dark"] #comparisonModal .modal-content {
     background-color: var(--zemin-rengi); /* Koyu Siyah/Yeşil (#1a1c18) */
     color: var(--ana-renk); /* Bej (#e6d6b8) */
     border: 1px solid rgba(255,255,255,0.1);
 }
-
 /* Header: Koyu modda ana renk (Bej) olduğu için yazı koyu olmalı */
 [data-theme="dark"] #comparisonModal .modal-header {
     background-color: var(--ikincil-renk); /* Koyu Yeşil (#5f6f52) kullanıyoruz ki yazı okunsun */
     color: #fff;
     border-bottom: 1px solid rgba(255,255,255,0.1);
 }
-
 /* Kontroller ve Tablo Başlığı: Mavi-gri YOK! */
 [data-theme="dark"] #comparison-controls,
 [data-theme="dark"] #comparisonModal .table thead th {
@@ -481,7 +441,6 @@ path.dimmed {
     color: var(--ana-renk) !important;
     border-bottom: 1px solid rgba(255,255,255,0.1);
 }
-
 /* Tablo Satırları */
 [data-theme="dark"] #comparisonModal .table {
     color: var(--ana-renk);
@@ -491,30 +450,24 @@ path.dimmed {
     color: var(--ana-renk);
     border-bottom: 1px solid rgba(255,255,255,0.05);
 }
-
-/* Zebra Striping (Koyu mod) */
 [data-theme="dark"] .table-striped > tbody > tr:nth-of-type(odd) > * {
     background-color: rgba(255, 255, 255, 0.03) !important; /* Çok hafif aydınlık */
 }
-
-/* Footer: Mavi-gri YOK! */
 [data-theme="dark"] #comparisonModal .modal-footer {
     background-color: var(--zemin-rengi) !important;
     border-top: 1px solid rgba(255,255,255,0.1);
 }
-
-/* Kazanan (Koyu Mod) */
 [data-theme="dark"] .val-winner {
     color: #fff; /* Parlak beyaz */
     text-decoration-color: var(--ana-renk);
 }
 
+/* Harita Üzerindeki Bayrak Animasyonu ve Ülke Etiketleri */
 .flag-anim {
     transform-origin: center;
     transform-box: fill-box; /* KRİTİK EKLEME: Dönüşüm merkezini resme odaklar */
     animation: flagZoom 0.2s ease-out forwards;
 }
-
 .country-label {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     /* Zoom yaptıkça fontu dinamik küçült (Sabit görünüm için) */
@@ -533,20 +486,18 @@ path.dimmed {
          1px  1px 0 #fff;
     user-select: none;
 }
-
 #map-container.zoom-medium .country-label.label-tier-1 {
     opacity: 0.7;
 }
-
 #map-container.zoom-high .country-label {
     opacity: 0.7;
 }
-
 @keyframes flagZoom {
     0% { transform: scale(0.9); }
     100% { transform: scale(1.15); } /* %35 büyüme yeterli */
 }
 
+ /* Karşılaştırma Tepsisi Stilleri */
 #comparison-tray {
     position: absolute;
     bottom: 20px;
@@ -564,11 +515,9 @@ path.dimmed {
     z-index: 900;
     max-width: 90%;
 }
-
 #comparison-tray.active {
     transform: translateX(-50%) translateY(0); /* Yukarı fırlar */
 }
-
 /* Tepsideki Ülke Kartları */
 .compare-card {
     position: relative;
@@ -584,11 +533,9 @@ path.dimmed {
     box-shadow: 0 4px 6px rgba(0,0,0,0.05);
     transition: transform 0.2s;
 }
-
 .compare-card:hover {
     transform: translateY(-3px);
 }
-
 .compare-card img {
     width: 40px;
     height: 26px;
@@ -597,7 +544,6 @@ path.dimmed {
     margin-bottom: 6px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
-
 .compare-card span {
     font-size: 0.65rem;
     font-weight: 600;
@@ -608,7 +554,6 @@ path.dimmed {
     text-overflow: ellipsis;
     width: 90%;
 }
-
 /* Silme Butonu (Kartın üzerinde) */
 .btn-remove-card {
     position: absolute;
@@ -629,11 +574,9 @@ path.dimmed {
     transition: opacity 0.2s;
     z-index: 10;
 }
-
 .compare-card:hover .btn-remove-card {
     opacity: 1;
 }
-
 [data-theme="dark"] .search-feedback {
     background-color: #2c3e50;
     color: #e74c3c;
@@ -644,7 +587,6 @@ path.dimmed {
     color: #ecf0f1;
     border-color: rgba(255,255,255,0.1);
 }
-
 /* Karşılaştır Aksiyon Butonu */
 .btn-compare-action {
     height: 80px;
@@ -661,12 +603,10 @@ path.dimmed {
     border: none;
     transition: all 0.2s;
 }
-
 .btn-compare-action:hover {
     filter: brightness(1.1);
     transform: scale(1.05);
 }
-
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(-5px); }
     to { opacity: 1; transform: translateY(0); }

@@ -257,13 +257,12 @@ function changeLanguage(lang) {
     const openPopover = document.querySelector('.popover');
     if (openPopover) openPopover.remove();
 
-    // --- YENİ EKLENEN KISIM ---
     // Harita üzerindeki ülke isimlerini yeni dile çevir
     if (typeof window.updateLabelsLanguage === 'function') {
         window.updateLabelsLanguage();
     }
 
-    // 4. KRİTİK EKLEME: Karşılaştırma Tepsisini Yeniden Çiz (Buton dili düzelir)
+    // Karşılaştırma Tepsisini Yeniden Çiz
     if (typeof window.updateComparisonTray === 'function') {
         window.updateComparisonTray();
     }
@@ -271,7 +270,7 @@ function changeLanguage(lang) {
 
 // UI Metinlerini Güncelleyen Fonksiyon
 function updateUITexts() {
-    // 'querySelectorAll' ile 'data-lang' niteliğine sahip tüm elementleri tek seferde bulup döngüye sokuyoruz.
+    // 'data-lang' niteliğine sahip tüm elementleri tek seferde bulup döngüye sok.
     document.querySelectorAll("[data-lang]").forEach((el) => {
         const key = el.getAttribute("data-lang");
         if (uiTranslations[window.currentLang][key]) {
@@ -281,7 +280,6 @@ function updateUITexts() {
 
     document.querySelectorAll("[data-lang-placeholder]").forEach((el) => {
         const key = el.getAttribute("data-lang-placeholder");
-        // 'translations' yerine 'window.uiTranslations' yazıldı
         if (window.uiTranslations[currentLang] && window.uiTranslations[currentLang][key]) {
             el.setAttribute("placeholder", window.uiTranslations[currentLang][key]);
         }
